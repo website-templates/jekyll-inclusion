@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inclusion jekyll theme</title>
+    <description>Responsive blog theme for jekyll website generator</description>
+    <link>http://website-templates.github.io/jekyll-inclusion/</link>
+    <atom:link href="http://website-templates.github.io/jekyll-inclusion/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 17 Jan 2015 22:06:04 +0200</pubDate>
+    <lastBuildDate>Sat, 17 Jan 2015 22:06:04 +0200</lastBuildDate>
+    <generator>Jekyll v2.5.2</generator>
+    
+      <item>
+        <title>Lorem ipsum</title>
+        <description>&lt;h2 class=&quot;typo_center&quot;&gt;Page elements&lt;/h2&gt;
+&lt;div class=&quot;chapter&quot;&gt;
+    &lt;p&gt;This blog is based on &lt;span class=&quot;inclusion&quot;&gt;Inclusion&lt;/span&gt; framework, so it's tools allow us to decorate our content. Just add predefined classname to our markup element - and that's all! Here is orifinal description:&lt;/p&gt;
+    &lt;blockquote class=&quot;bq_align-center&quot;&gt;
+        &lt;p&gt;Here you can see live examples of page elements that were created with &lt;span class=&quot;inclusion&quot;&gt;Inclusion&lt;/span&gt;. There are about eight groups of elements with it's own styles: headings and text, images, blockquotes, lists, code blocks, abstract blocks (with spoilers) that used as containers for different content, tables and buttons. Basic inclusions like section, chapter or navigation are not shown here.&lt;/p&gt;
+        &lt;cite&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;http://orlovmax.com/lab/tools/inclusion&quot;&gt;Inclusion description&lt;/a&gt;&lt;/cite&gt;
+    &lt;/blockquote&gt;
+    &lt;p&gt;Let me say a few words about structure of rhis post &amp;mdash; it's really huge, but no less important. So we have chapters that contain code snippets and their result examples. Here is a list with anchor links to related chapters:&lt;/p&gt;
+    &lt;ul class=&quot;list_center&quot;&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__typo&quot;&gt;Typo&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__images&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__blockquotes&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__lists&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__code&quot;&gt;Code blocks&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__tables&quot;&gt;Tables&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__blocks&quot;&gt;Blocks&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__buttons&quot;&gt;Buttons&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__grid&quot;&gt;Grid&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 04 Dec 2014 00:00:00 +0200</pubDate>
+        <link>http://website-templates.github.io/jekyll-inclusion/2014/12/04/lorem-ipsum/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2014/12/04/lorem-ipsum/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
