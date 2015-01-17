@@ -1,0 +1,166 @@
+/* Common header */
+   .main-header{
+      display: block;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;                          
+   }
+
+/* Header group */
+   .hgroup{
+      position: relative;
+      width: 100%;
+      height: 50px;
+      @include multiple-box-shadow( inset 0 50px 25px -30px $header-shadow);
+                    
+      & a{            
+         font-family: $font-condensed;
+         font-size: 30px;
+         line-height: 1;
+         color: $header-text;
+         text-decoration: none;
+         border-bottom: 1px dotted $header-text;    
+         @include transition(all, .3s);
+         
+         &:hover{
+            color: $header-text-hover;
+            border-color: $header-text-hover;
+         }
+         &.is-selected{
+            border: none;
+            cursor: default;
+            color: $header-text-selected;
+         }
+      }
+   
+      &>a{
+         display: none;
+         float: right;
+         margin: 5px 20px 0;
+         border: none;
+         
+         &:before{              
+            content: "\e804";
+            display: inline-block;
+            margin-right: 10px;
+            font-family: "inclusion";
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color: $header-text;
+            font-size: 32px;
+            cursor: pointer;                
+            @include transition(all, .3s);
+         }
+         &.is-open:before{                               
+            content: "\e805";
+         }
+         &:hover:before{
+            color: $header-text-hover;
+         }
+      }
+   
+      & ul{
+         display: block;
+         float: left;
+         margin: 0 20px;
+         list-style-type: none;
+      }           
+      & li{
+         margin-right: 5px;
+         display: inline-block;
+         text-align: center;
+      } 
+   }
+
+/* Common navigation */
+   .navbar{
+      display: block;        
+      width: 100%;
+      background: $nav-bg;
+      text-align: center;                   
+      & ul{          
+         text-align: center; 
+         line-height: 1;
+         list-style-type: none;
+      }          
+      & li{
+         display: inline-block;
+         position: relative;               
+         padding: 10px 10px 15px; 
+         margin-bottom: 0; 
+         color: $nav-text;                        
+            
+         &.submenu>a:after{
+            content: "\e809";
+            display: inline-block;
+            padding-left: 5px;
+            font-family: "inclusion";
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 20px;
+            vertical-align: middle;
+            color: $nav-text; 
+         } 
+         & a{            
+            font-family: $font-condensed;
+            font-size: 30px;
+            color: $nav-text;    
+            text-decoration: none;
+            @include transition(all, .3s);
+            
+            &:hover{
+               color: $nav-text-hover;
+            }
+            &.is-active{
+               border: none;
+               cursor: default;
+               color: $nav-text-hover;
+            }
+         }
+         
+         &>ul{
+            position: absolute;
+            display: none;
+            padding: 10px 0 0;
+            left: 0;
+            z-index: 101;
+            background: $nav-bg;
+            text-align: left;
+            overflow: hidden;
+            list-style-type: none;
+         } 
+         &:hover ul{
+            display: block;
+         }
+         & li{ 
+            display: block;
+            padding: 0 10px 10px;
+         }
+      }
+
+      @media screen and (max-width: 800px){
+         & li{
+            display: block;              
+            padding: 5px 10px 10px;              
+
+            &>ul{
+               position: relative;
+               text-align: center;              
+            }
+            & li{
+               display: inline-block;
+               padding: 0 10px 10px;
+            }
+         }
+      } 
+   }    

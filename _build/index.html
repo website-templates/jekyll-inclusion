@@ -1,0 +1,30 @@
+---
+layout: page
+home_img: "img/bg/index-home.jpg"
+end_img: "img/bg/index-end.jpg"
+color: light
+---
+
+<div class="post-list">{% for post in paginator.posts %}
+  <article class="post-preview"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/{{ post.thumb_img }}" alt="{{ post.title }}" class="post-preview__image js-lazy"/><a href="{{ post.url | prepend: site.baseurl }}" class="post-preview__link">
+      <h3 class="post-preview__title">{{ post.title }}</h3>{% if post.subtitle %}			
+      <h4 class="post-preview__subtitle">{{ post.subtitle }}</h4>{% endif %}</a>
+    <p class="post-preview__meta">
+      {% if post.translator %}
+      Author: <span class="post-preview__meta-author">{{ post.author }}</span>, translator: <span class="post-preview__meta-translator">{{ post.translator }} </span>Original: <a href="{{ post.source-link }}" class="post-preview__meta-source">{{ post.source }}</a>{% else %}
+      Author: <span class="post-preview__meta-author">{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</span>{% endif %}, published: 
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-preview__meta-date">{{ post.date | date: "%B %-d, %Y" }}</time>{% if post.labels %}<br/>Labels:
+      {% for label in post.labels %} <span class="post-preview__meta-tag">{{ label }}</span>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+      {% endif %}
+    </p>
+  </article>
+  <hr class="post-divider"/>{% endfor %}
+</div>{% if paginator.total_pages > 1 %}
+<nav class="pager">
+  <ul>{% if paginator.previous_page %}
+    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">New posts &rsaquo; </a></li>{% endif %}
+    {% if paginator.next_page %}
+    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link"> &lsaquo; Previous posts</a></li>{% endif %}
+  </ul>
+</nav>{% endif %}

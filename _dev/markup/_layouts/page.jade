@@ -1,0 +1,64 @@
+:verbatim
+	---
+	layout: default
+	---
+
+//- Page Home
+.overlay.overlay_home(style="background-image: url('{{ site.baseurl }}/{% if page.home_img %}{{ page.home_img }}{% else %}{{ site.home_img }}{% endif %}')")
+	section#home.home
+		.container
+			h1.home__title(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+				| {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+			h2.home__subtitle(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+				| {% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
+			a(class="icon icon_down {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} home__icon js-anchor", href='#main', title='Вперед!') Вперед!
+
+//- Main Content
+div#main.main
+	.container
+		| {{ content }}
+
+<!-- Page End -->
+.overlay(style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')")
+	section#end.end
+		.container
+			h2.end__title(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+				| Let's get in touch!
+			h3.end__subtitle(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+				| If you have any questions, please do not hesitate to contact me
+			nav.social
+				ul
+					li.social__item
+						a(class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_rss", href="{{ '/feed.xml' | prepend: site.baseurl }}", title='RSS feed') News feed
+					| {% if site.twitter_username %}
+					li.social__item
+						a(class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_twitter", href='https://twitter.com/{{ site.twitter_username }}', title='My Twitter') Follow me on twitter
+					| {% endif %}
+					| {% if site.fb_username %}
+					li.social__item
+						a(class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_fb", href='https://www.facebook.com/{{ site.fb_username }}', title='I`m on Facebook') My Facebook
+					| {% endif %}
+					| {% if site.gplus_username %}
+					li.social__item
+						a(class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_gplus", href='https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author', title='My Google+') Maxim Orlov on Google+
+					| {% endif %}
+					| {% if site.email %}
+					li.social__item
+						a(class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_mail", href='mailto:{{ site.email }}', title='Shoot an email to mail@orlovmax.com') mail@orlovmax.com
+					| {% endif %}
+					| {% if site.skype_username %}
+					li.social__item
+						a(class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_skype", href='skype:{{ site.skype_username }}?add', title='My Skype') Add me to Skype contacts
+					| {% endif %}
+					| {% if site.github_username %}
+					li.social__item
+						a(class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_git", href='https://github.com/{{ site.github_username }}', title='My Github') My projects on github
+					| {% endif %}
+					| {% if site.bitbucket_username %}
+					li.social__item
+						a(class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_bitbucket", href='https://bitbucket.org/{{ site.bitbucket_username }}', title='My Bitbucket') Some of my projects on Bitbucket
+					| {% endif %}
+					| {% if site.linkedin_username %}
+					li.social__item
+						a(class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_linkedin", href='https://linkedin.com/in/{{ site.linkedin_username }}', title='My Linkedin') My Linkedin profile
+					| {% endif %}

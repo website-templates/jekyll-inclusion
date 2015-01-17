@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div style="background-image: url('{{ site.baseurl }}/{% if page.home_img %}{{ page.home_img }}{% else %}{{ site.home_img }}{% endif %}')" class="overlay overlay_home">
+  <section id="home" class="home">
+    <div class="container">
+      <h1 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="home__title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+      <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="home__subtitle">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</h2><a href="#main" title="Вперед!" class="icon icon_down {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} home__icon js-anchor">Вперед!</a>
+    </div>
+  </section>
+</div>
+<div id="main" class="main">
+  <div class="container">{{ content }}</div>
+</div><!-- Page End -->
+<div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="overlay">
+  <section id="end" class="end">
+    <div class="container">
+      <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__title">Let's get in touch!</h2>
+      <h3 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__subtitle">If you have any questions, please do not hesitate to contact me</h3>
+      <nav class="social">
+        <ul>
+          <li class="social__item"><a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="RSS feed" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_rss">News feed</a></li>{% if site.twitter_username %}
+          <li class="social__item"><a href="https://twitter.com/{{ site.twitter_username }}" title="My Twitter" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_twitter">Follow me on twitter</a></li>{% endif %}
+          {% if site.fb_username %}
+          <li class="social__item"><a href="https://www.facebook.com/{{ site.fb_username }}" title="I`m on Facebook" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_fb">My Facebook</a></li>{% endif %}
+          {% if site.gplus_username %}
+          <li class="social__item"><a href="https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author" title="My Google+" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_gplus">Maxim Orlov on Google+</a></li>{% endif %}
+          {% if site.email %}
+          <li class="social__item"><a href="mailto:{{ site.email }}" title="Shoot an email to mail@orlovmax.com" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_mail">mail@orlovmax.com</a></li>{% endif %}
+          {% if site.skype_username %}
+          <li class="social__item"><a href="skype:{{ site.skype_username }}?add" title="My Skype" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_skype">Add me to Skype contacts</a></li>{% endif %}
+          {% if site.github_username %}
+          <li class="social__item"><a href="https://github.com/{{ site.github_username }}" title="My Github" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_git">My projects on github</a></li>{% endif %}
+          {% if site.bitbucket_username %}
+          <li class="social__item"><a href="https://bitbucket.org/{{ site.bitbucket_username }}" title="My Bitbucket" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_bitbucket">Some of my projects on Bitbucket</a></li>{% endif %}
+          {% if site.linkedin_username %}
+          <li class="social__item"><a href="https://linkedin.com/in/{{ site.linkedin_username }}" title="My Linkedin" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_linkedin">My Linkedin profile</a></li>{% endif %}
+        </ul>
+      </nav>
+    </div>
+  </section>
+</div>

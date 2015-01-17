@@ -1,0 +1,91 @@
+blockquote{
+   font-family: $font-serif;
+   display: block;
+   clear: both;
+   padding: 10px 0 5px;
+   margin-bottom: 20px;
+   
+   & p{
+      font-style: italic;
+      color: $bq-text;
+   }      
+   & cite{
+      display: block;
+      margin-top: 10px;  
+      font-size: 20px;
+      color: $bq-cite;
+      @media screen and (max-width: 960px){
+        font-size: 18px;
+      }
+      
+      & a{ 
+         color: $bq-cite;
+         &:hover{
+            text-decoration: none;
+            color: $bq-cite;
+         }
+      }
+      
+      &:before{
+         content: "\2014";
+         color: $bq-cite;
+      }
+   }
+}
+.bq{
+   
+   &_pos-center{
+      @include common-elem(center);
+      
+      &-extra{
+         @include common-elem-extra(center);
+      }
+   }
+   &_pos-left{
+      @include common-elem(left);
+      
+      &-extra{
+         @include common-elem-extra(left);
+      }
+   }
+   &_pos-right{
+      @include common-elem(right);
+      
+      &-extra{
+         @include common-elem-extra(right);
+      }
+   }
+   &_align-center{
+      text-align: justify;      
+      
+      & p:first-child:before{         
+         content: "\201C";
+         padding-right: 10px;
+         font-size: 60px;
+         line-height: 0;
+         vertical-align: middle; 
+         color: $bq-text;
+      }    
+      & cite{
+         text-align: right;
+      }
+   }
+   &_align-left{
+      text-align: left; 
+      padding-left: 15px;
+      border-left: 3px solid $bq-border;
+      
+      & cite{
+         text-align: right;
+      }
+   }
+   &_align-right{
+      text-align: right; 
+      padding-right: 15px;
+      border-right: 3px solid $bq-border;
+      
+      & cite{
+         text-align: left;
+      }
+   }
+}

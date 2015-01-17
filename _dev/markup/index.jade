@@ -1,0 +1,56 @@
+:verbatim
+	---
+	layout: page
+	home_img: "img/bg/index-home.jpg"
+	end_img: "img/bg/index-end.jpg"
+	color: light
+	---
+
+.post-list
+	| {% for post in paginator.posts %}
+	article.post-preview
+		img.post-preview__image.js-lazy(src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", data-src="{{ site.baseurl }}/{{ post.thumb_img }}", alt="{{ post.title }}")
+		a.post-preview__link(href='{{ post.url | prepend: site.baseurl }}')
+			h3.post-preview__title
+				| {{ post.title }}
+			| {% if post.subtitle %}			
+			h4.post-preview__subtitle
+				| {{ post.subtitle }}
+			| {% endif %}
+		p.post-preview__meta 
+			| {% if post.translator %}
+			| Author: 
+			span.post-preview__meta-author {{ post.author }}
+			| , translator: 
+			span.post-preview__meta-translator {{ post.translator }} 
+			| Original: 
+			a.post-preview__meta-source(href="{{ post.source-link }}") {{ post.source }}
+			| {% else %}
+			| Author: 
+			span.post-preview__meta-author {% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}
+			| {% endif %}, published: 
+			time.post-preview__meta-date(datetime="{{ post.date | date: '%Y-%m-%d' }}") {{ post.date | date: "%B %-d, %Y" }}
+			| {% if post.labels %}
+			br
+			| Labels:
+			| {% for label in post.labels %} 
+			span.post-preview__meta-tag {{ label }}
+			| {% unless forloop.last %}, {% endunless %}
+			| {% endfor %}
+			| {% endif %}
+	hr.post-divider		
+	| {% endfor %}
+
+//- Pager
+| {% if paginator.total_pages > 1 %}
+nav.pager
+	ul
+		| {% if paginator.previous_page %}
+		li.pager__item.pager__item_next
+			a.pager__link(href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}") New posts &rsaquo; 
+		| {% endif %}
+		| {% if paginator.next_page %}
+		li.pager__item.pager__item_previous
+			a.pager__link(href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}")  &lsaquo; Previous posts
+		| {% endif %}
+| {% endif %}

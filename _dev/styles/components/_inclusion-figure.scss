@@ -1,0 +1,93 @@
+figure {  
+   color: $figure-caption;
+   
+   & figcaption{
+      font-family: $font-condensed;
+      margin: 10px 0 5px;
+      padding: 0 10px;
+      font-size: 25px;
+      color: $figure-caption;
+      @media screen and (max-width: 960px){
+        font-size: 20px;
+      }
+   }  
+   /* Code content */
+   & code,pre {
+      color: $code-color;
+   }
+
+   & pre { 
+      background-color: $code-bg;
+      border-color: $code-border;
+   }
+   /* Image content */
+   & img{
+      display: block;
+      /*width: 100%;*/
+      max-width: 100%;
+      margin: auto;
+   }      
+   /* Video content */
+   &>div{
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 20px;
+      padding-bottom: 60%;  
+      
+      & iframe{
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+      }   
+   }  
+}
+
+
+.image, .code, .video{ 
+   &_center{
+      @include common-elem(center);
+      
+      & figcaption{
+         text-align: center; 
+      }
+      
+      &-extra{
+         @include common-elem-extra(center);
+      }
+   }
+   &_left{
+      @include common-elem(left);
+      
+      & figcaption{
+         text-align: left; 
+         border-left: 3px solid $figure-border;
+         @media screen and (max-width: 800px){
+            text-align: center;
+            border: none;
+         }               
+      }
+      
+      &-extra{
+         @include common-elem-extra(left);
+      }
+   }
+   &_right{
+      @include common-elem(right);
+      
+      & figcaption{
+         text-align: right;
+         border-right: 3px solid $figure-border;
+         @media screen and (max-width: 800px){
+            text-align: center;
+            border: none;
+         }               
+      }
+      
+      &-extra{
+         @include common-elem-extra(right);
+      }
+   }
+}

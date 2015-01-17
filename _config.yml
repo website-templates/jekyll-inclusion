@@ -1,0 +1,43 @@
+# Site settings
+lang: en
+title: Inclusion jekyll theme
+email: mail@orlovmax.com
+author: Maxim Orlov
+description: "Responsive blog theme for jekyll website generator"
+baseurl: "/jekyll-inclusion" # the subpath of your site, e.g. /blog/
+url: "http://website-templates.github.io" # the base hostname & protocol for your site
+# lang_en: "http://blog.orlovmax.com"
+# lang_ua: "http://uablog.orlovmax.com"
+# lang_ru: "http://rublog.orlovmax.com"
+home-repo: "https://github.com/website-templates/jekyll-inclusion"
+keywords: "jekyll theme, jekyll template, responsive jekyll theme"
+twitter_username: orlovmax_im
+github_username:  orlovmax
+# fb_username:
+gplus_username: 104202961668156466871
+# skype_username:
+bitbucket_username: orlovmax
+# linkedin_username: 
+
+home_img: "img/bg/index-home.jpg"
+end_img: "img/bg/index-end.jpg"
+thumb_img: "img/pic.jpg"
+
+# disqus-code: 
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+paginate: 5
+exclude: [
+'node_modules',
+'bower_components',
+'Gruntfile.js',
+'package.json',
+'bower.json',
+'README.md',
+'Rakefile'
+]
+
+source: _build
+destination: _deploy
