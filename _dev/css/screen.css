@@ -1,50 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300&subset=latin,cyrillic);/* 
- * Single-page framework "Inclusion" based on scss mixins
- * 
- * Copyright (c) 2014 Maxim Orlov
- *
- * Licensed under the MIT license:
- * http://www.opensource.org/licenses/mit-license.php
- *
- * Project home:
- * https://github.com/mycodelab/inclusion
-*/
-
-/*==============================
-  $Contents
-  ==============================*/
-
-/**
-* Contents......................Here we are!
-*
-* Component.....................useful things, mixins, settings, elements
-*   Reset.......................Reset defaults 
-*   Elements....................External scss mixins
-*   Grid system.................Import fluid gs
-*   Prism.......................Prism syntax highlight
-*   Fonts.......................Offline and online fonts
-*   Settings....................Framework settings and variables
-*   Mixins......................Internal framework mixins
-*                      
-* Layout styles.................Basic page styles
-*   General.....................Page body and container
-*   Top.........................Page header and navbar
-*   Content.....................Page content, sections, chapters, footer
-* Inclusions....................Blog content inclusions
-*   Typography..................Headings and text
-*   Buttons.....................Iconic and common buttons
-*   Common block................Common block element
-*   Blockquote..................Blockquote element
-*   List........................List element
-*   Figure......................Images and code elements
-*   Table.......................Table element
-*
-* Media queries.................Media queries section
-*/
-
-/* $Reset*/
-
-html,
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Open+Sans+Condensed:300&subset=latin,cyrillic);html,
 body,
 div,
 span,
@@ -102,8 +56,6 @@ body {
 	line-height: 1;
 }
 
-/* HTML5 display-role reset for older browsers */
-
 article,
 aside,
 details,
@@ -126,37 +78,7 @@ input[type=submit] {
 	cursor: pointer;
 }
 
-/* $Elements */
-
-/* $Grid system */
-
-/* =========================================================
-   Fluid grid system for scss
-   ========================================================= */
-
-/*Internal mixins */
-
-/* Calc() mixin */
-
-/* Clearfix */
-
-/* GS Mixins */
-
-/* Grid system container mixin, should be used for grid container and rows. */
-
-/* Column mixin: there are five variables, column count for current element, 
- * total column count in row, horizontal gutter and vertical gutter
- * By default it sets to 1 column of 12 total columns without gutters. 
- * Note, that gutter sets in percents, not pixels.*/
-
-/* Offset mixin allows to push column left or right on some distance. 
- * Expected settings: distance-column count to move on, total column count in row, horizontal gutter like in other columns. 
- * By default	it sets to 1 column of 12 total columns without gutters. Gutter units - percents*/
-
-/* Generate classnames for common fluid grid */
-
-.gs_container { /* Grid width and margin math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_container {
 	width: 100%;
 	margin: 0 0;
 	clear: both;
@@ -165,13 +87,12 @@ input[type=submit] {
 .gs_container:before,
 .gs_container:after {
 	display: block;
-	content: '';
+	content: "";
 	clear: both;
 	height: 0;
 }
 
-.gs_row { /* Grid width and margin math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_row {
 	width: 100%;
 	margin: 0 0;
 	clear: both;
@@ -180,254 +101,218 @@ input[type=submit] {
 .gs_row:before,
 .gs_row:after {
 	display: block;
-	content: '';
+	content: "";
 	clear: both;
 	height: 0;
 }
 
 .gs_col-1 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 6.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs_col-2 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 14.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs_col-3 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 23%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs_col-4 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 31.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs_col-5 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 39.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs_col-6 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 48%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs_col-7 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 56.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs_col-8 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 64.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs_col-9 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 73%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs_col-10 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 81.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs_col-11 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 89.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs_col-12 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+	float: left;
 	width: 98%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
-.gs_push-1 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_push-1 {
 	margin-left: 9.33333%;
 }
 
-.gs_pull-1 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_pull-1 {
 	margin-right: 9.33333%;
 }
 
-.gs_push-2 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_push-2 {
 	margin-left: 17.66667%;
 }
 
-.gs_pull-2 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_pull-2 {
 	margin-right: 17.66667%;
 }
 
-.gs_push-3 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_push-3 {
 	margin-left: 26%;
 }
 
-.gs_pull-3 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_pull-3 {
 	margin-right: 26%;
 }
 
-.gs_push-4 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_push-4 {
 	margin-left: 34.33333%;
 }
 
-.gs_pull-4 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_pull-4 {
 	margin-right: 34.33333%;
 }
 
-.gs_push-5 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_push-5 {
 	margin-left: 42.66667%;
 }
 
-.gs_pull-5 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_pull-5 {
 	margin-right: 42.66667%;
 }
 
-.gs_push-6 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_push-6 {
 	margin-left: 51%;
 }
 
-.gs_pull-6 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_pull-6 {
 	margin-right: 51%;
 }
 
-.gs_push-7 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_push-7 {
 	margin-left: 59.33333%;
 }
 
-.gs_pull-7 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_pull-7 {
 	margin-right: 59.33333%;
 }
 
-.gs_push-8 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_push-8 {
 	margin-left: 67.66667%;
 }
 
-.gs_pull-8 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_pull-8 {
 	margin-right: 67.66667%;
 }
 
-.gs_push-9 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_push-9 {
 	margin-left: 76%;
 }
 
-.gs_pull-9 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_pull-9 {
 	margin-right: 76%;
 }
 
-.gs_push-10 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_push-10 {
 	margin-left: 84.33333%;
 }
 
-.gs_pull-10 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_pull-10 {
 	margin-right: 84.33333%;
 }
 
-.gs_push-11 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_push-11 {
 	margin-left: 92.66667%;
 }
 
-.gs_pull-11 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-   * else - common math */
+.gs_pull-11 {
 	margin-right: 92.66667%;
 }
-
-/* Generate additional classnames for responsive grid */
 
 .demo_gs {
 	margin-bottom: 20px;
@@ -439,18 +324,10 @@ input[type=submit] {
 	line-height: 60px;
 }
 
-/* $Prism */
-
-/**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
- */
-
 code,
 pre {
 	display: inline-block;
-	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	font-family: Consolas, Monaco, "Andale Mono", monospace;
 	font-size: 16px;
 	line-height: 1.5;
 	direction: ltr;
@@ -540,7 +417,7 @@ pre {
 }
 
 .namespace {
-	opacity: .7;
+	opacity: 0.7;
 }
 
 .token.tab:not(:empty):before,
@@ -549,51 +426,13 @@ pre {
 	color: #e0d7d1;
 }
 
-/* $Fonts*/
-
-/* 'Open Sans', Tahoma, Verdana, Arial, sans-serif - for headings and text*/
-
-/*  Georgia, Times, "Times New Roman", serif  - for blockquotes and lists */
-
-/*  Consolas, Monaco, 'Andale Mono', monospace - for code fragments */
-
 @font-face {
-	font-family: 'inclusion';
+	font-family: "inclusion";
 	src: url("../fonts/inclusion/inclusion.eot");
 	src: url("../fonts/inclusion/inclusion.eot#iefix") format("embedded-opentype"), url("../fonts/inclusion/inclusion.woff") format("woff"), url("../fonts/inclusion/inclusion.ttf") format("truetype"), url("../fonts/inclusion/inclusion.svg") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
-
-/* $Settings*/
-
-/* Main colors and shades */
-
-/* Inclusions and components colors */
-
-/* Typo colors */
-
-/* Blockquote colors */
-
-/* List colors */
-
-/* Figure: image and code colors */
-
-/* Table colors */
-
-/* Button colors */
-
-/* Spoiler colors */
-
-/* Inclusions and components fonts */
-
-/* maps */
-
-/* $Mixins*/
-
-/* Common element mixin */
-
-/* $Layout general */
 
 html,
 body {
@@ -603,17 +442,17 @@ body {
 
 *::-moz-selection {
 	color: #efefef;
-	background: #F39C12;
+	background: #f39c12;
 }
 
 *::selection {
 	color: #efefef;
-	background: #F39C12;
+	background: #f39c12;
 }
 
 *::-moz-selection {
 	color: #efefef;
-	background: #F39C12;
+	background: #f39c12;
 }
 
 body {
@@ -630,7 +469,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	box-shadow: inset 0 3px 3px -2px #000, inset 0 -3px 3px -2px #000;
+	box-shadow: inset 0 3px 3px -2px black, inset 0 -3px 3px -2px black;
 }
 
 .overlay_home {
@@ -649,14 +488,10 @@ body {
 .container:before,
 .container:after {
 	display: block;
-	content: '';
+	content: "";
 	clear: both;
 	height: 0;
 }
-
-/* $Layout top */
-
-/* Common header */
 
 .main-header {
 	display: block;
@@ -666,8 +501,6 @@ body {
 	left: 0;
 	z-index: 999;
 }
-
-/* Header group */
 
 .hgroup {
 	position: relative;
@@ -705,7 +538,7 @@ body {
 }
 
 .hgroup > a:before {
-	content: "\e804";
+	content: "";
 	display: inline-block;
 	margin-right: 10px;
 	font-family: "inclusion";
@@ -722,7 +555,7 @@ body {
 }
 
 .hgroup > a.is-open:before {
-	content: "\e805";
+	content: "";
 }
 
 .hgroup > a:hover:before {
@@ -741,8 +574,6 @@ body {
 	display: inline-block;
 	text-align: center;
 }
-
-/* Common navigation */
 
 .navbar {
 	display: block;
@@ -766,7 +597,7 @@ body {
 }
 
 .navbar li.submenu > a:after {
-	content: "\e809";
+	content: "";
 	display: inline-block;
 	padding-left: 5px;
 	font-family: "inclusion";
@@ -819,8 +650,6 @@ body {
 	display: block;
 	padding: 0 10px 10px;
 }
-
-/* $Layout content */
 
 .home,
 .post-home,
@@ -913,7 +742,7 @@ body {
 .post-preview:before,
 .post-preview:after {
 	display: block;
-	content: '';
+	content: "";
 	clear: both;
 	height: 0;
 }
@@ -973,7 +802,7 @@ body {
 .pager ul:before,
 .pager ul:after {
 	display: block;
-	content: '';
+	content: "";
 	clear: both;
 	height: 0;
 }
@@ -1067,12 +896,12 @@ body {
 }
 
 .inclusion {
-	color: #F39C12;
+	color: #f39c12;
 	white-space: nowrap;
 }
 
 .inclusion:hover {
-	color: #F39C12;
+	color: #f39c12;
 	text-decoration: none;
 }
 
@@ -1081,7 +910,7 @@ body {
 }
 
 .inclusion:before {
-	content: "\e80f";
+	content: "";
 	display: inline-block;
 	font-family: "inclusion";
 	font-style: normal;
@@ -1092,12 +921,8 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 70%;
 	vertical-align: middle;
-	color: #F39C12;
+	color: #f39c12;
 }
-
-/* $Typography */
-
-/* Common typo elements */
 
 h1,
 h2,
@@ -1189,12 +1014,8 @@ a:focus {
 }
 
 .typo_shadow {
-	text-shadow: 1px 1px 1px #000;
+	text-shadow: 1px 1px 1px black;
 }
-
-/* $Button */
-
-/* Common button */
 
 .button {
 	display: block;
@@ -1385,8 +1206,6 @@ a:focus {
 	content: "";
 }
 
-/* $Common block */
-
 .block_center {
 	clear: both;
 	width: 90%;
@@ -1476,7 +1295,7 @@ a:focus {
 }
 
 .block_spoiler > a:before {
-	content: "\e803";
+	content: "";
 	display: inline-block;
 	margin-right: 10%;
 	font-family: "inclusion";
@@ -1494,10 +1313,8 @@ a:focus {
 }
 
 .block_spoiler.is-closed > a:before {
-	content: "\e802";
+	content: "";
 }
-
-/* $Blockquote */
 
 blockquote {
 	font-family: Georgia, Times, "Times New Roman", serif;
@@ -1529,7 +1346,7 @@ blockquote cite a:hover {
 }
 
 blockquote cite:before {
-	content: "\2014";
+	content: "—";
 	color: #2b2b2b;
 }
 
@@ -1575,7 +1392,7 @@ blockquote cite:before {
 }
 
 .bq_align-center p:first-child:before {
-	content: "\201C";
+	content: "“";
 	padding-right: 10px;
 	font-size: 60px;
 	line-height: 0;
@@ -1606,10 +1423,6 @@ blockquote cite:before {
 .bq_align-right cite {
 	text-align: left;
 }
-
-/* $List */
-
-/* Common list*/
 
 ul,
 ol {
@@ -1671,10 +1484,8 @@ ol li {
 	margin-right: -120px;
 }
 
-/* $Figure */
-
 figure {
-	color: #777777; /* Code content */ /* Image content */ /* Video content */
+	color: #777777;
 }
 
 figure figcaption {
@@ -1696,7 +1507,7 @@ figure pre {
 }
 
 figure img {
-	display: block; /*width: 100%;*/
+	display: block;
 	max-width: 100%;
 	margin: auto;
 }
@@ -1786,8 +1597,6 @@ figure > div iframe {
 	margin-right: -120px;
 }
 
-/* $Table */
-
 table {
 	max-width: 100%;
 	margin: 10px auto 20px;
@@ -1870,244 +1679,210 @@ table caption {
 @media screen and (max-width: 960px) {
 
 .gs-tablet_col-1 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 6.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-tablet_col-2 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 14.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-tablet_col-3 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 23%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-tablet_col-4 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 31.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-tablet_col-5 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 39.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-tablet_col-6 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 48%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-tablet_col-7 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 56.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-tablet_col-8 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 64.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-tablet_col-9 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 73%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-tablet_col-10 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 81.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-tablet_col-11 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 89.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-tablet_col-12 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 98%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
-.gs-tablet_push-1 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_push-1 {
 	margin-left: 9.33333%;
 }
 
-.gs-tablet_pull-1 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_pull-1 {
 	margin-right: 9.33333%;
 }
 
-.gs-tablet_push-2 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_push-2 {
 	margin-left: 17.66667%;
 }
 
-.gs-tablet_pull-2 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_pull-2 {
 	margin-right: 17.66667%;
 }
 
-.gs-tablet_push-3 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_push-3 {
 	margin-left: 26%;
 }
 
-.gs-tablet_pull-3 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_pull-3 {
 	margin-right: 26%;
 }
 
-.gs-tablet_push-4 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_push-4 {
 	margin-left: 34.33333%;
 }
 
-.gs-tablet_pull-4 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_pull-4 {
 	margin-right: 34.33333%;
 }
 
-.gs-tablet_push-5 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_push-5 {
 	margin-left: 42.66667%;
 }
 
-.gs-tablet_pull-5 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_pull-5 {
 	margin-right: 42.66667%;
 }
 
-.gs-tablet_push-6 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_push-6 {
 	margin-left: 51%;
 }
 
-.gs-tablet_pull-6 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_pull-6 {
 	margin-right: 51%;
 }
 
-.gs-tablet_push-7 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_push-7 {
 	margin-left: 59.33333%;
 }
 
-.gs-tablet_pull-7 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_pull-7 {
 	margin-right: 59.33333%;
 }
 
-.gs-tablet_push-8 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_push-8 {
 	margin-left: 67.66667%;
 }
 
-.gs-tablet_pull-8 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_pull-8 {
 	margin-right: 67.66667%;
 }
 
-.gs-tablet_push-9 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_push-9 {
 	margin-left: 76%;
 }
 
-.gs-tablet_pull-9 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_pull-9 {
 	margin-right: 76%;
 }
 
-.gs-tablet_push-10 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_push-10 {
 	margin-left: 84.33333%;
 }
 
-.gs-tablet_pull-10 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_pull-10 {
 	margin-right: 84.33333%;
 }
 
-.gs-tablet_push-11 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_push-11 {
 	margin-left: 92.66667%;
 }
 
-.gs-tablet_pull-11 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-tablet_pull-11 {
 	margin-right: 92.66667%;
 }
 
@@ -2518,244 +2293,210 @@ figure figcaption {
 @media screen and (max-width: 640px) {
 
 .gs-mobile_col-1 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 6.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-mobile_col-2 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 14.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-mobile_col-3 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 23%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-mobile_col-4 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 31.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-mobile_col-5 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 39.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-mobile_col-6 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 48%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-mobile_col-7 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 56.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-mobile_col-8 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 64.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-mobile_col-9 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 73%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-mobile_col-10 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 81.33333%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-mobile_col-11 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 89.66667%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
 .gs-mobile_col-12 {
-	float: left; /* Grid gutter width and margin math for calc() and fallback */ /* Column width math */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+	float: left;
 	width: 98%;
 	margin-left: 1%;
-	margin-right: 1%; /* Column height math */ /* Check gutter height and it fallback for `auto` values, if false - return no math variant */
+	margin-right: 1%;
 	height: auto;
 	margin-top: 1%;
 	margin-bottom: 1%;
 }
 
-.gs-mobile_push-1 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_push-1 {
 	margin-left: 9.33333%;
 }
 
-.gs-mobile_pull-1 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_pull-1 {
 	margin-right: 9.33333%;
 }
 
-.gs-mobile_push-2 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_push-2 {
 	margin-left: 17.66667%;
 }
 
-.gs-mobile_pull-2 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_pull-2 {
 	margin-right: 17.66667%;
 }
 
-.gs-mobile_push-3 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_push-3 {
 	margin-left: 26%;
 }
 
-.gs-mobile_pull-3 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_pull-3 {
 	margin-right: 26%;
 }
 
-.gs-mobile_push-4 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_push-4 {
 	margin-left: 34.33333%;
 }
 
-.gs-mobile_pull-4 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_pull-4 {
 	margin-right: 34.33333%;
 }
 
-.gs-mobile_push-5 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_push-5 {
 	margin-left: 42.66667%;
 }
 
-.gs-mobile_pull-5 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_pull-5 {
 	margin-right: 42.66667%;
 }
 
-.gs-mobile_push-6 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_push-6 {
 	margin-left: 51%;
 }
 
-.gs-mobile_pull-6 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_pull-6 {
 	margin-right: 51%;
 }
 
-.gs-mobile_push-7 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_push-7 {
 	margin-left: 59.33333%;
 }
 
-.gs-mobile_pull-7 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_pull-7 {
 	margin-right: 59.33333%;
 }
 
-.gs-mobile_push-8 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_push-8 {
 	margin-left: 67.66667%;
 }
 
-.gs-mobile_pull-8 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_pull-8 {
 	margin-right: 67.66667%;
 }
 
-.gs-mobile_push-9 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_push-9 {
 	margin-left: 76%;
 }
 
-.gs-mobile_pull-9 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_pull-9 {
 	margin-right: 76%;
 }
 
-.gs-mobile_push-10 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_push-10 {
 	margin-left: 84.33333%;
 }
 
-.gs-mobile_pull-10 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_pull-10 {
 	margin-right: 84.33333%;
 }
 
-.gs-mobile_push-11 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_push-11 {
 	margin-left: 92.66667%;
 }
 
-.gs-mobile_pull-11 { /* Grid gutter width and margin math for calc() and fallback */ /* Column width math for calc() and fallback */ /* Check gutter width and it fallback for `auto` values, if false - return no math variant */ /* Check gutter value, if its units not equal to grid units - return calc math with fallback<
-     * else - common math */
+.gs-mobile_pull-11 {
 	margin-right: 92.66667%;
 }
 

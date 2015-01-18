@@ -1,0 +1,96 @@
+// Main colors and shades
+$color-dark: #2b2b2b
+$color-dark_lighten: lighten($color-dark, 30%)
+
+$color-light: #efefef
+$color-light_darken: darken($color-light, 30%)
+
+$accent-color: #f39c12
+
+$link-color: #3498db
+$link-hover-color: #2980b9
+$shadow-color: black
+
+// Inclusions and components colors
+$selection-bg: $accent-color
+$selection-color: $color-light
+
+$body-bg: $color-light
+$body-text: $color-dark
+
+$header-shadow: $color-dark
+$header-text: $color-light
+$header-text-hover: $color-dark_lighten
+$header-text-selected: $color-dark_lighten
+
+$nav-bg: $color-light
+$nav-text: $color-dark
+$nav-text-hover: $color-light_darken
+
+$jumbo-text: $color-light
+$section-text: $color-dark
+$section-muted: $color-dark_lighten
+$section-bg: $color-light
+$section-shadow: $shadow-color
+$chapter-border: $color-light-darken
+
+// Typo colors
+$typo-muted: $color-dark_lighten
+$typo-shadow: $shadow-color
+
+// Blockquote colors
+$bq-text: $color-dark_lighten
+$bq-cite: $color-dark
+$bq-border: $color-dark_lighten
+
+// List colors
+$list-text: $color-dark_lighten
+
+// Figure: image and code colors
+$figure-caption: $color-dark_lighten
+$figure-border: $color-dark_lighten
+$code-color: $color-dark
+$code-border: darken($color-light, 10%)
+$code-bg: lighten($color-light, 5%)
+
+// Table colors
+$table-text: $color-dark_lighten
+$table-border: $color-dark_lighten
+$table-head-text: $color-dark
+$table-head-border: $color-dark
+
+// Button colors
+$button-text: $color-dark
+$button-text-hover: $color-dark_lighten
+$button-text-disabled: $color-dark_lighten
+$button-border: $color-dark_lighten
+$button-border-hover: $color-light_darken
+$button-border-disabled: $color-dark_lighten
+
+$icon-border: $color-light
+$icon-color: $color-light
+$icon-border-dark: $color-dark
+$icon-color-dark: $color-dark
+$icon-border-light: $color-light
+$icon-color-light: $color-light
+
+// Spoiler colors
+$spoiler-bg: lighten($color-light, 5%)
+$spoiler-head-bg: darken($color-light, 5%)
+$spoiler-head-bg-hover: darken($color-light, 10%)
+$spoiler-border: $color-dark_lighten
+$spoiler-head-text: $color-dark
+
+// Inclusions and components fonts
+$font-serif: Georgia, Times, "Times New Roman", serif
+$font-sans: "Open Sans", Tahoma, Verdana, Arial, sans-serif
+$font-condensed: "Open Sans Condensed", sans-serif
+
+// maps
+$icons: up "\e800", down "\e801", twitter "\e806", vk "\e807", gplus "\e808", skype "\e80a", bitbucket "\e80b", linkedin "\e80c", mail "\e80d", git "\e80e", pencil "\e810", fb "\e811", rss "\e812"
+
+$body-pattern: "data:image/jpeg;base64,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"
+
+$overlay-light: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAAnSURBVHjaYvz//z8DFEgxMDAwMDGgARaYDAMDwzOsKgAAAAD//wMA41IEIeqswKkAAAAASUVORK5CYII="
+
+$overlay-dark: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAAZSURBVHjaYmCAAGM0GjfHGEMGAAAA//8DACm0ATMe8beGAAAAAElFTkSuQmCC"

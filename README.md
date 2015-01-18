@@ -5,6 +5,8 @@ Simple and nice blog theme based on Inclusion framework.
 Proudly built with [Jekyll](http://jekyllrb.com/) and [Grunt](http://gruntjs.com/), hosted on [Github](https://github.com).
 Compatible browsers: IE8+, Firefox, Chrome, Opera, Yandex.browser, Safari
 
+Check out [quick demo](http://website-templates.github.io/jekyll-inclusion/) of this theme
+
 ---
 
 ##Contents

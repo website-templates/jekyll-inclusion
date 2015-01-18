@@ -121,7 +121,7 @@ comments: true
         <figcaption>Left-floated image</figcaption>
     </figure>
     <figure class="image_left" title="Left-floated image. Click on it to see enlarged image">
-        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/img/post/lorem/1.jpg" data-title="Cruise ship" alt="Cruise ship in Trondheimsfjorden, 1923" />
+        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/1.jpg" data-title="Cruise ship" alt="Cruise ship in Trondheimsfjorden, 1923" />
         <figcaption>Cruise ship in Trondheimsfjorden, 1923</figcaption>
     </figure>
     <p>Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat</p>
@@ -138,7 +138,7 @@ comments: true
         <figcaption>Right-floated image</figcaption>
     </figure>
     <figure class="image_right" title="Right-floated image. Click on it to see enlarged image">
-        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/img/post/lorem/2.jpg" data-title="Canyon bridge" alt="Capilano Canyon, North Vancouver" />
+        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/2.jpg" data-title="Canyon bridge" alt="Capilano Canyon, North Vancouver" />
         <figcaption>Capilano Canyon, North Vancouver</figcaption>
     </figure>
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
@@ -155,7 +155,7 @@ comments: true
         <figcaption>Centered full-width image</figcaption>
     </figure>    
     <figure class="image_center" title="Centered full-width image. Click on it to see enlarged image">
-        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/img/post/lorem/3.jpg" data-title="Beacon" alt="Lindesnes Fyr" />
+        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/3.jpg" data-title="Beacon" alt="Lindesnes Fyr" />
         <figcaption>Lindesnes Fyr</figcaption>
     </figure>                   
     <p>Fusce vel magna commodo, sodales risus at, eleifend nibh. Nulla tristique metus eu ante elementum, sit amet tempor purus molestie. In luctus feugiat lacus sed lobortis. Suspendisse potenti. In sed magna ornare, aliquet ligula vitae, scelerisque ligula. Donec ac lacus vel lorem aliquet malesuada in sit amet sapien. Aliquam erat volutpat. Nullam gravida faucibus tellus semper molestie. </p>
@@ -171,7 +171,7 @@ comments: true
         <figcaption>Left floated image with extra margin</figcaption>
     </figure>
     <figure class="image_left image_left-extra" title="Left floated image with extra margin. Click on it to see enlarged image">
-        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/img/post/lorem/4.jpg" data-title="Orange sky" alt="Transmission lines in May 1972" />
+        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/4.jpg" data-title="Orange sky" alt="Transmission lines in May 1972" />
         <figcaption>Transmission lines in May 1972</figcaption>
     </figure>
     <p>Phasellus euismod neque at odio congue bibendum. Nam neque lectus, hendrerit nec ligula nec, feugiat tincidunt dolor. Maecenas id sem orci. Ut non velit est. Nullam et lectus in arcu rhoncus rutrum vitae vitae augue. Donec sodales risus auctor velit vulputate, vel elementum velit viverra. Nulla mattis scelerisque tellus eget malesuada. Donec tempus vulputate felis, id dictum odio euismod sit amet. </p>
@@ -188,7 +188,7 @@ comments: true
         <figcaption>Right floated image and with extra margin</figcaption>
     </figure>
     <figure class="image_right image_right-extra" title="Right floated image and with extra margin. Click on it to see enlarged image">
-        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/img/post/lorem/5.jpg" data-title="Surveying" alt="Surveying at Innveien, Veiholmen, 1923." />
+        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/5.jpg" data-title="Surveying" alt="Surveying at Innveien, Veiholmen, 1923." />
         <figcaption>Surveying at Innveien, Veiholmen, 1923.</figcaption>
     </figure>                       
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
@@ -205,7 +205,7 @@ comments: true
         <figcaption>Centered image and with extra margins</figcaption>
     </figure>    
     <figure class="image_center image_center-extra" title="Centered image and with extra margins. Click on it to see enlarged image">
-        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/img/post/lorem/8.jpg" data-title="Old view" alt="Perspective of Jackson, Miss. 1925." />
+        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/8.jpg" data-title="Old view" alt="Perspective of Jackson, Miss. 1925." />
         <figcaption>Perspective of Jackson, Miss. 1925.</figcaption>
     </figure>
 </section>
@@ -1068,11 +1068,11 @@ comments: true
     </figure>
     <div class="block_right" title="Right-floated thumbs within block">
         <figure class="image_left">
-            <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/img/post/lorem/6.jpg" alt="A lot of sand." />
+            <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/6.jpg" alt="A lot of sand." />
             <figcaption>A lot of sand.</figcaption>
         </figure>                       
         <figure class="image_left">
-            <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/img/post/lorem/7.jpg" alt="Groningen" />
+            <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/7.jpg" alt="Groningen" />
             <figcaption>Groningen</figcaption>
         </figure>                           
     </div>                      
@@ -1218,7 +1218,7 @@ comments: true
     <div class="block_left block_left-extra block_spoiler js-spoiler" title="Left-floated image under spoiler">
         <a href="#" class="js-panel">Hidden image</a>
         <figure class="image_center">
-            <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/img/post/lorem/3.jpg" alt="Lindesnes Fyr" />
+            <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/3.jpg" alt="Lindesnes Fyr" />
             <figcaption>Lindesnes Fyr</figcaption>
         </figure>                           
     </div>
