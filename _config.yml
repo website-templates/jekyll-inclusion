@@ -28,7 +28,7 @@ thumb_img: "img/pic.jpg"
 # Build settings
 markdown: kramdown
 permalink: pretty
-paginate: 5
+paginate: 3
 exclude: [
 'node_modules',
 'bower_components',
