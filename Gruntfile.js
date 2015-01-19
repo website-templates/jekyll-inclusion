@@ -374,12 +374,6 @@ module.exports = function(grunt) {
 
       //Delete .gitkeep files. If you don't use Bower - just run `grunt clean`  
         clean: {
-          gitkeep: ['<%= dev.main %>/**/.gitkeep', '<%= build.main %>/**/.gitkeep'],
-          less: '<%= dev.styles %>/**/*.less',
-          sass: '<%= dev.styles %>/**/*.scss',
-          stylus: '<%= dev.styles %>/**/*.styl',
-          haml: '<%= dev.markup %>/**/*.haml',
-          jade: '<%= dev.markup %>/**/*.jade',
           debug: ['<%= build.js %>/**/*.js',
                   '!<%= build.js %>/**/*.min.js',
                   '<%= build.css %>/**/*.css',
@@ -414,7 +408,7 @@ module.exports = function(grunt) {
         watch: {
           all: {
             files: ['<%= dev.html %>/**/*.html',
-                    '<%= dev.styles %>/**/*.{scss,less,styl}',
+                    '<%= dev.styles %>/**/*.{scss,sass,less,styl}',
                     '<%= dev.css %>/*.css',
                     '<%= dev.js %>/**/*.js',
                     '<%= dev.img %>/**/*.{png,jpg,gif}',

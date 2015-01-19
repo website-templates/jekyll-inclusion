@@ -32,16 +32,21 @@ There are two branches: master branch and gh-pages.
 Project's development based on [frontend-scaffold](https://github.com/orlovmax/front-end-scaffold) and located in master branch:
 
 `/_dev/` folder - contains source code.
-
 `/_build/` folder - build version
+
+gh-pages branch contains pure html/css/js site compiled by jekyll. This is for common user repository. For organization repository deploy branch should be `master` This brunch located in deploy folder:
+
 `/_deploy/` folder - generated site, ready for deploy
 
-gh-pages branch contains pure html/css/js site compiled by jekyll. This is for common user repository. For organization repository deploy branch should be `master`
+You shoul  read [this article](http://www.aymerick.com/2014/07/22/jekyll-github-pages-bower-bootstrap.html) about creating dev and deploy branches for your blog. 
 
 ## Development and blogging
+At first we need to make some fixes to Gruntfile:
+- remove `gruntBase = '../../../';` this string - it used for grunt-collection plugin.
+- remove this task  `grunt.loadNpmTasks('grunt-collection');`
+- uncomment other `grunt.loadNpmTasks`... strings
 
 Install dependencies:
-
 * npm install
 * bower install
 
