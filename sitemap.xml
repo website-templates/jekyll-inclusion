@@ -6,6 +6,14 @@
 	<loc>http://website-templates.github.io/jekyll-inclusion/</loc>
 </url>
 
+<url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/page2/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/page3/</loc>
+</url>
+
 
 <url>
 	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</loc>
@@ -13,6 +21,34 @@
 
 <url>
 	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/11/demo-post-grid/</loc>
 </url>
 
 </urlset>

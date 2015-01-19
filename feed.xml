@@ -5,8 +5,8 @@
     <description>Responsive blog theme for jekyll website generator</description>
     <link>http://website-templates.github.io/jekyll-inclusion/</link>
     <atom:link href="http://website-templates.github.io/jekyll-inclusion/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 19 Jan 2015 23:43:26 +0200</pubDate>
-    <lastBuildDate>Mon, 19 Jan 2015 23:43:26 +0200</lastBuildDate>
+    <pubDate>Tue, 20 Jan 2015 00:23:25 +0200</pubDate>
+    <lastBuildDate>Tue, 20 Jan 2015 00:23:25 +0200</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
       <item>
@@ -52,6 +52,276 @@
         <pubDate>Sun, 18 Jan 2015 00:00:00 +0200</pubDate>
         <link>http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</link>
         <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Demo post &amp;mdash; blockquotes</title>
+        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Blockquotes&lt;/h3&gt;
+
+</description>
+        <pubDate>Sat, 17 Jan 2015 00:00:00 +0200</pubDate>
+        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Demo post &amp;mdash; lists</title>
+        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Ordered and unordered lists&lt;/h3&gt;
+
+</description>
+        <pubDate>Fri, 16 Jan 2015 00:00:00 +0200</pubDate>
+        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Demo post &amp;mdash; code blocks</title>
+        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Code blocks&lt;/h3&gt;
+&lt;p&gt;Let's check code blocks, each of them represent their own markup with predefined classnames.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 15 Jan 2015 00:00:00 +0200</pubDate>
+        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Demo post &amp;mdash; tables</title>
+        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Tables&lt;/h3&gt;
+
+</description>
+        <pubDate>Wed, 14 Jan 2015 00:00:00 +0200</pubDate>
+        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Demo post &amp;mdash; blocks</title>
+        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Blocks&lt;/h3&gt;
+&lt;blockquote class=&quot;bq_align-center&quot;&gt;
+    &lt;p&gt;This inclusion was created as container for other page elements like widgets, complex blocks, media stuff, iframes or floated titles and also some nested things as container with titled lists or image galleries. Also this element have a spoiler option, that hide content under spoiler with title and icon. &lt;br /&gt;
+    This sounds good and it's really useful for some cases so let's see how we can do this.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+        <pubDate>Tue, 13 Jan 2015 00:00:00 +0200</pubDate>
+        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Demo post &amp;mdash; buttons</title>
+        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Buttons&lt;/h3&gt;
+&lt;figure class=&quot;code_center code_center-extra&quot;&gt;
+    &lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;
+    &amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;button button_center button_small&amp;quot;&amp;gt;Small button&amp;lt;/button&amp;gt;
+    &amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;button button_center button_regular&amp;quot;&amp;gt;Regular button&amp;lt;/button&amp;gt;
+    &amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;button button_center button_large&amp;quot;&amp;gt;Large button&amp;lt;/button&amp;gt; 
+    &amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;button button_left button_regular&amp;quot;&amp;gt;Left-floated button&amp;lt;/button&amp;gt; 
+    &amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;button button_right button_regular&amp;quot;&amp;gt;Right-floated button&amp;lt;/button&amp;gt;
+    &amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;button button_center button_regular button_disabled&amp;quot;&amp;gt;Disabled button&amp;lt;/button&amp;gt;
+    &lt;/code&gt;&lt;/pre&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;button type=&quot;button&quot; class=&quot;button button_center button_small&quot; title=&quot;Small active button&quot;&gt;Small button&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button_center button_regular&quot; title=&quot;Regular active button&quot;&gt;Regular button&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;button button_center button_large&quot; title=&quot;Large active button&quot;&gt;Large button&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;Phasellus euismod neque at odio congue bibendum. Nam neque lectus, hendrerit nec ligula nec, feugiat tincidunt dolor. Maecenas id sem orci. Ut non velit est.&lt;/p&gt;
+&lt;p&gt;&lt;button type=&quot;button&quot; class=&quot;button button_left button_regular&quot; title=&quot;Left-floated regular active button&quot;&gt;Left-floated button&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;Maecenas id sem orci. Ut non velit est. Nullam et lectus in arcu rhoncus rutrum vitae vitae augue. Donec sodales risus auctor velit vulputate, vel elementum velit viverra. Nulla mattis scelerisque tellus eget malesuada. &lt;/p&gt;
+&lt;p&gt;&lt;button type=&quot;button&quot; class=&quot;button button_right button_regular&quot; title=&quot;Right-floated regular active button&quot;&gt;Right-floated button&lt;/button&gt;&lt;/p&gt;
+&lt;p&gt;Phasellus euismod neque at odio congue bibendum. Nam neque lectus, hendrerit nec ligula nec, feugiat tincidunt dolor. Maecenas id sem orci. Ut non velit est. Nullam et lectus in arcu rhoncus rutrum vitae vitae augue. Donec sodales risus auctor velit vulputate, vel elementum velit viverra. Nulla mattis scelerisque tellus eget malesuada. Donec tempus vulputate felis, id dictum odio euismod sit amet. &lt;/p&gt;
+&lt;p&gt;&lt;button type=&quot;button&quot; class=&quot;button button_center button_regular button_disabled&quot; title=&quot;Regular disabled button&quot;&gt;Disabled button&lt;/button&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 12 Jan 2015 00:00:00 +0200</pubDate>
+        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Demo post &amp;mdash; grid</title>
+        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Grid&lt;/h3&gt;
+&lt;h4 class=&quot;typo_condensed typo_center&quot;&gt;Fluid responsive grid example&lt;/h4&gt;
+&lt;div class=&quot;block_center block_center-extra block_spoiler js-spoiler&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-panel&quot;&gt;Fluid responsive grid markup&lt;/a&gt;
+    &lt;figure class=&quot;code_center&quot;&gt;
+        &lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;
+    &amp;lt;div class=&amp;quot;demo_gs gs_container&amp;quot;&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;                            
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs-tablet_col-2 gs-mobile_col-3&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-2 gs-tablet_col-4&amp;quot;&amp;gt;2&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-2 gs-tablet_col-4&amp;quot;&amp;gt;2&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-2 gs-tablet_col-4&amp;quot;&amp;gt;2&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-2 gs-tablet_col-4&amp;quot;&amp;gt;2&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-2 gs-tablet_col-4&amp;quot;&amp;gt;2&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-2 gs-tablet_col-4&amp;quot;&amp;gt;2&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-3  gs-mobile_col-6&amp;quot;&amp;gt;3&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-3  gs-mobile_col-6&amp;quot;&amp;gt;3&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-3  gs-mobile_col-6&amp;quot;&amp;gt;3&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-3  gs-mobile_col-6&amp;quot;&amp;gt;3&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-4  gs-mobile_col-12&amp;quot;&amp;gt;4&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-4  gs-mobile_col-12&amp;quot;&amp;gt;4&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-4  gs-mobile_col-12&amp;quot;&amp;gt;4&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-6  gs-mobile_col-12&amp;quot;&amp;gt;6&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-6  gs-mobile_col-12&amp;quot;&amp;gt;6&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-12&amp;quot;&amp;gt;12&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;                          
+    &amp;lt;/div&amp;gt;    
+        &lt;/code&gt;&lt;/pre&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&quot;demo_gs gs_container&quot;&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;                            
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs-tablet_col-2  gs-mobile_col-3&quot;&gt;1&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;
+        &lt;div class=&quot;demo_col gs_col-2 gs-tablet_col-4&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-2 gs-tablet_col-4&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-2 gs-tablet_col-4&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-2 gs-tablet_col-4&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-2 gs-tablet_col-4&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-2 gs-tablet_col-4&quot;&gt;2&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;
+        &lt;div class=&quot;demo_col gs_col-3  gs-mobile_col-6&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-3  gs-mobile_col-6&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-3  gs-mobile_col-6&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-3  gs-mobile_col-6&quot;&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;
+        &lt;div class=&quot;demo_col gs_col-4  gs-mobile_col-12&quot;&gt;4&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-4  gs-mobile_col-12&quot;&gt;4&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-4  gs-mobile_col-12&quot;&gt;4&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;
+        &lt;div class=&quot;demo_col gs_col-6  gs-mobile_col-12&quot;&gt;6&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-6  gs-mobile_col-12&quot;&gt;6&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;
+        &lt;div class=&quot;demo_col gs_col-12&quot;&gt;12&lt;/div&gt;
+    &lt;/div&gt;                          
+&lt;/div&gt;
+&lt;h4 class=&quot;typo_condensed typo_center&quot;&gt;Fluid grid with pushed and pulled columns&lt;/h4&gt;
+&lt;div class=&quot;block_center block_center-extra block_spoiler js-spoiler&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;js-panel&quot;&gt;Fluid grid markup&lt;/a&gt;
+    &lt;figure class=&quot;code_center&quot;&gt;
+        &lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;
+    &amp;lt;div class=&amp;quot;demo_gs gs_container&amp;quot;&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;                            
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1 gs_push-4&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-1&amp;quot;&amp;gt;1&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-2 gs_push-2&amp;quot;&amp;gt;2&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-2 gs_push-1 gs_pull-1&amp;quot;&amp;gt;2&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-2&amp;quot;&amp;gt;2&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-3 gs_push-3&amp;quot;&amp;gt;3&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-3&amp;quot;&amp;gt;3&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-4 gs_pull-4&amp;quot;&amp;gt;4&amp;lt;/div&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-4&amp;quot;&amp;gt;4&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-6 gs_push-3&amp;quot;&amp;gt;6&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div class=&amp;quot;gs_row&amp;quot;&amp;gt;
+            &amp;lt;div class=&amp;quot;demo_col gs_col-12&amp;quot;&amp;gt;12&amp;lt;/div&amp;gt;
+        &amp;lt;/div&amp;gt;                          
+    &amp;lt;/div&amp;gt;    
+        &lt;/code&gt;&lt;/pre&gt;
+    &lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&quot;demo_gs gs_container&quot;&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;                            
+        &lt;div class=&quot;demo_col gs_col-1&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1 gs_push-4&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-1&quot;&gt;1&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;
+        &lt;div class=&quot;demo_col gs_col-2 gs_push-2&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-2 gs_push-1 gs_pull-1&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-2&quot;&gt;2&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;
+        &lt;div class=&quot;demo_col gs_col-3 gs_push-3&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-3&quot;&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;
+        &lt;div class=&quot;demo_col gs_col-4 gs_pull-4&quot;&gt;4&lt;/div&gt;
+        &lt;div class=&quot;demo_col gs_col-4&quot;&gt;4&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;
+        &lt;div class=&quot;demo_col gs_col-6 gs_push-3&quot;&gt;6&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;gs_row&quot;&gt;
+        &lt;div class=&quot;demo_col gs_col-12&quot;&gt;12&lt;/div&gt;
+    &lt;/div&gt;                          
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 11 Jan 2015 00:00:00 +0200</pubDate>
+        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/11/demo-post-grid/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/11/demo-post-grid/</guid>
         
         
       </item>
