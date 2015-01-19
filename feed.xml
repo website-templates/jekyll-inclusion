@@ -5,12 +5,12 @@
     <description>Responsive blog theme for jekyll website generator</description>
     <link>http://website-templates.github.io/jekyll-inclusion/</link>
     <atom:link href="http://website-templates.github.io/jekyll-inclusion/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 19 Jan 2015 22:19:45 +0200</pubDate>
-    <lastBuildDate>Mon, 19 Jan 2015 22:19:45 +0200</lastBuildDate>
+    <pubDate>Mon, 19 Jan 2015 23:43:26 +0200</pubDate>
+    <lastBuildDate>Mon, 19 Jan 2015 23:43:26 +0200</lastBuildDate>
     <generator>Jekyll v2.5.2</generator>
     
       <item>
-        <title>Lorem ipsum</title>
+        <title>Demo post &amp;mdash; typography</title>
         <description>&lt;h2 class=&quot;typo_center&quot;&gt;Page elements&lt;/h2&gt;
 &lt;div class=&quot;chapter&quot;&gt;
     &lt;p&gt;This blog is based on &lt;span class=&quot;inclusion&quot;&gt;Inclusion&lt;/span&gt; framework, so it's tools allow us to decorate our content. Just add predefined classname to our markup element - and that's all! Here is orifinal description:&lt;/p&gt;
@@ -18,44 +18,40 @@
         &lt;p&gt;Here you can see live examples of page elements that were created with &lt;span class=&quot;inclusion&quot;&gt;Inclusion&lt;/span&gt;. There are about eight groups of elements with it's own styles: headings and text, images, blockquotes, lists, code blocks, abstract blocks (with spoilers) that used as containers for different content, tables and buttons. Basic inclusions like section, chapter or navigation are not shown here.&lt;/p&gt;
         &lt;cite&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;http://orlovmax.com/lab/tools/inclusion&quot;&gt;Inclusion description&lt;/a&gt;&lt;/cite&gt;
     &lt;/blockquote&gt;
-    &lt;p&gt;Let me say a few words about structure of rhis post &amp;mdash; it's really huge, but no less important. So we have chapters that contain code snippets and their result examples. Here is a list with anchor links to related chapters:&lt;/p&gt;
+    &lt;p&gt;Let me say a few words about these demo posts. We have 9 chapters that contain code snippets and their result examples. Each chapter represented as separate post. Here is a list with links to related chapters:&lt;/p&gt;
     &lt;ul class=&quot;list_center&quot;&gt;
-        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__typo&quot;&gt;Typo&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__images&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__blockquotes&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__lists&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__code&quot;&gt;Code blocks&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__tables&quot;&gt;Tables&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__blocks&quot;&gt;Blocks&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__buttons&quot;&gt;Buttons&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;#demo__grid&quot;&gt;Grid&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/&quot;&gt;Images&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/&quot;&gt;Lists&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/&quot;&gt;Code blocks&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/&quot;&gt;Tables&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/&quot;&gt;Blocks&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/&quot;&gt;Buttons&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;js-anchor&quot; href=&quot;http://website-templates.github.io/jekyll-inclusion/2015/01/11/demo-post-grid/&quot;&gt;Grid&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;
+&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Headings and text&lt;/h3&gt;
 
 </description>
         <pubDate>Mon, 19 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/19/lorem-ipsum/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/19/lorem-ipsum/</guid>
+        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</guid>
         
         
       </item>
     
       <item>
-        <title>Sample post</title>
-        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Another one sample post&lt;/h3&gt;
-&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce semper elementum mattis. Suspendisse vitae porta turpis. &lt;/p&gt;
-&lt;figure class=&quot;video_center&quot;&gt;
-    &lt;div&gt;
-        &lt;iframe width=&quot;420&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/kPDnw3_1GOI&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-    &lt;figcaption&gt;Робота з шаблоном Бойлерплейт&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu augue sem. Sed eros tortor, rhoncus eget tortor at, adipiscing faucibus libero. Nullam eget neque sit amet eros sagittis venenatis. Nulla cursus metus in mattis consectetur. Cras nibh est, vestibulum vel imperdiet in, porttitor vel lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sed pharetra tellus. Morbi et tellus iaculis, viverra nibh non, placerat diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce semper elementum mattis. Suspendisse vitae porta turpis. &lt;/p&gt;
+        <title>Demo post &amp;mdash; images</title>
+        <description>&lt;!-- Images demo start--&gt;
+&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Images&lt;/h3&gt;
+&lt;blockquote class=&quot;bq_align-center&quot;&gt;
+    &lt;p&gt;Well, here you can see centerd, floated or extra-positioned images. Also you can check fullscreen prview of images by clicking on them. For this purpose I've used &lt;a rel=&quot;nofollow&quot; href=&quot;https://github.com/tholman/intense-images&quot;&gt;Intense Images plugin&lt;/a&gt; It's really awesome thing!&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
-        <pubDate>Tue, 23 Dec 2014 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2014/12/23/sample-post/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2014/12/23/sample-post/</guid>
+        <pubDate>Sun, 18 Jan 2015 00:00:00 +0200</pubDate>
+        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</guid>
         
         
       </item>
