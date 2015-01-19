@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demo post &mdash; typography"
-subtitle: "This is the first post with test and demo for typo elements with code snipets and explanations"
+subtitle: "This is the first post with tests and demo for typo elements with code snippets and explanations"
 date: 2015-01-19
 labels: 
 - Lorem ipsum

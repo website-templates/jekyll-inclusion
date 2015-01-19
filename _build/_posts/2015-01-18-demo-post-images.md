@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demo post &mdash; images"
-subtitle: "This is the second post with test and demo for images with code snipets and explanations"
+subtitle: "This is the second post with tests and demo for images with code snippets and explanations"
 date: 2015-01-18
 labels: 
 - Lorem ipsum
