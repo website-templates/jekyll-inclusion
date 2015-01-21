@@ -8,6 +8,7 @@ module.exports = function(grunt) {
       // Dev paths
       dev: {
         main: '_dev',
+        coffee: 'dev/coffee',
         js: '_dev/js',
         markup: '_dev/markup',
         styles: '_dev/styles',
@@ -30,6 +31,18 @@ module.exports = function(grunt) {
       },
       jekyll: {
         deploy: '_deploy'
+      },
+
+      // Compile CoffeeScript
+      coffee: {
+        main: {
+          expand: true,
+          flatten: true,
+          cwd: '<%= dev.coffee %>',
+          src: ['**/*.coffee', '!components/**/*.*'],
+          dest: '<%= dev.js %>',
+          ext: '.js'
+        }
       },
 
       //Assemble *.js files
@@ -430,6 +443,7 @@ module.exports = function(grunt) {
     // and uncomment other tasks
     grunt.loadNpmTasks('grunt-collection');
 
+    // grunt.loadNpmTasks('grunt-contrib-coffee');
     // grunt.loadNpmTasks('grunt-contrib-concat');
     // grunt.loadNpmTasks('grunt-contrib-uglify');
     // grunt.loadNpmTasks('grunt-contrib-sass');
@@ -457,7 +471,8 @@ module.exports = function(grunt) {
                                      // 'clean:bower'
     ]);
 
-    grunt.registerTask('init', ['concat',
+    grunt.registerTask('init', ['coffee',
+                                'concat',
                                 'sass',
                                 'less',
                                 'stylus',
@@ -467,7 +482,8 @@ module.exports = function(grunt) {
                                 'shell:jekyllBuild'
     ]);
 
-    grunt.registerTask('default', ['newer:concat',
+    grunt.registerTask('default', ['newer:coffee',
+                                   'newer:concat',
                                    'newer:sass',
                                    'newer:less',
                                    'newer:stylus',
