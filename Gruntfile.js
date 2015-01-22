@@ -8,7 +8,7 @@ module.exports = function(grunt) {
       // Dev paths
       dev: {
         main: '_dev',
-        coffee: 'dev/coffee',
+        coffee: '_dev/coffee',
         js: '_dev/js',
         markup: '_dev/markup',
         styles: '_dev/styles',
@@ -423,6 +423,7 @@ module.exports = function(grunt) {
             files: ['<%= dev.html %>/**/*.html',
                     '<%= dev.styles %>/**/*.{scss,sass,less,styl}',
                     '<%= dev.css %>/*.css',
+                    '<%= dev.coffee %>/**/*.coffee',
                     '<%= dev.js %>/**/*.js',
                     '<%= dev.img %>/**/*.{png,jpg,gif}',
                     '<%= dev.markup %>/**/*.{jade,md,markdown}',
