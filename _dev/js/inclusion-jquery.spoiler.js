@@ -1,42 +1,34 @@
-/* 
- * Simple spoiler
-*/
-
-;(function ( $, window, document, undefined ) {
-    var defaults = {
-        spoilerPanel: "js-panel",
-        spoilerClosed: "is-closed",
-        state: "closed"      
+(function() {
+  (function($, window, document, undefined_) {
+    var SimpleSpoiler, defaults;
+    SimpleSpoiler = function(element, options) {
+      this.options = $.extend({}, defaults, options);
+      this.element = element;
+      return this.init();
     };
-
-    function SimpleSpoiler( element, options ) {
-        this.options = $.extend( {}, defaults, options) ;
-        this.element = element;     
-        this.init();
-    }
-
-    SimpleSpoiler.prototype.init = function () {
-        var $this = $(this.element),
-            $spoilerPanel = $this.find("." + this.options.spoilerPanel),
-            cond = this.options.state;
-
-        // Looking for condition from settings, if it closed - add appropriate classes 
-        // to our spoiler  
-        if ((! cond || cond == "closed") && (!($this.hasClass(this.options.spoilerClosed)))){
-            $this.addClass(this.options.spoilerClosed);
-        }     
-
-        //Toggle closed class on spoiler panel click
-        $spoilerPanel.on('click', $.proxy(function(e){
-            e.preventDefault();            
-            $this.toggleClass(this.options.spoilerClosed);
-        }, this));        
+    defaults = {
+      spoilerPanel: "js-panel",
+      spoilerClosed: "is-closed",
+      state: "closed"
     };
-
-    $.fn.simpleSpoiler = function ( options ) {
-        return this.each(function () {          
-            new SimpleSpoiler( this, options );
-        });
+    SimpleSpoiler.prototype.init = function() {
+      var $spoilerPanel, $this, cond;
+      $this = $(this.element);
+      $spoilerPanel = $this.find("." + this.options.spoilerPanel);
+      cond = this.options.state;
+      if ((!cond || cond === "closed") && (!($this.hasClass(this.options.spoilerClosed)))) {
+        $this.addClass(this.options.spoilerClosed);
+      }
+      return $spoilerPanel.on("click", $.proxy(function(e) {
+        e.preventDefault();
+        return $this.toggleClass(this.options.spoilerClosed);
+      }, this));
     };
+    return $.fn.simpleSpoiler = function(options) {
+      return this.each(function() {
+        return new SimpleSpoiler(this, options);
+      });
+    };
+  })(jQuery, window, document);
 
-})( jQuery, window, document );
+}).call(this);

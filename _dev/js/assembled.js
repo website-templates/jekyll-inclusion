@@ -418,429 +418,391 @@ var Intense = (function() {
     });
 
 })();
-/* 
- * jQuery anchorScroll plugin for smooth scrollin to anchor, fallback script for pages without general nav but with standalone anchor links 
- */
-;(function( $, window, document, undefined ) {  
-  'use strict';
-  $.fn.anchorScroll = function(){
-    var $this = this;
-
-    // Smooth anchor scroll, targeted to our nav anchors 
-    // Actually this thing was modified on csstricks
-      $this.click(function () {
-        if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && 
-            location.hostname === this.hostname) {
-
-            var target = $(this.hash);
-            target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-            if (target.length) {
+(function() {
+  (function($, window, document, undefined_) {
+    "use strict";
+    return $.fn.anchorScroll = function() {
+      var $this;
+      $this = this;
+      $this.click(function() {
+        var target;
+        if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {
+          target = $(this.hash);
+          target = (target.length ? target : $("[name=" + this.hash.slice(1) + "]"));
+          if (target.length) {
             $("html,body").animate({
               scrollTop: target.offset().top
             }, 1000);
             return false;
           }
         }
-    });   
-    return this;
-  };         
-})( jQuery, window, document );
-/** $Lazy load
- * Lazy Load - jQuery plugin for lazy loading images
- *
- * Copyright (c) 2007-2013 Mika Tuupola
- *
- * Licensed under the MIT license:
- *   http://www.opensource.org/licenses/mit-license.php
- *
- * Project home:
- *   http://www.appelsiini.net/projects/lazyload
- *
- * Version:  1.9.3
- *
+      });
+      return this;
+    };
+  })(jQuery, window, document);
+
+}).call(this);
+
+
+/*
+$Lazy load
+Lazy Load - jQuery plugin for lazy loading images
+
+Copyright (c) 2007-2013 Mika Tuupola
+
+Licensed under the MIT license:
+http://www.opensource.org/licenses/mit-license.php
+
+Project home:
+http://www.appelsiini.net/projects/lazyload
+
+Version:  1.9.3
  */
 
-;(function($, window, document, undefined) {
-    var $window = $(window);
-
+(function() {
+  (function($, window, document, undefined_) {
+    var $window;
+    $window = $(window);
     $.fn.lazyload = function(options) {
-        var elements = this;
-        var $container;
-        var settings = {
-            threshold       : 0,
-            failure_limit   : 0,
-            event           : "scroll",
-            effect          : "show",
-            container       : window,
-            data_attribute  : "src",
-            skip_invisible  : true,
-            appear          : null,
-            load            : null,
-            placeholder     : "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
-        };
+      var $container, elements, settings, update;
+      update = function() {
+        var counter;
+        counter = 0;
+        return elements.each(function() {
+          var $this;
+          $this = $(this);
+          if (settings.skip_invisible && !$this.is(":visible")) {
+            return;
+          }
+          if ($.abovethetop(this, settings) || $.leftofbegin(this, settings)) {
 
-        function update() {
-            var counter = 0;
-
-            elements.each(function() {
-                var $this = $(this);
-                if (settings.skip_invisible && !$this.is(":visible")) {
-                    return;
-                }
-                if ($.abovethetop(this, settings) ||
-                    $.leftofbegin(this, settings)) {
-                        /* Nothing. */
-                } else if (!$.belowthefold(this, settings) &&
-                    !$.rightoffold(this, settings)) {
-                        $this.trigger("appear");
-                        /* if we found an image we'll load, reset the counter */
-                        counter = 0;
-                } else {
-                    if (++counter > settings.failure_limit) {
-                        return false;
-                    }
-                }
-            });
-
-        }
-
-        if(options) {
-            /* Maintain BC for a couple of versions. */
-            if (undefined !== options.failurelimit) {
-                options.failure_limit = options.failurelimit;
-                delete options.failurelimit;
+          } else if (!$.belowthefold(this, settings) && !$.rightoffold(this, settings)) {
+            $this.trigger("appear");
+            return counter = 0;
+          } else {
+            if (++counter > settings.failure_limit) {
+              return false;
             }
-            if (undefined !== options.effectspeed) {
-                options.effect_speed = options.effectspeed;
-                delete options.effectspeed;
-            }
-
-            $.extend(settings, options);
-        }
-
-        /* Cache container as jQuery as object. */
-        $container = (settings.container === undefined ||
-                      settings.container === window) ? $window : $(settings.container);
-
-        /* Fire one scroll event per scroll. Not one scroll event per image. */
-        if (0 === settings.event.indexOf("scroll")) {
-            $container.bind(settings.event, function() {
-                return update();
-            });
-        }
-
-        this.each(function() {
-            var self = this;
-            var $self = $(self);
-
-            self.loaded = false;
-
-            /* If no src attribute given use data:uri. */
-            if ($self.attr("src") === undefined || $self.attr("src") === false) {
-                if ($self.is("img")) {
-                    $self.attr("src", settings.placeholder);
-                }
-            }
-
-            /* When appear is triggered load original image. */
-            $self.one("appear", function() {
-                if (!this.loaded) {
-                    if (settings.appear) {
-                        var elements_left = elements.length;
-                        settings.appear.call(self, elements_left, settings);
-                    }
-                    $("<img />")
-                        .bind("load", function() {
-
-                            var original = $self.attr("data-" + settings.data_attribute);
-                            $self.hide();
-                            if ($self.is("img")) {
-                                $self.attr("src", original);
-                            } else {
-                                $self.css("background-image", "url('" + original + "')");
-                            }
-                            $self[settings.effect](settings.effect_speed);
-
-                            self.loaded = true;
-
-                            /* Remove image from array so it is not looped next time. */
-                            var temp = $.grep(elements, function(element) {
-                                return !element.loaded;
-                            });
-                            elements = $(temp);
-
-                            if (settings.load) {
-                                var elements_left = elements.length;
-                                settings.load.call(self, elements_left, settings);
-                            }
-                        })
-                        .attr("src", $self.attr("data-" + settings.data_attribute));
-                }
-            });
-
-            /* When wanted event is triggered load original image */
-            /* by triggering appear.                              */
-            if (0 !== settings.event.indexOf("scroll")) {
-                $self.bind(settings.event, function() {
-                    if (!self.loaded) {
-                        $self.trigger("appear");
-                    }
-                });
-            }
+          }
         });
-
-        /* Check if something appears when window is resized. */
-        $window.bind("resize", function() {
-            update();
+      };
+      elements = this;
+      $container = void 0;
+      settings = {
+        threshold: 0,
+        failure_limit: 0,
+        event: "scroll",
+        effect: "show",
+        container: window,
+        data_attribute: "src",
+        skip_invisible: true,
+        appear: null,
+        load: null,
+        placeholder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+      };
+      if (options) {
+        if (undefined !== options.failurelimit) {
+          options.failure_limit = options.failurelimit;
+          delete options.failurelimit;
+        }
+        if (undefined !== options.effectspeed) {
+          options.effect_speed = options.effectspeed;
+          delete options.effectspeed;
+        }
+        $.extend(settings, options);
+      }
+      $container = (settings.container === undefined || settings.container === window ? $window : $(settings.container));
+      if (0 === settings.event.indexOf("scroll")) {
+        $container.bind(settings.event, function() {
+          return update();
         });
-
-        /* With IOS5 force loading images when navigating with back button. */
-        /* Non optimal workaround. */
-        if ((/(?:iphone|ipod|ipad).*os 5/gi).test(navigator.appVersion)) {
-            $window.bind("pageshow", function(event) {
-                if (event.originalEvent && event.originalEvent.persisted) {
-                    elements.each(function() {
-                        $(this).trigger("appear");
-                    });
-                }
-            });
+      }
+      this.each(function() {
+        var $self, self;
+        self = this;
+        $self = $(self);
+        self.loaded = false;
+        if ($self.attr("src") === undefined || $self.attr("src") === false) {
+          if ($self.is("img")) {
+            $self.attr("src", settings.placeholder);
+          }
         }
-
-        /* Force initial check if images should appear. */
-        $(document).ready(function() {
-            update();
-        });
-
-        return this;
-    };
-
-    /* Convenience methods in jQuery namespace.           */
-    /* Use as  $.belowthefold(element, {threshold : 100, container : window}) */
-
-    $.belowthefold = function(element, settings) {
-        var fold;
-
-        if (settings.container === undefined || settings.container === window) {
-            fold = (window.innerHeight ? window.innerHeight : $window.height()) + $window.scrollTop();
-        } else {
-            fold = $(settings.container).offset().top + $(settings.container).height();
-        }
-
-        return fold <= $(element).offset().top - settings.threshold;
-    };
-
-    $.rightoffold = function(element, settings) {
-        var fold;
-
-        if (settings.container === undefined || settings.container === window) {
-            fold = $window.width() + $window.scrollLeft();
-        } else {
-            fold = $(settings.container).offset().left + $(settings.container).width();
-        }
-
-        return fold <= $(element).offset().left - settings.threshold;
-    };
-
-    $.abovethetop = function(element, settings) {
-        var fold;
-
-        if (settings.container === undefined || settings.container === window) {
-            fold = $window.scrollTop();
-        } else {
-            fold = $(settings.container).offset().top;
-        }
-
-        return fold >= $(element).offset().top + settings.threshold  + $(element).height();
-    };
-
-    $.leftofbegin = function(element, settings) {
-        var fold;
-
-        if (settings.container === undefined || settings.container === window) {
-            fold = $window.scrollLeft();
-        } else {
-            fold = $(settings.container).offset().left;
-        }
-
-        return fold >= $(element).offset().left + settings.threshold + $(element).width();
-    };
-
-    $.inviewport = function(element, settings) {
-         return !$.rightoffold(element, settings) && !$.leftofbegin(element, settings) &&
-                !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
-     };
-
-    /* Custom selectors for your convenience.   */
-    /* Use as $("img:below-the-fold").something() or */
-    /* $("img").filter(":below-the-fold").something() which is faster */
-
-    $.extend($.expr[":"], {
-        "below-the-fold" : function(a) { return $.belowthefold(a, {threshold : 0}); },
-        "above-the-top"  : function(a) { return !$.belowthefold(a, {threshold : 0}); },
-        "right-of-screen": function(a) { return $.rightoffold(a, {threshold : 0}); },
-        "left-of-screen" : function(a) { return !$.rightoffold(a, {threshold : 0}); },
-        "in-viewport"    : function(a) { return $.inviewport(a, {threshold : 0}); },
-        /* Maintain BC for couple of versions. */
-        "above-the-fold" : function(a) { return !$.belowthefold(a, {threshold : 0}); },
-        "right-of-fold"  : function(a) { return $.rightoffold(a, {threshold : 0}); },
-        "left-of-fold"   : function(a) { return !$.rightoffold(a, {threshold : 0}); }
-    });
-
-}) (jQuery, window, document);
-/* 
- * navigation script: sticky nav, anchor smooth scrolling, selecting current nav item 
-*/
-
-;(function ( $, window, document, undefined ) {
-    var defaults = {
-        navAnchor: "js-anchor",
-        navLink: "js-link",
-        navIcon: "js-navtoggle",
-        iconOpen: "is-open",
-        activeLink: "is-active",
-        state: "closed"      
-    };
-
-    function NavKit( element, options ) {
-        this.options = $.extend( {}, defaults, options) ;
-        this.element = element;     
-        this.init();
-    }
-
-    NavKit.prototype.init = function () {
-        var $this = $(this.element),
-            $navAnchor = $("." + this.options.navAnchor),
-            $navLink = $("." + this.options.navLink),
-            $navIcon = $("." + this.options.navIcon),
-            cond = this.options.state,
-            navHeight = $this.show().height(),
-            aArray = [],
-            i;
-
-        // Looking for condition from settings, if it closed - add appropriate classes 
-        // to icon, menu and container  
-        if (! cond || cond == "closed"){
-            $this.slideToggle();
-            $navIcon.show();
-        } else{
-          $navIcon.show().addClass(this.options.iconOpen);
-        }     
-
-        //toggle nav onclick
-        $navIcon.on('click', $.proxy(function(e){
-           e.preventDefault();
-           $navIcon.toggleClass(this.options.iconOpen);
-           $this.slideToggle();
-        }, this));
-
-        // Smooth anchor scroll, targeted to our nav anchors 
-        // Actually this thing was modified on csstricks
-        $navAnchor.click(function () {
-            if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && 
-                location.hostname === this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-                if (target.length) {
-                $("html,body").animate({
-                  scrollTop: target.offset().top - navHeight
-                }, 1000);
-                return false;
+        $self.one("appear", function() {
+          var elements_left;
+          if (!this.loaded) {
+            if (settings.appear) {
+              elements_left = elements.length;
+              settings.appear.call(self, elements_left, settings);
+            }
+            return $("<img />").bind("load", function() {
+              var original, temp;
+              original = $self.attr("data-" + settings.data_attribute);
+              $self.hide();
+              if ($self.is("img")) {
+                $self.attr("src", original);
+              } else {
+                $self.css("background-image", "url('" + original + "')");
               }
-            }
+              $self[settings.effect](settings.effect_speed);
+              self.loaded = true;
+              temp = $.grep(elements, function(element) {
+                return !element.loaded;
+              });
+              elements = $(temp);
+              if (settings.load) {
+                elements_left = elements.length;
+                return settings.load.call(self, elements_left, settings);
+              }
+            }).attr("src", $self.attr("data-" + settings.data_attribute));
+          }
         });
-
-        //Highlight nav list item when current section visible
-        //Originally this way is belong to http://www.callmenick.com
-        for(i = 0; i < $navLink.length; i += 1) {
-            var link = $navLink[i],
-                ahref = $(link).attr('href');
-                aArray.push(ahref);
-        } // this for loop fills the aArray with attribute href values
-
-        $(window).scroll($.proxy(function () {
-            var windowPos = $(window).scrollTop(), // get the offset of the window from the top of page
-                windowHeight = $(window).height(), // get the height of the window
-                docHeight = $(document).height(),
-                $firstSection = $("section").eq(0);
-            for (i = 0; i < aArray.length; i += 1) {
-                var theID = aArray[i],
-                sectPos = $(theID).offset().top - navHeight, // get the offset of the div from the top of page + except nav height
-                sectHeight = $(theID).height(); // get the height of the div in question
-
-                if (windowPos >= sectPos && windowPos < (sectPos + sectHeight)) {
-                    $navLink.filter("[href='" + theID + "']").addClass(this.options.activeLink);
-                } else {
-                    $navLink.filter("[href='" + theID + "']").removeClass(this.options.activeLink);
-                }
+        if (0 !== settings.event.indexOf("scroll")) {
+          return $self.bind(settings.event, function() {
+            if (!self.loaded) {
+              return $self.trigger("appear");
             }
-        //highlight last nav list item on last section
-            if (windowPos + windowHeight === docHeight) {
-                if (!$this.find("li").filter(":last-child").find($navLink).hasClass(this.options.activeLink)) {
-                    $navLink.filter("." + this.options.activeLink).removeClass(this.options.activeLink);
-                    $this.find("li").filter(":last-child").find($navLink).addClass(this.options.activeLink);
-                }
-            }
+          });
+        }
+      });
+      $window.bind("resize", function() {
+        return update();
+      });
+      if (/(?:iphone|ipod|ipad).*os 5/g.test(navigator.appVersion)) {
+        $window.bind("pageshow", function(event) {
+          if (event.originalEvent && event.originalEvent.persisted) {
+            return elements.each(function() {
+              return $(this).trigger("appear");
+            });
+          }
+        });
+      }
+      $(document).ready(function() {
+        return update();
+      });
+      return this;
+    };
+    $.belowthefold = function(element, settings) {
+      var fold;
+      fold = void 0;
+      if (settings.container === undefined || settings.container === window) {
+        fold = (window.innerHeight ? window.innerHeight : $window.height()) + $window.scrollTop();
+      } else {
+        fold = $(settings.container).offset().top + $(settings.container).height();
+      }
+      return fold <= $(element).offset().top - settings.threshold;
+    };
+    $.rightoffold = function(element, settings) {
+      var fold;
+      fold = void 0;
+      if (settings.container === undefined || settings.container === window) {
+        fold = $window.width() + $window.scrollLeft();
+      } else {
+        fold = $(settings.container).offset().left + $(settings.container).width();
+      }
+      return fold <= $(element).offset().left - settings.threshold;
+    };
+    $.abovethetop = function(element, settings) {
+      var fold;
+      fold = void 0;
+      if (settings.container === undefined || settings.container === window) {
+        fold = $window.scrollTop();
+      } else {
+        fold = $(settings.container).offset().top;
+      }
+      return fold >= $(element).offset().top + settings.threshold + $(element).height();
+    };
+    $.leftofbegin = function(element, settings) {
+      var fold;
+      fold = void 0;
+      if (settings.container === undefined || settings.container === window) {
+        fold = $window.scrollLeft();
+      } else {
+        fold = $(settings.container).offset().left;
+      }
+      return fold >= $(element).offset().left + settings.threshold + $(element).width();
+    };
+    $.inviewport = function(element, settings) {
+      return !$.rightoffold(element, settings) && !$.leftofbegin(element, settings) && !$.belowthefold(element, settings) && !$.abovethetop(element, settings);
+    };
+    return $.extend($.expr[":"], {
+      "below-the-fold": function(a) {
+        return $.belowthefold(a, {
+          threshold: 0
+        });
+      },
+      "above-the-top": function(a) {
+        return !$.belowthefold(a, {
+          threshold: 0
+        });
+      },
+      "right-of-screen": function(a) {
+        return $.rightoffold(a, {
+          threshold: 0
+        });
+      },
+      "left-of-screen": function(a) {
+        return !$.rightoffold(a, {
+          threshold: 0
+        });
+      },
+      "in-viewport": function(a) {
+        return $.inviewport(a, {
+          threshold: 0
+        });
+      },
+      "above-the-fold": function(a) {
+        return !$.belowthefold(a, {
+          threshold: 0
+        });
+      },
+      "right-of-fold": function(a) {
+        return $.rightoffold(a, {
+          threshold: 0
+        });
+      },
+      "left-of-fold": function(a) {
+        return !$.rightoffold(a, {
+          threshold: 0
+        });
+      }
+    });
+  })(jQuery, window, document);
 
-        //highlight first nav item when first section has some top offset
+}).call(this);
+
+(function() {
+  (function($, window, document, undefined_) {
+    var NavKit, defaults;
+    NavKit = function(element, options) {
+      this.options = $.extend({}, defaults, options);
+      this.element = element;
+      return this.init();
+    };
+    defaults = {
+      navAnchor: "js-anchor",
+      navLink: "js-link",
+      navIcon: "js-navtoggle",
+      iconOpen: "is-open",
+      activeLink: "is-active",
+      state: "closed"
+    };
+    NavKit.prototype.init = function() {
+      var $navAnchor, $navIcon, $navLink, $this, aArray, ahref, cond, i, link, navHeight;
+      $this = $(this.element);
+      $navAnchor = $("." + this.options.navAnchor);
+      $navLink = $("." + this.options.navLink);
+      $navIcon = $("." + this.options.navIcon);
+      cond = this.options.state;
+      navHeight = $this.show().height();
+      aArray = [];
+      i = void 0;
+      if (!cond || cond === "closed") {
+        $this.slideToggle();
+        $navIcon.show();
+      } else {
+        $navIcon.show().addClass(this.options.iconOpen);
+      }
+      $navIcon.on("click", $.proxy(function(e) {
+        e.preventDefault();
+        $navIcon.toggleClass(this.options.iconOpen);
+        return $this.slideToggle();
+      }, this));
+      $navAnchor.click(function() {
+        var target;
+        if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") && location.hostname === this.hostname) {
+          target = $(this.hash);
+          target = (target.length ? target : $("[name=" + this.hash.slice(1) + "]"));
+          if (target.length) {
+            $("html,body").animate({
+              scrollTop: target.offset().top - navHeight
+            }, 1000);
+            return false;
+          }
+        }
+      });
+      i = 0;
+      while (i < $navLink.length) {
+        link = $navLink[i];
+        ahref = $(link).attr("href");
+        aArray.push(ahref);
+        i += 1;
+      }
+      return $(window).scroll($.proxy(function() {
+        var $firstSection, docHeight, sectHeight, sectPos, theID, windowHeight, windowPos;
+        windowPos = $(window).scrollTop();
+        windowHeight = $(window).height();
+        docHeight = $(document).height();
+        $firstSection = $("section").eq(0);
+        i = 0;
+        while (i < aArray.length) {
+          theID = aArray[i];
+          sectPos = $(theID).offset().top - navHeight;
+          sectHeight = $(theID).height();
+          if (windowPos >= sectPos && windowPos < (sectPos + sectHeight)) {
+            $navLink.filter("[href='" + theID + "']").addClass(this.options.activeLink);
+          } else {
+            $navLink.filter("[href='" + theID + "']").removeClass(this.options.activeLink);
+          }
+          i += 1;
+        }
+        if (windowPos + windowHeight === docHeight) {
+          if (!$this.find("li").filter(":last-child").find($navLink).hasClass(this.options.activeLink)) {
+            $navLink.filter("." + this.options.activeLink).removeClass(this.options.activeLink);
+            $this.find("li").filter(":last-child").find($navLink).addClass(this.options.activeLink);
+          }
+        }
         if (windowPos < $firstSection.offset().top) {
-                if (!$this.find("li").filter(":first-child").find($navLink).hasClass(this.options.activeLink)) {
-                    $navLink.filter("." + this.options.activeLink).removeClass(this.options.activeLink);
-                    $this.find("li").filter(":first-child").find($navLink).addClass(this.options.activeLink);
-                }
-            }
-        }, this));
+          if (!$this.find("li").filter(":first-child").find($navLink).hasClass(this.options.activeLink)) {
+            $navLink.filter("." + this.options.activeLink).removeClass(this.options.activeLink);
+            return $this.find("li").filter(":first-child").find($navLink).addClass(this.options.activeLink);
+          }
+        }
+      }, this));
     };
-
-    $.fn.navKit = function ( options ) {
-        return this.each(function () {          
-            new NavKit( this, options );
-        });
+    return $.fn.navKit = function(options) {
+      return this.each(function() {
+        return new NavKit(this, options);
+      });
     };
+  })(jQuery, window, document);
 
-})( jQuery, window, document );
-/* 
- * Simple spoiler
-*/
+}).call(this);
 
-;(function ( $, window, document, undefined ) {
-    var defaults = {
-        spoilerPanel: "js-panel",
-        spoilerClosed: "is-closed",
-        state: "closed"      
+(function() {
+  (function($, window, document, undefined_) {
+    var SimpleSpoiler, defaults;
+    SimpleSpoiler = function(element, options) {
+      this.options = $.extend({}, defaults, options);
+      this.element = element;
+      return this.init();
     };
-
-    function SimpleSpoiler( element, options ) {
-        this.options = $.extend( {}, defaults, options) ;
-        this.element = element;     
-        this.init();
-    }
-
-    SimpleSpoiler.prototype.init = function () {
-        var $this = $(this.element),
-            $spoilerPanel = $this.find("." + this.options.spoilerPanel),
-            cond = this.options.state;
-
-        // Looking for condition from settings, if it closed - add appropriate classes 
-        // to our spoiler  
-        if ((! cond || cond == "closed") && (!($this.hasClass(this.options.spoilerClosed)))){
-            $this.addClass(this.options.spoilerClosed);
-        }     
-
-        //Toggle closed class on spoiler panel click
-        $spoilerPanel.on('click', $.proxy(function(e){
-            e.preventDefault();            
-            $this.toggleClass(this.options.spoilerClosed);
-        }, this));        
+    defaults = {
+      spoilerPanel: "js-panel",
+      spoilerClosed: "is-closed",
+      state: "closed"
     };
-
-    $.fn.simpleSpoiler = function ( options ) {
-        return this.each(function () {          
-            new SimpleSpoiler( this, options );
-        });
+    SimpleSpoiler.prototype.init = function() {
+      var $spoilerPanel, $this, cond;
+      $this = $(this.element);
+      $spoilerPanel = $this.find("." + this.options.spoilerPanel);
+      cond = this.options.state;
+      if ((!cond || cond === "closed") && (!($this.hasClass(this.options.spoilerClosed)))) {
+        $this.addClass(this.options.spoilerClosed);
+      }
+      return $spoilerPanel.on("click", $.proxy(function(e) {
+        e.preventDefault();
+        return $this.toggleClass(this.options.spoilerClosed);
+      }, this));
     };
+    return $.fn.simpleSpoiler = function(options) {
+      return this.each(function() {
+        return new SimpleSpoiler(this, options);
+      });
+    };
+  })(jQuery, window, document);
 
-})( jQuery, window, document );
+}).call(this);
+
 /** $Prism
  * Prism: Lightweight, robust, elegant syntax highlighting
  * MIT license http://www.opensource.org/licenses/mit-license.php/
@@ -1191,12 +1153,12 @@ Prism.languages.scss = Prism.languages.extend("css", {
     $(function() {
       var lazyImage;
       lazyImage = $(".js-lazy");
-      lazyImage.lazyload({
+      return lazyImage.lazyload({
         effect: "fadeIn",
         threshold: 200
       });
     });
-    $(".js-spoiler").simpleSpoiler({
+    return $(".js-spoiler").simpleSpoiler({
       state: "closed"
     });
   });
@@ -1217,7 +1179,7 @@ Prism.languages.scss = Prism.languages.extend("css", {
       check = false;
       (function(a, b) {
         if (/(android|bb\d+|meego).+mobile|avantgo|bada\/ |blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge   |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/ |plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino |android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)  |amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl( ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng) |dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze) |fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta) |hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/) |ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-  |kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(  01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )  |mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)  |nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(  ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55 \/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-  0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk) |tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)  |utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c (\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) {
-          check = true;
+          return check = true;
         }
       })(navigator.userAgent || navigator.vendor || window.opera);
       return check;
@@ -1225,7 +1187,7 @@ Prism.languages.scss = Prism.languages.extend("css", {
     if (!window.mobilecheck()) {
       if (!isIE() | isIE() > 8) {
         elements = document.getElementsByClassName("js-view");
-        Intense(elements);
+        return Intense(elements);
       }
     }
   })();
