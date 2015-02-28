@@ -473,7 +473,7 @@ module.exports = function(grunt) {
                                      // 'clean:bower'
     ]);
 
-    grunt.registerTask('init', ['coffee',
+    grunt.registerTask('regen', ['coffee',
                                 'concat',
                                 'sass',
                                 'less',

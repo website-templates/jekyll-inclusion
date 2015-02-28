@@ -32,11 +32,6 @@ head
 
 	// OpenSans and OpenSans Condensed from Google cdn
 	link(href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800|Open+Sans+Condensed:300&subset=latin,cyrillic', rel='stylesheet', type='text/css')
-	
-	// CSS3 media queries and HTML5 tags support for old IE
-	<!--[if lt IE 9]><script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script><script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script><![endif]-->
-	<!-- Or you can use these two scripts from local folder, dont forget for conditional comments for old IE
-	<script src="{{ '/js/ie/ie.min.js' | prepend: site.baseurl }}"></script> -->
 
 	// Main stylesheet
 	<!-- build:css {{ '/css/screen.min.css' | prepend: site.baseurl }} -->
@@ -45,6 +40,11 @@ head
 
 	// Browser update screen styles
 	<!--[if lt IE 8]><link rel="stylesheet" href="{{ '/css/ie-out.min.css' | prepend: site.baseurl }}"><![endif]-->
+	
+	// CSS3 media queries and HTML5 tags support for old IE
+	<!--[if lt IE 9]><script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script><script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script><![endif]-->
+	<!-- Or you can use these two scripts from local folder, dont forget for conditional comments for old IE
+	<script src="{{ '/js/ie/ie.min.js' | prepend: site.baseurl }}"></script> -->
 
 	// Page refresh script for live coding
 	<!-- build:remove -->

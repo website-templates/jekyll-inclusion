@@ -56,7 +56,7 @@ Than you can use next tasks for grunt:
 * Helper tasks:
     - `grunt bower-dev` - copies bower dependencies in right folders
 * Site dev tasks:
-    - `grunt init` - compiles source files, generates site with jekyll, but only once. Doesn't watch for changes. Useful for the first time project initialization to avoid broken path errors.
+    - `grunt regen` - compiles source files, generates site with jekyll, but only once. Doesn't watch for changes. Useful for the first time project initialization to avoid broken path errors or for forced project regeneration.
     - `grunt` - default task for development, compiles source files, generates site with jekyll, watches for changes. Note that this task watches and processes only changed files, thanks to `newer` option
     - `grunt build` - minifies assets and generates site with jekyll, also processes and mififies generated markup 
 * Jekyll tasks:
