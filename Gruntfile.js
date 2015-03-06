@@ -10,7 +10,7 @@ module.exports = function(grunt) {
         main: '_dev',
         coffee: '_dev/coffee',
         js: '_dev/js',
-        markup: '_dev/markup',
+        templates: '_dev/templates',
         styles: '_dev/styles',
         css: '_dev/css',
         html: '_dev/html',
@@ -62,7 +62,7 @@ module.exports = function(grunt) {
           // }
         },
 
-      //Uglify assembled *.js file    
+      //Uglify assembled *.js file
         uglify: {
           options: {
             mangle: false
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
           // }
         },
 
-      //Compile *.scss files  
+      //Compile *.scss files
         sass: {
           main: {
             options: {
@@ -103,7 +103,7 @@ module.exports = function(grunt) {
             files: [{
               expand: true,
               cwd: '<%= dev.styles %>',
-              src: ['**/*.{sass,scss}', '!components/**/*.*'],
+              src: ['**/*.{sass,scss}'],
               dest: '<%= dev.css %>',
               ext: '.css'
             }]
@@ -123,37 +123,7 @@ module.exports = function(grunt) {
           // }
         },
 
-      //Compile *.less files
-        less: {
-          main: {
-            files: [{
-              expand: true,
-              cwd: '<%= dev.styles %>',
-              src: ['**/*.less', '!components/**/*.*'],
-              dest: '<%= dev.css %>',
-              ext: '.css'
-            }]
-          }
-        },
-
-       //Compile *.styl files
-        stylus: {
-          main: {
-            options: {
-              linenos: false,
-              compress: false
-            },
-            files: [{
-              expand: true,
-              cwd: '<%= dev.styles %>',
-              src: [ '**/*.styl', '!components/**/*.*' ],
-              dest: '<%= dev.css %>',
-              ext: '.css'
-            }]
-          }
-        },
-
-      //Combine media queries in result *.css files   
+      //Combine media queries in result *.css files
         cmq: {
           options: {
             log: false
@@ -165,7 +135,7 @@ module.exports = function(grunt) {
           }
         },
 
-      //Autoprefixer  
+      //Autoprefixer
         autoprefixer: {
           options: {
             browsers: ['last 2 versions', 'ie 8', 'ie 9']
@@ -181,7 +151,7 @@ module.exports = function(grunt) {
           }
         },
 
-      //Minify and organize *.css files  
+      //Minify and organize *.css files
         csso: {
           options: {
             keepSpecialComments: '*',
@@ -198,7 +168,7 @@ module.exports = function(grunt) {
           }
         },
 
-      //Compile *.jade files  
+      //Compile *.jade files
         jade: {
           main: {
             options: {
@@ -206,8 +176,8 @@ module.exports = function(grunt) {
                 pretty: true
             },
             files: [ {
-              cwd: "<%= dev.markup %>",
-              src: ['**/*.jade', '!components/**/*.*'],
+              cwd: "<%= dev.templates %>",
+              src: ['**/*.jade'],
               dest: "<%= dev.html %>/",
               expand: true,
               ext: ".html"
@@ -215,20 +185,7 @@ module.exports = function(grunt) {
           }
         },
 
-      //Compile *.haml files  
-        haml: {
-          main: {
-            files: [ {
-              cwd: "<%= dev.markup %>",
-              src: ['**/*.haml', '!components/**/*.*'],
-              dest: "<%= dev.html %>/",
-              expand: true,
-              ext: ".html"
-            } ]
-          }
-        },
-
-      //Minify *.html files 
+      //Minify *.html files
         htmlmin: {
             main: {
               options: {
@@ -246,7 +203,7 @@ module.exports = function(grunt) {
             }
         },
 
-      //Minify image files   
+      //Minify image files
         imagemin: {
           main: {
             options: {
@@ -265,9 +222,9 @@ module.exports = function(grunt) {
         copy: {
           // php: {
           //   files: [{
-          //     expand: true, 
+          //     expand: true,
           //     cwd: '<%= dev.php %>/',
-          //     src: '**', 
+          //     src: '**',
           //     dest: '<%= build.php %>'
           //   }]
           // },
@@ -307,10 +264,10 @@ module.exports = function(grunt) {
               dest: '<%= build.css %>/'
             }]
           },
-          markup: {
+          templates: {
             files: [{
               expand: true,
-              cwd: '<%= dev.markup %>',
+              cwd: '<%= dev.templates %>',
               src: ['**/*.{md,markdown}'],
               dest: '<%= build.main %>'
             }]
@@ -333,7 +290,7 @@ module.exports = function(grunt) {
           }
         },
 
-      //Assemble bower components in right order 
+      //Assemble bower components in right order
         bower_concat: {
           vendor: {
             dest: '<%= dev.js %>/vendor/vendor.js',
@@ -354,7 +311,7 @@ module.exports = function(grunt) {
           }
         },
 
-      //Copy bower components to the custom folder   
+      //Copy bower components to the custom folder
         // bowercopy: {
         //   options: {
         //     // clean: true,
@@ -386,7 +343,7 @@ module.exports = function(grunt) {
         //   }
         // },
 
-      //Delete .gitkeep files. If you don't use Bower - just run `grunt clean`  
+      //Delete .gitkeep files. If you don't use Bower - just run `grunt clean`
         clean: {
           debug: ['<%= build.js %>/**/*.js',
                   '!<%= build.js %>/**/*.min.js',
@@ -395,7 +352,7 @@ module.exports = function(grunt) {
           bower: 'bower_components'
         },
 
-      //Delete some dev code and references from files        
+      //Delete some dev code and references from files
         processhtml: {
           dist: {
             files: [{
@@ -418,16 +375,16 @@ module.exports = function(grunt) {
             }
         },
 
-      //Watch for changes    
+      //Watch for changes
         watch: {
           all: {
             files: ['<%= dev.html %>/**/*.html',
-                    '<%= dev.styles %>/**/*.{scss,sass,less,styl}',
+                    '<%= dev.styles %>/**/*.{scss,sass}',
                     '<%= dev.css %>/*.css',
                     '<%= dev.coffee %>/**/*.coffee',
                     '<%= dev.js %>/**/*.js',
                     '<%= dev.img %>/**/*.{png,jpg,gif}',
-                    '<%= dev.markup %>/**/*.{jade,md,markdown}',
+                    '<%= dev.templates %>/**/*.{jade,md,markdown}',
                     '<%= dev.php %>/**/*.php',
                     '<%= dev.fonts %>/**/*.{eot,svg,ttf,woff}'],
             tasks: ['default'],
@@ -438,9 +395,9 @@ module.exports = function(grunt) {
         }
     });
 
-    
 
-    // I use general node_modules directory for common projects, 
+
+    // I use general node_modules directory for common projects,
     // so for standalone dev you should remove grunt-collection task loading
     // and uncomment other tasks
     grunt.loadNpmTasks('grunt-collection');
@@ -449,8 +406,6 @@ module.exports = function(grunt) {
     // grunt.loadNpmTasks('grunt-contrib-concat');
     // grunt.loadNpmTasks('grunt-contrib-uglify');
     // grunt.loadNpmTasks('grunt-contrib-sass');
-    // grunt.loadNpmTasks('grunt-contrib-less');
-    // grunt.loadNpmTasks('grunt-contrib-stylus');
     // grunt.loadNpmTasks('grunt-combine-media-queries');
     // grunt.loadNpmTasks('grunt-autoprefixer');
     // grunt.loadNpmTasks('grunt-csso');
@@ -476,8 +431,6 @@ module.exports = function(grunt) {
     grunt.registerTask('regen', ['coffee',
                                 'concat',
                                 'sass',
-                                'less',
-                                'stylus',
                                 'jade',
                                 // 'imagemin',
                                 'copy',
@@ -487,8 +440,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['newer:coffee',
                                    'newer:concat',
                                    'newer:sass',
-                                   'newer:less',
-                                   'newer:stylus',
                                    'newer:jade',
                                    'newer:imagemin',
                                    'newer:copy',
@@ -507,7 +458,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('jekyll-build', ['newer:imagemin',
-                                        'newer:copy:markup',
+                                        'newer:copy:templates',
                                         'newer:copy:helpers',
                                         'shell:jekyllBuild',
                                         'processhtml',
