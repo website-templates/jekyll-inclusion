@@ -17,13 +17,13 @@ github_username:  orlovmax
 gplus_username: 104202961668156466871
 # skype_username:
 bitbucket_username: orlovmax
-# linkedin_username: 
+# linkedin_username:
 
 home_img: "img/bg/index-home.jpg"
 end_img: "img/bg/index-end.jpg"
 thumb_img: "img/pic.jpg"
 
-# disqus-code: 
+# disqus-code:
 
 # Build settings
 markdown: kramdown

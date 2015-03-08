@@ -367,9 +367,15 @@ module.exports = function(grunt) {
 
       // Build and serve jekyll blog
         shell: {
+            // Build jekyll website
             jekyllBuild: {
                 command: 'jekyll build'
             },
+            // Deploy only jekyll website
+            rakeJekyllDeploy: {
+                command: 'rake jekyllDeploy'
+            },
+            // Deploy dev version and jekyll website
             rakeDeploy: {
                 command: 'rake deploy'
             }
@@ -465,5 +471,6 @@ module.exports = function(grunt) {
                                         'htmlmin'
     ]);
 
-    grunt.registerTask('jekyll-deploy', ['shell:rakeDeploy']);
+    grunt.registerTask('jekyll-deploy', ['shell:rakeJekyllDeploy']);
+    grunt.registerTask('deploy', ['shell:rakeDeploy']);
 };

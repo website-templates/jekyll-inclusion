@@ -61,7 +61,8 @@ Than you can use next tasks for grunt:
     - `grunt build` - minifies assets and generates site with jekyll, also processes and mififies generated markup 
 * Jekyll tasks:
     - `grunt jekyll-build` - task for blogging, generates site with jekyll, processes and minifies generated markup
-    - `grunt jekyll-deploy` - task for deploy, runs `rakeDeploy` through `grunt-shell` plugin: commits source files, commits deploy files and push all this stuff to remote repo.
+    - `grunt jekyll-deploy` - task for deploy, runs `rakeJekyllDeploy` through `grunt-shell` plugin: commits deploy files and push them to the remote repo.
+    - `grunt deploy` - task for deploy, runs `rakeDeploy` through `grunt-shell` plugin: commits source files, commits deploy files and push all this stuff to the remote repo.
 
 ## Changelog
 * (December 30, 2014)
