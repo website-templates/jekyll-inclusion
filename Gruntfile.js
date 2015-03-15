@@ -392,7 +392,10 @@ module.exports = function(grunt) {
                     '<%= dev.img %>/**/*.{png,jpg,gif}',
                     '<%= dev.templates %>/**/*.{jade,md,markdown}',
                     '<%= dev.php %>/**/*.php',
-                    '<%= dev.fonts %>/**/*.{eot,svg,ttf,woff}'],
+                    '<%= dev.fonts %>/**/*.{eot,svg,ttf,woff}',
+                    '<%= dev.helpers %>/**/*.*',
+                    '<%= dev.helpers %>/**/.htaccess',
+                    '<%= dev.helpers %>/**/CNAME'],
             tasks: ['default'],
             options: {
               spawn: false
