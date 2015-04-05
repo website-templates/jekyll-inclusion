@@ -5,17 +5,17 @@
     <description>Responsive blog theme for jekyll website generator</description>
     <link>http://website-templates.github.io/jekyll-inclusion/</link>
     <atom:link href="http://website-templates.github.io/jekyll-inclusion/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 15 Mar 2015 23:25:30 +0200</pubDate>
-    <lastBuildDate>Sun, 15 Mar 2015 23:25:30 +0200</lastBuildDate>
-    <generator>Jekyll v2.5.2</generator>
+    <pubDate>Sun, 05 Apr 2015 23:46:32 +0300</pubDate>
+    <lastBuildDate>Sun, 05 Apr 2015 23:46:32 +0300</lastBuildDate>
+    <generator>Jekyll v3.0.0.pre.beta2</generator>
     
       <item>
         <title>Demo post &amp;mdash; typography</title>
         <description>&lt;h2 class=&quot;typo_center&quot;&gt;Page elements&lt;/h2&gt;
 &lt;div class=&quot;chapter&quot;&gt;
-    &lt;p&gt;This blog is based on &lt;span class=&quot;inclusion&quot;&gt;Inclusion&lt;/span&gt; framework, so it's tools allow us to decorate our content. Just add predefined classname to our markup element - and that's all! Here is orifinal description:&lt;/p&gt;
+    &lt;p&gt;This blog is based on &lt;span class=&quot;inclusion&quot;&gt;Inclusion&lt;/span&gt; framework, so it&#39;s tools allow us to decorate our content. Just add predefined classname to our markup element - and that&#39;s all! Here is orifinal description:&lt;/p&gt;
     &lt;blockquote class=&quot;bq_align-center&quot;&gt;
-        &lt;p&gt;Here you can see live examples of page elements that were created with &lt;span class=&quot;inclusion&quot;&gt;Inclusion&lt;/span&gt;. There are about eight groups of elements with it's own styles: headings and text, images, blockquotes, lists, code blocks, abstract blocks (with spoilers) that used as containers for different content, tables and buttons. Basic inclusions like section, chapter or navigation are not shown here.&lt;/p&gt;
+        &lt;p&gt;Here you can see live examples of page elements that were created with &lt;span class=&quot;inclusion&quot;&gt;Inclusion&lt;/span&gt;. There are about eight groups of elements with it&#39;s own styles: headings and text, images, blockquotes, lists, code blocks, abstract blocks (with spoilers) that used as containers for different content, tables and buttons. Basic inclusions like section, chapter or navigation are not shown here.&lt;/p&gt;
         &lt;cite&gt;&lt;a rel=&quot;nofollow&quot; href=&quot;http://orlovmax.com/lab/tools/inclusion&quot;&gt;Inclusion description&lt;/a&gt;&lt;/cite&gt;
     &lt;/blockquote&gt;
     &lt;p&gt;Let me say a few words about these demo posts. We have 9 chapters that contain code snippets and their result examples. Each chapter represented as separate post. Here is a list with links to related chapters:&lt;/p&gt;
@@ -45,7 +45,7 @@
         <description>&lt;!-- Images demo start--&gt;
 &lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Images&lt;/h3&gt;
 &lt;blockquote class=&quot;bq_align-center&quot;&gt;
-    &lt;p&gt;Well, here you can see centerd, floated or extra-positioned images. Also you can check fullscreen prview of images by clicking on them. For this purpose I've used &lt;a rel=&quot;nofollow&quot; href=&quot;https://github.com/tholman/intense-images&quot;&gt;Intense Images plugin&lt;/a&gt; It's really awesome thing!&lt;/p&gt;
+    &lt;p&gt;Well, here you can see centerd, floated or extra-positioned images. Also you can check fullscreen prview of images by clicking on them. For this purpose I&#39;ve used &lt;a rel=&quot;nofollow&quot; href=&quot;https://github.com/tholman/intense-images&quot;&gt;Intense Images plugin&lt;/a&gt; It&#39;s really awesome thing!&lt;/p&gt;
 &lt;/blockquote&gt;
 
 </description>
@@ -83,7 +83,7 @@
       <item>
         <title>Demo post &amp;mdash; code blocks</title>
         <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Code blocks&lt;/h3&gt;
-&lt;p&gt;Let's check code blocks, each of them represent their own markup with predefined classnames.&lt;/p&gt;
+&lt;p&gt;Let&#39;s check code blocks, each of them represent their own markup with predefined classnames.&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 15 Jan 2015 00:00:00 +0200</pubDate>
@@ -110,7 +110,7 @@
         <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Blocks&lt;/h3&gt;
 &lt;blockquote class=&quot;bq_align-center&quot;&gt;
     &lt;p&gt;This inclusion was created as container for other page elements like widgets, complex blocks, media stuff, iframes or floated titles and also some nested things as container with titled lists or image galleries. Also this element have a spoiler option, that hide content under spoiler with title and icon. &lt;br /&gt;
-    This sounds good and it's really useful for some cases so let's see how we can do this.&lt;/p&gt;
+    This sounds good and it&#39;s really useful for some cases so let&#39;s see how we can do this.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 </description>

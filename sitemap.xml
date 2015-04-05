@@ -3,7 +3,19 @@
 	
 
 <url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/feed.xml</loc>
+</url>
+
+<url>
 	<loc>http://website-templates.github.io/jekyll-inclusion/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/robots.txt</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/jekyll-inclusion/sitemap.xml</loc>
 </url>
 
 <url>
