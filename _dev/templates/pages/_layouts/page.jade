@@ -1,0 +1,15 @@
+:verbatim
+	---
+	layout: default
+	---
+
+// Page Home
+include ../../components/home-section
+
+// Main Content
+#main.main(role='main')
+	.container
+		| {{ content }}
+
+// Page End
+include ../../components/end-section

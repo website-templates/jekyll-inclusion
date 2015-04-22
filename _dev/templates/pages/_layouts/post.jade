@@ -1,0 +1,16 @@
+:verbatim
+	---
+	layout: page
+	---
+
+article.post
+	| {{ content }}
+
+	// Post meta information
+	include ../../components/post-meta
+
+// Pagination
+include ../../components/paginator
+
+// Comments
+include ../../components/comments

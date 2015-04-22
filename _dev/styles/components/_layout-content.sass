@@ -87,13 +87,16 @@
 		@media screen and (max-width: 800px)
 			margin: auto
 	&__meta
-		font-family: $font-sans
-		color: $section-text
-		font-weight: 400
 		margin-left: 250px
 		@media screen and (max-width: 800px)
 			margin: auto
-		&-author, &-date, &-tag, &-translator
+		&-autorship, &-tags, &-category
+			display: block
+			margin-bottom: 0
+			font-family: $font-sans
+			color: $section-text
+			font-weight: 400
+		&-author, &-date, &-tag, &-cat, &-translator
 			// font-family: $font-serif;
 			color: $section-muted
 			font-weight: 300
@@ -160,12 +163,15 @@
 		margin-top: 30px
 		padding: 0 10px
 		border-left: 3px solid $figure-border
-		font-family: $font-sans
-		color: $section-text
-		font-weight: 400
 		@media screen and (max-width: 800px)
 			margin: auto
-		&-author, &-date, &-tag, &-translator
+		&-autorship, &-tags, &-category
+			display: block
+			margin-bottom: 0
+			font-family: $font-sans
+			color: $section-text
+			font-weight: 400
+		&-author, &-date, &-tag, &-cat, &-translator
 			// font-family: $font-serif;
 			color: $section-muted
 			font-weight: 300

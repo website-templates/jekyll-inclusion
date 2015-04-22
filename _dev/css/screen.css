@@ -768,15 +768,23 @@ body {
 }
 
 .post-preview__meta {
+	margin-left: 250px;
+}
+
+.post-preview__meta-autorship,
+.post-preview__meta-tags,
+.post-preview__meta-category {
+	display: block;
+	margin-bottom: 0;
 	font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
 	color: #2b2b2b;
 	font-weight: 400;
-	margin-left: 250px;
 }
 
 .post-preview__meta-author,
 .post-preview__meta-date,
 .post-preview__meta-tag,
+.post-preview__meta-cat,
 .post-preview__meta-translator {
 	color: #777777;
 	font-weight: 300;
@@ -849,6 +857,13 @@ body {
 	margin-top: 30px;
 	padding: 0 10px;
 	border-left: 3px solid #777777;
+}
+
+.post__meta-autorship,
+.post__meta-tags,
+.post__meta-category {
+	display: block;
+	margin-bottom: 0;
 	font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
 	color: #2b2b2b;
 	font-weight: 400;
@@ -857,6 +872,7 @@ body {
 .post__meta-author,
 .post__meta-date,
 .post__meta-tag,
+.post__meta-cat,
 .post__meta-translator {
 	color: #777777;
 	font-weight: 300;

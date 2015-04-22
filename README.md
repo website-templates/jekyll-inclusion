@@ -65,6 +65,8 @@ Than you can use next tasks for grunt:
     - `grunt deploy` - task for deploy, runs `rakeDeploy` through `grunt-shell` plugin: commits source files, commits deploy files and push all this stuff to the remote repo.
 
 ## Changelog
+* (April 22, 2015)
+  - Categories and tag support, templates structure modified
 * (December 30, 2014)
   - Added Disqus coments
 * (December 05, 2014)
@@ -84,6 +86,8 @@ Than you can use next tasks for grunt:
 * [Prism syntax highlighter](http://prismjs.com/download.html) 
 * [Detect Mobile Browsers](http://detectmobilebrowsers.com/)
 * [Clean blog jekyll theme](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)
+* [Strip.rb - strip newlines after for loop](https://github.com/aucor/jekyll-plugins)
+* [Category-Tag pages generator](https://github.com/rymoio)
 
 ## License
 [MIT](http://opensource.org/licenses/MIT)

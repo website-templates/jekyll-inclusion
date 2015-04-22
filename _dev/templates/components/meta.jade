@@ -1,0 +1,23 @@
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+title {% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}
+meta(name="description", content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}")
+meta(name="keywords", content="{% if page.tags %}{% for tag in page.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ site.keywords }}{% endif %}")
+meta(name="viewport", content="width=device-width, initial-scale=1")
+link(rel="canonical", href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}")
+<!--Opengraph-->
+meta(property="og:type", content="website")
+meta(property="og:title", content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}")
+meta(property="og:description", content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}")
+meta(property="og:image", content="{% if page.thumb_img %}{{ page.thumb_img | prepend: '/' | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.thumb_img | prepend: '/' | prepend: site.baseurl | prepend: site.url }}{% endif %}")
+meta(property="og:url", content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}")
+<!--TwitterCard-->
+| {% if site.twitter_username %}
+meta(name="twitter:card", content="summary")
+meta(name="twitter:title", content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}")
+meta(name="twitter:description", content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}")
+meta(name="twitter:image:src", content="{% if page.thumb_img %}{{ page.thumb_img | prepend: '/' | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.thumb_img | prepend: '/' | prepend: site.baseurl | prepend: site.url }}{% endif %}")
+meta(name="twitter:creator", content="{{ site.twitter_username }}")
+meta(name="twitter:site", content="{{ site.twitter_username }}")
+meta(name="twitter:url", content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}")
+| {% endif %}

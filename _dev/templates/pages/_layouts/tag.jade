@@ -1,0 +1,16 @@
+:verbatim
+	---
+	layout: page
+	home_img: "img/bg/tag-home.jpg"
+	end_img: "img/bg/tag-end.jpg"
+	color: light
+	---
+
+// Post list
+| {% for post in site.posts %}
+| {% for tag in post.tags %}
+| {% if tag == page.tag %}
+include ../../components/post-list
+| {% endif %}
+| {% endfor %}
+| {% endfor %}

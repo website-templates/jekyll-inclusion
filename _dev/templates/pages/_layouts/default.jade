@@ -1,0 +1,22 @@
+doctype html
+html(lang='{{ site.lang }}')
+	head
+		// Meta information
+		include ../../components/meta
+
+		// Head external resources
+		include ../../components/head-src
+
+	body
+		// Header
+		include ../../components/header
+		| {{ content }}
+
+		// Footer
+		include ../../components/footer
+
+		// Browser update screen
+		include ../../components/ie-out
+
+		// Body external resources
+		include ../../components/body-src

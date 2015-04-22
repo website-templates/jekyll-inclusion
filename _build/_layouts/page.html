@@ -2,17 +2,26 @@
 layout: default
 ---
 
-<div style="background-image: url('{{ site.baseurl }}/{% if page.home_img %}{{ page.home_img }}{% else %}{{ site.home_img }}{% endif %}')" class="overlay overlay_home">
+<!-- Page Home-->
+<div style="background-image: url('{{ site.baseurl }}/{% if page.home_img %}{{ page.home_img }}{% else %}{{ site.home_img }}{% endif %}')" class="overlay overlay_home">{% if page.l-page %}
   <section id="home" class="home">
     <div class="container">
       <h1 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="home__title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-      <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="home__subtitle">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</h2><a href="#main" title="Вперед!" class="icon icon_down {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} home__icon js-anchor">Вперед!</a>
+      <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="home__subtitle">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</h2><a href="#main" title="Let`s go!" class="icon icon_down {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} home__icon js-anchor">Let`s go!</a>
     </div>
-  </section>
+  </section>{% else %}
+  <section id="home" class="post-home">
+    <div class="container">
+      <h1 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="post-home__title">{{ page.title }}</h1>{% if page.description %}
+      <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="post-home__subtitle">{{ page.description }}</h2>{% endif %}<a href="#main" title="Let`s go!" class="icon icon_down {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} home__icon js-anchor">Let`s go!</a>
+    </div>
+  </section>{% endif %}
 </div>
-<div id="main" class="main">
+<!-- Main Content-->
+<div id="main" role="main" class="main">
   <div class="container">{{ content }}</div>
-</div><!-- Page End -->
+</div>
+<!-- Page End-->
 <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="overlay">
   <section id="end" class="end">
     <div class="container">

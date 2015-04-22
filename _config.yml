@@ -1,16 +1,20 @@
 # Site settings
+
+# General settings
 lang: en
 title: Inclusion jekyll theme
 email: mail@orlovmax.com
 author: Maxim Orlov
 description: "Responsive blog theme for jekyll website generator"
+keywords: "jekyll theme, jekyll template, responsive jekyll theme"
+
+# URL settings
 baseurl: "/jekyll-inclusion" # the subpath of your site, e.g. /blog/
 url: "http://website-templates.github.io" # the base hostname & protocol for your site
 # lang_en: "http://blog.orlovmax.com"
 # lang_ua: "http://uablog.orlovmax.com"
 # lang_ru: "http://rublog.orlovmax.com"
 home-repo: "https://github.com/website-templates/jekyll-inclusion"
-keywords: "jekyll theme, jekyll template, responsive jekyll theme"
 twitter_username: orlovmax_im
 github_username:  orlovmax
 # fb_username:
@@ -19,6 +23,7 @@ gplus_username: 104202961668156466871
 bitbucket_username: orlovmax
 # linkedin_username:
 
+# Default src
 home_img: "img/bg/index-home.jpg"
 end_img: "img/bg/index-end.jpg"
 thumb_img: "img/pic.jpg"
@@ -27,7 +32,7 @@ thumb_img: "img/pic.jpg"
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: /:year/:month/:day/:title/
 paginate: 3
 exclude: [
 'node_modules',
@@ -41,3 +46,17 @@ exclude: [
 
 source: _build
 destination: _deploy
+
+# Category pages settings
+categories:
+  url: /categories/
+  title_prefix: 'Category: '
+  descr_prefix: 'Blog posts in category '
+  layout: category.html
+
+# Tag pages settings
+tags:
+  url: /tags/
+  title_prefix: 'Tag: '
+  descr_prefix: 'Posts tagged '
+  layout: tag.html

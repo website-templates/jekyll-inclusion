@@ -176,7 +176,7 @@ module.exports = function(grunt) {
                 pretty: true
             },
             files: [ {
-              cwd: "<%= dev.templates %>",
+              cwd: "<%= dev.templates %>/pages",
               src: ['**/*.jade'],
               dest: "<%= dev.html %>/",
               expand: true,
@@ -267,7 +267,7 @@ module.exports = function(grunt) {
           templates: {
             files: [{
               expand: true,
-              cwd: '<%= dev.templates %>',
+              cwd: '<%= dev.templates %>/pages',
               src: ['**/*.{md,markdown}'],
               dest: '<%= build.main %>'
             }]
@@ -390,7 +390,7 @@ module.exports = function(grunt) {
                     '<%= dev.coffee %>/**/*.coffee',
                     '<%= dev.js %>/**/*.js',
                     '<%= dev.img %>/**/*.{png,jpg,gif}',
-                    '<%= dev.templates %>/**/*.{jade,md,markdown}',
+                    '<%= dev.templates %>/pages/**/*.{jade,md,markdown}',
                     '<%= dev.php %>/**/*.php',
                     '<%= dev.fonts %>/**/*.{eot,svg,ttf,woff}',
                     '<%= dev.helpers %>/**/*.*',

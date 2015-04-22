@@ -1,0 +1,20 @@
+.overlay.overlay_home(style="background-image: url('{{ site.baseurl }}/{% if page.home_img %}{{ page.home_img }}{% else %}{{ site.home_img }}{% endif %}')")
+	| {% if page.l-page %}
+	section#home.home
+		.container
+			h1.home__title(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+				| {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+			h2.home__subtitle(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+				| {% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
+			a(class="icon icon_down {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} home__icon js-anchor", href='#main', title='Let`s go!') Let`s go!
+	| {% else %}
+	section#home.post-home
+		.container
+			h1.post-home__title(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+				| {{ page.title }}
+			| {% if page.description %}
+			h2.post-home__subtitle(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+				| {{ page.description }}
+			| {% endif %}
+			a(class="icon icon_down {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} home__icon js-anchor", href='#main', title='Let`s go!') Let`s go!
+	| {% endif %}
