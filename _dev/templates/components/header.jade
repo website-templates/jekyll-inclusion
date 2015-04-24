@@ -2,7 +2,6 @@
 header.main-header
 	nav.navbar.js-nav
 		ul
-			| {% strip %}
 			li
 				a(href='{{ site.baseurl }}/') Home
 			| {% for page in site.pages %}
@@ -15,7 +14,6 @@ header.main-header
 				a(href='http://orlovmax.com') About author
 			li
 				a(href='https://github.com/website-templates/jekyll-inclusion') Project on github
-			| {% endstrip %}
 	.hgroup
 		a.js-navtoggle(href='#') Menu
 		// Navigation for multilingual blogs

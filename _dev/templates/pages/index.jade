@@ -6,16 +6,12 @@
 	color: light
 	lang_ru: "/"
 	lang_ua: "/"
-	l-page: true
-	pager: true
+	type: page
 	---
 
-// Post list
-| {% for post in paginator.posts %}
-include ../components/post-list
-| {% endfor %}
+// Post preview list
+.post-list
+	include ../components/post-preview
 
 // Pagination
-| {% if paginator.total_pages > 1 %}
 include ../components/paginator
-| {% endif %}

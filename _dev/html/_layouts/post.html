@@ -1,5 +1,6 @@
 ---
 layout: page
+type: post
 ---
 
 <article class="post">{{ content }}
@@ -30,18 +31,41 @@ layout: page
   <hr class="post-divider"/>
 </article>
 <!-- Pagination-->
-<nav class="pager">{% if page.l-page and page.pager %}
+{% if page.type == 'page' %}
+{% if paginator.total_pages > 1 %}
+<nav class="pager">
   <ul>{% if paginator.previous_page %}
     <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">New posts &rsaquo;</a></li>{% endif %}
     {% if paginator.next_page %}
     <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link"> &lsaquo; Previous posts</a></li>{% endif %}
-  </ul>{% else %}
+  </ul>
+</nav>{% endif %}
+{% endif %}
+{% if page.type == 'taxonomy' %}
+{% if paginator.total_pages > 1 %}
+<nav class="pager">
+  <ul>
+    {% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+    <li class="pager__item pager__item_next"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">New posts &rsaquo;</a></li>{% else %}
+    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">New posts &rsaquo;</a></li>{% endif %}
+    {% endif %}
+    {% if paginator.next_page %}
+    {% if paginator.next_page == 1 %}
+    <li class="pager__item pager__item_previous"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link"> &lsaquo; Previous posts</a></li>{% else %}
+    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link"> &lsaquo; Previous posts</a></li>{% endif %}
+    {% endif %}
+  </ul>
+</nav>{% endif %}
+{% endif %}
+{% if page.type == 'post' %}
+<nav class="pager">
   <ul>{% if page.previous.url %}
     <li class="pager__item pager__item_previous"><a href="{{page.previous.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.previous.title}}" class="pager__link">&lsaquo; Previous post</a></li>{% endif %}
     {% if page.next.url %}
     <li class="pager__item pager__item_next"><a href="{{page.next.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.next.title}}" class="pager__link">Next post &rsaquo;</a></li>{% endif %}
-  </ul>{% endif %}
-</nav>
+  </ul>
+</nav>{% endif %}
 <!-- Comments-->
 <div class="comments">
   {% if site.disqus-code %}

@@ -34,6 +34,7 @@ thumb_img: "img/pic.jpg"
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 paginate: 3
+paginate_path: "page-:num/"
 exclude: [
 'node_modules',
 'bower_components',
@@ -49,14 +50,16 @@ destination: _deploy
 
 # Category pages settings
 categories:
-  url: /categories/
+  url: /category/
+  slug: ''
   title_prefix: 'Category: '
   descr_prefix: 'Blog posts in category '
   layout: category.html
 
 # Tag pages settings
 tags:
-  url: /tags/
+  url: /tag/
+  slug: ''
   title_prefix: 'Tag: '
   descr_prefix: 'Posts tagged '
   layout: tag.html

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% strip %}<!DOCTYPE html>
 <html lang="{{ site.lang }}">
   <head>
     <!-- Meta information-->
@@ -45,13 +45,13 @@
     <!-- Navigation-->
     <header class="main-header">
       <nav class="navbar js-nav">
-        <ul>{% strip %}
+        <ul>
           <li><a href="{{ site.baseurl }}/">Home</a></li>{% for page in site.pages %}
           {% if page.menu %}
           <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>{% endif %}
           {% endfor %}
           <li><a href="http://orlovmax.com">About author</a></li>
-          <li><a href="https://github.com/website-templates/jekyll-inclusion">Project on github</a></li>{% endstrip %}
+          <li><a href="https://github.com/website-templates/jekyll-inclusion">Project on github</a></li>
         </ul>
       </nav>
       <div class="hgroup"><a href="#" class="js-navtoggle">Menu</a>
@@ -72,4 +72,4 @@
     <!-- build:js {{ '/js/assembled.min.js' | prepend: site.baseurl }} -->
     <script src="{{ '/js/assembled.js' | prepend: site.baseurl }}"></script><!-- /build -->
   </body>
-</html>
+</html>{% endstrip %}

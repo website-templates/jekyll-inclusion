@@ -1,24 +1,55 @@
+| {% if page.type == 'page' %}
+| {% if paginator.total_pages > 1 %}
 nav.pager
-	| {% if page.l-page and page.pager %}
 	ul
 		| {% if paginator.previous_page %}
 		li.pager__item.pager__item_next
 			a.pager__link(href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}") New posts &rsaquo;
 		| {% endif %}
+
 		| {% if paginator.next_page %}
 		li.pager__item.pager__item_previous
 			a.pager__link(href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}")  &lsaquo; Previous posts
 		| {% endif %}
+| {% endif %}
+| {% endif %}
 
-	| {% else %}
+| {% if page.type == 'taxonomy' %}
+| {% if paginator.total_pages > 1 %}
+nav.pager
+	ul
+		| {% if paginator.previous_page %}
+		| {% if paginator.previous_page == 1 %}
+		li.pager__item.pager__item_next
+			a.pager__link(href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}") New posts &rsaquo;
+		| {% else %}
+		li.pager__item.pager__item_next
+			a.pager__link(href="{{ paginator.previous_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}") New posts &rsaquo;
+		| {% endif %}
+		| {% endif %}
+
+		| {% if paginator.next_page %}
+		| {% if paginator.next_page == 1 %}
+		li.pager__item.pager__item_previous
+			a.pager__link(href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}")  &lsaquo; Previous posts
+		| {% else %}
+		li.pager__item.pager__item_previous
+			a.pager__link(href="{{ paginator.next_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}")  &lsaquo; Previous posts
+		| {% endif %}
+		| {% endif %}
+| {% endif %}
+| {% endif %}
+
+| {% if page.type == 'post' %}
+nav.pager
 	ul
 		| {% if page.previous.url %}
 		li.pager__item.pager__item_previous
 			a.pager__link(href="{{page.previous.url | prepend: site.baseurl | replace: '//', '/'}}", title='{{page.previous.title}}') &lsaquo; Previous post
 		| {% endif %}
+
 		| {% if page.next.url %}
 		li.pager__item.pager__item_next
 			a.pager__link(href="{{page.next.url | prepend: site.baseurl | replace: '//', '/'}}", title='{{page.next.title}}') Next post &rsaquo;
 		| {% endif %}
-
-	| {% endif %}
+| {% endif %}

@@ -1,5 +1,5 @@
 .overlay.overlay_home(style="background-image: url('{{ site.baseurl }}/{% if page.home_img %}{{ page.home_img }}{% else %}{{ site.home_img }}{% endif %}')")
-	| {% if page.l-page %}
+	| {% if page.type == 'page' or page.type == 'taxonomy' %}
 	section#home.home
 		.container
 			h1.home__title(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")

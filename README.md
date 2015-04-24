@@ -65,6 +65,8 @@ Than you can use next tasks for grunt:
     - `grunt deploy` - task for deploy, runs `rakeDeploy` through `grunt-shell` plugin: commits source files, commits deploy files and push all this stuff to the remote repo.
 
 ## Changelog
+* (April 25, 2015)
+  - Categories and tag pagination added
 * (April 22, 2015)
   - Categories and tag support, templates structure modified
 * (December 30, 2014)
@@ -87,7 +89,8 @@ Than you can use next tasks for grunt:
 * [Detect Mobile Browsers](http://detectmobilebrowsers.com/)
 * [Clean blog jekyll theme](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)
 * [Strip.rb - strip newlines after for loop](https://github.com/aucor/jekyll-plugins)
-* [Category-Tag pages generator](https://github.com/rymoio)
+* [Tag pages generator](https://github.com/ilyakhokhryakov/jekyll-tagging-pagination)
+* [Tag and Category pages pagination](https://github.com/realjenius/realjenius.com/blob/master/_plugins/cat_and_tag_generator.rb)
 
 ## License
 [MIT](http://opensource.org/licenses/MIT)

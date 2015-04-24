@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Page Home-->
-<div style="background-image: url('{{ site.baseurl }}/{% if page.home_img %}{{ page.home_img }}{% else %}{{ site.home_img }}{% endif %}')" class="overlay overlay_home">{% if page.l-page %}
+<div style="background-image: url('{{ site.baseurl }}/{% if page.home_img %}{{ page.home_img }}{% else %}{{ site.home_img }}{% endif %}')" class="overlay overlay_home">{% if page.type == 'page' or page.type == 'taxonomy' %}
   <section id="home" class="home">
     <div class="container">
       <h1 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="home__title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
