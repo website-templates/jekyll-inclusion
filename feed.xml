@@ -3,10 +3,10 @@
   <channel>
     <title>Inclusion jekyll theme</title>
     <description>Responsive blog theme for jekyll website generator</description>
-    <link>http://website-templates.github.io/jekyll-inclusion/</link>
-    <atom:link href="http://website-templates.github.io/jekyll-inclusion/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 05 Apr 2015 23:46:32 +0300</pubDate>
-    <lastBuildDate>Sun, 05 Apr 2015 23:46:32 +0300</lastBuildDate>
+    <link>http://website-templates.github.io/</link>
+    <atom:link href="http://website-templates.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 25 Apr 2015 01:44:20 +0300</pubDate>
+    <lastBuildDate>Sat, 25 Apr 2015 01:44:20 +0300</lastBuildDate>
     <generator>Jekyll v3.0.0.pre.beta2</generator>
     
       <item>
@@ -34,9 +34,21 @@
 
 </description>
         <pubDate>Mon, 19 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</guid>
+        <link>http://website-templates.github.io/2015/01/19/demo-post-typo/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/2015/01/19/demo-post-typo/</guid>
         
+        <category>Lorem ipsum</category>
+        
+        <category>test</category>
+        
+        <category>demo</category>
+        
+        <category>page elements</category>
+        
+        <category>typography</category>
+        
+        
+        <category>technologies</category>
         
       </item>
     
@@ -50,9 +62,21 @@
 
 </description>
         <pubDate>Sun, 18 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</guid>
+        <link>http://website-templates.github.io/2015/01/18/demo-post-images/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/2015/01/18/demo-post-images/</guid>
         
+        <category>Lorem ipsum</category>
+        
+        <category>test</category>
+        
+        <category>demo</category>
+        
+        <category>page elements</category>
+        
+        <category>images</category>
+        
+        
+        <category>technologies</category>
         
       </item>
     
@@ -62,9 +86,21 @@
 
 </description>
         <pubDate>Sat, 17 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</guid>
+        <link>http://website-templates.github.io/2015/01/17/demo-post-blockquotes/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/2015/01/17/demo-post-blockquotes/</guid>
         
+        <category>Lorem ipsum</category>
+        
+        <category>test</category>
+        
+        <category>demo</category>
+        
+        <category>page elements</category>
+        
+        <category>blockquotes</category>
+        
+        
+        <category>technologies</category>
         
       </item>
     
@@ -74,9 +110,21 @@
 
 </description>
         <pubDate>Fri, 16 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</guid>
+        <link>http://website-templates.github.io/2015/01/16/demo-post-lists/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/2015/01/16/demo-post-lists/</guid>
         
+        <category>Lorem ipsum</category>
+        
+        <category>test</category>
+        
+        <category>demo</category>
+        
+        <category>page elements</category>
+        
+        <category>lists</category>
+        
+        
+        <category>technologies</category>
         
       </item>
     
@@ -87,9 +135,21 @@
 
 </description>
         <pubDate>Thu, 15 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</guid>
+        <link>http://website-templates.github.io/2015/01/15/demo-post-code/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/2015/01/15/demo-post-code/</guid>
         
+        <category>Lorem ipsum</category>
+        
+        <category>test</category>
+        
+        <category>demo</category>
+        
+        <category>page elements</category>
+        
+        <category>code blocks</category>
+        
+        
+        <category>technologies</category>
         
       </item>
     
@@ -99,9 +159,21 @@
 
 </description>
         <pubDate>Wed, 14 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</guid>
+        <link>http://website-templates.github.io/2015/01/14/demo-post-tables/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/2015/01/14/demo-post-tables/</guid>
         
+        <category>Lorem ipsum</category>
+        
+        <category>test</category>
+        
+        <category>demo</category>
+        
+        <category>page elements</category>
+        
+        <category>tables</category>
+        
+        
+        <category>technologies</category>
         
       </item>
     
@@ -115,9 +187,21 @@
 
 </description>
         <pubDate>Tue, 13 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</guid>
+        <link>http://website-templates.github.io/2015/01/13/demo-post-blocks/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/2015/01/13/demo-post-blocks/</guid>
         
+        <category>Lorem ipsum</category>
+        
+        <category>test</category>
+        
+        <category>demo</category>
+        
+        <category>page elements</category>
+        
+        <category>blocks</category>
+        
+        
+        <category>technologies</category>
         
       </item>
     
@@ -146,9 +230,21 @@
 
 </description>
         <pubDate>Mon, 12 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</guid>
+        <link>http://website-templates.github.io/2015/01/12/demo-post-buttons/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/2015/01/12/demo-post-buttons/</guid>
         
+        <category>Lorem ipsum</category>
+        
+        <category>test</category>
+        
+        <category>demo</category>
+        
+        <category>page elements</category>
+        
+        <category>buttons</category>
+        
+        
+        <category>technologies</category>
         
       </item>
     
@@ -320,9 +416,21 @@
 
 </description>
         <pubDate>Sun, 11 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/11/demo-post-grid/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/11/demo-post-grid/</guid>
+        <link>http://website-templates.github.io/2015/01/11/demo-post-grid/</link>
+        <guid isPermaLink="true">http://website-templates.github.io/2015/01/11/demo-post-grid/</guid>
         
+        <category>Lorem ipsum</category>
+        
+        <category>test</category>
+        
+        <category>demo</category>
+        
+        <category>page elements</category>
+        
+        <category>grid</category>
+        
+        
+        <category>technologies</category>
         
       </item>
     
