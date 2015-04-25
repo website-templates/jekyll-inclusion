@@ -14,13 +14,13 @@ module Jekyll
     def paginate(site, tag)
       tag_posts = site.posts.find_all {|post| post.tags.include?(tag)}.sort_by {|post| -post.date.to_f}
       num_pages = TagPager.calculate_pages(tag_posts, site.config['paginate'].to_i)
-      tag_name = tag.downcase.gsub(/\s+/, '-')
+      tag_name = tag.gsub(/\s+/, '-')
       (1..num_pages).each do |page|
         pager = TagPager.new(site, page, tag_posts, tag_name, num_pages)
         dir = File.join(site.config['tags']['url'], tag_name, page > 1 ? site.config['tags']['slug'] + "#{page}" : '')
 	      base_path = site.config['tags']['url'] + "#{tag_name}" + "/"
 	      slug_path = site.config['tags']['slug']
-        page = TagPage.new(site, site.source, dir, tag, base_path, slug_path, page, num_pages)
+        page = TagPage.new(site, site.source, dir, tag, base_path, slug_path, page)
         page.pager = pager
         site.pages << page
       end
@@ -28,7 +28,7 @@ module Jekyll
   end
 
   class TagPage < Page
-    def initialize(site, base, dir, tag, base_path, slug_path, page, num_pages)
+    def initialize(site, base, dir, tag, base_path, slug_path, page)
       @site = site
       @base = base
       @dir = dir
@@ -40,8 +40,9 @@ module Jekyll
 
       tag_title_prefix = site.config['tags']['title_prefix']
       tag_descr_prefix = site.config['tags']['descr_prefix']
+      tag_descr_postfix = site.config['tags']['descr_postfix']
       self.data['title'] = "#{tag_title_prefix}#{tag}"
-      self.data['description'] = "#{tag_descr_prefix}&laquo;#{tag}&raquo;, page #{page} of #{num_pages}"
+      self.data['description'] = "#{tag_descr_prefix}#{tag}#{tag_descr_postfix}#{page}"
       self.data['base'] = base_path
       self.data['slug'] = slug_path
     end

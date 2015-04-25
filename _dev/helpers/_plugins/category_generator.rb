@@ -14,13 +14,13 @@ module Jekyll
     def paginate(site, category)
       category_posts = site.posts.find_all {|post| post.categories.include?(category)}.sort_by {|post| -post.date.to_f}
       num_pages = CategoryPager.calculate_pages(category_posts, site.config['paginate'].to_i)
-      category_name = category.downcase.gsub(/\s+/, '-')
+      category_name = category.gsub(/\s+/, '-')
       (1..num_pages).each do |page|
         pager = CategoryPager.new(site, page, category_posts, category_name, num_pages)
         dir = File.join(site.config['categories']['url'], category_name, page > 1 ? site.config['categories']['slug'] + "#{page}" : '')
 	      base_path = site.config['categories']['url'] + "#{category_name}" + "/"
 	      slug_path = site.config['categories']['slug']
-        page = CategoryPage.new(site, site.source, dir, category, base_path, slug_path, page, num_pages)
+        page = CategoryPage.new(site, site.source, dir, category, base_path, slug_path, page)
         page.pager = pager
         site.pages << page
       end
@@ -28,7 +28,7 @@ module Jekyll
   end
 
   class CategoryPage < Page
-    def initialize(site, base, dir, category, base_path, slug_path, page, num_pages)
+    def initialize(site, base, dir, category, base_path, slug_path, page)
       @site = site
       @base = base
       @dir = dir
@@ -40,8 +40,9 @@ module Jekyll
 
       category_title_prefix = site.config['categories']['title_prefix']
       category_descr_prefix = site.config['categories']['descr_prefix']
+      category_descr_postfix = site.config['categories']['descr_postfix']
       self.data['title'] = "#{category_title_prefix}#{category}"
-      self.data['description'] = "#{category_descr_prefix}&laquo;#{category}&raquo;, page #{page} of #{num_pages}"
+      self.data['description'] = "#{category_descr_prefix}#{category}#{category_descr_postfix}#{page}"
       self.data['base'] = base_path
       self.data['slug'] = slug_path
     end

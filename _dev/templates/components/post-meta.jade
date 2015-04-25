@@ -27,7 +27,7 @@ p.post__meta
 	p.post__meta-tags
 		| Tags:&nbsp;
 		| {% for tag in page.tags %}
-		a.post__meta-tag(href="{{ site.tags.url | prepend: site.baseurl }}{{ tag | slugify }}/") {{ tag }}
+		a.post__meta-tag(href="{{ site.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/") {{ tag }}
 		| {% unless forloop.last %}, {% endunless %}
 		| {% endfor %}
 	| {% endif %}
@@ -37,7 +37,7 @@ p.post__meta
 	p.post__meta-category
 		| Category:&nbsp;
 		| {% for cat in page.category %}
-		a.post__meta-cat(href="{{ site.categories.url | prepend: site.baseurl }}{{ cat | slugify }}/") {{ cat }}
+		a.post__meta-cat(href="{{ site.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/") {{ cat }}
 		| {% unless forloop.last %}, {% endunless %}
 		| {% endfor %}
 	| {% endif %}
