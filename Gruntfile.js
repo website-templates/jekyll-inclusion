@@ -287,6 +287,14 @@ module.exports = function(grunt) {
               src: ['**/*.*', '**/.htaccess', '**/CNAME'],
               dest: '<%= build.main %>'
             }]
+          },
+          jekyllStyle: {
+            files: [{
+              expand: true,
+              cwd: '<%= dev.css %>',
+              src: ['**/*.css'],
+              dest: '<%= jekyll.deploy %>/css'
+            }]
           }
         },
 
@@ -401,6 +409,17 @@ module.exports = function(grunt) {
               spawn: false
             },
           },
+          style: {
+            files: ['<%= dev.styles %>/**/*.sass',
+                    '!<%= dev.styles %>/components/**/*.sass',
+                    '<%= dev.css %>/*.css',
+                    '<%= dev.js %>/**/*.js',
+                    '<%= dev.img %>/**/*.{png,jpg,gif}'],
+            tasks: ['jekyll-style'],
+            options: {
+              spawn: false
+            }
+          }
         }
     });
 
@@ -453,7 +472,12 @@ module.exports = function(grunt) {
                                    'newer:imagemin',
                                    'newer:copy',
                                    'shell:jekyllBuild',
-                                   'watch'
+                                   'watch:all'
+    ]);
+
+    grunt.registerTask('jekyll-style', ['newer:sass',
+                                  			'newer:copy:jekyllStyle',
+                                  			'watch:style'
     ]);
 
     grunt.registerTask('build', ['cmq',
