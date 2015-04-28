@@ -19,27 +19,15 @@
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/category/technologies/</loc>
+	<loc>http://website-templates.github.io/tag/Lorem-ipsum/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/category/technologies/2/</loc>
+	<loc>http://website-templates.github.io/tag/Lorem-ipsum/2/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/category/technologies/3/</loc>
-</url>
-
-<url>
-	<loc>http://website-templates.github.io/tag/lorem%20ipsum/</loc>
-</url>
-
-<url>
-	<loc>http://website-templates.github.io/tag/lorem%20ipsum/2/</loc>
-</url>
-
-<url>
-	<loc>http://website-templates.github.io/tag/lorem%20ipsum/3/</loc>
+	<loc>http://website-templates.github.io/tag/Lorem-ipsum/3/</loc>
 </url>
 
 <url>
@@ -67,15 +55,15 @@
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/page%20elements/</loc>
+	<loc>http://website-templates.github.io/tag/page-elements/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/page%20elements/2/</loc>
+	<loc>http://website-templates.github.io/tag/page-elements/2/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/page%20elements/3/</loc>
+	<loc>http://website-templates.github.io/tag/page-elements/3/</loc>
 </url>
 
 <url>
@@ -95,7 +83,7 @@
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/code%20blocks/</loc>
+	<loc>http://website-templates.github.io/tag/code-blocks/</loc>
 </url>
 
 <url>
@@ -115,11 +103,23 @@
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/2/</loc>
+	<loc>http://website-templates.github.io/category/technologies/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/3/</loc>
+	<loc>http://website-templates.github.io/category/technologies/2/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/category/technologies/3/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/page-2/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/page-3/</loc>
 </url>
 
 
