@@ -1,17 +1,27 @@
 :verbatim
 	---
-	layout: page
+	layout: default
 	type: post
 	---
 
-article.post
-	| {{ content }}
+// Main Content
+main.main(role='main')
+	// Page Home
+	include ../../components/home-section
 
-	// Post meta information
-	include ../../components/post-meta
 
-// Pagination
-include ../../components/paginator
+	article#content.content
+		.container
+			| {{ content }}
 
-// Comments
-include ../../components/comments
+			// Post meta information
+			include ../../components/post-meta
+
+			// Pagination
+			include ../../components/paginator
+
+			// Comments
+			include ../../components/comments
+
+// Page End
+include ../../components/end-section

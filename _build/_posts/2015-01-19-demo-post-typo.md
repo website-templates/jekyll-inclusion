@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demo post &mdash; typography"
-subtitle: "This is the first post with tests and demo for typo elements with code snippets and explanations"
+description: "This is the first post with tests and demo for typo elements with code snippets and explanations"
 date: 2015-01-19
 tags: 
 - Lorem ipsum
@@ -11,7 +11,7 @@ tags:
 - typography
 category:
 - technologies
-home_img: "img/post/lorem/common-0.jpg"
+header_img: "img/post/lorem/common-0.jpg"
 thumb_img: "img/post/lorem/cm-0.jpg"
 ---
 

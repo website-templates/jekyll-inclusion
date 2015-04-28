@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demo post &mdash; lists"
-subtitle: "This is the fourth post with tests and demo for lists elements with code snippets and explanations"
+description: "This is the fourth post with tests and demo for lists elements with code snippets and explanations"
 date: 2015-01-16
 tags: 
 - Lorem ipsum
@@ -11,7 +11,7 @@ tags:
 - lists
 category:
 - technologies
-home_img: "img/post/lorem/common-3.jpg"
+header_img: "img/post/lorem/common-3.jpg"
 thumb_img: "img/post/lorem/cm-3.jpg"
 ---     
 <h3 class="typo_serif typo_center">Ordered and unordered lists</h3>

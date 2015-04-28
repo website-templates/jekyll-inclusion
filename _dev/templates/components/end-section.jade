@@ -1,9 +1,9 @@
-.overlay(style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')")
-	section#end.end
+section.end(style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')")
+	.overlay
 		.container
 			h2.end__title(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
 				| Let's get in touch!
-			h3.end__subtitle(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+			h3.end__descr(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
 				| If you have any questions, please do not hesitate to contact me
 
 			nav.social

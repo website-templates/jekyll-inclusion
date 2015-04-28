@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demo post &mdash; grid"
-subtitle: "This is the ninth post with tests and demo for grid with code snippets and explanations"
+description: "This is the ninth post with tests and demo for grid with code snippets and explanations"
 date: 2015-01-11
 tags: 
 - Lorem ipsum
@@ -11,7 +11,7 @@ tags:
 - grid
 category:
 - technologies
-home_img: "img/post/lorem/common-8.jpg"
+header_img: "img/post/lorem/common-8.jpg"
 thumb_img: "img/post/lorem/cm-8.jpg"
 ---
 <h3 class="typo_serif typo_center">Grid</h3>

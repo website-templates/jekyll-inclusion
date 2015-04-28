@@ -1,15 +1,17 @@
 :verbatim
 	---
 	layout: default
+	type: page
 	---
 
-// Page Home
-include ../../components/home-section
-
 // Main Content
-#main.main(role='main')
-	.container
-		| {{ content }}
+main.main(role='main')
+	// Page Home
+	include ../../components/home-section
+
+	section#content.content
+		.container
+			| {{ content }}
 
 // Page End
 include ../../components/end-section

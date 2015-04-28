@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demo post &mdash; images"
-subtitle: "This is the second post with tests and demo for images with code snippets and explanations"
+description: "This is the second post with tests and demo for images with code snippets and explanations"
 date: 2015-01-18
 tags: 
 - Lorem ipsum
@@ -11,7 +11,7 @@ tags:
 - images
 category:
 - technologies
-home_img: "img/post/lorem/common-1.jpg"
+header_img: "img/post/lorem/common-1.jpg"
 thumb_img: "img/post/lorem/cm-1.jpg"
 --- 
 

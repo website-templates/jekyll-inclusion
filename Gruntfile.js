@@ -461,7 +461,13 @@ module.exports = function(grunt) {
                                 'sass',
                                 'jade',
                                 // 'imagemin',
-                                'copy',
+                                'copy:fonts',
+																'copy:js',
+																'copy:livejs',
+																'copy:css',
+																'copy:templates',
+																'copy:html',
+																'copy:helpers',
                                 'shell:jekyllBuild'
     ]);
 
@@ -470,7 +476,13 @@ module.exports = function(grunt) {
                                    'newer:sass',
                                    'newer:jade',
                                    'newer:imagemin',
-                                   'newer:copy',
+                                	 'newer:copy:fonts',
+																	 'newer:copy:js',
+																	 'newer:copy:livejs',
+																	 'newer:copy:css',
+																	 'newer:copy:templates',
+																	 'newer:copy:html',
+																	 'newer:copy:helpers',
                                    'shell:jekyllBuild',
                                    'watch:all'
     ]);

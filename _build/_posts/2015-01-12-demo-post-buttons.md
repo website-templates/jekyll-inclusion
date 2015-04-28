@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demo post &mdash; buttons"
-subtitle: "This is the eighth post with tests and demo for buttons with code snippets and explanations"
+description: "This is the eighth post with tests and demo for buttons with code snippets and explanations"
 date: 2015-01-12
 tags: 
 - Lorem ipsum
@@ -11,7 +11,7 @@ tags:
 - buttons
 category:
 - technologies
-home_img: "img/post/lorem/common-7.jpg"
+header_img: "img/post/lorem/common-7.jpg"
 thumb_img: "img/post/lorem/cm-7.jpg"
 ---
 <h3 class="typo_serif typo_center">Buttons</h3>

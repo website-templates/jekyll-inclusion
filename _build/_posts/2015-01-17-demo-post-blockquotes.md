@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demo post &mdash; blockquotes"
-subtitle: "This is the third post with tests and demo for blockquotes with code snippets and explanations"
+description: "This is the third post with tests and demo for blockquotes with code snippets and explanations"
 date: 2015-01-17
 tags: 
 - Lorem ipsum
@@ -11,7 +11,7 @@ tags:
 - blockquotes
 category:
 - technologies
-home_img: "img/post/lorem/common-2.jpg"
+header_img: "img/post/lorem/common-2.jpg"
 thumb_img: "img/post/lorem/cm-2.jpg"
 ---
 <h3 class="typo_serif typo_center">Blockquotes</h3>

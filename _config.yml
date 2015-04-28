@@ -24,7 +24,7 @@ bitbucket_username: orlovmax
 # linkedin_username:
 
 # Default src
-home_img: "img/bg/index-home.jpg"
+header_img: "img/bg/index-header.jpg"
 end_img: "img/bg/index-end.jpg"
 thumb_img: "img/pic.jpg"
 

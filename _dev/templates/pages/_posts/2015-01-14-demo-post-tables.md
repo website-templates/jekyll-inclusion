@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demo post &mdash; tables"
-subtitle: "This is the sixth post with tests and demo for table elements with code snippets and explanations"
+description: "This is the sixth post with tests and demo for table elements with code snippets and explanations"
 date: 2015-01-14
 tags: 
 - Lorem ipsum
@@ -11,7 +11,7 @@ tags:
 - tables
 category:
 - technologies
-home_img: "img/post/lorem/common-5.jpg"
+header_img: "img/post/lorem/common-5.jpg"
 thumb_img: "img/post/lorem/cm-5.jpg"
 ---
 <h3 class="typo_serif typo_center">Tables</h3>

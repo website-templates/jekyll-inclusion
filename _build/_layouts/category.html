@@ -1,9 +1,8 @@
 ---
 layout: page
-home_img: "img/bg/cat-home.jpg"
+header_img: "img/bg/cat-home.jpg"
 end_img: "img/bg/cat-end.jpg"
 color: light
-type: taxonomy
 ---
 
 <!-- Post preview list-->
@@ -11,7 +10,7 @@ type: taxonomy
   <!-- Post preview item-->
   <article class="post-preview"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/{{ post.thumb_img }}" alt="{{ post.title }}" class="post-preview__image js-lazy"/><a href="{{ post.url | prepend: site.baseurl }}" class="post-preview__link">
       <h3 class="post-preview__title">{{ post.title }}</h3>{% if post.description %}
-      <h4 class="post-preview__subtitle">{{ post.description }}</h4>{% endif %}</a>
+      <h4 class="post-preview__descr">{{ post.description }}</h4>{% endif %}</a>
     <!-- Meta information: authorship, publication date, tags, category-->
     <div class="post-preview__meta">
       <p class="post-preview__meta-autorship">

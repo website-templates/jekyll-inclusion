@@ -1,43 +1,43 @@
 // Meta information: authorship, publication date, tags, category
-p.post__meta
-	p.post__meta-autorship
+footer.post-meta
+	p.post-meta__autorship
 
 		// Check if post is translation and if so - use extended autorsip info
 		| {% if page.translator %}
 		| Author:&nbsp;
-		span.post__meta-author {{ page.author }}
+		span.post-meta__author {{ page.author }}
 		| , translator:&nbsp;
-		span.post__meta-translator {{ page.translator }}
+		span.post-meta__translator {{ page.translator }}
 		br
 		| Source:&nbsp;
-		a.post__meta-source(href="{{ page.source-link }}") {{ page.source }}
+		a.post-meta__source(href="{{ page.source-link }}") {{ page.source }}
 
 		// Else use short autorsip info
 		| {% else %}
 		| Author:&nbsp;
-		span.post__meta-author {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}
+		span.post-meta__author {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}
 		| {% endif %}
 
 		// Publication date
 		| , published:&nbsp;
-		time.post__meta-date(datetime="{{ page.date | date: '%Y-%m-%d' }}") {{ page.date | date: "%B %-d, %Y" }}
+		time.post-meta__date(datetime="{{ page.date | date: '%Y-%m-%d' }}") {{ page.date | date: "%B %-d, %Y" }}
 
 	// Checking for post tags and show them
 	| {% if page.tags %}
-	p.post__meta-tags
+	p.post-meta__tags
 		| Tags:&nbsp;
 		| {% for tag in page.tags %}
-		a.post__meta-tag(href="{{ site.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/") {{ tag }}
+		a.post-meta__tag(href="{{ site.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/") {{ tag }}
 		| {% unless forloop.last %}, {% endunless %}
 		| {% endfor %}
 	| {% endif %}
 
 	// Checking for post category and show it
 	| {% if page.category %}
-	p.post__meta-category
+	p.post-meta__category
 		| Category:&nbsp;
 		| {% for cat in page.category %}
-		a.post__meta-cat(href="{{ site.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/") {{ cat }}
+		a.post-meta__cat(href="{{ site.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/") {{ cat }}
 		| {% unless forloop.last %}, {% endunless %}
 		| {% endfor %}
 	| {% endif %}

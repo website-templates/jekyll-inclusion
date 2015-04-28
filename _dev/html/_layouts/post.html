@@ -1,87 +1,138 @@
 ---
-layout: page
+layout: default
 type: post
 ---
 
-<article class="post">{{ content }}
-  <!-- Post meta information-->
-  <!-- Meta information: authorship, publication date, tags, category-->
-  <p class="post__meta">
-    <p class="post__meta-autorship">
-      <!-- Check if post is translation and if so - use extended autorsip info-->{% if page.translator %}
-      Author:&nbsp;<span class="post__meta-author">{{ page.author }}</span>, translator:&nbsp;<span class="post__meta-translator">{{ page.translator }}</span><br/>Source:&nbsp;<a href="{{ page.source-link }}" class="post__meta-source">{{ page.source }}</a>
-      <!-- Else use short autorsip info-->{% else %}
-      Author:&nbsp;<span class="post__meta-author">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</span>{% endif %}
-      <!-- Publication date-->, published:&nbsp;
-      <time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="post__meta-date">{{ page.date | date: "%B %-d, %Y" }}</time>
-    </p>
-    <!-- Checking for post tags and show them-->{% if page.tags %}
-    <p class="post__meta-tags">
-      Tags:&nbsp;
-      {% for tag in page.tags %}<a href="{{ site.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/" class="post__meta-tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
-      {% endfor %}
-    </p>{% endif %}
-    <!-- Checking for post category and show it-->{% if page.category %}
-    <p class="post__meta-category">
-      Category:&nbsp;
-      {% for cat in page.category %}<a href="{{ site.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/" class="post__meta-cat">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
-      {% endfor %}
-    </p>{% endif %}
-  </p>
-  <hr class="post-divider"/>
-</article>
-<!-- Pagination-->
-{% if page.type == 'page' %}
-{% if paginator.total_pages > 1 %}
-<nav class="pager">
-  <ul>{% if paginator.previous_page %}
-    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a></li>{% endif %}
-    {% if paginator.next_page %}
-    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a></li>{% endif %}
-  </ul>
-</nav>{% endif %}
-{% endif %}
-{% if page.type == 'taxonomy' %}
-{% if paginator.total_pages > 1 %}
-<nav class="pager">
-  <ul>
-    {% if paginator.previous_page %}
-    {% if paginator.previous_page == 1 %}
-    <li class="pager__item pager__item_next"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a></li>{% else %}
-    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a></li>{% endif %}
-    {% endif %}
-    {% if paginator.next_page %}
-    {% if paginator.next_page == 1 %}
-    <li class="pager__item pager__item_previous"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a></li>{% else %}
-    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a></li>{% endif %}
-    {% endif %}
-  </ul>
-</nav>{% endif %}
-{% endif %}
-{% if page.type == 'post' %}
-<nav class="pager">
-  <ul>{% if page.previous.url %}
-    <li class="pager__item pager__item_previous"><a href="{{page.previous.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.previous.title}}" class="pager__link">{{site.pager.post-prev}}</a></li>{% endif %}
-    {% if page.next.url %}
-    <li class="pager__item pager__item_next"><a href="{{page.next.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.next.title}}" class="pager__link">{{site.pager.post-next}}</a></li>{% endif %}
-  </ul>
-</nav>{% endif %}
-<!-- Comments-->
-<div class="comments">
-  {% if site.disqus-code %}
-  {% if page.comments %}
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = '{{site.disqus-code}}'; // required: replace example with your forum shortname
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  {% endif %}
-  {% endif %}
-</div>
+<!-- Main Content-->
+<main role="main" class="main">
+  <!-- Page Home-->{% if page.type == 'page' %}
+  <header style="background-image: url('{{ site.baseurl }}/{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}')" class="page-header">
+    <div class="overlay">
+      <div class="container">
+        <h1 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+        <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__descr">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}</h2><a href="#content" title="Let`s go!" class="icon icon_down {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} page-header__icon js-anchor">Let`s go!</a>
+      </div>
+    </div>
+  </header>{% else %}
+  <header style="background-image: url('{{ site.baseurl }}/{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}')" class="post-header">
+    <div class="overlay">
+      <div class="container">
+        <h1 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="post-header__title">{{ page.title }}</h1>{% if page.description %}
+        <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="post-header__descr">{{ page.description }}</h2>{% endif %}<a href="#content" title="Let`s go!" class="icon icon_down {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} post-header__icon js-anchor">Let`s go!</a>
+      </div>
+    </div>
+  </header>{% endif %}
+  <article id="content" class="content">
+    <div class="container">{{ content }}
+      <!-- Post meta information-->
+      <!-- Meta information: authorship, publication date, tags, category-->
+      <footer class="post-meta">
+        <p class="post-meta__autorship">
+          <!-- Check if post is translation and if so - use extended autorsip info-->{% if page.translator %}
+          Author:&nbsp;<span class="post-meta__author">{{ page.author }}</span>, translator:&nbsp;<span class="post-meta__translator">{{ page.translator }}</span><br/>Source:&nbsp;<a href="{{ page.source-link }}" class="post-meta__source">{{ page.source }}</a>
+          <!-- Else use short autorsip info-->{% else %}
+          Author:&nbsp;<span class="post-meta__author">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</span>{% endif %}
+          <!-- Publication date-->, published:&nbsp;
+          <time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="post-meta__date">{{ page.date | date: "%B %-d, %Y" }}</time>
+        </p>
+        <!-- Checking for post tags and show them-->{% if page.tags %}
+        <p class="post-meta__tags">
+          Tags:&nbsp;
+          {% for tag in page.tags %}<a href="{{ site.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/" class="post-meta__tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </p>{% endif %}
+        <!-- Checking for post category and show it-->{% if page.category %}
+        <p class="post-meta__category">
+          Category:&nbsp;
+          {% for cat in page.category %}<a href="{{ site.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/" class="post-meta__cat">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </p>{% endif %}
+      </footer>
+      <hr class="post-divider"/>
+      <!-- Pagination-->
+      {% if page.type == 'page' %}
+      {% if paginator.total_pages > 1 %}
+      <nav class="pager">
+        <ul>{% if paginator.previous_page %}
+          <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a></li>{% endif %}
+          {% if paginator.next_page %}
+          <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a></li>{% endif %}
+        </ul>
+      </nav>{% endif %}
+      {% endif %}
+      {% if page.type == 'taxonomy' %}
+      {% if paginator.total_pages > 1 %}
+      <nav class="pager">
+        <ul>
+          {% if paginator.previous_page %}
+          {% if paginator.previous_page == 1 %}
+          <li class="pager__item pager__item_next"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a></li>{% else %}
+          <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a></li>{% endif %}
+          {% endif %}
+          {% if paginator.next_page %}
+          {% if paginator.next_page == 1 %}
+          <li class="pager__item pager__item_previous"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a></li>{% else %}
+          <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a></li>{% endif %}
+          {% endif %}
+        </ul>
+      </nav>{% endif %}
+      {% endif %}
+      {% if page.type == 'post' %}
+      <nav class="pager">
+        <ul>{% if page.previous.url %}
+          <li class="pager__item pager__item_previous"><a href="{{page.previous.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.previous.title}}" class="pager__link">{{site.pager.post-prev}}</a></li>{% endif %}
+          {% if page.next.url %}
+          <li class="pager__item pager__item_next"><a href="{{page.next.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.next.title}}" class="pager__link">{{site.pager.post-next}}</a></li>{% endif %}
+        </ul>
+      </nav>{% endif %}
+      <!-- Comments-->
+      <div class="comments">
+        {% if site.disqus-code %}
+        {% if page.comments %}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = '{{site.disqus-code}}'; // required: replace example with your forum shortname
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </article>
+</main>
+<!-- Page End-->
+<section style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="end">
+  <div class="overlay">
+    <div class="container">
+      <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__title">Let's get in touch!</h2>
+      <h3 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__descr">If you have any questions, please do not hesitate to contact me</h3>
+      <nav class="social">
+        <ul>
+          <li class="social__item"><a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="RSS feed" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_rss">News feed</a></li>{% if site.twitter_username %}
+          <li class="social__item"><a href="https://twitter.com/{{ site.twitter_username }}" title="My Twitter" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_twitter">Follow me on twitter</a></li>{% endif %}
+          {% if site.fb_username %}
+          <li class="social__item"><a href="https://www.facebook.com/{{ site.fb_username }}" title="I`m on Facebook" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_fb">My Facebook</a></li>{% endif %}
+          {% if site.gplus_username %}
+          <li class="social__item"><a href="https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author" title="My Google+" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_gplus">Maxim Orlov on Google+</a></li>{% endif %}
+          {% if site.email %}
+          <li class="social__item"><a href="mailto:{{ site.email }}" title="Shoot an email to mail@orlovmax.com" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_mail">mail@orlovmax.com</a></li>{% endif %}
+          {% if site.skype_username %}
+          <li class="social__item"><a href="skype:{{ site.skype_username }}?add" title="My Skype" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_skype">Add me to Skype contacts</a></li>{% endif %}
+          {% if site.github_username %}
+          <li class="social__item"><a href="https://github.com/{{ site.github_username }}" title="My Github" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_git">My projects on github</a></li>{% endif %}
+          {% if site.bitbucket_username %}
+          <li class="social__item"><a href="https://bitbucket.org/{{ site.bitbucket_username }}" title="My Bitbucket" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_bitbucket">Some of my projects on Bitbucket</a></li>{% endif %}
+          {% if site.linkedin_username %}
+          <li class="social__item"><a href="https://linkedin.com/in/{{ site.linkedin_username }}" title="My Linkedin" class="icon {% if page.color == 'dark' %}icon_dark{% elsif page.color == 'light' %}icon_light{% endif %} icon_linkedin">My Linkedin profile</a></li>{% endif %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</section>

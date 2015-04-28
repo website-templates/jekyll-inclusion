@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Demo post &mdash; code blocks"
-subtitle: "This is the fifth post with tests and demo for code blocks with code snippets and explanations"
+description: "This is the fifth post with tests and demo for code blocks with code snippets and explanations"
 date: 2015-01-15
 tags: 
 - Lorem ipsum
@@ -11,7 +11,7 @@ tags:
 - code blocks
 category:
 - technologies
-home_img: "img/post/lorem/common-4.jpg"
+header_img: "img/post/lorem/common-4.jpg"
 thumb_img: "img/post/lorem/cm-4.jpg"
 ---
 <h3 class="typo_serif typo_center">Code blocks</h3>
