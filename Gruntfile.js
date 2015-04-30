@@ -500,6 +500,7 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('theme', ['newer:sass',
+    														 'newer:coffee',
                                  'newer:concat',
                                  'newer:copy:jekyllStyles',
                                  'newer:copy:jekyllScripts',
