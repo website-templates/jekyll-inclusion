@@ -1,0 +1,32 @@
+// Header group
+.hgroup
+	position: relative
+	width: 100%
+	height: 60px
+	+multiple-box-shadow(inset 0 50px 35px -35px $header-shadow)
+
+	&__navicon
+		display: none
+		float: right
+		margin: 5px 20px 0
+		border: none
+		font-size: 0
+		&:before
+			content: "\e804"
+			display: inline-block
+			margin-right: 10px
+			font-family: "inclusion"
+			font-style: normal
+			font-weight: normal
+			font-variant: normal
+			text-transform: none
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			color: $header-text
+			font-size: 32px
+			cursor: pointer
+			+transition(all, 0.3s)
+		&.is-open:before
+			content: "\e805"
+		&:hover:before
+			color: $header-text-hover

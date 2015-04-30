@@ -1,0 +1,42 @@
+.pager
+	&__list
+		+clearfix
+		list-style-type: none
+	&__item
+		display: block
+		max-width: 49%
+		height: 50px
+		margin: 10px 0
+		@media screen and (max-width: 800px)
+			width: 100%
+			max-width: 100%
+		&_previous
+			float: left
+			@media screen and (max-width: 800px)
+				float: none
+		&_next
+			float: right
+			@media screen and (max-width: 800px)
+				float: none
+	&__link
+		display: block
+		width: 100%
+		height: 100%
+		padding: 0 15px
+		border: 1px solid
+		border-color: $button-border
+		font-family: $font-sans
+		font-size: 20px
+		line-height: 50px
+		text-decoration: none
+		text-align: center
+		color: $button-text
+		text-decoration: none
+		+transition(all, 0.2s)
+		@media screen and (max-width: 960px)
+			font-size: 18px
+		@media screen and (max-width: 600px)
+			font-size: 16px
+		&:hover
+			border-color: $button-border-hover
+			color: $button-text-hover

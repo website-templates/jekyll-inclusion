@@ -41,33 +41,64 @@
     <script src="{{ '/js/live.js' | prepend: site.baseurl }}"></script><!-- /build -->
   </head>
   <body>
-    <!-- Header-->
-    <!-- Navigation-->
+    <!-- Main Header-->
     <header class="main-header">
-      <nav class="navbar js-nav">
-        <ul>
-          <li><a href="{{ site.baseurl }}/">Home</a></li>{% for page in site.pages %}
-          {% if page.menu %}
-          <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>{% endif %}
+      <nav class="js-nav nav">
+        <ul class="nav__list">{% for item in site.data.nav %}
+          {% if item.submenu != null %}
+          <li class="nav__item nav__item_sub"><a href="{{ item.link | prepend: site.baseurl }}" class="nav__link nav__link_sub">{{ item.name }}</a>
+            <ul class="nav__list nav__list_sub">{% for subitem in item.submenu %}
+              <li class="nav__item nav__item_sub"><a href="{{ subitem.link | prepend: site.baseurl }}" class="nav__link nav__link_sub">{{ subitem.name }}</a>
+              </li>{% endfor %}
+            </ul>
+          </li>{% else %}
+          <li class="nav__item"><a href="{{ item.link | prepend: site.baseurl }}" class="nav__link">{{ item.name }}</a>
+          </li>{% endif %}
           {% endfor %}
-          <li><a href="http://orlovmax.com">About author</a></li>
-          <li><a href="https://github.com/website-templates/jekyll-inclusion">Project on github</a></li>
+          {% for page in site.pages %}
+          {% if page.menu %}
+          <li class="nav__item"><a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">{{ page.title }}</a>
+          </li>{% endif %}
+          {% endfor %}{% for page in site.pages %}
+          {% if page.menu %}
+          <li class="nav__item"><a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">{{ page.title }}</a>
+          </li>{% endif %}
+          {% endfor %}
         </ul>
       </nav>
-      <div class="hgroup"><a href="#" class="js-navtoggle">Menu</a>
-        <!-- Navigation for multilingual blogs-->
+      <div class="hgroup"><a href="#" class="hgroup__navicon js-navtoggle">Menu</a>
+        <ul class="languages">{% if page.lang_ua or page.lang_ru%}
+          <li class="languages__item">
+            <div class="is-selected languages__link">en
+            </div>
+          </li>{% endif %}
+          {% if page.lang_ua %}
+          <li class="languages__item"><a href="{{ page.lang_ua | prepend: site.baseurl | prepend: site.lang_ua }}" class="languages__link">ua</a>
+          </li>{% endif %}
+          {% if page.lang_ru %}
+          <li class="languages__item"><a href="{{ page.lang_ru | prepend: site.baseurl | prepend: site.lang_ru}}" class="languages__link">ru</a>
+          </li>{% endif %}
+        </ul>
       </div>
     </header>
-    <!-- Main content-->{{ content }}
-    <!-- Footer-->
-    <!-- Footer-->
+    <!-- Main content-->
+    <!-- Main footer-->
     <footer class="main-footer">
       <div class="container">
-        <h5>Designed and coded by&nbsp;<a href="http://orlovmax.com">Maxim Orlov</a> under&nbsp;<a href="http://opensource.org/licenses/MIT" rel="nofollow">MIT</a> license<br>Copyright © {{ site.url | replace: 'http://', '' }} - {{ site.time | date: '%Y' }}</h5>
-        <p>Based on&nbsp;<a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>, designed with&nbsp;<a href="http://orlovmax.com/lab/tools/inclusion" class="inclusion">Inclusion</a><br>Powered by&nbsp;<a href="http://gruntjs.com" rel="nofollow">Grunt</a>, hosted on&nbsp;<a href="{{ site.home-repo }}" rel="nofollow">Github</a></p>
+        <h5 class="main-footer__copyright">Designed and coded by&nbsp;<a href="http://orlovmax.com" class="main-footer__link">Maxim Orlov</a> under&nbsp;<a href="http://opensource.org/licenses/MIT" rel="nofollow" class="main-footer__link">MIT</a> license<br>Copyright © {{ site.url | replace: 'http://', '' }} - {{ site.time | date: '%Y' }}
+        </h5>
+        <p class="main-footer__site-info">Based on&nbsp;<a href="http://jekyllrb.com" rel="nofollow" class="main-footer__link">Jekyll</a>, designed with&nbsp;<a href="http://orlovmax.com/lab/tools/inclusion" class="inclusion">Inclusion</a><br>Powered by&nbsp;<a href="http://gruntjs.com" rel="nofollow" class="main-footer__link">Grunt</a>, hosted on&nbsp;<a href="{{ site.home-repo }}" rel="nofollow" class="main-footer__link">Github</a>
+        </p>
       </div>
     </footer>
-    <!-- Browser update screen--><!--[if lt IE 8]><div class="browser-msg"><h2 class="browser-msg__title">Houston we've had a problem</h2><p class="browser-msg__info">It looks like you’re using an insecure version of Internet Explorer.<br>Using an outdated browser makes your computer unsafe.</p><h3 class="browser-msg__sub">For the best experience on the web, please update your browser.</h3><ul class="browser-msg__list"><li class="browser-msg__item"><a href="http://www.google.com/chrome" title="Google Chrome"><span class="browser-item__img chrome"></span><h2 class="browser-item__title">Google Chrome</h2><p class="browser-item__descr">Built for the modern web and designed to be fast in every possible way.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.firefox.com/" title="Mozilla Firefox"><span class="browser-item__img firefox"></span><h2 class="browser-item__title">Mozilla Firefox</h2><p class="browser-item__descr">Committed to you, your privacy and an open Web.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.apple.com/safari/" title="Apple Safari"><span class="browser-item__img safari"></span><h2 class="browser-item__title">Safari</h2><p class="browser-item__descr">The smartest way to surf. Wait less and browse more.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.opera.com/" title="Opera"><span class="browser-item__img opera"></span><h2 class="browser-item__title">Opera</h2><p class="browser-item__descr">Made to discover. Get a better experience.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer"><span class="browser-item__img ie"></span><h2 class="browser-item__title">Internet Explorer</h2><p class="browser-item__descr">Fast and fluid. Stay safer as you browse.</p><p class="browser-item__note">Visit official website for more info</p></a></li></ul><p class="browser-msg__info">Thank you :)</p></div><![endif]-->
+    <!-- Browser update screen-->
+    {% if site.lang == 'en' %}
+    <!--[if lt IE 9]><div class="browser-msg"><h2 class="browser-msg__title">Houston we've had a problem</h2><p class="browser-msg__info">It looks like you’re using an insecure version of Internet Explorer.<br>Using an outdated browser makes your computer unsafe.</p><h3 class="browser-msg__sub">For the best experience on the web, please update your browser.</h3><ul class="browser-msg__list"><li class="browser-msg__item"><a href="http://www.google.com/chrome" title="Google Chrome"><span class="browser-item__img chrome"></span><h2 class="browser-item__title">Google Chrome</h2><p class="browser-item__descr">Built for the modern web and designed to be fast in every possible way.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.firefox.com/" title="Mozilla Firefox"><span class="browser-item__img firefox"></span><h2 class="browser-item__title">Mozilla Firefox</h2><p class="browser-item__descr">Committed to you, your privacy and an open Web.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.apple.com/safari/" title="Apple Safari"><span class="browser-item__img safari"></span><h2 class="browser-item__title">Safari</h2><p class="browser-item__descr">The smartest way to surf. Wait less and browse more.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.opera.com/" title="Opera"><span class="browser-item__img opera"></span><h2 class="browser-item__title">Opera</h2><p class="browser-item__descr">Made to discover. Get a better experience.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer"><span class="browser-item__img ie"></span><h2 class="browser-item__title">Internet Explorer</h2><p class="browser-item__descr">Fast and fluid. Stay safer as you browse.</p><p class="browser-item__note">Visit official website for more info</p></a></li></ul><p class="browser-msg__info">Thank you :)</p></div><![endif]-->
+    {% elsif site.lang == 'uk' %}
+    <!--[if lt IE 9]><div class="browser-msg"><h2 class="browser-msg__title">Х'юстон у нас проблема</h2><p class="browser-msg__info">Схоже на те, що ви використовуєте ненадійну версію Інтернет Експлорера.<br>Використання застарілих браузерів робить вашу систему вразливою.</p><h3 class="browser-msg__sub">Для більш зручного і безпечного користування вебом, будь-ласка оновіть ваш браузер.</h3><ul class="browser-msg__list"><li class="browser-msg__item"><a href="http://www.google.com/chrome" title="Google Chrome"><span class="browser-item__img chrome"></span><h2 class="browser-item__title">Google Chrome</h2><p class="browser-item__descr">Built for the modern web and designed to be fast in every possible way.</p><p class="browser-item__note">Відвідати офіційний сайт щоб дізнатись більше</p></a></li><li class="browser-msg__item"><a href="http://www.firefox.com/" title="Mozilla Firefox"><span class="browser-item__img firefox"></span><h2 class="browser-item__title">Mozilla Firefox</h2><p class="browser-item__descr">Committed to you, your privacy and an open Web.</p><p class="browser-item__note">Відвідати офіційний сайт щоб дізнатись більше</p></a></li><li class="browser-msg__item"><a href="http://www.apple.com/safari/" title="Apple Safari"><span class="browser-item__img safari"></span><h2 class="browser-item__title">Safari</h2><p class="browser-item__descr">The smartest way to surf. Wait less and browse more.</p><p class="browser-item__note">Відвідати офіційний сайт щоб дізнатись більше</p></a></li><li class="browser-msg__item"><a href="http://www.opera.com/" title="Opera"><span class="browser-item__img opera"></span><h2 class="browser-item__title">Opera</h2><p class="browser-item__descr">Made to discover. Get a better experience.</p><p class="browser-item__note">Відвідати офіційний сайт щоб дізнатись більше</p></a></li><li class="browser-msg__item"><a href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer"><span class="browser-item__img ie"></span><h2 class="browser-item__title">Internet Explorer</h2><p class="browser-item__descr">Fast and fluid. Stay safer as you browse.</p><p class="browser-item__note">Відвідати офіційний сайт щоб дізнатись більше</p></a></li></ul><p class="browser-msg__info">Дякую за розуміння :)</p></div><![endif]-->
+    {% elsif site.lang == 'ru' %}
+    <!--[if lt IE 9]><div class="browser-msg"><h2 class="browser-msg__title">Хьюстон у нас проблема</h2><p class="browser-msg__info">Похоже, что вы используете ненадежную версию Интернет Эксплорера.<br>Использование устаревших браузеров делает вашу систему уязвимой.</p><h3 class="browser-msg__sub">Для более удобного и безопасного использования веба, пожалуйста обновите ваш браузер.</h3><ul class="browser-msg__list"><li class="browser-msg__item"><a href="http://www.google.com/chrome" title="Google Chrome"><span class="browser-item__img chrome"></span><h2 class="browser-item__title">Google Chrome</h2><p class="browser-item__descr">Built for the modern web and designed to be fast in every possible way.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.firefox.com/" title="Mozilla Firefox"><span class="browser-item__img firefox"></span><h2 class="browser-item__title">Mozilla Firefox</h2><p class="browser-item__descr">Committed to you, your privacy and an open Web.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.apple.com/safari/" title="Apple Safari"><span class="browser-item__img safari"></span><h2 class="browser-item__title">Safari</h2><p class="browser-item__descr">The smartest way to surf. Wait less and browse more.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.opera.com/" title="Opera"><span class="browser-item__img opera"></span><h2 class="browser-item__title">Opera</h2><p class="browser-item__descr">Made to discover. Get a better experience.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer"><span class="browser-item__img ie"></span><h2 class="browser-item__title">Internet Explorer</h2><p class="browser-item__descr">Fast and fluid. Stay safer as you browse.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li></ul><p class="browser-msg__info">Спасибо за понимание :)</p></div><![endif]-->
+    {% endif %}
     <!-- Body external resources--><!-- build:js {{ '/js/vendor/vendor.min.js' | prepend: site.baseurl }} -->
     <script src="{{ '/js/vendor/vendor.js' | prepend: site.baseurl }}"></script><!-- /build -->
     <!-- build:js {{ '/js/assembled.min.js' | prepend: site.baseurl }} -->

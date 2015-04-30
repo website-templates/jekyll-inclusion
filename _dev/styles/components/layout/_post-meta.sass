@@ -1,0 +1,44 @@
+// Post meta information
+.post-meta
+	display: block
+	clear: both
+	margin-top: 50px
+	padding: 0 10px
+	border-left: 3px solid $figure-border
+
+	&__autorship,
+	&__tags,
+	&__categories
+		display: block
+		margin-bottom: 0
+		font-family: $font-sans
+		color: $section-text
+		font-weight: 400
+		&_preview
+			display: block
+			margin-bottom: 0
+			font-family: $font-sans
+			color: $section-text
+			font-weight: 400
+
+	&__author,
+	&__date,
+	&__tag,
+	&__category,
+	&__translator
+		// font-family: $font-serif;
+		color: $section-muted
+		font-weight: 300
+		&_preview
+			// font-family: $font-serif;
+			color: $section-muted
+			font-weight: 300
+
+	&_preview
+		clear: none
+		margin-left: 250px
+		margin-top: 0
+		padding: 0
+		border: none
+		@media screen and (max-width: 800px)
+			margin: auto

@@ -1,0 +1,34 @@
+//- Site navigation
+mixin nav()
+	+b('nav').nav.js-nav
+		+e('ul').list
+			//- We can add page menu items from data *.yml
+			| {% for item in site.data.nav %}
+			| {% if item.submenu != null %}
+			+e.item_sub
+				+e.link_sub(href='{{ item.link | prepend: site.baseurl }}') {{ item.name }}
+				+e('ul').list_sub
+					| {% for subitem in item.submenu %}
+					+e.item_sub
+						+e.link_sub(href='{{ subitem.link | prepend: site.baseurl }}') {{ subitem.name }}
+					| {% endfor %}
+			| {% else %}
+			+e.item
+				+e.link(href='{{ item.link | prepend: site.baseurl }}') {{ item.name }}
+			| {% endif %}
+			| {% endfor %}
+
+			| {% for page in site.pages %}
+			| {% if page.menu %}
+			+e.item
+				+e.link(href='{{ page.url | prepend: site.baseurl }}') {{ page.title }}
+			| {% endif %}
+			| {% endfor %}
+
+			//- Or we can add them from site pages if page `menu` option is true
+			| {% for page in site.pages %}
+			| {% if page.menu %}
+			+e.item
+				+e.link(href='{{ page.url | prepend: site.baseurl }}') {{ page.title }}
+			| {% endif %}
+			| {% endfor %}

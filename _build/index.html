@@ -3,75 +3,95 @@ layout: page
 header_img: "img/bg/index-home.jpg"
 end_img: "img/bg/index-end.jpg"
 color: light
-lang_ru: "/"
-lang_ua: "/"
+type: page
 ---
 
-<!-- Post preview list-->
-<div class="post-list">{% for post in paginator.posts %}
-  <!-- Post preview item-->
-  <article class="post-preview"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/{{ post.thumb_img }}" alt="{{ post.title }}" class="post-preview__image js-lazy"/><a href="{{ post.url | prepend: site.baseurl }}" class="post-preview__link">
-      <h3 class="post-preview__title">{{ post.title }}</h3>{% if post.description %}
-      <h4 class="post-preview__descr">{{ post.description }}</h4>{% endif %}</a>
-    <!-- Meta information: authorship, publication date, tags, category-->
-    <div class="post-preview__meta">
-      <p class="post-preview__meta-autorship">
-        <!-- Check if post is translation and if so - use extended autorsip info-->{% if post.translator %}
-        Author:&nbsp;<span class="post-preview__meta-author">{{ post.author }}</span>, translator:&nbsp;<span class="post-preview__meta-translator">{{ post.translator }}</span><br/>Source:&nbsp;<a href="{{ post.source-link }}" class="post-preview__meta-source">{{ post.source }}</a>
-        <!-- Else use short autorsip info-->{% else %}
-        Author:&nbsp;<span class="post-preview__meta-author">{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</span>{% endif %}
-        <!-- Publication date-->, published:&nbsp;
-        <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-preview__meta-date">{{ post.date | date: "%B %-d, %Y" }}</time>
-      </p>
-      <!-- Checking for post tags and show them-->{% if post.tags %}
-      <p class="post-preview__meta-tags">
-        Tags:&nbsp;
-        {% for tag in post.tags %}<a href="{{ site.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/" class="post-preview__meta-tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
-        {% endfor %}
-      </p>{% endif %}
-      <!-- Checking for post category and show it-->{% if post.category %}
-      <p class="post-preview__meta-category">
-        Category:&nbsp;
-        {% for cat in post.category %}<a href="{{ site.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/" class="post-preview__meta-cat">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
-        {% endfor %}
-      </p>{% endif %}
-    </div>
-  </article>
-  <hr class="post-divider"/>{% endfor %}
-</div>
+<!-- Post preview list-->{% for post in paginator.posts %}
+<article class="post-preview"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/{{ post.thumb_img }}" alt="{{ post.title }}" class="js-lazy post-preview__image" title=""/><a href="{{ post.url | prepend: site.baseurl }}" class="post-preview__link">
+    <h3 class="post-preview__title">{{ post.title }}
+    </h3>{% if post.description %}
+    <h4 class="post-preview__descr">{{ post.description }}
+    </h4>{% endif %}</a>{% if page.type == 'page' or page.type == 'taxonomy' %}
+  <div class="post-meta post-meta_preview">
+    <p class="post-meta__autorship post-meta__autorship_preview">{% if post.translator %}
+      Author:&nbsp;<span class="post-meta__author post-meta__author_preview">{{ post.author }}</span>, translator:&nbsp;<span class="post-meta__translator post-meta__translator_preview">{{ post.translator }}</span><br>Source:&nbsp;<a href="{{ post.source-link }}" class="post-meta__source post-meta__source_preview">{{ post.source }}</a>{% else %}
+      Author:&nbsp;<span class="post-meta__author post-meta__author_preview">{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</span>{% endif %}, published:&nbsp;
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-meta__date post-meta__date_preview">{{ post.date | date: "%B %-d, %Y" }}
+      </time>
+    </p>{% if post.tags %}
+    <p class="post-meta__tags post-meta__tags_preview">
+      Tags:&nbsp;
+      {% for tag in post.tags %}<a href="{{ site.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/" class="post-meta__tag post-meta__tag_preview">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>{% endif %}{% if post.category %}
+    <p class="post-meta__categories post-meta__categories_preview">
+      Category:&nbsp;
+      {% for cat in post.category %}<a href="{{ site.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/" class="post-meta__category post-meta__category_preview">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>{% endif %}
+  </div>{% elsif page.type == 'post' %}
+  <div class="post-meta">
+    <p class="post-meta__autorship">{% if page.translator %}
+      Author:&nbsp;<span class="post-meta__author">{{ page.author }}</span>, translator:&nbsp;<span class="post-meta__translator">{{ page.translator }}</span><br>Source:&nbsp;<a href="{{ page.source-link }}" class="post-meta__source">{{ page.source }}</a>{% else %}
+      Author:&nbsp;<span class="post-meta__author">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</span>{% endif %}, published:&nbsp;
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="post-meta__date">{{ page.date | date: "%B %-d, %Y" }}
+      </time>
+    </p>{% if page.tags %}
+    <p class="post-meta__tags">
+      Tags:&nbsp;
+      {% for tag in page.tags %}<a href="{{ site.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/" class="post-meta__tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>{% endif %}{% if page.category %}
+    <p class="post-meta__categories">
+      Category:&nbsp;
+      {% for cat in page.category %}<a href="{{ site.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/" class="post-meta__category">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>{% endif %}
+  </div>
+  <hr class="divider">{% endif %}
+</article>
+<hr class="divider">{% endfor %}
 <!-- Pagination-->
 {% if page.type == 'page' %}
 {% if paginator.total_pages > 1 %}
 <nav class="pager">
-  <ul>{% if paginator.previous_page %}
-    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a></li>{% endif %}
+  <ul class="pager__list">{% if paginator.previous_page %}
+    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a>
+    </li>{% endif %}
     {% if paginator.next_page %}
-    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a></li>{% endif %}
+    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a>
+    </li>{% endif %}
   </ul>
 </nav>{% endif %}
 {% endif %}
 {% if page.type == 'taxonomy' %}
 {% if paginator.total_pages > 1 %}
 <nav class="pager">
-  <ul>
+  <ul class="pager__list">
     {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-    <li class="pager__item pager__item_next"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a></li>{% else %}
-    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a></li>{% endif %}
+    <li class="pager__item pager__item_next"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a>
+    </li>{% else %}
+    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-next}}</a>
+    </li>{% endif %}
     {% endif %}
     {% if paginator.next_page %}
     {% if paginator.next_page == 1 %}
-    <li class="pager__item pager__item_previous"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a></li>{% else %}
-    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a></li>{% endif %}
+    <li class="pager__item pager__item_previous"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a>
+    </li>{% else %}
+    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.pager.page-prev}}</a>
+    </li>{% endif %}
     {% endif %}
   </ul>
 </nav>{% endif %}
 {% endif %}
 {% if page.type == 'post' %}
 <nav class="pager">
-  <ul>{% if page.previous.url %}
-    <li class="pager__item pager__item_previous"><a href="{{page.previous.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.previous.title}}" class="pager__link">{{site.pager.post-prev}}</a></li>{% endif %}
+  <ul class="pager__list">{% if page.previous.url %}
+    <li class="pager__item pager__item_previous"><a href="{{page.previous.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.previous.title}}" class="pager__link">{{site.pager.post-prev}}</a>
+    </li>{% endif %}
     {% if page.next.url %}
-    <li class="pager__item pager__item_next"><a href="{{page.next.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.next.title}}" class="pager__link">{{site.pager.post-next}}</a></li>{% endif %}
+    <li class="pager__item pager__item_next"><a href="{{page.next.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.next.title}}" class="pager__link">{{site.pager.post-next}}</a>
+    </li>{% endif %}
   </ul>
 </nav>{% endif %}

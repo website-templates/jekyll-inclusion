@@ -20,6 +20,8 @@ mixin bemto_tag(tag)
       - newTag = 'span';
     else if bemto_chain_contexts[contextIndex-1] === 'list'
       - newTag = 'li';
+    else if bemto_chain_contexts[contextIndex-1] === 'optionlist'
+      - newTag = 'option';
 
   //- Attributes context checks
   if attributes.href
@@ -46,6 +48,8 @@ mixin bemto_tag(tag)
     - bemto_chain_contexts[bemto_chain_contexts.length] = 'inline';
   else if ['ul','ol'].indexOf(newTag) !== -1
     - bemto_chain_contexts[bemto_chain_contexts.length] = 'list';
+  else if ['select','datalist'].indexOf(newTag) !== -1
+    - bemto_chain_contexts[bemto_chain_contexts.length] = 'optionlist';
   else
     - bemto_chain_contexts[bemto_chain_contexts.length] = 'block';
 
@@ -64,6 +68,7 @@ mixin bemto_tag(tag)
     when 'cite': cite&attributes(attributes): block
     when 'code': code&attributes(attributes): block
     when 'dd': dd&attributes(attributes): block
+    when 'datalist': datalist&attributes(attributes): block
     when 'del': del&attributes(attributes): block
     when 'dfn': dfn&attributes(attributes): block
     when 'dl': dl&attributes(attributes): block
@@ -87,15 +92,18 @@ mixin bemto_tag(tag)
     when 'label': label&attributes(attributes): block
     when 'legend': legend&attributes(attributes): block
     when 'li': li&attributes(attributes): block
+    when 'main': main&attributes(attributes): block
     when 'mark': mark&attributes(attributes): block
     when 'nav': nav&attributes(attributes): block
     when 'ol': ol&attributes(attributes): block
+    when 'option': option&attributes(attributes): block
     when 'p': p&attributes(attributes): block
     when 'pre': pre&attributes(attributes): block
     when 'q': q&attributes(attributes): block
     when 's': s&attributes(attributes): block
     when 'samp': samp&attributes(attributes): block
     when 'section': section&attributes(attributes): block
+    when 'select': select&attributes(attributes): block
     when 'small': small&attributes(attributes): block
     when 'span': span&attributes(attributes): block
     when 'strong': strong&attributes(attributes): block
@@ -109,6 +117,7 @@ mixin bemto_tag(tag)
     when 'tfoot': tfoot&attributes(attributes): block
     when 'th': th&attributes(attributes): block
     when 'thead': thead&attributes(attributes): block
+    when 'time': time&attributes(attributes): block
     when 'tr': tr&attributes(attributes): block
     when 'u ': u&attributes(attributes): block
     when 'ul': ul&attributes(attributes): block

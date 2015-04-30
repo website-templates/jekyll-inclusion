@@ -1,14 +1,30 @@
-:verbatim
-	---
-	layout: page
-	header_img: "img/bg/tag-home.jpg"
-	end_img: "img/bg/tag-end.jpg"
-	color: light
-	---
+extends default
+block front-matter
+	:verbatim
+		---
+		header_img: "img/bg/tag-home.jpg"
+		end_img: "img/bg/tag-end.jpg"
+		color: light
+		type: taxonomy
+		---
 
-// Post preview list
-.post-list
-	include ../../components/post-preview
+//- I don't think that default layout is so necessary for jekyll generating
+//- So we can apply it with JADE template engine and minimize count of build steps
+block content
+	main.main(role='main')
+		section.page
+			// Page home
+			+page-header()
 
-// Pagination
-include ../../components/paginator
+			// Page content from *.md
+			#start.container.container_page
+				// Post preview list
+				+post-preview()
+					+post-meta()
+
+				// Pagination
+				+paginator()
+
+		// Page End
+		+page-end
+			+social()

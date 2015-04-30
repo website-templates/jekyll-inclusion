@@ -1,0 +1,8 @@
+- name: "Home"
+  link: "/"
+
+- name: "About author"
+  link: "http://orlovmax.com"
+
+- name: "Project on github"
+  link: "https://github.com/website-templates/jekyll-inclusion"

@@ -1,16 +1,22 @@
+//- Mixins:
+//- bemto mixin for Jade and BEM magic
+include ../helpers/mixins
+
+//- Common used mixin-blocks
+include ../components/blocks
+
 :verbatim
 	---
 	layout: page
 	header_img: "img/bg/index-home.jpg"
 	end_img: "img/bg/index-end.jpg"
 	color: light
-	lang_ru: "/"
-	lang_ua: "/"
+	type: page
 	---
 
 // Post preview list
-.post-list
-	include ../components/post-preview
++post-preview()
+	+post-meta()
 
 // Pagination
-include ../components/paginator
++paginator()

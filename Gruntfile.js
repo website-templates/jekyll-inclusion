@@ -288,12 +288,24 @@ module.exports = function(grunt) {
               dest: '<%= build.main %>'
             }]
           },
-          jekyllStyle: {
+          jekyllStyles: {
             files: [{
               expand: true,
-              cwd: '<%= dev.css %>',
+              cwd: '<%= dev.css %>/',
               src: ['**/*.css'],
-              dest: '<%= jekyll.deploy %>/css'
+              dest: '<%= jekyll.deploy %>/css/'
+            }]
+          },
+          jekyllScripts: {
+            files: [{
+              expand: true,
+              cwd: '<%= dev.js %>/',
+              src: [
+                '**/assembled.js',
+                '**/vendor.js',
+                '**/head.js',
+                '**/ie.js'],
+              dest: '<%= jekyll.deploy %>/js/'
             }]
           }
         },
@@ -393,12 +405,12 @@ module.exports = function(grunt) {
         watch: {
           all: {
             files: ['<%= dev.html %>/**/*.html',
-                    '<%= dev.styles %>/**/*.{scss,sass}',
+                    '<%= dev.styles %>/**/*.sass',
+                    '!<%= dev.styles %>/components/**/*.sass',
                     '<%= dev.css %>/*.css',
-                    '<%= dev.coffee %>/**/*.coffee',
                     '<%= dev.js %>/**/*.js',
                     '<%= dev.img %>/**/*.{png,jpg,gif}',
-                    '<%= dev.templates %>/pages/**/*.{jade,md,markdown}',
+                    '<%= dev.templates %>/**/*.{jade,md,markdown}',
                     '<%= dev.php %>/**/*.php',
                     '<%= dev.fonts %>/**/*.{eot,svg,ttf,woff}',
                     '<%= dev.helpers %>/**/*.*',
@@ -407,7 +419,7 @@ module.exports = function(grunt) {
             tasks: ['default'],
             options: {
               spawn: false
-            },
+            }
           },
           style: {
             files: ['<%= dev.styles %>/**/*.sass',
@@ -415,7 +427,7 @@ module.exports = function(grunt) {
                     '<%= dev.css %>/*.css',
                     '<%= dev.js %>/**/*.js',
                     '<%= dev.img %>/**/*.{png,jpg,gif}'],
-            tasks: ['jekyll-style'],
+            tasks: ['theme'],
             options: {
               spawn: false
             }
@@ -487,9 +499,11 @@ module.exports = function(grunt) {
                                    'watch:all'
     ]);
 
-    grunt.registerTask('jekyll-style', ['newer:sass',
-                                  			'newer:copy:jekyllStyle',
-                                  			'watch:style'
+    grunt.registerTask('theme', ['newer:sass',
+                                 'newer:concat',
+                                 'newer:copy:jekyllStyles',
+                                 'newer:copy:jekyllScripts',
+                                 'watch:style'
     ]);
 
     grunt.registerTask('build', ['cmq',

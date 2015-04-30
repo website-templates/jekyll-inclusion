@@ -1,0 +1,27 @@
+// Languages bar
+.languages
+	display: block
+	float: left
+	margin: 0 20px
+	list-style-type: none
+
+	&__item
+		margin-right: 5px
+		display: inline-block
+		text-align: center
+
+	&__link
+		font-family: $font-condensed
+		font-size: 30px
+		line-height: 1
+		color: $header-text
+		text-decoration: none
+		border-bottom: 1px dotted $header-text
+		+transition(all, 0.3s)
+		&:hover
+			color: $header-text-hover
+			border-color: $header-text-hover
+		&.is-selected
+			border: none
+			cursor: default
+			color: $header-text-selected

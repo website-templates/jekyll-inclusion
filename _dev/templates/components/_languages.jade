@@ -1,0 +1,15 @@
+//- Navigation for multilingual blogs
+mixin languages()
+	+b('ul').languages
+		| {% if page.lang_ua or page.lang_ru%}
+		+e.item
+			+e.link.is-selected en
+		| {% endif %}
+		| {% if page.lang_ua %}
+		+e.item
+			+e.link(href="{{ page.lang_ua | prepend: site.baseurl | prepend: site.lang_ua }}") ua
+		| {% endif %}
+		| {% if page.lang_ru %}
+		+e.item
+			+e.link(href="{{ page.lang_ru | prepend: site.baseurl | prepend: site.lang_ru}}") ru
+		| {% endif %}

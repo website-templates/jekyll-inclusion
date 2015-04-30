@@ -1,0 +1,30 @@
+// Post preview
+.post-preview
+	clear: both
+	+clearfix
+	&__image
+		display: block
+		float: left
+		width: 220px
+		height: 220px
+		margin: 0 30px 30px 0
+		@media screen and (max-width: 800px)
+			float: none
+			width: 100%
+			height: auto
+			margin: 0 auto 10px
+	&__link
+		text-decoration: none
+	&__title
+		font-family: $font-sans
+		color: $section-text
+		font-weight: 600
+		margin-left: 250px
+		@media screen and (max-width: 800px)
+			margin: auto
+	&__descr
+		font-family: $font-condensed
+		color: $section-muted
+		margin-left: 250px
+		@media screen and (max-width: 800px)
+			margin: auto

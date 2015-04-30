@@ -1,0 +1,24 @@
+//- Footer
+mixin main-footer()
+	+b('footer').main-footer
+		.container
+			+e('h5').copyright
+				| Designed and coded by&nbsp;
+				+e.link(href='http://orlovmax.com') Maxim Orlov
+				|  under&nbsp;
+				+e.link(href='http://opensource.org/licenses/MIT', rel='nofollow') MIT
+				|  license
+				br
+				| Copyright © {{ site.url | replace: 'http://', '' }} - {{ site.time | date: '%Y' }}
+			+e('p').site-info
+				| Based on&nbsp;
+				+e.link(href='http://jekyllrb.com', rel='nofollow') Jekyll
+				| , designed with&nbsp;
+				a.inclusion(href='http://orlovmax.com/lab/tools/inclusion') Inclusion
+				br
+				| Powered by&nbsp;
+				+e.link(href='http://gruntjs.com', rel='nofollow') Grunt
+				| , hosted on&nbsp;
+				+e.link(href='{{ site.home-repo }}', rel='nofollow') Github
+
+

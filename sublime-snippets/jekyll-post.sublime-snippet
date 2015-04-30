@@ -3,17 +3,16 @@
 ---
 layout: post
 title: "$1"
-subtitle: "$2"
+description: "$2"
 date: $3
-labels: 
+tags:
 - $4
-thumb_img: "img/post/$5/$6"
-home_img: "img/post/$5/$7"
-end_img: "img/post/$5/$8"
+category:
+- $5
+thumb_img: "img/post/$6/$7"
+home_img: "img/post/$6/$8"
+end_img: "img/post/$6/$9"
 comments: true
-<!-- lang_en:  -->
-<!-- lang_ua:  -->
-<!-- lang_ru:  -->
 <!-- permalink:  -->
 ---
 ]]></content>

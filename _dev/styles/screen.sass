@@ -10,25 +10,39 @@
 // https://github.com/mycodelab/inclusion
 
 // ==============================
+// ==============================
 // $Contents
 // ==============================
 //
 // Contents......................Here we are!
 //
-// Component.....................useful things, mixins, settings, elements
-//   Reset.......................Reset defaults
+// Helpers.......................useful things, mixins, elements
 //   Elements....................External scss mixins
 //   Grid system.................Import fluid gs
-//   Prism.......................Prism syntax highlight
-//   Fonts.......................Offline and online fonts
-//   Settings....................Framework settings and variables
-//   Mixins......................Internal framework mixins
+//   Prism.......................Prism syntax highlighting styles
 //
-// Layout styles.................Basic page styles
-//   General.....................Page body and container
-//   Top.........................Page header and navbar
-//   Content.....................Page content, sections, chapters, footer
-// Inclusions....................Blog content inclusions
+// General.......................General components and settings
+//   Fonts.......................Offline and online fonts
+//   Reset.......................Reset defaults
+//   Settings...................Settings and variables
+//
+// Layout........................Basic page styles
+//   Common......................Site containers and common layout blocks
+//   Main header.................Site header
+//   Navigation..................main navigation
+//   Header group................Header group for langmenu and navicon
+//   Languages...................Languages menu
+//   Page and post header........Page and post header screen
+//   Post preview................Post preview for post list
+//   Post meta...................Post meta information
+//   Paginator...................Page and post pagination
+//   Comments....................Comments block
+//   End section.................Post and page end section with social icons
+//   Social buttons..............Social buttons
+//   Main footer.................Site footer
+//
+// Content.......................Content styling things
+//   Mixins......................Internal framework mixins
 //   Typography..................Headings and text
 //   Buttons.....................Iconic and common buttons
 //   Common block................Common block element
@@ -40,67 +54,103 @@
 // Media queries.................Media queries section
 
 /////////////////////////////////
-/// $Component
+/// $Helpers
 /////////////////////////////////
 
-// $Reset
-@import components/component-reset
-
 // $Elements
-@import components/component-elements
+@import components/helpers/_elements
 
 // $Grid system
-@import components/component-gs
+@import components/helpers/_gs
 
 // $Prism
-@import components/component-prism
+@import components/helpers/_prism
+
+
+/////////////////////////////////
+/// $General
+/////////////////////////////////
 
 // $Fonts
-@import components/component-fonts
+@import components/general/_fonts
+
+// $Reset
+@import components/general/_reset
 
 // $Settings
-@import components/component-settings
+@import components/general/_settings
 
-// $Mixins
-@import components/component-mixins
 
 /////////////////////////////////
 /// $Layout styles
 /////////////////////////////////
 
-// $Layout general
-@import components/layout-general
+// $Common
+@import components/layout/_common
 
-// $Layout top
-@import components/layout-top
+// $Main header
+@import components/layout/_main-header
 
-// $Layout content
-@import components/layout-content
+// $Navigation
+@import components/layout/_nav
+
+// $Header group
+@import components/layout/_hgroup
+
+// $Languages
+@import components/layout/_languages
+
+// $Page and post header
+@import components/layout/_page-header
+
+// $Post preview
+@import components/layout/_post-preview
+
+// $Post meta
+@import components/layout/_post-meta
+
+// $Paginator
+@import components/layout/_paginator
+
+// $Comments
+@import components/layout/_comments
+
+// $End section
+@import components/layout/_end-section
+
+// $Social buttons
+@import components/layout/_social
+
+// $Main footer
+@import components/layout/_main-footer
 
 /////////////////////////////////
-/// $Inclusions
+/// $Content
 /////////////////////////////////
+
+// $Mixins
+@import components/content/_inclusion-mixins
 
 // $Typography
-@import components/inclusion-typo
+@import components/content/_inclusion-typo
 
 // $Button
-@import components/inclusion-buttons
+@import components/content/_inclusion-buttons
 
 // $Common block
-@import components/inclusion-block
+@import components/content/_inclusion-block
 
 // $Blockquote
-@import components/inclusion-blockquote
+@import components/content/_inclusion-blockquote
 
 // $List
-@import components/inclusion-list
+@import components/content/_inclusion-list
 
 // $Figure
-@import components/inclusion-figure
+@import components/content/_inclusion-figure
 
 // $Table
-@import components/inclusion-table
+@import components/content/_inclusion-table
 
 /////////////////////////////////
 /// $Media queries

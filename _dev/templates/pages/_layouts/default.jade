@@ -1,26 +1,40 @@
+//- Mixins:
+//- bemto mixin for Jade and BEM magic
+include ../../helpers/mixins
+
+//- Common used mixin-blocks
+include ../../components/blocks
+
+//- This block will be filled with required variables
+block front-matter
+
 | {% strip %}
 doctype html
 html(lang='{{ site.lang }}')
 	head
 		// Meta information
-		include ../../components/meta
+		include ../../components/general/meta
 
 		// Head external resources
-		include ../../components/head-src
+		include ../../components/general/head-src
 
 	body
-		// Header
-		include ../../components/header
+		// Main Header
+		+main-header()
+			+nav()
+			+hgroup()
+				+languages()
 
 		// Main content
-		| {{ content }}
+		block content
 
-		// Footer
-		include ../../components/footer
+
+		// Main footer
+		+main-footer()
 
 		// Browser update screen
-		include ../../components/ie-out
+		+ie-out()
 
 		// Body external resources
-		include ../../components/body-src
+		include ../../components/general/body-src
 | {% endstrip %}

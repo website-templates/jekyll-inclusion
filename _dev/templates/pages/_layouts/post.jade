@@ -1,27 +1,32 @@
-:verbatim
-	---
-	layout: default
-	type: post
-	---
+extends default
+block front-matter
+	:verbatim
+		---
+		color: light
+		type: post
+		---
 
-// Main Content
-main.main(role='main')
-	// Page Home
-	include ../../components/home-section
+//- I don't think that default layout is so necessary for jekyll generating
+//- So we can apply it with JADE template engine and minimize count of build steps
+block content
+	main.main(role='main')
+		article.post
+			// Post home
+			+page-header()._post
 
+			// Post content from *.md
+			#start.container.container_post
+				| {{ content }}
 
-	article#content.content
-		.container
-			| {{ content }}
+				// Post meta information
+				+post-meta()
 
-			// Post meta information
-			include ../../components/post-meta
+				// Pagination
+				+paginator()
 
-			// Pagination
-			include ../../components/paginator
+				// Comments
+				+comments()
 
-			// Comments
-			include ../../components/comments
-
-// Page End
-include ../../components/end-section
+		// Page End
+		+page-end
+			+social()
