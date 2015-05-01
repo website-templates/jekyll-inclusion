@@ -4,8 +4,8 @@ mixin page-end()
 		.overlay
 			.container
 				+e('h2').title(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
-					| Let's get in touch!
+					| {{ site.end.title }}
 				+e('h3').descr(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
-					| If you have any questions, please do not hesitate to contact me
+					| {{ site.end.descr }}
 
 				block

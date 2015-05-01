@@ -6,28 +6,28 @@ mixin post-meta()
 
 			//- Check if post is translation and if so - use extended autorsip info
 			| {% if post.translator %}
-			| Author:&nbsp;
+			| {{ site.meta.author }}:&nbsp;
 			+e.author_preview {{ post.author }}
-			| , translator:&nbsp;
+			| , {{ site.meta.translator }}:&nbsp;
 			+e.translator_preview {{ post.translator }}
 			br
-			| Source:&nbsp;
+			| {{ site.meta.source }}:&nbsp;
 			+e.source_preview(href="{{ post.source-link }}") {{ post.source }}
 
 			//- Else use short autorsip info
 			| {% else %}
-			| Author:&nbsp;
+			| {{ site.meta.author }}:&nbsp;
 			+e.author_preview {% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}
 			| {% endif %}
 
 			//- Publication date
-			| , published:&nbsp;
+			| , {{ site.meta.date }}:&nbsp;
 			+e('time').date_preview(datetime="{{ post.date | date: '%Y-%m-%d' }}") {{ post.date | date: "%B %-d, %Y" }}
 
 		//- Checking for post tags and show them
 		| {% if post.tags %}
 		+e('p').tags_preview
-			| Tags:&nbsp;
+			| {{ site.meta.tags }}:&nbsp;
 			| {% for tag in post.tags %}
 			+e.tag_preview(href="{{ site.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/") {{ tag }}
 			| {% unless forloop.last %}, {% endunless %}
@@ -37,7 +37,7 @@ mixin post-meta()
 		//- Checking for post category and show it
 		| {% if post.category %}
 		+e('p').categories_preview
-			| Category:&nbsp;
+			| {{ site.meta.category }}:&nbsp;
 			| {% for cat in post.category %}
 			+e.category_preview(href="{{ site.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/") {{ cat }}
 			| {% unless forloop.last %}, {% endunless %}
@@ -49,28 +49,28 @@ mixin post-meta()
 
 			//- Check if post is translation and if so - use extended autorsip info
 			| {% if page.translator %}
-			| Author:&nbsp;
+			| {{ site.meta.author }}:&nbsp;
 			+e.author {{ page.author }}
-			| , translator:&nbsp;
+			| , {{ site.meta.translator }}:&nbsp;
 			+e.translator {{ page.translator }}
 			br
-			| Source:&nbsp;
+			| {{ site.meta.source }}:&nbsp;
 			+e.source(href="{{ page.source-link }}") {{ page.source }}
 
 			//- Else use short autorsip info
 			| {% else %}
-			| Author:&nbsp;
+			| {{ site.meta.author }}:&nbsp;
 			+e.author {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}
 			| {% endif %}
 
 			//- Publication date
-			| , published:&nbsp;
+			| , {{ site.meta.date }}:&nbsp;
 			+e('time').date(datetime="{{ page.date | date: '%Y-%m-%d' }}") {{ page.date | date: "%B %-d, %Y" }}
 
 		//- Checking for post tags and show them
 		| {% if page.tags %}
 		+e('p').tags
-			| Tags:&nbsp;
+			| {{ site.meta.tags }}:&nbsp;
 			| {% for tag in page.tags %}
 			+e.tag(href="{{ site.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/") {{ tag }}
 			| {% unless forloop.last %}, {% endunless %}
@@ -80,7 +80,7 @@ mixin post-meta()
 		//- Checking for post category and show it
 		| {% if page.category %}
 		+e('p').categories
-			| Category:&nbsp;
+			| {{ site.meta.category }}:&nbsp;
 			| {% for cat in page.category %}
 			+e.category(href="{{ site.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/") {{ cat }}
 			| {% unless forloop.last %}, {% endunless %}

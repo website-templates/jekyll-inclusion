@@ -67,8 +67,35 @@ tags:
   layout: tag.html
 
 # Layout common texts
+scroll-next: 'Let`s go!'
+
+menu-text: 'Menu'
+
 pager:
   page-next: 'Newer posts ›'
   page-prev: '‹ Older posts'
   post-next: 'Next post ›'
   post-prev: '‹ Previous post'
+
+meta:
+  author: 'Author'
+  translator: 'translator'
+  source: 'Source'
+  date: 'published'
+  tags: 'Tags'
+  category: 'Category'
+
+end:
+  title: 'Let`s get in touch!'
+  descr: 'If you have any questions, please do not hesitate to contact me'
+
+social:
+  rss: 'News feed'
+  twitter: 'Follow me on twitter'
+  facebook: 'My Facebook'
+  gplus: 'My Google+'
+  mail: 'Shoot me an email'
+  skype: 'Add me to Skype contacts'
+  git: 'My projects on github'
+  bitbucket: 'Some of my projects on Bitbucket'
+  linkedin: 'My Linkedin profile'

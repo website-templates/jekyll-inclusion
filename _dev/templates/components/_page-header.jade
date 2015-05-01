@@ -7,4 +7,4 @@ mixin page-header()
 					| {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
 				+e('h2').descr(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")&attributes(attributes)
 					| {% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
-				+e.icon.js-anchor.icon.icon_down.icon_light(href='#start', title='Let`s go!')&attributes(attributes) Let`s go!
+				+e.icon.js-anchor.icon.icon_down.icon_light(href='#start', title='{{ site.scroll-next }}')&attributes(attributes) Let`s go!

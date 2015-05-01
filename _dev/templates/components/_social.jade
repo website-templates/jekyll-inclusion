@@ -3,36 +3,36 @@ mixin social()
 	+b('nav').social
 		+e('ul').list
 			+e.item
-				+e.link.icon.icon_light.icon_rss(href="{{ '/feed.xml' | prepend: site.baseurl }}", title='RSS feed') News feed
+				+e.link.icon.icon_light.icon_rss(href="{{ '/feed.xml' | prepend: site.baseurl }}", title='{{ site.social.rss }}') {{ site.social.rss }}
 			| {% if site.twitter_username %}
 			+e.item
-				+e.link.icon.icon_light.icon_twitter(href='https://twitter.com/{{ site.twitter_username }}', title='My Twitter') Follow me on twitter
+				+e.link.icon.icon_light.icon_twitter(href='https://twitter.com/{{ site.twitter_username }}', title='{{ site.social.twitter }}') {{ site.social.twitter }}
 			| {% endif %}
 			| {% if site.fb_username %}
 			+e.item
-				+e.link.icon.icon_light.icon_fb(href='https://www.facebook.com/{{ site.fb_username }}', title='I`m on Facebook') My Facebook
+				+e.link.icon.icon_light.icon_fb(href='https://www.facebook.com/{{ site.fb_username }}', title='{{ site.social.facebook }}') {{ site.social.facebook }}
 			| {% endif %}
 			| {% if site.gplus_username %}
 			+e.item
-				+e.link.icon.icon_light.icon_gplus(href='https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author', title='My Google+') Maxim Orlov on Google+
+				+e.link.icon.icon_light.icon_gplus(href='https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author', title='{{ site.social.gplus }}') {{ site.social.gplus }}
 			| {% endif %}
 			| {% if site.email %}
 			+e.item
-				+e.link.icon.icon_light.icon_mail(href='mailto:{{ site.email }}', title='Shoot an email to mail@orlovmax.com') mail@orlovmax.com
+				+e.link.icon.icon_light.icon_mail(href='mailto:{{ site.email }}', title='{{ site.social.mail }}') {{ site.social.mail }}
 			| {% endif %}
 			| {% if site.skype_username %}
 			+e.item
-				+e.link.icon.icon_light.icon_skype(href='skype:{{ site.skype_username }}?add', title='My Skype') Add me to Skype contacts
+				+e.link.icon.icon_light.icon_skype(href='skype:{{ site.skype_username }}?add', title='{{ site.social.skype }}') {{ site.social.skype }}
 			| {% endif %}
 			| {% if site.github_username %}
 			+e.item
-				+e.link.icon.icon_light.icon_git(href='https://github.com/{{ site.github_username }}', title='My Github') My projects on github
+				+e.link.icon.icon_light.icon_git(href='https://github.com/{{ site.github_username }}', title='{{ site.social.git }}') {{ site.social.git }}
 			| {% endif %}
 			| {% if site.bitbucket_username %}
 			+e.item
-				+e.link.icon.icon_light.icon_bitbucket(href='https://bitbucket.org/{{ site.bitbucket_username }}', title='My Bitbucket') Some of my projects on Bitbucket
+				+e.link.icon.icon_light.icon_bitbucket(href='https://bitbucket.org/{{ site.bitbucket_username }}', title='{{ site.social.bitbucket }}') {{ site.social.bitbucket }}
 			| {% endif %}
 			| {% if site.linkedin_username %}
 			+e.item
-				+e.link.icon.icon_light.icon_linkedin(href='https://linkedin.com/in/{{ site.linkedin_username }}', title='My Linkedin') My Linkedin profile
+				+e.link.icon.icon_light.icon_linkedin(href='https://linkedin.com/in/{{ site.linkedin_username }}', title='{{ site.social.linkedin }}') {{ site.social.linkedin }}
 			| {% endif %}
