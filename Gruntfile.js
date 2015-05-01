@@ -408,6 +408,7 @@ module.exports = function(grunt) {
                     '<%= dev.styles %>/**/*.sass',
                     '!<%= dev.styles %>/components/**/*.sass',
                     '<%= dev.css %>/*.css',
+                    '<%= dev.coffee %>/*.coffee',
                     '<%= dev.js %>/**/*.js',
                     '<%= dev.img %>/**/*.{png,jpg,gif}',
                     '<%= dev.templates %>/**/*.{jade,md,markdown}',
@@ -423,6 +424,7 @@ module.exports = function(grunt) {
           },
           style: {
             files: ['<%= dev.styles %>/**/*.sass',
+                    '<%= dev.coffee %>/*.coffee',
                     '!<%= dev.styles %>/components/**/*.sass',
                     '<%= dev.css %>/*.css',
                     '<%= dev.js %>/**/*.js',

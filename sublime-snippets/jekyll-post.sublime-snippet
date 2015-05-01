@@ -10,9 +10,11 @@ tags:
 category:
 - $5
 thumb_img: "img/post/$6/$7"
-home_img: "img/post/$6/$8"
+header_img: "img/post/$6/$8"
 end_img: "img/post/$6/$9"
-comments: true
+<!-- comments: true -->
+<!-- langs:
+  "en": "/" -->
 <!-- permalink:  -->
 ---
 ]]></content>

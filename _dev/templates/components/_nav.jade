@@ -18,13 +18,6 @@ mixin nav()
 			| {% endif %}
 			| {% endfor %}
 
-			| {% for page in site.pages %}
-			| {% if page.menu %}
-			+e.item
-				+e.link(href='{{ page.url | prepend: site.baseurl }}') {{ page.title }}
-			| {% endif %}
-			| {% endfor %}
-
 			//- Or we can add them from site pages if page `menu` option is true
 			| {% for page in site.pages %}
 			| {% if page.menu %}

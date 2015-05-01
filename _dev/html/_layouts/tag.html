@@ -60,11 +60,6 @@ type: taxonomy
           </li>{% else %}
           <li class="nav__item"><a href="{{ item.link | prepend: site.baseurl }}" class="nav__link">{{ item.name }}</a>
           </li>{% endif %}
-          {% endfor %}
-          {% for page in site.pages %}
-          {% if page.menu %}
-          <li class="nav__item"><a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">{{ page.title }}</a>
-          </li>{% endif %}
           {% endfor %}{% for page in site.pages %}
           {% if page.menu %}
           <li class="nav__item"><a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">{{ page.title }}</a>
@@ -72,19 +67,19 @@ type: taxonomy
           {% endfor %}
         </ul>
       </nav>
-      <div class="hgroup"><a href="#" class="hgroup__navicon js-navtoggle">{{ site.menu-text }}</a>
-        <ul class="languages">{% if page.lang_ua or page.lang_ru%}
+      <div class="hgroup"><a href="#" class="hgroup__navicon js-navtoggle">{{ site.menu-text }}</a>{% if site.lang_current %}
+        <ul class="languages">{% for sitelang in site.langs %}
+          {% if site.lang_current == sitelang[0] and page.langs %}
           <li class="languages__item">
-            <div class="is-selected languages__link">en
+            <div class="is-selected languages__link">{{ sitelang[0] }}
             </div>
           </li>{% endif %}
-          {% if page.lang_ua %}
-          <li class="languages__item"><a href="{{ page.lang_ua | prepend: site.baseurl | prepend: site.lang_ua }}" class="languages__link">ua</a>
+          {% for pagelang in page.langs %}{% if sitelang[0] == pagelang[0] %}
+          <li class="languages__item"><a href="{{ pagelang[1] | prepend: sitelang[1] }}" class="languages__link">{{ sitelang[0] }}</a>
           </li>{% endif %}
-          {% if page.lang_ru %}
-          <li class="languages__item"><a href="{{ page.lang_ru | prepend: site.baseurl | prepend: site.lang_ru}}" class="languages__link">ru</a>
-          </li>{% endif %}
-        </ul>
+          {% endfor %}
+          {% endfor %}
+        </ul>{% endif %}
       </div>
     </header>
     <!-- Main content-->
@@ -210,6 +205,9 @@ type: taxonomy
                 </li>{% endif %}
                 {% if site.fb_username %}
                 <li class="social__item"><a href="https://www.facebook.com/{{ site.fb_username }}" title="{{ site.social.facebook }}" class="icon icon_fb icon_light social__link">{{ site.social.facebook }}</a>
+                </li>{% endif %}
+                {% if site.vk_username %}
+                <li class="social__item"><a href="https://www.vk.com/{{ site.vk_username }}" title="{{ site.social.vkontakte }}" class="icon icon_light icon_vk social__link">{{ site.social.vkontakte }}</a>
                 </li>{% endif %}
                 {% if site.gplus_username %}
                 <li class="social__item"><a href="https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author" title="{{ site.social.gplus }}" class="icon icon_gplus icon_light social__link">{{ site.social.gplus }}</a>

@@ -11,17 +11,22 @@ keywords: "jekyll theme, jekyll template, responsive jekyll theme"
 # URL settings
 baseurl: "/jekyll-inclusion" # the subpath of your site, e.g. /blog/
 url: "http://website-templates.github.io" # the base hostname & protocol for your site
-# lang_en: "http://blog.orlovmax.com"
-# lang_ua: "http://uablog.orlovmax.com"
-# lang_ru: "http://rublog.orlovmax.com"
 home-repo: "https://github.com/website-templates/jekyll-inclusion"
 twitter_username: orlovmax_im
 github_username:  orlovmax
 # fb_username:
+# vk_username:
 gplus_username: 104202961668156466871
 # skype_username:
 bitbucket_username: orlovmax
 # linkedin_username:
+
+# Multilanguage blog settings: names, base url and current lang
+# langs:
+#   "en": "http://blog.orlovmax.com"
+#   "ru": "http://rublog.orlovmax.com"
+#   "ua": "http://uablog.orlovmax.com"
+# lang_current: "ua"
 
 # Default src
 header_img: "img/bg/index-header.jpg"
@@ -93,6 +98,7 @@ social:
   rss: 'News feed'
   twitter: 'Follow me on twitter'
   facebook: 'My Facebook'
+  vkontakte: 'I`m Vkontakte'
   gplus: 'My Google+'
   mail: 'Shoot me an email'
   skype: 'Add me to Skype contacts'

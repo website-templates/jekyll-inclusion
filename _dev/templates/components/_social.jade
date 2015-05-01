@@ -12,6 +12,10 @@ mixin social()
 			+e.item
 				+e.link.icon.icon_light.icon_fb(href='https://www.facebook.com/{{ site.fb_username }}', title='{{ site.social.facebook }}') {{ site.social.facebook }}
 			| {% endif %}
+			| {% if site.vk_username %}
+			+e.item
+				+e.link.icon.icon_light.icon_vk(href='https://www.vk.com/{{ site.vk_username }}', title='{{ site.social.vkontakte }}') {{ site.social.vkontakte }}
+			| {% endif %}
 			| {% if site.gplus_username %}
 			+e.item
 				+e.link.icon.icon_light.icon_gplus(href='https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author', title='{{ site.social.gplus }}') {{ site.social.gplus }}

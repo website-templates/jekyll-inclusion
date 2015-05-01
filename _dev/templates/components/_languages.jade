@@ -1,15 +1,20 @@
 //- Navigation for multilingual blogs
 mixin languages()
+	//- Display this block if we have site languages and current language option is active
+	| {% if site.lang_current %}
 	+b('ul').languages
-		| {% if page.lang_ua or page.lang_ru%}
+		//- Highlight current language if page has alternative languages
+		| {% for sitelang in site.langs %}
+		| {% if site.lang_current == sitelang[0] and page.langs %}
 		+e.item
-			+e.link.is-selected en
+			+e.link.is-selected {{ sitelang[0] }}
 		| {% endif %}
-		| {% if page.lang_ua %}
+		| {% for pagelang in page.langs %}
+		//- Show languages if they are available in pages or posts
+		| {% if sitelang[0] == pagelang[0] %}
 		+e.item
-			+e.link(href="{{ page.lang_ua | prepend: site.baseurl | prepend: site.lang_ua }}") ua
+			+e.link(href="{{ pagelang[1] | prepend: sitelang[1] }}") {{ sitelang[0] }}
 		| {% endif %}
-		| {% if page.lang_ru %}
-		+e.item
-			+e.link(href="{{ page.lang_ru | prepend: site.baseurl | prepend: site.lang_ru}}") ru
-		| {% endif %}
+		| {% endfor %}
+		| {% endfor %}
+	| {% endif %}
