@@ -5,12 +5,12 @@ mixin nav()
 			//- We can add page menu items from data *.yml
 			| {% for item in site.data.nav %}
 			| {% if item.submenu != null %}
-			+e.item_sub
-				+e.link_sub(href='{{ item.link | prepend: site.baseurl }}') {{ item.name }}
+			+e.item
+				+e.link_submenu(href='{{ item.link | prepend: site.baseurl }}') {{ item.name }}
 				+e('ul').list_sub
 					| {% for subitem in item.submenu %}
 					+e.item_sub
-						+e.link_sub(href='{{ subitem.link | prepend: site.baseurl }}') {{ subitem.name }}
+						+e.link(href='{{ subitem.link | prepend: site.baseurl }}') {{ subitem.name }}
 					| {% endfor %}
 			| {% else %}
 			+e.item

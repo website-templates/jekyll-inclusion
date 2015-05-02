@@ -50,9 +50,9 @@ type: page
       <nav class="js-nav nav">
         <ul class="nav__list">{% for item in site.data.nav %}
           {% if item.submenu != null %}
-          <li class="nav__item nav__item_sub"><a href="{{ item.link | prepend: site.baseurl }}" class="nav__link nav__link_sub">{{ item.name }}</a>
+          <li class="nav__item"><a href="{{ item.link | prepend: site.baseurl }}" class="nav__link nav__link_submenu">{{ item.name }}</a>
             <ul class="nav__list nav__list_sub">{% for subitem in item.submenu %}
-              <li class="nav__item nav__item_sub"><a href="{{ subitem.link | prepend: site.baseurl }}" class="nav__link nav__link_sub">{{ subitem.name }}</a>
+              <li class="nav__item nav__item_sub"><a href="{{ subitem.link | prepend: site.baseurl }}" class="nav__link">{{ subitem.name }}</a>
               </li>{% endfor %}
             </ul>
           </li>{% else %}
