@@ -85,8 +85,6 @@ Install dependencies:
 * npm install
 * bower install
 
-Than you can use next tasks for grunt:
-
 ### Editorconfig
 This project have .editorconfig file at the root that used by your code editor with editorconfig plugin. It describes codestyle like indent style, trailing whitespaces etc. See more details [here](http://editorconfig.org/) 
 

@@ -15,8 +15,10 @@ include ../components/blocks
 	---
 
 // Post preview list
+| {% for post in paginator.posts %}
 +post-preview()
 	+post-meta()
+| {% endfor %}
 
 // Pagination
 +paginator()

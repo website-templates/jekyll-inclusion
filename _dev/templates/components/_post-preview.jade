@@ -1,6 +1,5 @@
 //- Post preview item
 mixin post-preview()
-	| {% for post in paginator.posts %}
 	+b('article').post-preview
 		+e.image.js-lazy(src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", data-src="{{ site.baseurl }}/{{ post.thumb_img }}", alt="{{ post.title }}")
 		+e.link(href='{{ post.url | prepend: site.baseurl }}')
@@ -13,4 +12,3 @@ mixin post-preview()
 
 		block
 	hr.divider
-	| {% endfor %}

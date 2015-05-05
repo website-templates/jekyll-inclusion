@@ -19,8 +19,10 @@ block content
 			// Page content from *.md
 			#start.container.container_page
 				// Post preview list
+				| {% for post in paginator.posts %}
 				+post-preview()
 					+post-meta()
+				| {% endfor %}
 
 				// Pagination
 				+paginator()
