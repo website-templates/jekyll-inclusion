@@ -1,21 +1,21 @@
 {
-  "name": "frontend-ru",
+  "name": "jekyll-inclusion",
   "version": "0.0.0",
-  "description": "Russian language blog about frontend dev",
+  "description": "Jekyll inclusion theme",
   "main": "_site/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/frontend-ru/frontend-ru.github.io.git"
+    "url": "https://github.com/website-templates/jekyll-inclusion.git"
   },
   "author": "Maxim Orlov mail@orlovmax.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/frontend-ru/frontend-ru.github.io/issues"
+    "url": "https://github.com/website-templates/jekyll-inclusion/issues"
   },
-  "homepage": "https://github.com/frontend-ru/frontend-ru.github.io",
+  "homepage": "http://website-templates.github.io/jekyll-inclusion",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^1.0.1",
@@ -34,6 +34,7 @@
     "grunt-csso": "^0.6.3",
     "grunt-newer": "^0.7.0",
     "grunt-processhtml": "^0.3.3",
-    "grunt-shell": "^1.1.1"
+    "grunt-shell": "^1.1.1",
+    "load-grunt-config": "^0.17.1"
   }
 }
