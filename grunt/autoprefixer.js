@@ -8,8 +8,8 @@ module.exports = {
 		files:[{
 			expand: true,
 			flatten: true,
-			src: '<%= paths.dev.css %>/*.css',
-			dest: '<%= paths.dev.css %>/'
+			src: '<%= dev.css %>/*.css',
+			dest: '<%= dev.css %>/'
 		}]
 	}
 }

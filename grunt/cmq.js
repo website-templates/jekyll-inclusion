@@ -5,7 +5,7 @@ module.exports = {
 	},
 	main: {
 		files: {
-			'<%= paths.dev.css %>': ['<%= paths.dev.css %>/*.css']
+			'<%= dev.css %>': ['<%= dev.css %>/*.css']
 		}
 	}
 }

@@ -2,14 +2,14 @@
 module.exports = {
 	main: {
 		files: [{
-			src: ['<%= paths.dev.js %>/*.js', '!<%= paths.dev.js %>/assembled.js'],
-			dest: '<%= paths.dev.js %>/assembled.js'
+			src: ['<%= dev.js %>/*.js', '!<%= dev.js %>/assembled.js'],
+			dest: '<%= dev.js %>/assembled.js'
 		}]
 	},
 	// head: {
 	// 	files: [{
-	// 		src: ['<%= paths.dev.js %>/head/*.js', '!<%= paths.dev.js %>/head/head.js'],
-	// 		dest: '<%= paths.dev.js %>/head/head.js'
+	// 		src: ['<%= dev.js %>/head/*.js', '!<%= dev.js %>/head/head.js'],
+	// 		dest: '<%= dev.js %>/head/head.js'
 	// 	}]
 	// }
 }

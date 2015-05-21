@@ -76,10 +76,6 @@ You shoul  read [this article](http://www.aymerick.com/2014/07/22/jekyll-github-
 NOTE: this example use in _config.yml use baseurl option, so after domain there is path: /jekyll-inclusion. If you want to run this example on the local machine you should to comment or remove this line in _config.yml file.
 
 ## Development and blogging
-At first we need to make some fixes to Gruntfile:
-- remove `gruntBase = '../../../';` this string - it used for grunt-collection plugin.
-- remove this task  `grunt.loadNpmTasks('grunt-collection');`
-- uncomment other `grunt.loadNpmTasks`... strings
 - 
 Install dependencies:
 * npm install
@@ -105,6 +101,8 @@ This project have .editorconfig file at the root that used by your code editor w
 This theme use special data from _data/nav.yml to generate navigation. It's useful when you need to create nested menu. Also each page have menu option and if it will turn to true - this page will appear in menu.
 
 ## Changelog
+* (May 22, 2015)
+	- Used grunt-load-config instead of require-dir
 * (May 21, 2015)
 	- Grunt tasks structure modified using separated tasks
 * (April 30, 2015)

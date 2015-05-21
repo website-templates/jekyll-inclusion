@@ -1,0 +1,81 @@
+default:
+    tasks:
+        - 'newer:coffee'
+        - 'newer:concat'
+        - 'newer:sass'
+        - 'newer:jade'
+        - 'newer:imagemin'
+        - 'newer:copy:fonts'
+        - 'newer:copy:js'
+        - 'newer:copy:livejs'
+        - 'newer:copy:css'
+        - 'newer:copy:templates'
+        - 'newer:copy:html'
+        - 'newer:copy:helpers'
+        - 'shell:jekyllBuild'
+        - 'watch:all'
+
+
+bower-dev:
+    tasks:
+        - 'bower_concat'
+        # - 'clean:bower'
+
+
+regen:
+    tasks:
+        - 'coffee'
+        - 'concat'
+        - 'sass'
+        - 'jade'
+        # - 'imagemin'
+        - 'copy:fonts'
+        - 'copy:js'
+        - 'copy:livejs'
+        - 'copy:css'
+        - 'copy:templates'
+        - 'copy:html'
+        - 'copy:helpers'
+        - 'shell:jekyllBuild'
+
+
+theme:
+    tasks:
+        - 'newer:sass'
+        - 'newer:coffee'
+        - 'newer:concat'
+        - 'newer:copy:jekyllStyles'
+        - 'newer:copy:jekyllScripts'
+        - 'watch:style'
+
+
+build:
+    tasks:
+        - 'cmq'
+        - 'autoprefixer'
+        - 'uglify'
+        - 'csso'
+        - 'clean:debug'
+        - 'shell:jekyllBuild'
+        - 'processhtml'
+        - 'htmlmin'
+
+
+
+jekyll-build:
+    tasks:
+        - 'newer:imagemin'
+        - 'newer:copy:templates'
+        - 'newer:copy:helpers'
+        - 'shell:jekyllBuild'
+        - 'processhtml'
+        - 'htmlmin'
+
+
+deploy:
+    tasks:
+        - 'shell:rakeDeploy'
+
+jekyll-deploy:
+    tasks:
+        - 'shell:rakeJekyllDeploy'

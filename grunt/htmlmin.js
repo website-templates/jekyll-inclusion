@@ -7,9 +7,9 @@ module.exports = {
 			minifyCSS: true
 		},
 		files: [ {
-			cwd: '<%= paths.jekyll.deploy %>',
+			cwd: '<%= jekyll.deploy %>',
 			src: '**/*.html',
-			dest: '<%= paths.jekyll.deploy %>',
+			dest: '<%= jekyll.deploy %>',
 			expand: true,
 			ext: '.html'
 		} ]
