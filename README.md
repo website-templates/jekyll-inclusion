@@ -80,7 +80,7 @@ At first we need to make some fixes to Gruntfile:
 - remove `gruntBase = '../../../';` this string - it used for grunt-collection plugin.
 - remove this task  `grunt.loadNpmTasks('grunt-collection');`
 - uncomment other `grunt.loadNpmTasks`... strings
-
+- 
 Install dependencies:
 * npm install
 * bower install
@@ -105,6 +105,8 @@ This project have .editorconfig file at the root that used by your code editor w
 This theme use special data from _data/nav.yml to generate navigation. It's useful when you need to create nested menu. Also each page have menu option and if it will turn to true - this page will appear in menu.
 
 ## Changelog
+* (May 21, 2015)
+	- Grunt tasks structure modified using separated tasks
 * (April 30, 2015)
 	- Templates and styles structure refactored, data driven nav added
 * (April 25, 2015)
