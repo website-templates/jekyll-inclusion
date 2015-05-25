@@ -16,7 +16,6 @@ Check out [quick demo](http://website-templates.github.io/jekyll-inclusion/) of 
 	- [Editorconfig](#editorconfig)
 	- [Grunt tasks](#grunt-tasks)
 	- [Data driven nav](#data-driven-nav)
-* [TODO](#todo)
 * [Changelog](#changelog)
 * [Credits](#credits)
 * [License](#license)
@@ -101,6 +100,8 @@ This project have .editorconfig file at the root that used by your code editor w
 This theme use special data from _data/nav.yml to generate navigation. It's useful when you need to create nested menu. Also each page have menu option and if it will turn to true - this page will appear in menu.
 
 ## Changelog
+* (May 25, 2015)
+	- Sublime snippets removed in favour of using bash script
 * (May 22, 2015)
 	- Used grunt-load-config instead of require-dir
 * (May 21, 2015)
