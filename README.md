@@ -16,6 +16,7 @@ Check out [quick demo](http://website-templates.github.io/jekyll-inclusion/) of 
 	- [Editorconfig](#editorconfig)
 	- [Grunt tasks](#grunt-tasks)
 	- [Data driven nav](#data-driven-nav)
+	- [Post creating](#post-creating)
 * [Changelog](#changelog)
 * [Credits](#credits)
 * [License](#license)
@@ -99,7 +100,12 @@ This project have .editorconfig file at the root that used by your code editor w
 ### Data driven nav
 This theme use special data from _data/nav.yml to generate navigation. It's useful when you need to create nested menu. Also each page have menu option and if it will turn to true - this page will appear in menu.
 
+### Post creating
+There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b917c2) that allows us to create new posts. Just type `jpost your-post-name` and it will create new post at `_dev/templates/pages/_posts` with predefined draft layout from `_draft` directory and also it will create folder in `_dev/img/posts/` with name `your-post-name` for your post images. It's pretty simple and useful. Now it's only working draft and in future I'll refactor this functionality.
+
 ## Changelog
+* (May 26, 2015)
+	- New post with bash script added
 * (May 25, 2015)
 	- Sublime snippets removed in favour of using bash script
 * (May 22, 2015)
