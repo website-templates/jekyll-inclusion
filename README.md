@@ -102,6 +102,7 @@ This theme use special data from _data/nav.yml to generate navigation. It's usef
 
 ### Post creating
 There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b917c2) that allows us to create new posts. Just type `jpost your-post-name` and it will create new post at `_dev/templates/pages/_posts` with predefined draft layout from `_draft` directory and also it will create folder in `_dev/img/posts/` with name `your-post-name` for your post images. It's pretty simple and useful. Now it's only working draft and in future I'll refactor this functionality.
+Also you can find this function in `jpost` file [here](https://github.com/website-templates/jekyll-inclusion/blob/master/jpost)
 
 ## Changelog
 * (May 26, 2015)

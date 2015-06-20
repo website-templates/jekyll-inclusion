@@ -47,7 +47,8 @@ exclude: [
 'package.json',
 'bower.json',
 'README.md',
-'Rakefile'
+'Rakefile',
+'jpost'
 ]
 
 source: _build

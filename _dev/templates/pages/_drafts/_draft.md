@@ -1,9 +1,10 @@
 ---
 layout: post
-title:
-description:
-date:
+title: ""
+description: ""
+date: y-m-d
 tags:
+- 
 - 
 category:
 - 
