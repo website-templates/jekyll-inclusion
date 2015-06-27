@@ -4,8 +4,11 @@ module.exports = {
 		log: false
 	},
 	main: {
-		files: {
-			'<%= dev.css %>': ['<%= dev.css %>/*.css']
-		}
+		files:[{
+			expand: true,
+			cwd: '<%= build.css %>/',
+			src: ['**/*.css', '!*.min.css'],
+			dest: '<%= build.css %>/'
+		}]
 	}
 }

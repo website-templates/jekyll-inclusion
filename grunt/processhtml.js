@@ -3,9 +3,9 @@ module.exports = {
 	dist: {
 		files: [{
 			expand: true,
-			cwd: '<%= jekyll.deploy %>',
+			cwd: '<%= deploy.main %>',
 			src: '**/*.html',
-			dest: '<%= jekyll.deploy %>',
+			dest: '<%= deploy.main %>',
 			ext: '.html'
 		}],
 	}

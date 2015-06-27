@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 			// Dev paths
 			dev: {
 				main: '_dev',
+				data: '_dev/data',
 				coffee: '_dev/coffee',
 				js: '_dev/js',
 				templates: '_dev/templates',
@@ -13,19 +14,24 @@ module.exports = function(grunt) {
 				img: '_dev/img',
 				fonts: '_dev/fonts',
 				helpers: '_dev/helpers',
-				php: '_dev/php',
+				ruby: '_dev/ruby',
 				devtools: '_dev/devtools'
 			},
-			 build: {
+			publ: {
+				img: '_publ/img',
+				pages: '_publ/pages'
+			},
+			build: {
 				main: '_build',
 				css: '_build/css',
 				fonts: '_build/fonts',
 				img: '_build/img',
-				php: '_build/php',
+				plugins: '_build/_plugins',
+				data: '_build/_data',
 				js: '_build/js'
-			 },
-			 jekyll: {
-				deploy: '_deploy'
+			},
+			deploy: {
+				main: '_deploy'
 			}
 		}
 	});

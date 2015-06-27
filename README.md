@@ -32,18 +32,18 @@ Check out [quick demo](http://website-templates.github.io/jekyll-inclusion/) of 
 ## Structure
 There are two branches: master branch and gh-pages.
 Project's development based on [frontend-scaffold](https://github.com/orlovmax/front-end-scaffold) and located in master branch:
-
+```
 `/_dev/` folder - contains source code.
 	`coffee/`                    - coffeescripts
 	`css/`                       - compiled css
+	`data/`                      - data for jekyll generation (nav etc)
 	`devtools/`                  - livereload js
 	`fonts/`                     - offline and icon fonts
 	`helpers/`                   - files that will be copied to _build folder
-		`_data/`                   - data for jekyll generation (nav etc)
-		`_plugins/`                - jekyll plugins
 	`html/`                      - compiled html (pages and layouts)
 	`img/`                       - images
 	`js/`                        - compiled coffee js, vendor js, custom js
+	`ruby/`                      - jekyll plugins
 	`styles/`                    - sass stylesheets
 		`components`               - stylsheets components (blocks)
 			`content`                - post content styles (Inclusion)
@@ -59,6 +59,7 @@ Project's development based on [frontend-scaffold](https://github.com/orlovmax/f
 
 `/_build/` folder - build version, generated sources ready for jekyll build
 	`_data/`                     - data for jekyll generation (nav etc)
+	`_drafts`                    - drafts (will be copied to `_build/_drafts` folder)
 	`_layouts/`                  - layouts for jekyll generation
 	`_plugins/`                  - jekyll plugins
 	`_posts/`                    - posts (*.md)
@@ -67,6 +68,13 @@ Project's development based on [frontend-scaffold](https://github.com/orlovmax/f
 	`img/`                       - images
 	`js/`                        - scripts
 
+`/_publ/` folder - site content: posts, pages and pictures
+	`img/`                       - post and pages images
+	`pages`                      - site posts and pages
+		`_drafts`                - drafts (will be copied to `_build/_drafts` folder)
+		`_posts`                 - posts (will be copied to `_build/_posts`folder)
+		jpost.sh                 - script for new posts creating
+```
 gh-pages branch contains pure html/css/js site compiled by jekyll. This is for common user repository. For organization repository deploy branch should be `master` This brunch located in deploy folder:
 
 `/_deploy/` folder - generated site, ready for deploy
@@ -93,7 +101,7 @@ This project have .editorconfig file at the root that used by your code editor w
 		- `grunt build` - minifies assets and generates site with jekyll, also processes and mififies generated markup
 		- `grunt theme` - task for theme styling and scripting without site rebuild. It inclues sass compile, js concat tasks and copy task that will copy generated css and js right to the _deploy folder and you'll be able to see changes without jekyll build. Please note that after this task I suggest you to run `grunt regen` task and then - `grunt build` for final build and further deploy.
 * Jekyll tasks:
-		- `grunt jekyll-build` - task for blogging, generates site with jekyll, processes and minifies generated markup
+		- `grunt publish` - task for blogging, generates site with jekyll, processes and minifies generated markup
 		- `grunt jekyll-deploy` - task for deploy, runs `rakeJekyllDeploy` through `grunt-shell` plugin: commits deploy files and push them to the remote repo.
 		- `grunt deploy` - task for deploy, runs `rakeDeploy` through `grunt-shell` plugin: commits source files, commits deploy files and push all this stuff to the remote repo.
 
@@ -101,10 +109,12 @@ This project have .editorconfig file at the root that used by your code editor w
 This theme use special data from _data/nav.yml to generate navigation. It's useful when you need to create nested menu. Also each page have menu option and if it will turn to true - this page will appear in menu.
 
 ### Post creating
-There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b917c2) that allows us to create new posts. Just type `jpost your-post-name` and it will create new post at `_dev/templates/pages/_posts` with predefined draft layout from `_draft` directory and also it will create folder in `_dev/img/posts/` with name `your-post-name` for your post images. It's pretty simple and useful. Now it's only working draft and in future I'll refactor this functionality.
-Also you can find this function in `jpost` file [here](https://github.com/website-templates/jekyll-inclusion/blob/master/jpost)
+There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b917c2) that allows us to create new posts. I've put it in a `_publ` folder, so just execute it, like `bash post.sh your-post-name` and it will create new post at `_publ/pages/_posts` with predefined draft layout from `_draft` directory and also it will create folder in `_publ/img/posts/` with name `your-post-name` for your post images. It's pretty simple and useful.
+Also you can find this function in `jpost` file [here](https://github.com/website-templates/jekyll-inclusion/blob/master/_publ/post.sh)
 
 ## Changelog
+* (May 28, 2015)
+	- Structure changed, blogging content separated 
 * (May 26, 2015)
 	- New post with bash script added
 * (May 25, 2015)

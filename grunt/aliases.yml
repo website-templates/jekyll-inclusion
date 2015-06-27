@@ -1,3 +1,4 @@
+# Default task watch and process changes from dev and blogging folders
 default:
     tasks:
         - 'newer:coffee'
@@ -9,19 +10,21 @@ default:
         - 'newer:copy:js'
         - 'newer:copy:livejs'
         - 'newer:copy:css'
-        - 'newer:copy:templates'
         - 'newer:copy:html'
         - 'newer:copy:helpers'
+        - 'newer:copy:ruby'
+        - 'newer:copy:data'
+        - 'newer:copy:publ'
         - 'shell:jekyllBuild'
         - 'watch:all'
 
-
+# Process bower dependencies
 bower-dev:
     tasks:
         - 'bower_concat'
         # - 'clean:bower'
 
-
+# Rebuild project from scratch using dev and blogging folders
 regen:
     tasks:
         - 'coffee'
@@ -33,12 +36,15 @@ regen:
         - 'copy:js'
         - 'copy:livejs'
         - 'copy:css'
-        - 'copy:templates'
         - 'copy:html'
         - 'copy:helpers'
+        - 'copy:ruby'
+        - 'copy:data'
+        - 'copy:publ'
         - 'shell:jekyllBuild'
 
-
+# Task for theme style fixes (only styles or scripting).
+# Run this task after regen task to update src paths for styles and scripts
 theme:
     tasks:
         - 'newer:sass'
@@ -46,9 +52,9 @@ theme:
         - 'newer:concat'
         - 'newer:copy:jekyllStyles'
         - 'newer:copy:jekyllScripts'
-        - 'watch:style'
+        - 'watch:theme'
 
-
+# Generate jekyll website and prepares it for deploy
 build:
     tasks:
         - 'cmq'
@@ -60,22 +66,24 @@ build:
         - 'processhtml'
         - 'htmlmin'
 
-
-
-jekyll-build:
+# Publishing task - copy posts, pages and their images to src folder
+# for further regeneration
+publish:
     tasks:
         - 'newer:imagemin'
-        - 'newer:copy:templates'
-        - 'newer:copy:helpers'
+        - 'newer:copy:publ'
+        - 'newer:copy:data'
         - 'shell:jekyllBuild'
         - 'processhtml'
         - 'htmlmin'
+        # - 'watch:publish'
 
-
+# Deploy dev and build versions
 deploy:
     tasks:
         - 'shell:rakeDeploy'
 
+# Deploy only generated site
 jekyll-deploy:
     tasks:
         - 'shell:rakeJekyllDeploy'

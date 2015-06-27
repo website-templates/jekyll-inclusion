@@ -36,14 +36,6 @@ module.exports = {
 			dest: '<%= build.css %>/'
 		}]
 	},
-	templates: {
-		files: [{
-			expand: true,
-			cwd: '<%= dev.templates %>/pages',
-			src: ['**/*.{md,markdown}'],
-			dest: '<%= build.main %>'
-		}]
-	},
 	html: {
 		files: [{
 			expand: true,
@@ -60,12 +52,36 @@ module.exports = {
 			dest: '<%= build.main %>'
 		}]
 	},
+	data: {
+		files: [{
+			expand: true,
+			cwd: '<%= dev.data %>',
+			src: ['**/*.*'],
+			dest: '<%= build.data %>'
+		}]
+	},
+	ruby: {
+		files: [{
+			expand: true,
+			cwd: '<%= dev.ruby %>',
+			src: ['**/*.rb'],
+			dest: '<%= build.plugins %>'
+		}]
+	},
+	publ: {
+		files: [{
+			expand: true,
+			cwd: '<%= publ.pages %>',
+			src: ['**/*.*'],
+			dest: '<%= build.main %>'
+		}]
+	},
 	jekyllStyles: {
 		files: [{
 			expand: true,
 			cwd: '<%= dev.css %>/',
 			src: ['**/*.css'],
-			dest: '<%= jekyll.deploy %>/css/'
+			dest: '<%= deploy.main %>/css/'
 		}]
 	},
 	jekyllScripts: {
@@ -77,7 +93,7 @@ module.exports = {
 				'**/vendor.js',
 				'**/head.js',
 				'**/ie.js'],
-			dest: '<%= jekyll.deploy %>/js/'
+			dest: '<%= deploy.main %>/js/'
 		}]
 	}
 }

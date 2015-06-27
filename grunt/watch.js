@@ -7,8 +7,8 @@ module.exports = {
 				'<%= dev.css %>/*.css',
 				'<%= dev.js %>/**/*.js',
 				'<%= dev.img %>/**/*.{png,jpg,gif}',
-				'<%= dev.templates %>/**/*.{jade,md,markdown}',
-				'<%= dev.php %>/**/*.php',
+				'<%= dev.templates %>/**/*.{jade}',
+				'<%= dev.ruby %>/**/*.rb',
 				'<%= dev.fonts %>/**/*.{eot,svg,ttf,woff}',
 				'<%= dev.helpers %>/**/*.*',
 				'<%= dev.helpers %>/**/.htaccess',
@@ -18,13 +18,21 @@ module.exports = {
 		  spawn: false
 		}
 	},
-	style: {
+	theme: {
 		files: ['<%= dev.styles %>/**/*.sass',
 				'!<%= dev.styles %>/components/**/*.sass',
 				'<%= dev.css %>/*.css',
 				'<%= dev.js %>/**/*.js',
 				'<%= dev.img %>/**/*.{png,jpg,gif}'],
 		tasks: ['theme'],
+		options: {
+		  spawn: false
+		}
+	},
+	publish: {
+		files: ['<%= publ.img %>/**/*.{png,jpg,gif}',
+				'<%= publ.pages %>/**/*.*'],
+		tasks: ['publish'],
 		options: {
 		  spawn: false
 		}
