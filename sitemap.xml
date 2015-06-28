@@ -3,160 +3,160 @@
 	
 
 <url>
-	<loc>http://website-templates.github.io/feed.xml</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/feed.xml</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/robots.txt</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/robots.txt</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/sitemap.xml</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/sitemap.xml</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/Lorem-ipsum/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/category/technologies/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/Lorem-ipsum/2/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/category/technologies/2/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/Lorem-ipsum/3/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/category/technologies/3/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/test/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/Lorem-ipsum/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/test/2/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/Lorem-ipsum/2/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/test/3/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/Lorem-ipsum/3/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/demo/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/test/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/demo/2/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/test/2/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/demo/3/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/test/3/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/page-elements/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/demo/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/page-elements/2/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/demo/2/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/page-elements/3/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/demo/3/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/grid/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/page-elements/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/buttons/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/page-elements/2/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/blocks/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/page-elements/3/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/tables/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/grid/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/code-blocks/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/buttons/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/lists/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/blocks/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/blockquotes/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/tables/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/images/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/code-blocks/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/tag/typography/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/lists/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/category/technologies/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/blockquotes/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/category/technologies/2/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/images/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/category/technologies/3/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/tag/typography/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/page-2/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/page-2/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/page-3/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/page-3/</loc>
 </url>
 
 
 <url>
-	<loc>http://website-templates.github.io/2015/01/19/demo-post-typo/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/2015/01/18/demo-post-images/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/2015/01/17/demo-post-blockquotes/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/2015/01/16/demo-post-lists/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/2015/01/15/demo-post-code/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/2015/01/14/demo-post-tables/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/2015/01/13/demo-post-blocks/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/2015/01/12/demo-post-buttons/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</loc>
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/2015/01/11/demo-post-grid/</loc>
+	<loc>http://website-templates.github.io/jekyll-inclusion/2015/01/11/demo-post-grid/</loc>
 </url>
 
 </urlset>
