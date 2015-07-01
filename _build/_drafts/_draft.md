@@ -8,9 +8,9 @@ tags:
 - 
 category:
 - 
-thumb_img: "img/post/"
-header_img: "img/post/"
-end_img: "img/post/"
+thumb_img: "img/post/_PATH/thumb.jpg"
+header_img: "img/post/_PATH/header.jpg"
+end_img: "img/post/_PATH/end.jpg"
 comments: true
 langs:
   "en": "/"

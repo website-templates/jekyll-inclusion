@@ -1096,15 +1096,26 @@ body {
   position: relative;
   width: 100%;
   min-height: 100%;
-  background-position: center 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   text-align: center;
-  -webkit-background-size: cover;
-  background-size: cover;
+  overflow: hidden;
   -webkit-box-shadow: inset 0 3px 3px -2px black, inset 0 -3px 3px -2px black;
   -moz-box-shadow: inset 0 3px 3px -2px black, inset 0 -3px 3px -2px black;
   box-shadow: inset 0 3px 3px -2px black, inset 0 -3px 3px -2px black;
+}
+.page-header__bg {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.page-header__bg_blurred {
+  filter: url(../img/blur.svg#blur);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
 }
 .page-header__title {
   color: #efefef;
@@ -1300,15 +1311,26 @@ body {
   position: relative;
   width: 100%;
   min-height: 50%;
-  background-position: center 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   text-align: center;
-  -webkit-background-size: cover;
-  background-size: cover;
+  overflow: hidden;
   -webkit-box-shadow: inset 0 3px 3px -2px black, inset 0 -3px 3px -2px black;
   -moz-box-shadow: inset 0 3px 3px -2px black, inset 0 -3px 3px -2px black;
   box-shadow: inset 0 3px 3px -2px black, inset 0 -3px 3px -2px black;
+}
+.end__bg {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.end__bg_blurred {
+  filter: url(../img/blur.svg#blur);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
 }
 .end__title {
   color: #efefef;

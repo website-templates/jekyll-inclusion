@@ -1,6 +1,11 @@
 //- Page end section
 mixin page-end()
-	+b('section').end(style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')")
+	+b('section').end
+		| {% if page.end_blur %}
+		+e('div').bg_blurred(style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')")
+		| {% else %}
+		+e('div').bg(style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')")
+		| {% endif %}
 		.overlay
 			.container
 				+e('h2').title(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")

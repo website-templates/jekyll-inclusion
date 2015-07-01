@@ -84,7 +84,11 @@ type: post
     <main role="main" class="main">
       <article class="post">
         <!-- Post home-->
-        <header style="background-image: url('{{ site.baseurl }}/{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}')" class="page-header page-header_post">
+        <header class="page-header page-header_post">{% if page.start_blur %}
+          <div style="background-image: url('{{ site.baseurl }}/{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}')" class="page-header__bg page-header__bg_blurred page-header__bg_post">
+          </div>{% else %}
+          <div style="background-image: url('{{ site.baseurl }}/{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}')" class="page-header__bg page-header__bg_post">
+          </div>{% endif %}
           <div class="overlay">
             <div class="container">
               <h1 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__title page-header__title_post">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
@@ -199,7 +203,11 @@ type: post
         </div>
       </article>
       <!-- Page End-->
-      <section style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="end">
+      <section class="end">{% if page.end_blur %}
+        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="end__bg end__bg_blurred">
+        </div>{% else %}
+        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="end__bg">
+        </div>{% endif %}
         <div class="overlay">
           <div class="container">
             <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__title">{{ site.end.title }}

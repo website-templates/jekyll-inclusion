@@ -2,13 +2,25 @@
 	position: relative
 	width: 100%
 	min-height: 100%
-	// NOTE: Background images are set within the HTML (YAML Front Matter) using inline CSS!
-	background-position: center 0
-	background-repeat: no-repeat
-	background-attachment: fixed
 	text-align: center
-	+bg-size(cover)
+	overflow: hidden
 	+multiple-box-shadow(inset 0 3px 3px -2px $section-shadow, inset 0 -3px 3px -2px $section-shadow)
+
+	&__bg
+		position: absolute
+		min-width: 100%
+		min-height: 100%
+		// NOTE: Background images are set within the HTML (YAML Front Matter) using inline CSS!
+		background-size: cover
+		background-position: center 0
+		background-repeat: no-repeat
+		background-attachment: fixed
+
+		&_blurred
+			filter: url(../img/blur.svg#blur)
+			-webkit-filter: blur(5px)
+			filter: blur(5px)
+			filter: unquote("progid:DXImageTransform.Microsoft.Blur(PixelRadius='5')")
 
 	&__title
 		color: $jumbo-text
