@@ -9,7 +9,7 @@
 // Project home:
 // https://github.com/mycodelab/inclusion
 
-// ==============================
+
 // ==============================
 // $Contents
 // ==============================
@@ -17,14 +17,14 @@
 // Contents......................Here we are!
 //
 // Helpers.......................useful things, mixins, elements
-//   Elements....................External scss mixins
+//   Mixins......................External scss mixins
 //   Grid system.................Import fluid gs
 //   Prism.......................Prism syntax highlighting styles
+//   Settings....................Settings and variables
 //
 // General.......................General components and settings
 //   Fonts.......................Offline and online fonts
 //   Reset.......................Reset defaults
-//   Settings...................Settings and variables
 //
 // Layout........................Basic page styles
 //   Common......................Site containers and common layout blocks
@@ -41,7 +41,7 @@
 //   Social buttons..............Social buttons
 //   Main footer.................Site footer
 //
-// Content.......................Content styling things
+// Inclusion.....................Content styling things
 //   Mixins......................Internal framework mixins
 //   Typography..................Headings and text
 //   Buttons.....................Iconic and common buttons
@@ -58,13 +58,16 @@
 /////////////////////////////////
 
 // $Elements
-@import components/helpers/_elements
+@import helpers/_mixins
 
 // $Grid system
-@import components/helpers/_gs
+@import helpers/_gs
 
 // $Prism
-@import components/helpers/_prism
+@import helpers/_prism
+
+// $Settings
+@import helpers/_settings
 
 
 /////////////////////////////////
@@ -77,80 +80,77 @@
 // $Reset
 @import components/general/_reset
 
-// $Settings
-@import components/general/_settings
-
 
 /////////////////////////////////
 /// $Layout styles
 /////////////////////////////////
 
 // $Common
-@import components/layout/_common
+@import components/_common
 
 // $Main header
-@import components/layout/_main-header
+@import components/_main-header
 
 // $Navigation
-@import components/layout/_nav
+@import components/_nav
 
 // $Header group
-@import components/layout/_hgroup
+@import components/_hgroup
 
 // $Languages
-@import components/layout/_languages
+@import components/_languages
 
 // $Page and post header
-@import components/layout/_page-header
+@import components/_page-header
 
 // $Post preview
-@import components/layout/_post-preview
+@import components/_post-preview
 
 // $Post meta
-@import components/layout/_post-meta
+@import components/_post-meta
 
 // $Paginator
-@import components/layout/_paginator
+@import components/_paginator
 
 // $Comments
-@import components/layout/_comments
+@import components/_comments
 
 // $End section
-@import components/layout/_end-section
+@import components/_end-section
 
 // $Social buttons
-@import components/layout/_social
+@import components/_social
 
 // $Main footer
-@import components/layout/_main-footer
+@import components/_main-footer
 
 /////////////////////////////////
 /// $Content
 /////////////////////////////////
 
 // $Mixins
-@import components/content/_inclusion-mixins
+@import components/inclusion/_inclusion-mixins
 
 // $Typography
-@import components/content/_inclusion-typo
+@import components/inclusion/_inclusion-typo
 
 // $Button
-@import components/content/_inclusion-buttons
+@import components/inclusion/_inclusion-buttons
 
 // $Common block
-@import components/content/_inclusion-block
+@import components/inclusion/_inclusion-block
 
 // $Blockquote
-@import components/content/_inclusion-blockquote
+@import components/inclusion/_inclusion-blockquote
 
 // $List
-@import components/content/_inclusion-list
+@import components/inclusion/_inclusion-list
 
 // $Figure
-@import components/content/_inclusion-figure
+@import components/inclusion/_inclusion-figure
 
 // $Table
-@import components/content/_inclusion-table
+@import components/inclusion/_inclusion-table
 
 /////////////////////////////////
 /// $Media queries

@@ -1,10 +1,10 @@
-.page-header
+.end
 	position: relative
 	width: 100%
-	min-height: 100%
+	min-height: 50%
 	text-align: center
 	overflow: hidden
-	+multiple-box-shadow(inset 0 3px 3px -2px $section-shadow, inset 0 -3px 3px -2px $section-shadow)
+	box-shadow: inset 0 3px 3px -2px $section-shadow, inset 0 -3px 3px -2px $section-shadow
 
 	&__bg
 		position: absolute
@@ -29,12 +29,9 @@
 		text-shadow: 1px 1px 1px $header-shadow
 
 	&__descr
+		margin-bottom: 75px
 		color: $jumbo-text
 		font-family: $font-condensed
 		text-shadow: 1px 1px 1px $header-shadow
-
-	&__icon
-		margin: 75px auto 30px
-
-	&_post
-		text-align: left
+		@media screen and (max-width: 800px)
+			margin-bottom: 50px

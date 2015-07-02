@@ -45,11 +45,10 @@ Project's development based on [frontend-scaffold](https://github.com/orlovmax/f
 	`js/`                        - compiled coffee js, vendor js, custom js
 	`ruby/`                      - jekyll plugins
 	`styles/`                    - sass stylesheets
+		`helpers`                  - grid and third-party stuff, mixins
 		`components`               - stylsheets components (blocks)
-			`content`                - post content styles (Inclusion)
+			`inclusion`              - post content styles (Inclusion)
 			`general`                - general styles like reset.sass
-			`helpers`                - grid and third-party stuff, mixins
-			`layout`                 - site layout and blocks
 	`templates/`                 - jade templates
 		`components`               - page blocks
 		`helpers`                  - mixins
@@ -113,6 +112,8 @@ There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b
 Also you can find this function in `jpost` file [here](https://github.com/website-templates/jekyll-inclusion/blob/master/_publ/post.sh)
 
 ## Changelog
+* (July 02, 2015)
+	- Styles structure upd, elements lib replaced by autoprefixer and mixins lib
 * (May 28, 2015)
 	- Structure changed, blogging content separated 
 * (May 26, 2015)
