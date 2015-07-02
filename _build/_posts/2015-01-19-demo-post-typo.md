@@ -11,8 +11,8 @@ tags:
 - typography
 category:
 - technologies
-header_img: "img/post/lorem/common-0.jpg"
-thumb_img: "img/post/lorem/cm-0.jpg"
+start_img: "img/post/lorem/meta/common-0.jpg"
+thumb_img: "img/post/lorem/meta/cm-0.jpg"
 ---
 
 <h2 class="typo_center">Page elements</h2>

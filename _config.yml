@@ -29,7 +29,7 @@ bitbucket_username: orlovmax
 # lang_current: "ua"
 
 # Default src
-header_img: "img/bg/index-header.jpg"
+start_img: "img/bg/index-header.jpg"
 end_img: "img/bg/index-end.jpg"
 thumb_img: "img/pic.jpg"
 

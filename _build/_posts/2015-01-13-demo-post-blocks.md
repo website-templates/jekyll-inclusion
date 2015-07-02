@@ -11,8 +11,8 @@ tags:
 - blocks
 category:
 - technologies
-header_img: "img/post/lorem/common-6.jpg"
-thumb_img: "img/post/lorem/cm-6.jpg"
+start_img: "img/post/lorem/meta/common-6.jpg"
+thumb_img: "img/post/lorem/meta/cm-6.jpg"
 ---
 <h3 class="typo_serif typo_center">Blocks</h3>
 <blockquote class="bq_align-center">

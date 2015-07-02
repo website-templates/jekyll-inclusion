@@ -11,8 +11,8 @@ tags:
 - code blocks
 category:
 - technologies
-header_img: "img/post/lorem/common-4.jpg"
-thumb_img: "img/post/lorem/cm-4.jpg"
+start_img: "img/post/lorem/meta/common-4.jpg"
+thumb_img: "img/post/lorem/meta/cm-4.jpg"
 ---
 <h3 class="typo_serif typo_center">Code blocks</h3>
 <p>Let's check code blocks, each of them represent their own markup with predefined classnames.</p>

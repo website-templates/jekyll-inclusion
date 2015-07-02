@@ -11,8 +11,8 @@ tags:
 - grid
 category:
 - technologies
-header_img: "img/post/lorem/common-8.jpg"
-thumb_img: "img/post/lorem/cm-8.jpg"
+start_img: "img/post/lorem/meta/common-8.jpg"
+thumb_img: "img/post/lorem/meta/cm-8.jpg"
 ---
 <h3 class="typo_serif typo_center">Grid</h3>
 <h4 class="typo_condensed typo_center">Fluid responsive grid example</h4>

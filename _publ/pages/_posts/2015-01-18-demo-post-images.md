@@ -11,8 +11,8 @@ tags:
 - images
 category:
 - technologies
-header_img: "img/post/lorem/common-1.jpg"
-thumb_img: "img/post/lorem/cm-1.jpg"
+start_img: "img/post/lorem/meta/common-1.jpg"
+thumb_img: "img/post/lorem/meta/cm-1.jpg"
 --- 
 
 <!-- Images demo start-->

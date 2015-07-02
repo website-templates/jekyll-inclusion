@@ -85,9 +85,9 @@ type: page
       <section class="page">
         <!-- Page home-->
         <header class="page-header">{% if page.start_blur %}
-          <div style="background-image: url('{{ site.baseurl }}/{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}')" class="page-header__bg page-header__bg_blurred">
+          <div style="background-image: url('{{ site.baseurl }}/{% if page.start_img %}{{ page.start_img }}{% else %}{{ site.start_img }}{% endif %}')" class="page-header__bg page-header__bg_blurred">
           </div>{% else %}
-          <div style="background-image: url('{{ site.baseurl }}/{% if page.header_img %}{{ page.header_img }}{% else %}{{ site.header_img }}{% endif %}')" class="page-header__bg">
+          <div style="background-image: url('{{ site.baseurl }}/{% if page.start_img %}{{ page.start_img }}{% else %}{{ site.start_img }}{% endif %}')" class="page-header__bg">
           </div>{% endif %}
           <div class="overlay">
             <div class="container">

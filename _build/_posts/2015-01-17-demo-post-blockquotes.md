@@ -11,8 +11,8 @@ tags:
 - blockquotes
 category:
 - technologies
-header_img: "img/post/lorem/common-2.jpg"
-thumb_img: "img/post/lorem/cm-2.jpg"
+start_img: "img/post/lorem/meta/common-2.jpg"
+thumb_img: "img/post/lorem/meta/cm-2.jpg"
 ---
 <h3 class="typo_serif typo_center">Blockquotes</h3>
 
