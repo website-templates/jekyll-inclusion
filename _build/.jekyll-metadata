@@ -1,96 +1,96 @@
 ---
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-01-11-demo-post-grid.md:
-  mtime: 2015-07-03 01:29:06.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-01-12-demo-post-buttons.md:
-  mtime: 2015-07-03 01:29:07.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-01-13-demo-post-blocks.md:
-  mtime: 2015-07-03 01:35:39.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-01-14-demo-post-tables.md:
-  mtime: 2015-07-03 01:29:09.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-01-15-demo-post-code.md:
-  mtime: 2015-07-03 01:29:10.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-01-16-demo-post-lists.md:
-  mtime: 2015-07-03 01:29:11.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-01-17-demo-post-blockquotes.md:
-  mtime: 2015-07-03 01:29:12.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-01-18-demo-post-images.md:
-  mtime: 2015-07-03 01:36:16.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-01-19-demo-post-typo.md:
-  mtime: 2015-07-03 01:29:13.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/feed.xml:
-  mtime: 2015-04-05 23:46:02.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/robots.txt:
-  mtime: 2015-04-05 23:45:56.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/sitemap.xml:
-  mtime: 2015-04-05 23:45:51.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/css/ie-out.min.css:
-  mtime: 2015-07-03 01:41:20.000000000 +03:00
+  mtime: 2015-07-06 22:38:31.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/css/screen.min.css:
-  mtime: 2015-07-03 01:41:20.000000000 +03:00
+  mtime: 2015-07-06 22:38:32.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/favicon.ico:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/inclusion/inclusion.eot:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/inclusion/inclusion.svg:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/inclusion/inclusion.ttf:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/inclusion/inclusion.woff:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/opensans-cond/opensans-condlight.eot:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/opensans-cond/opensans-condlight.svg:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/opensans-cond/opensans-condlight.ttf:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 ? D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/opensans-cond/opensans-condlight.woff
-: mtime: 2014-11-26 16:57:07.000000000 +02:00
+: mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/opensans/opensans-regular.eot:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/opensans/opensans-regular.svg:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/opensans/opensans-regular.ttf:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/fonts/opensans/opensans-regular.woff:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/humans.txt:
-  mtime: 2014-12-10 17:45:38.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/img/bg/about-end.jpg:
   mtime: 2015-06-28 03:01:56.000000000 +03:00
@@ -225,34 +225,34 @@ D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_
   mtime: 2015-06-28 03:01:57.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/assembled.min.js:
-  mtime: 2015-07-03 01:41:14.000000000 +03:00
+  mtime: 2015-07-06 22:38:26.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/ie/ie.min.js:
-  mtime: 2015-07-03 01:41:14.000000000 +03:00
+  mtime: 2015-07-06 22:38:26.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/vendor/vendor.min.js:
-  mtime: 2015-07-03 01:41:20.000000000 +03:00
+  mtime: 2015-07-06 22:38:31.000000000 +03:00
   deps: []
 /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html:
-  mtime: 2015-07-05 00:52:13.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/css/ie-out.css:
-  mtime: 2015-07-03 01:40:23.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/css/screen.css:
-  mtime: 2015-07-03 01:40:24.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/assembled.js:
-  mtime: 2015-07-03 01:40:23.000000000 +03:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/ie/ie.js:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/live.js:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/vendor/vendor.js:
-  mtime: 2014-11-26 16:57:07.000000000 +02:00
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/img/post/lorem/meta/cm-0.jpg:
   mtime: 2015-06-28 03:01:57.000000000 +03:00
@@ -580,5 +580,21 @@ d:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_
   mtime: 2015-07-05 00:07:06.000000000 +03:00
   deps: []
 d:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/img/post/lorem/meta/common-9.jpg:
+  mtime: 2015-07-05 00:07:06.000000000 +03:00
+  deps: []
+D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-01-20-yaml-front-matter.md:
+  mtime: 2015-07-06 22:36:46.000000000 +03:00
+  deps:
+  - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
+D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/img/post/lorem/meta/cm-10.jpg:
+  mtime: 2015-07-05 00:07:06.000000000 +03:00
+  deps: []
+D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/img/post/lorem/meta/cm-9.jpg:
+  mtime: 2015-07-05 00:07:06.000000000 +03:00
+  deps: []
+D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/img/post/lorem/meta/common-10.jpg:
+  mtime: 2015-07-05 00:07:06.000000000 +03:00
+  deps: []
+D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/img/post/lorem/meta/common-9.jpg:
   mtime: 2015-07-05 00:07:06.000000000 +03:00
   deps: []

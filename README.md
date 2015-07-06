@@ -36,7 +36,6 @@ Project's development based on [frontend-scaffold](https://github.com/orlovmax/f
 `/_dev/` folder - contains source code.
 	`coffee/`                    - coffeescripts
 	`css/`                       - compiled css
-	`data/`                      - data for jekyll generation (nav etc)
 	`devtools/`                  - livereload js
 	`fonts/`                     - offline and icon fonts
 	`helpers/`                   - files that will be copied to _build folder
@@ -68,6 +67,7 @@ Project's development based on [frontend-scaffold](https://github.com/orlovmax/f
 	`js/`                        - scripts
 
 `/_publ/` folder - site content: posts, pages and pictures
+	`data/`                      - data for jekyll generation (nav etc)
 	`img/`                       - post and pages images
 	`pages`                      - site posts and pages
 		`_drafts`                - drafts (will be copied to `_build/_drafts` folder)
@@ -112,6 +112,10 @@ There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b
 Also you can find this function in `jpost` file [here](https://github.com/website-templates/jekyll-inclusion/blob/master/_publ/post.sh)
 
 ## Changelog
+* (July 06, 2015)
+	- Copy task replaced by sync
+* (July 06, 2015)
+	- data folder moved to _publ folder
 * (July 02, 2015)
 	- Styles structure upd, elements lib replaced by autoprefixer and mixins lib
 * (May 28, 2015)
