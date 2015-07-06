@@ -55,7 +55,7 @@ module.exports = {
 	data: {
 		files: [{
 			expand: true,
-			cwd: '<%= dev.data %>',
+			cwd: '<%= publ.data %>',
 			src: ['**/*.*'],
 			dest: '<%= build.data %>'
 		}]

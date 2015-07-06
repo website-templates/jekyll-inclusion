@@ -4,31 +4,32 @@ module.exports = function(grunt) {
 			// Dev paths
 			dev: {
 				main: '_dev',
-				data: '_dev/data',
-				coffee: '_dev/coffee',
-				js: '_dev/js',
-				templates: '_dev/templates',
-				styles: '_dev/styles',
-				css: '_dev/css',
-				html: '_dev/html',
-				img: '_dev/img',
-				fonts: '_dev/fonts',
-				helpers: '_dev/helpers',
-				ruby: '_dev/ruby',
-				devtools: '_dev/devtools'
+				coffee: '<%= dev.main %>/coffee',
+				js: '<%= dev.main %>/js',
+				templates: '<%= dev.main %>/templates',
+				styles: '<%= dev.main %>/styles',
+				css: '<%= dev.main %>/css',
+				html: '<%= dev.main %>/html',
+				img: '<%= dev.main %>/img',
+				fonts: '<%= dev.main %>/fonts',
+				helpers: '<%= dev.main %>/helpers',
+				ruby: '<%= dev.main %>/ruby',
+				devtools: '<%= dev.main %>/devtools'
 			},
 			publ: {
-				img: '_publ/img',
-				pages: '_publ/pages'
+				main: '_publ',
+				img: '<%= publ.main %>/img',
+				data: '<%= publ.main %>/data',
+				pages: '<%= publ.main %>/pages'
 			},
 			build: {
 				main: '_build',
-				css: '_build/css',
-				fonts: '_build/fonts',
-				img: '_build/img',
-				plugins: '_build/_plugins',
-				data: '_build/_data',
-				js: '_build/js'
+				css: '<%= build.main %>/css',
+				fonts: '<%= build.main %>/fonts',
+				img: '<%= build.main %>/img',
+				plugins: '<%= build.main %>/_plugins',
+				data: '<%= build.main %>/_data',
+				js: '<%= build.main %>/js'
 			},
 			deploy: {
 				main: '_deploy'
