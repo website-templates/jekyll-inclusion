@@ -1,5 +1,5 @@
 $ ->
-	
+
 	# jQuery navKit plugin init and settings
 	#	*
 	#	* navAnchor: "js-anchor"	anchor class name link for smooth scrolling
@@ -8,48 +8,50 @@ $ ->
 	#	* iconOpen: "is-open"		class name of icon, when navbar is open (change icon to cross instead burger)
 	#	* activeLink: "is-active"	class name of active and highlighted link
 	#	* state: "closed"			default state of navbar
-	#	
+	#
 	$(".js-nav").navKit state: "closed" #apply plugin to navbar with .js-nav classname
-	
+
 	# jQuery anchorScroll plugin init and settings, fallback for pages with no navbar but with anchor links
 	#	*  Disabled by default!
 	#	*
 	#	* anchor: "js-anchor"	anchor class name link for smooth scrolling
-	#	
-	
+	#
+
 	#apply plugin to link with .js-anchor classname
-	# $(".js-anchor").anchorScroll(); 
-	
+	# $(".js-anchor").anchorScroll();
+
 	# jQuery Lazy load plugin init and settings
 	#	* more settings here http://www.appelsiini.net/projects/lazyload
-	#	
+	#
 	$ ->
 		lazyImage = $(".js-lazy") #lazy load of images with .js-lazy classname
 		lazyImage.lazyload
 			effect: "fadeIn"
 			threshold: 200
+			load: ->
+				$(this).thumbImgFit
 
 
-	
+
 	# jQuery simpleSpoiler plugin init and settings
 	#	*
 	#	* spoilerPanel: "js-panel"		spoiler panel class name. Click on it will toggle spoiler
 	#    * spoilerClosed: "is-closed"	class name of closed spoiler
 	#    * state: "closed"				default tate of current spoiler or spoilers
-	#	
+	#
 	$(".js-spoiler").simpleSpoiler state: "closed" #apply plugin to spoilers with .js-spoiler classname
 
 
 # Intense image view plugin
 #* More details here https://github.com/tholman/intense-images
 #*
-#* Run it only on desktops (thx to http://detectmobilebrowsers.com/), 
+#* Run it only on desktops (thx to http://detectmobilebrowsers.com/),
 #* because there are some troubles with touch scrolling
 #
 (->
-	
+
 	#check for mobile devices
-	
+
 	#Check for IE
 	isIE = ->
 		myNav = navigator.userAgent.toLowerCase()
@@ -61,7 +63,7 @@ $ ->
 		) navigator.userAgent or navigator.vendor or window.opera
 		check
 
-	
+
 	# if not mobile - run Intense plugin
 	unless window.mobilecheck()
 		if not isIE() | isIE() > 8

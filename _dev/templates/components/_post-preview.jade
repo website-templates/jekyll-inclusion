@@ -1,7 +1,8 @@
 //- Post preview item
 mixin post-preview()
 	+b('article').post-preview
-		+e.image.js-lazy(src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", data-src="{{ site.baseurl }}/{{ post.thumb_img }}", alt="{{ post.title }}")
+		+e.thumbnail.js-thumb
+			+e.image.js-lazy.js-thumb-img(src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", data-src="{{ site.baseurl }}/{{ post.thumb_img }}", alt="{{ post.title }}")
 		+e.link(href='{{ post.url | prepend: site.baseurl }}')
 			+e('h3').title
 				| {{ post.title }}

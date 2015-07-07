@@ -103,7 +103,9 @@ type: taxonomy
         <!-- Page content from *.md-->
         <div id="start" class="container container_page">
           <!-- Post preview list-->{% for post in paginator.posts %}
-          <article class="post-preview"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/{{ post.thumb_img }}" alt="{{ post.title }}" class="js-lazy post-preview__image" title=""/><a href="{{ post.url | prepend: site.baseurl }}" class="post-preview__link">
+          <article class="post-preview">
+            <div class="js-thumb post-preview__thumbnail"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/{{ post.thumb_img }}" alt="{{ post.title }}" class="js-lazy js-thumb-img post-preview__image" title=""/>
+            </div><a href="{{ post.url | prepend: site.baseurl }}" class="post-preview__link">
               <h3 class="post-preview__title">{{ post.title }}
               </h3>{% if post.description %}
               <h4 class="post-preview__descr">{{ post.description }}

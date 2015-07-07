@@ -1134,19 +1134,58 @@ body {
   clear: both;
   height: 0;
 }
-.post-preview__image {
+.post-preview__thumbnail {
+  position: relative;
   display: block;
   float: left;
   width: 220px;
   height: 220px;
   margin: 0 30px 30px 0;
+  overflow: hidden;
 }
 @media screen and (max-width: 800px) {
-  .post-preview__image {
+  .post-preview__thumbnail {
     float: none;
     width: 100%;
     height: auto;
     margin: 0 auto 10px;
+    overflow: visible;
+  }
+}
+.post-preview__image {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 800px) {
+  .post-preview__image {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: translate(0, 0);
+  }
+}
+.post-preview__image.is-vertical {
+  width: 100%;
+  max-width: 100%;
+}
+@media screen and (max-width: 800px) {
+  .post-preview__image.is-vertical {
+    width: auto;
+  }
+}
+.post-preview__image.is-horizontal {
+  height: 100%;
+  max-height: 100%;
+}
+@media screen and (max-width: 800px) {
+  .post-preview__image.is-horizontal {
+    height: auto;
   }
 }
 .post-preview__link {

@@ -4,6 +4,7 @@ module.exports = {
 		files: ['<%= dev.html %>/**/*.html',
 				'<%= dev.styles %>/**/*.sass',
 				'!<%= dev.styles %>/components/**/*.sass',
+				'<%= dev.coffee %>/**/*.coffee',
 				'<%= dev.css %>/*.css',
 				'<%= dev.js %>/**/*.js',
 				'<%= dev.img %>/**/*.{png,jpg,gif}',
@@ -21,6 +22,7 @@ module.exports = {
 	theme: {
 		files: ['<%= dev.styles %>/**/*.sass',
 				'!<%= dev.styles %>/components/**/*.sass',
+				'<%= dev.coffee %>/**/*.coffee',
 				'<%= dev.css %>/*.css',
 				'<%= dev.js %>/**/*.js',
 				'<%= dev.img %>/**/*.{png,jpg,gif}'],

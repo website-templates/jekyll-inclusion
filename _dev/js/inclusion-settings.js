@@ -8,7 +8,10 @@
       lazyImage = $(".js-lazy");
       return lazyImage.lazyload({
         effect: "fadeIn",
-        threshold: 200
+        threshold: 200,
+        load: function() {
+          return $(this).thumbImgFit;
+        }
       });
     });
     return $(".js-spoiler").simpleSpoiler({
