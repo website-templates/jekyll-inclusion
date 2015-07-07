@@ -19,22 +19,6 @@
 </url>
 
 <url>
-	<loc>http://website-templates.github.io/category/technologies/</loc>
-</url>
-
-<url>
-	<loc>http://website-templates.github.io/category/technologies/2/</loc>
-</url>
-
-<url>
-	<loc>http://website-templates.github.io/category/technologies/3/</loc>
-</url>
-
-<url>
-	<loc>http://website-templates.github.io/category/technologies/4/</loc>
-</url>
-
-<url>
 	<loc>http://website-templates.github.io/tag/Lorem-ipsum/</loc>
 </url>
 
@@ -132,6 +116,22 @@
 
 <url>
 	<loc>http://website-templates.github.io/tag/YAML-front-matter/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/category/technologies/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/category/technologies/2/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/category/technologies/3/</loc>
+</url>
+
+<url>
+	<loc>http://website-templates.github.io/category/technologies/4/</loc>
 </url>
 
 <url>

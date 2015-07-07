@@ -5,12 +5,12 @@
     <description>Responsive blog theme for jekyll website generator</description>
     <link>http://website-templates.github.io/</link>
     <atom:link href="http://website-templates.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 05 Jul 2015 00:06:39 +0300</pubDate>
-    <lastBuildDate>Sun, 05 Jul 2015 00:06:39 +0300</lastBuildDate>
+    <pubDate>Tue, 07 Jul 2015 22:57:10 +0300</pubDate>
+    <lastBuildDate>Tue, 07 Jul 2015 22:57:10 +0300</lastBuildDate>
     <generator>Jekyll v3.0.0.pre.beta2</generator>
     
       <item>
-        <title>Demo post &amp;mdash YAML front matter</title>
+        <title>Demo post &amp;mdash; YAML front matter</title>
         <description>&lt;p&gt;Hi, this is an additional post, that I’ve wrote to explain some specifics of yaml front matter options that were used in current theme. Let’s start from _config.yml file&lt;/p&gt;
 
 </description>
