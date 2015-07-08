@@ -108,10 +108,12 @@ This project have .editorconfig file at the root that used by your code editor w
 This theme use special data from _data/nav.yml to generate navigation. It's useful when you need to create nested menu. Also each page have menu option and if it will turn to true - this page will appear in menu.
 
 ### Post creating
-There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b917c2) that allows us to create new posts. I've put it in a `_publ` folder, so just execute it, like `bash post.sh your-post-name` and it will create new post at `_publ/pages/_posts` with predefined draft layout from `_draft` directory and also it will create folder in `_publ/img/posts/` with name `your-post-name` for your post images. It's pretty simple and useful.
+There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b917c2) that allows us to create new posts. I've put it in a `_publ` folder, so just execute it, like `bash post.sh your-post-name` or `post.sh your-post-name` and it will create new post at `_publ/pages/_posts` with predefined draft layout from `_draft` directory and also it will create folder in `_publ/img/posts/` with name `your-post-name` for your post images. It's pretty simple and useful.
 Also you can find this function in `jpost` file [here](https://github.com/website-templates/jekyll-inclusion/blob/master/_publ/post.sh)
 
 ## Changelog
+* (July 07, 2015)
+	- thumbnail img fit resize script added, watch coffe task updated
 * (July 06, 2015)
 	- Copy task replaced by sync
 * (July 06, 2015)

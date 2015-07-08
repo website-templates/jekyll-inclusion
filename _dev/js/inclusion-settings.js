@@ -10,7 +10,7 @@
         effect: "fadeIn",
         threshold: 200,
         load: function() {
-          return $(this).thumbImgFit;
+          return $(this).thumbImgFit();
         }
       });
     });

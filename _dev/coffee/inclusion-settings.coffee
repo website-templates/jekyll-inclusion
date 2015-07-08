@@ -29,7 +29,7 @@ $ ->
 			effect: "fadeIn"
 			threshold: 200
 			load: ->
-				$(this).thumbImgFit
+				$(this).thumbImgFit()
 
 
 
