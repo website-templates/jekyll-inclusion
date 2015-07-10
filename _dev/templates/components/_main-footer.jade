@@ -9,7 +9,7 @@ mixin main-footer()
 				+e.link(href='http://opensource.org/licenses/MIT', rel='nofollow') MIT
 				|  license
 				br
-				| Copyright © {{ site.url | replace: 'http://', '' }} - {{ site.time | date: '%Y' }}
+				| &copy; {{ site.time | date: '%Y' }} {{ site.url | replace: 'http://', '' }}
 			+e('p').site-info
 				| Based on&nbsp;
 				+e.link(href='http://jekyllrb.com', rel='nofollow') Jekyll

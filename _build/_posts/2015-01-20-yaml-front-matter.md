@@ -12,6 +12,7 @@ category:
 - technologies
 thumb_img: "img/post/lorem/meta/cm-10.jpg"
 start_img: "img/post/lorem/meta/common-10.jpg"
+start_attribution: "Photo from unsplash.com"
 ---
 Hi, this is an additional post, that I've wrote to explain some specifics of yaml front matter options that were used in current theme. Let's start from _config.yml file
 
@@ -130,13 +131,15 @@ Ok, I think that's clear, we've alredy checked general settings. And now let's t
 	- 
 	thumb_img: "img/post/_PATH/meta/thumb.jpg" # Image for the first screen of the page or post
 	start_img: "img/post/_PATH/meta/start.jpg" # Image for the last screen of the page or post
+	start_attribution: "" # Attribution for start image
+	start_blur: true # Add blur for the first screen of post or page
 	end_img: "img/post/_PATH/meta/end.jpg" # Image for the post preview
+	end_attribution: "" # Attribution for end image
+	end_blur: true # Add blur for the last screen of post or page
 	langs: # URL's for different languages
 	  "en": "/"
 	permalink: # Custom page permalink
 	comments: true # Enable or disable disqus comments
-	start_blur: true # Add blur for the first screen of post or page
-	end_blur: true # Add blur for the last screen of post or page
 	---		
 	</code></pre>
 	<figcaption>YAML Front Matter block</figcaption>

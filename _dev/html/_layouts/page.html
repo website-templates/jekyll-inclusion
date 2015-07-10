@@ -94,9 +94,11 @@ type: page
               <h1 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
               </h1>
               <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__descr">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
-              </h2><a href="#start" title="{{ site.scroll-next }}" class="icon icon_down icon_light js-anchor page-header__icon">Let`s go!</a>
+              </h2><a href="#start" title="{{ site.scroll-next }}" class="icon icon_down icon_light js-anchor page-header__icon">{{ site.scroll-next }}</a>
             </div>
-          </div>
+          </div>{% if page.start_attribution %}
+          <p style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__attribution">{{ page.start_attribution }}
+          </p>{% endif %}
         </header>
         <!-- Page content from *.md-->
         <div id="start" class="container container_page">{{ content }}</div>
@@ -146,13 +148,15 @@ type: page
               </ul>
             </nav>
           </div>
-        </div>
+        </div>{% if page.end_attribution %}
+        <p style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__attribution">{{ page.end_attribution }}
+        </p>{% endif %}
       </section>
     </main>
     <!-- Main footer-->
     <footer class="main-footer">
       <div class="container">
-        <h5 class="main-footer__copyright">Designed and coded by&nbsp;<a href="http://orlovmax.com" class="main-footer__link">Maxim Orlov</a> under&nbsp;<a href="http://opensource.org/licenses/MIT" rel="nofollow" class="main-footer__link">MIT</a> license<br>Copyright © {{ site.url | replace: 'http://', '' }} - {{ site.time | date: '%Y' }}
+        <h5 class="main-footer__copyright">Designed and coded by&nbsp;<a href="http://orlovmax.com" class="main-footer__link">Maxim Orlov</a> under&nbsp;<a href="http://opensource.org/licenses/MIT" rel="nofollow" class="main-footer__link">MIT</a> license<br>&copy; {{ site.time | date: '%Y' }} {{ site.url | replace: 'http://', '' }}
         </h5>
         <p class="main-footer__site-info">Based on&nbsp;<a href="http://jekyllrb.com" rel="nofollow" class="main-footer__link">Jekyll</a>, designed with&nbsp;<a href="http://orlovmax.com/lab/tools/inclusion" class="inclusion">Inclusion</a><br>Powered by&nbsp;<a href="http://gruntjs.com" rel="nofollow" class="main-footer__link">Grunt</a>, hosted on&nbsp;<a href="{{ site.home-repo }}" rel="nofollow" class="main-footer__link">Github</a>
         </p>

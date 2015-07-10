@@ -14,3 +14,7 @@ mixin page-end()
 					| {{ site.end.descr }}
 
 				block
+		| {% if page.end_attribution %}
+		+e('p').attribution(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+			| {{ page.end_attribution }}
+		| {% endif %}
