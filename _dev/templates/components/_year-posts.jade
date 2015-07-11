@@ -1,0 +1,19 @@
+mixin year-posts()
+	| {%for post in site.posts %}
+	| {% unless post.next %}
+	+b('article').year-posts
+		+e('h2').title {{ post.date | date: '%Y' }}
+		+e('ul').list
+			| {% else %}
+			| {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+			| {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+			| {% if year != nyear %}
+	+b('article').year-posts
+		+e('h2').title {{ post.date | date: '%Y' }}
+		+e('ul').list
+			| {% endif %}
+			| {% endunless %}
+			+e('li').item
+				+e('a').link(href='{{ post.url | prepend: site.baseurl }}') {{ post.title }}
+				+e('time').date {{ post.date | date: "%B %-d" }}
+			| {% endfor %}

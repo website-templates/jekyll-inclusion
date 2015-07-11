@@ -1,0 +1,44 @@
+.year-posts
+	display: block
+	width: 100%
+	margin-bottom: 50px
+
+	&__title
+		font-family: $font-condensed
+		color: $section-text
+
+
+	&__list
+		list-style: none
+		width: 100%
+
+	&__item
+		position: relative
+		display: block
+		width: 100%
+		margin: 0 0 0 10px
+		border-bottom: 1px dotted $chapter-border
+		transition: all .2s
+		+clearfix
+		&:hover
+			border-bottom: 1px solid $chapter-border
+
+	&__link
+		display: block
+		width: 100%
+		height: 100%
+		padding: 15px 0 5px
+		text-decoration: none
+		font-family: $font-sans
+		color: $section-text
+		&:hover
+			color: $section-text
+
+	&__date
+		position: absolute
+		top: 15px
+		right: 0
+		font-family: $font-sans
+		color: $section-muted
+		@media(max-width:600px)
+			display: none

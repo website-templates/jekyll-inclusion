@@ -1,6 +1,9 @@
 - name: "Home"
   link: "/"
 
+- name: "Archive"
+  link: "/archive"
+
 - name: "About author"
   link: "http://orlovmax.com"
 
