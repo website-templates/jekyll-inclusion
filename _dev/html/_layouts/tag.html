@@ -116,7 +116,7 @@ type: taxonomy
               <p class="post-meta__autorship post-meta__autorship_preview">{% if post.translator %}
                 {{ site.meta.author }}:&nbsp;<span class="post-meta__author post-meta__author_preview">{{ post.author }}</span>, {{ site.meta.translator }}:&nbsp;<span class="post-meta__translator post-meta__translator_preview">{{ post.translator }}</span><br>{{ site.meta.source }}:&nbsp;<a href="{{ post.source-link }}" class="post-meta__source post-meta__source_preview">{{ post.source }}</a>{% else %}
                 {{ site.meta.author }}:&nbsp;<span class="post-meta__author post-meta__author_preview">{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</span>{% endif %}, {{ site.meta.date }}:&nbsp;
-                <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-meta__date post-meta__date_preview">{{ post.date | date: "%B %-d, %Y" }}
+                <time datetime="{{ post.date | date: '%Y-%m-%d' }}" class="post-meta__date post-meta__date_preview">{{ post.date | localize: "%-d %B %Y" }}
                 </time>
               </p>{% if post.tags %}
               <p class="post-meta__tags post-meta__tags_preview">
@@ -134,7 +134,7 @@ type: taxonomy
               <p class="post-meta__autorship">{% if page.translator %}
                 {{ site.meta.author }}:&nbsp;<span class="post-meta__author">{{ page.author }}</span>, {{ site.meta.translator }}:&nbsp;<span class="post-meta__translator">{{ page.translator }}</span><br>{{ site.meta.source }}:&nbsp;<a href="{{ page.source-link }}" class="post-meta__source">{{ page.source }}</a>{% else %}
                 {{ site.meta.author }}:&nbsp;<span class="post-meta__author">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</span>{% endif %}, {{ site.meta.date }}:&nbsp;
-                <time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="post-meta__date">{{ page.date | date: "%B %-d, %Y" }}
+                <time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="post-meta__date">{{ page.date | localize: "%-d %B %Y" }}
                 </time>
               </p>{% if page.tags %}
               <p class="post-meta__tags">

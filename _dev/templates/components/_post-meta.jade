@@ -22,7 +22,7 @@ mixin post-meta()
 
 			//- Publication date
 			| , {{ site.meta.date }}:&nbsp;
-			+e('time').date_preview(datetime="{{ post.date | date: '%Y-%m-%d' }}") {{ post.date | date: "%B %-d, %Y" }}
+			+e('time').date_preview(datetime="{{ post.date | date: '%Y-%m-%d' }}") {{ post.date | localize: "%-d %B %Y" }}
 
 		//- Checking for post tags and show them
 		| {% if post.tags %}
@@ -65,7 +65,7 @@ mixin post-meta()
 
 			//- Publication date
 			| , {{ site.meta.date }}:&nbsp;
-			+e('time').date(datetime="{{ page.date | date: '%Y-%m-%d' }}") {{ page.date | date: "%B %-d, %Y" }}
+			+e('time').date(datetime="{{ page.date | date: '%Y-%m-%d' }}") {{ page.date | localize: "%-d %B %Y" }}
 
 		//- Checking for post tags and show them
 		| {% if page.tags %}

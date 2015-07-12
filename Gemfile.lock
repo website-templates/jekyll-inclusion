@@ -5,6 +5,7 @@ GEM
     colorator (0.1)
     ffi (1.9.8-x86-mingw32)
     hitimes (1.2.2-x86-mingw32)
+    i18n (0.7.0)
     jekyll (3.0.0.pre.beta2)
       colorator (~> 0.1)
       jekyll-sass-converter (~> 1.0)
@@ -39,5 +40,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  i18n
   jekyll (~> 3.0.0.pre.beta)
   jekyll-paginate

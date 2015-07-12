@@ -29,7 +29,7 @@ regenerate: true
     {% endif %}
     {% endunless %}
     <li class="year-posts__item"><a href="{{ post.url | prepend: site.baseurl }}" class="year-posts__link">{{ post.title }}</a>
-      <time class="year-posts__date">{{ post.date | date: "%B %-d" }}
+      <time class="year-posts__date">{{ post.date | localize: "%-d %B" }}
       </time>
     </li>{% endfor %}
   </ul>

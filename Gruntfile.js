@@ -20,6 +20,7 @@ module.exports = function(grunt) {
 				main: '_publ',
 				img: '<%= publ.main %>/img',
 				data: '<%= publ.main %>/data',
+				local: '<%= publ.main %>/locales',
 				pages: '<%= publ.main %>/pages'
 			},
 			build: {
@@ -29,6 +30,7 @@ module.exports = function(grunt) {
 				img: '<%= build.main %>/img',
 				plugins: '<%= build.main %>/_plugins',
 				data: '<%= build.main %>/_data',
+				local: '<%= build.main %>/_locales',
 				js: '<%= build.main %>/js'
 			},
 			deploy: {
