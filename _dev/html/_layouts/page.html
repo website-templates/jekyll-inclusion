@@ -111,42 +111,40 @@ type: page
         </div>{% endif %}
         <div class="overlay">
           <div class="container">
-            <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__title">{{ site.end.title }}
+            <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__title">{{ site.end.title_social }}
             </h2>
-            <h3 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__descr">{{ site.end.descr }}
+            <h3 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__descr">{{ site.end.descr_social }}
             </h3>
-            <nav class="social">
-              <ul class="social__list">
-                <li class="social__item"><a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ site.social.rss }}" class="icon icon_light icon_rss social__link">{{ site.social.rss }}</a>
-                </li>{% if site.twitter_username %}
-                <li class="social__item"><a href="https://twitter.com/{{ site.twitter_username }}" title="{{ site.social.twitter }}" class="icon icon_light icon_twitter social__link">{{ site.social.twitter }}</a>
-                </li>{% endif %}
-                {% if site.fb_username %}
-                <li class="social__item"><a href="https://www.facebook.com/{{ site.fb_username }}" title="{{ site.social.facebook }}" class="icon icon_fb icon_light social__link">{{ site.social.facebook }}</a>
-                </li>{% endif %}
-                {% if site.vk_username %}
-                <li class="social__item"><a href="https://www.vk.com/{{ site.vk_username }}" title="{{ site.social.vkontakte }}" class="icon icon_light icon_vk social__link">{{ site.social.vkontakte }}</a>
-                </li>{% endif %}
-                {% if site.gplus_username %}
-                <li class="social__item"><a href="https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author" title="{{ site.social.gplus }}" class="icon icon_gplus icon_light social__link">{{ site.social.gplus }}</a>
-                </li>{% endif %}
-                {% if site.email %}
-                <li class="social__item"><a href="mailto:{{ site.email }}" title="{{ site.social.mail }}" class="icon icon_light icon_mail social__link">{{ site.social.mail }}</a>
-                </li>{% endif %}
-                {% if site.skype_username %}
-                <li class="social__item"><a href="skype:{{ site.skype_username }}?add" title="{{ site.social.skype }}" class="icon icon_light icon_skype social__link">{{ site.social.skype }}</a>
-                </li>{% endif %}
-                {% if site.github_username %}
-                <li class="social__item"><a href="https://github.com/{{ site.github_username }}" title="{{ site.social.git }}" class="icon icon_git icon_light social__link">{{ site.social.git }}</a>
-                </li>{% endif %}
-                {% if site.bitbucket_username %}
-                <li class="social__item"><a href="https://bitbucket.org/{{ site.bitbucket_username }}" title="{{ site.social.bitbucket }}" class="icon icon_bitbucket icon_light social__link">{{ site.social.bitbucket }}</a>
-                </li>{% endif %}
-                {% if site.linkedin_username %}
-                <li class="social__item"><a href="https://linkedin.com/in/{{ site.linkedin_username }}" title="{{ site.social.linkedin }}" class="icon icon_light icon_linkedin social__link">{{ site.social.linkedin }}</a>
-                </li>{% endif %}
-              </ul>
-            </nav>
+            <ul class="social">
+              <li class="social__item"><a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ site.social.rss }}" class="icon icon_light icon_rss social__link">{{ site.social.rss }}</a>
+              </li>{% if site.twitter_username %}
+              <li class="social__item"><a href="https://twitter.com/{{ site.twitter_username }}" title="{{ site.social.twitter }}" class="icon icon_light icon_twitter social__link">{{ site.social.twitter }}</a>
+              </li>{% endif %}
+              {% if site.fb_username %}
+              <li class="social__item"><a href="https://www.facebook.com/{{ site.fb_username }}" title="{{ site.social.facebook }}" class="icon icon_fb icon_light social__link">{{ site.social.facebook }}</a>
+              </li>{% endif %}
+              {% if site.vk_username %}
+              <li class="social__item"><a href="https://www.vk.com/{{ site.vk_username }}" title="{{ site.social.vkontakte }}" class="icon icon_light icon_vk social__link">{{ site.social.vkontakte }}</a>
+              </li>{% endif %}
+              {% if site.gplus_username %}
+              <li class="social__item"><a href="https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author" title="{{ site.social.gplus }}" class="icon icon_gplus icon_light social__link">{{ site.social.gplus }}</a>
+              </li>{% endif %}
+              {% if site.email %}
+              <li class="social__item"><a href="mailto:{{ site.email }}" title="{{ site.social.mail }}" class="icon icon_light icon_mail social__link">{{ site.social.mail }}</a>
+              </li>{% endif %}
+              {% if site.skype_username %}
+              <li class="social__item"><a href="skype:{{ site.skype_username }}?add" title="{{ site.social.skype }}" class="icon icon_light icon_skype social__link">{{ site.social.skype }}</a>
+              </li>{% endif %}
+              {% if site.github_username %}
+              <li class="social__item"><a href="https://github.com/{{ site.github_username }}" title="{{ site.social.git }}" class="icon icon_git icon_light social__link">{{ site.social.git }}</a>
+              </li>{% endif %}
+              {% if site.bitbucket_username %}
+              <li class="social__item"><a href="https://bitbucket.org/{{ site.bitbucket_username }}" title="{{ site.social.bitbucket }}" class="icon icon_bitbucket icon_light social__link">{{ site.social.bitbucket }}</a>
+              </li>{% endif %}
+              {% if site.linkedin_username %}
+              <li class="social__item"><a href="https://linkedin.com/in/{{ site.linkedin_username }}" title="{{ site.social.linkedin }}" class="icon icon_light icon_linkedin social__link">{{ site.social.linkedin }}</a>
+              </li>{% endif %}
+            </ul>
           </div>
         </div>{% if page.end_attribution %}
         <p style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__attribution">{{ page.end_attribution }}

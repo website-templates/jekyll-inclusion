@@ -1,0 +1,14 @@
+//- Share icons
+mixin share()
+	+b('ul').social
+		+e.item
+			+e.link.icon.icon_light.icon_twitter(href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}", title='{{ site.share.twitter }}') {{ site.share.twitter }}
+
+		+e.item
+			+e.link.icon.icon_light.icon_fb(href="http://www.facebook.com/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}", title='{{ site.share.facebook }}') {{ site.share.facebook }}
+
+		+e.item
+			+e.link.icon.icon_light.icon_vk(href="http://vk.com/share.php?url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}", title='{{ site.share.vkontakte }}') {{ site.share.vkontakte }}
+
+		+e.item
+			+e.link.icon.icon_light.icon_gplus(href="https://plus.google.com/share?url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}", title='{{ site.share.gplus }}') {{ site.share.gplus }}

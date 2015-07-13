@@ -91,8 +91,10 @@ meta:
   category: 'Category'
 
 end:
-  title: 'Let`s get in touch!'
-  descr: 'If you have any questions, please do not hesitate to contact me'
+  title_social: 'Let`s get in touch!'
+  descr_social: 'If you have any questions, please do not hesitate to contact me'
+  title_share: 'Share this post'
+  descr_share: 'If you like this post why don`t you share it with your friends?'
 
 social:
   rss: 'News feed'
@@ -105,3 +107,10 @@ social:
   git: 'My projects on github'
   bitbucket: 'Some of my projects on Bitbucket'
   linkedin: 'My Linkedin profile'
+
+share:
+  twitter: 'Share on Twitter'
+  facebook: 'Share on Facebook'
+  vkontakte: 'Share on Vkontakte'
+  gplus: 'Share on Google+'
+
