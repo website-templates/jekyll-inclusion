@@ -57,9 +57,9 @@ Project's development based on [frontend-scaffold](https://github.com/orlovmax/f
 
 `/_build/` folder - build version, generated sources ready for jekyll build
 	`_data/`                     - data for jekyll generation (nav etc)
+		`i18n/`                  - i18n localization *.yml files
 	`_drafts`                    - drafts (will be copied to `_build/_drafts` folder)
 	`_layouts/`                  - layouts for jekyll generation
-	`_locales/`                  - i18n localization *.yml files
 	`_plugins/`                  - jekyll plugins
 	`_posts/`                    - posts (*.md)
 	`css/`                       - site styles
@@ -69,8 +69,8 @@ Project's development based on [frontend-scaffold](https://github.com/orlovmax/f
 
 `/_publ/` folder - site content: posts, pages and pictures
 	`data/`                      - data for jekyll generation (nav etc)
+		`i18n/`                  - i18n localization *.yml files
 	`img/`                       - post and pages images
-	`locales/`                   - i18n localization *.yml files
 	`pages`                      - site posts and pages
 		`_drafts`                - drafts (will be copied to `_build/_drafts` folder)
 		`_posts`                 - posts (will be copied to `_build/_posts`folder)
