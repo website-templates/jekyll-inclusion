@@ -67,15 +67,6 @@ module.exports = {
 		}],
 		verbose: true
 	},
-	local: {
-		files: [{
-			expand: true,
-			cwd: '<%= publ.local %>',
-			src: ['**/*.yml'],
-			dest: '<%= build.local %>'
-		}],
-		verbose: true
-	},
 	ruby: {
 		files: [{
 			expand: true,
