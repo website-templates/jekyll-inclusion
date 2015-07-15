@@ -61,7 +61,7 @@
           {% endfor %}
         </ul>
       </nav>
-      <div class="hgroup"><a href="#" class="hgroup__navicon js-navtoggle">{{ site.menu-text }}</a>{% if site.lang_current %}
+      <div class="hgroup"><a href="#" class="hgroup__navicon js-navtoggle">{{ site.data.locales.menu-text }}</a>{% if site.lang_current %}
         <ul class="languages">{% for sitelang in site.langs %}
           {% if site.lang_current == sitelang[0] and page.langs %}
           <li class="languages__item">

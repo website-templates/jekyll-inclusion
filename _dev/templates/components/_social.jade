@@ -2,40 +2,40 @@
 mixin social()
 	+b('ul').social
 		+e.item
-			+e.link.icon.icon_light.icon_rss(href="{{ '/feed.xml' | prepend: site.baseurl }}", title='{{ site.social.rss }}') {{ site.social.rss }}
+			+e.link.icon.icon_light.icon_rss(href="{{ '/feed.xml' | prepend: site.baseurl }}", title='{{ site.data.locales.social.rss }}') {{ site.data.locales.social.rss }}
 		| {% if site.twitter_username %}
 		+e.item
-			+e.link.icon.icon_light.icon_twitter(href='https://twitter.com/{{ site.twitter_username }}', title='{{ site.social.twitter }}') {{ site.social.twitter }}
+			+e.link.icon.icon_light.icon_twitter(href='https://twitter.com/{{ site.twitter_username }}', title='{{ site.data.locales.social.twitter }}') {{ site.data.locales.social.twitter }}
 		| {% endif %}
 		| {% if site.fb_username %}
 		+e.item
-			+e.link.icon.icon_light.icon_fb(href='https://www.facebook.com/{{ site.fb_username }}', title='{{ site.social.facebook }}') {{ site.social.facebook }}
+			+e.link.icon.icon_light.icon_fb(href='https://www.facebook.com/{{ site.fb_username }}', title='{{ site.data.locales.social.facebook }}') {{ site.data.locales.social.facebook }}
 		| {% endif %}
 		| {% if site.vk_username %}
 		+e.item
-			+e.link.icon.icon_light.icon_vk(href='https://www.vk.com/{{ site.vk_username }}', title='{{ site.social.vkontakte }}') {{ site.social.vkontakte }}
+			+e.link.icon.icon_light.icon_vk(href='https://www.vk.com/{{ site.vk_username }}', title='{{ site.data.locales.social.vkontakte }}') {{ site.data.locales.social.vkontakte }}
 		| {% endif %}
 		| {% if site.gplus_username %}
 		+e.item
-			+e.link.icon.icon_light.icon_gplus(href='https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author', title='{{ site.social.gplus }}') {{ site.social.gplus }}
+			+e.link.icon.icon_light.icon_gplus(href='https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author', title='{{ site.data.locales.social.gplus }}') {{ site.data.locales.social.gplus }}
 		| {% endif %}
 		| {% if site.email %}
 		+e.item
-			+e.link.icon.icon_light.icon_mail(href='mailto:{{ site.email }}', title='{{ site.social.mail }}') {{ site.social.mail }}
+			+e.link.icon.icon_light.icon_mail(href='mailto:{{ site.email }}', title='{{ site.data.locales.social.mail }}') {{ site.data.locales.social.mail }}
 		| {% endif %}
 		| {% if site.skype_username %}
 		+e.item
-			+e.link.icon.icon_light.icon_skype(href='skype:{{ site.skype_username }}?add', title='{{ site.social.skype }}') {{ site.social.skype }}
+			+e.link.icon.icon_light.icon_skype(href='skype:{{ site.skype_username }}?add', title='{{ site.data.locales.social.skype }}') {{ site.data.locales.social.skype }}
 		| {% endif %}
 		| {% if site.github_username %}
 		+e.item
-			+e.link.icon.icon_light.icon_git(href='https://github.com/{{ site.github_username }}', title='{{ site.social.git }}') {{ site.social.git }}
+			+e.link.icon.icon_light.icon_git(href='https://github.com/{{ site.github_username }}', title='{{ site.data.locales.social.git }}') {{ site.data.locales.social.git }}
 		| {% endif %}
 		| {% if site.bitbucket_username %}
 		+e.item
-			+e.link.icon.icon_light.icon_bitbucket(href='https://bitbucket.org/{{ site.bitbucket_username }}', title='{{ site.social.bitbucket }}') {{ site.social.bitbucket }}
+			+e.link.icon.icon_light.icon_bitbucket(href='https://bitbucket.org/{{ site.bitbucket_username }}', title='{{ site.data.locales.social.bitbucket }}') {{ site.data.locales.social.bitbucket }}
 		| {% endif %}
 		| {% if site.linkedin_username %}
 		+e.item
-			+e.link.icon.icon_light.icon_linkedin(href='https://linkedin.com/in/{{ site.linkedin_username }}', title='{{ site.social.linkedin }}') {{ site.social.linkedin }}
+			+e.link.icon.icon_light.icon_linkedin(href='https://linkedin.com/in/{{ site.linkedin_username }}', title='{{ site.data.locales.social.linkedin }}') {{ site.data.locales.social.linkedin }}
 		| {% endif %}

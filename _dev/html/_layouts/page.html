@@ -65,7 +65,7 @@ type: page
           {% endfor %}
         </ul>
       </nav>
-      <div class="hgroup"><a href="#" class="hgroup__navicon js-navtoggle">{{ site.menu-text }}</a>{% if site.lang_current %}
+      <div class="hgroup"><a href="#" class="hgroup__navicon js-navtoggle">{{ site.data.locales.menu-text }}</a>{% if site.lang_current %}
         <ul class="languages">{% for sitelang in site.langs %}
           {% if site.lang_current == sitelang[0] and page.langs %}
           <li class="languages__item">
@@ -94,7 +94,7 @@ type: page
               <h1 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
               </h1>
               <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__descr">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
-              </h2><a href="#start" title="{{ site.scroll-next }}" class="icon icon_down icon_light js-anchor page-header__icon">{{ site.scroll-next }}</a>
+              </h2><a href="#start" title="{{ site.data.locales.scroll-next }}" class="icon icon_down icon_light js-anchor page-header__icon">{{ site.data.locales.scroll-next }}</a>
             </div>
           </div>{% if page.start_attribution %}
           <p style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__attribution">{{ page.start_attribution }}
@@ -105,44 +105,44 @@ type: page
       </section>
       <!-- Page End-->
       <section class="end">{% if page.end_blur %}
-        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="end__bg end__bg_blurred">
+        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.data.locales.end_img }}{% endif %}')" class="end__bg end__bg_blurred">
         </div>{% else %}
-        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="end__bg">
+        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.data.locales.end_img }}{% endif %}')" class="end__bg">
         </div>{% endif %}
         <div class="overlay">
           <div class="container">
-            <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__title">{{ site.end.title_social }}
+            <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__title">{{ site.data.locales.end.title_social }}
             </h2>
-            <h3 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__descr">{{ site.end.descr_social }}
+            <h3 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__descr">{{ site.data.locales.end.descr_social }}
             </h3>
             <ul class="social">
-              <li class="social__item"><a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ site.social.rss }}" class="icon icon_light icon_rss social__link">{{ site.social.rss }}</a>
+              <li class="social__item"><a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ site.data.locales.social.rss }}" class="icon icon_light icon_rss social__link">{{ site.data.locales.social.rss }}</a>
               </li>{% if site.twitter_username %}
-              <li class="social__item"><a href="https://twitter.com/{{ site.twitter_username }}" title="{{ site.social.twitter }}" class="icon icon_light icon_twitter social__link">{{ site.social.twitter }}</a>
+              <li class="social__item"><a href="https://twitter.com/{{ site.twitter_username }}" title="{{ site.data.locales.social.twitter }}" class="icon icon_light icon_twitter social__link">{{ site.data.locales.social.twitter }}</a>
               </li>{% endif %}
               {% if site.fb_username %}
-              <li class="social__item"><a href="https://www.facebook.com/{{ site.fb_username }}" title="{{ site.social.facebook }}" class="icon icon_fb icon_light social__link">{{ site.social.facebook }}</a>
+              <li class="social__item"><a href="https://www.facebook.com/{{ site.fb_username }}" title="{{ site.data.locales.social.facebook }}" class="icon icon_fb icon_light social__link">{{ site.data.locales.social.facebook }}</a>
               </li>{% endif %}
               {% if site.vk_username %}
-              <li class="social__item"><a href="https://www.vk.com/{{ site.vk_username }}" title="{{ site.social.vkontakte }}" class="icon icon_light icon_vk social__link">{{ site.social.vkontakte }}</a>
+              <li class="social__item"><a href="https://www.vk.com/{{ site.vk_username }}" title="{{ site.data.locales.social.vkontakte }}" class="icon icon_light icon_vk social__link">{{ site.data.locales.social.vkontakte }}</a>
               </li>{% endif %}
               {% if site.gplus_username %}
-              <li class="social__item"><a href="https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author" title="{{ site.social.gplus }}" class="icon icon_gplus icon_light social__link">{{ site.social.gplus }}</a>
+              <li class="social__item"><a href="https://plus.google.com/u/0/{{ site.gplus_username }}?rel=author" title="{{ site.data.locales.social.gplus }}" class="icon icon_gplus icon_light social__link">{{ site.data.locales.social.gplus }}</a>
               </li>{% endif %}
               {% if site.email %}
-              <li class="social__item"><a href="mailto:{{ site.email }}" title="{{ site.social.mail }}" class="icon icon_light icon_mail social__link">{{ site.social.mail }}</a>
+              <li class="social__item"><a href="mailto:{{ site.email }}" title="{{ site.data.locales.social.mail }}" class="icon icon_light icon_mail social__link">{{ site.data.locales.social.mail }}</a>
               </li>{% endif %}
               {% if site.skype_username %}
-              <li class="social__item"><a href="skype:{{ site.skype_username }}?add" title="{{ site.social.skype }}" class="icon icon_light icon_skype social__link">{{ site.social.skype }}</a>
+              <li class="social__item"><a href="skype:{{ site.skype_username }}?add" title="{{ site.data.locales.social.skype }}" class="icon icon_light icon_skype social__link">{{ site.data.locales.social.skype }}</a>
               </li>{% endif %}
               {% if site.github_username %}
-              <li class="social__item"><a href="https://github.com/{{ site.github_username }}" title="{{ site.social.git }}" class="icon icon_git icon_light social__link">{{ site.social.git }}</a>
+              <li class="social__item"><a href="https://github.com/{{ site.github_username }}" title="{{ site.data.locales.social.git }}" class="icon icon_git icon_light social__link">{{ site.data.locales.social.git }}</a>
               </li>{% endif %}
               {% if site.bitbucket_username %}
-              <li class="social__item"><a href="https://bitbucket.org/{{ site.bitbucket_username }}" title="{{ site.social.bitbucket }}" class="icon icon_bitbucket icon_light social__link">{{ site.social.bitbucket }}</a>
+              <li class="social__item"><a href="https://bitbucket.org/{{ site.bitbucket_username }}" title="{{ site.data.locales.social.bitbucket }}" class="icon icon_bitbucket icon_light social__link">{{ site.data.locales.social.bitbucket }}</a>
               </li>{% endif %}
               {% if site.linkedin_username %}
-              <li class="social__item"><a href="https://linkedin.com/in/{{ site.linkedin_username }}" title="{{ site.social.linkedin }}" class="icon icon_light icon_linkedin social__link">{{ site.social.linkedin }}</a>
+              <li class="social__item"><a href="https://linkedin.com/in/{{ site.linkedin_username }}" title="{{ site.data.locales.social.linkedin }}" class="icon icon_light icon_linkedin social__link">{{ site.data.locales.social.linkedin }}</a>
               </li>{% endif %}
             </ul>
           </div>

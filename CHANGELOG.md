@@ -1,3 +1,7 @@
+* (July 15, 2015)
+	- locales moved to _data/locales
+* (July 14, 2015)
+	- i18n files reorganized - moved to data folder
 * (July 13, 2015)
 	- Share section added
 * (July 12, 2015)
