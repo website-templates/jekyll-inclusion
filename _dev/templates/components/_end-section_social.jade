@@ -2,9 +2,9 @@
 mixin page-end_social()
 	+b('section').end
 		| {% if page.end_blur %}
-		+e('div').bg_blurred(style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.data.locales.end_img }}{% endif %}')")
+		+e('div').bg_blurred(style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')")
 		| {% else %}
-		+e('div').bg(style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.data.locales.end_img }}{% endif %}')")
+		+e('div').bg(style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')")
 		| {% endif %}
 		.overlay
 			.container

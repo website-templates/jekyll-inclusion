@@ -29,8 +29,8 @@ bitbucket_username: orlovmax
 # lang_current: "ua"
 
 # Default src
-start_img: "img/bg/index_start.jpg"
-end_img: "img/bg/index_end.jpg"
+start_img: "img/bg/home_start.jpg"
+end_img: "img/bg/home_end.jpg"
 thumb_img: "img/pic.jpg"
 
 # disqus-code:

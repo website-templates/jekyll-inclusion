@@ -206,9 +206,9 @@ type: post
       </article>
       <!-- Page End-->
       <section class="end">{% if page.end_blur %}
-        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.data.locales.end_img }}{% endif %}')" class="end__bg end__bg_blurred">
+        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="end__bg end__bg_blurred">
         </div>{% else %}
-        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.data.locales.end_img }}{% endif %}')" class="end__bg">
+        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="end__bg">
         </div>{% endif %}
         <div class="overlay">
           <div class="container">
