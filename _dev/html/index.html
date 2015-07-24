@@ -59,10 +59,10 @@ regenerate: true
 {% if paginator.total_pages > 1 %}
 <nav class="pager">
   <ul class="pager__list">{% if paginator.previous_page %}
-    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.pager.page-next}}</a>
+    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page-next}}</a>
     </li>{% endif %}
     {% if paginator.next_page %}
-    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.pager.page-prev}}</a>
+    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page-prev}}</a>
     </li>{% endif %}
   </ul>
 </nav>{% endif %}
@@ -73,16 +73,16 @@ regenerate: true
   <ul class="pager__list">
     {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-    <li class="pager__item pager__item_next"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.pager.page-next}}</a>
+    <li class="pager__item pager__item_next"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page-next}}</a>
     </li>{% else %}
-    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.pager.page-next}}</a>
+    <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page-next}}</a>
     </li>{% endif %}
     {% endif %}
     {% if paginator.next_page %}
     {% if paginator.next_page == 1 %}
-    <li class="pager__item pager__item_previous"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.pager.page-prev}}</a>
+    <li class="pager__item pager__item_previous"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page-prev}}</a>
     </li>{% else %}
-    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.pager.page-prev}}</a>
+    <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page-prev}}</a>
     </li>{% endif %}
     {% endif %}
   </ul>
@@ -91,10 +91,10 @@ regenerate: true
 {% if page.type == 'post' %}
 <nav class="pager">
   <ul class="pager__list">{% if page.previous.url %}
-    <li class="pager__item pager__item_previous"><a href="{{page.previous.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.previous.title}}" class="pager__link">{{site.data.locales.pager.post-prev}}</a>
+    <li class="pager__item pager__item_previous"><a href="{{page.previous.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.previous.title}}" class="pager__link">{{site.data.locales.paginator.post-prev}}</a>
     </li>{% endif %}
     {% if page.next.url %}
-    <li class="pager__item pager__item_next"><a href="{{page.next.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.next.title}}" class="pager__link">{{site.data.locales.pager.post-next}}</a>
+    <li class="pager__item pager__item_next"><a href="{{page.next.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.next.title}}" class="pager__link">{{site.data.locales.paginator.post-next}}</a>
     </li>{% endif %}
   </ul>
 </nav>{% endif %}

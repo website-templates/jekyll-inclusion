@@ -6,12 +6,12 @@ mixin paginator()
 		+e('ul').list
 			| {% if paginator.previous_page %}
 			+e('li').item_next
-				+e.link(href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.pager.page-next}}
+				+e.link(href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.paginator.page-next}}
 			| {% endif %}
 
 			| {% if paginator.next_page %}
 			+e('li').item_previous
-				+e.link(href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.pager.page-prev}}
+				+e.link(href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.paginator.page-prev}}
 			| {% endif %}
 	| {% endif %}
 	| {% endif %}
@@ -23,20 +23,20 @@ mixin paginator()
 			| {% if paginator.previous_page %}
 			| {% if paginator.previous_page == 1 %}
 			+e('li').item_next
-				+e.link(href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.pager.page-next}}
+				+e.link(href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.paginator.page-next}}
 			| {% else %}
 			+e('li').item_next
-				+e.link(href="{{ paginator.previous_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.pager.page-next}}
+				+e.link(href="{{ paginator.previous_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.paginator.page-next}}
 			| {% endif %}
 			| {% endif %}
 
 			| {% if paginator.next_page %}
 			| {% if paginator.next_page == 1 %}
 			+e('li').item_previous
-				+e.link(href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.pager.page-prev}}
+				+e.link(href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.paginator.page-prev}}
 			| {% else %}
 			+e('li').item_previous
-				+e.link(href="{{ paginator.next_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.pager.page-prev}}
+				+e.link(href="{{ paginator.next_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}") {{site.data.locales.paginator.page-prev}}
 			| {% endif %}
 			| {% endif %}
 	| {% endif %}
@@ -47,11 +47,11 @@ mixin paginator()
 		+e('ul').list
 			| {% if page.previous.url %}
 			+e('li').item_previous
-				+e.link(href="{{page.previous.url | prepend: site.baseurl | replace: '//', '/'}}", title='{{page.previous.title}}') {{site.data.locales.pager.post-prev}}
+				+e.link(href="{{page.previous.url | prepend: site.baseurl | replace: '//', '/'}}", title='{{page.previous.title}}') {{site.data.locales.paginator.post-prev}}
 			| {% endif %}
 
 			| {% if page.next.url %}
 			+e('li').item_next
-				+e.link(href="{{page.next.url | prepend: site.baseurl | replace: '//', '/'}}", title='{{page.next.title}}') {{site.data.locales.pager.post-next}}
+				+e.link(href="{{page.next.url | prepend: site.baseurl | replace: '//', '/'}}", title='{{page.next.title}}') {{site.data.locales.paginator.post-next}}
 			| {% endif %}
 	| {% endif %}

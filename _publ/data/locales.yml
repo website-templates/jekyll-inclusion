@@ -23,7 +23,7 @@ scroll-next: 'Let`s go!'
 menu-text: 'Menu'
 
 # Pagination buttons
-pager:
+paginator:
   page-next: 'Newer posts ›'
   page-prev: '‹ Older posts'
   post-next: 'Next post ›'
