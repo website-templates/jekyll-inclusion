@@ -24,10 +24,10 @@ menu-text: 'Menu'
 
 # Pagination buttons
 paginator:
-  page-next: 'Newer posts ›'
-  page-prev: '‹ Older posts'
-  post-next: 'Next post ›'
-  post-prev: '‹ Previous post'
+  page_next: 'Newer posts ›'
+  page_prev: '‹ Older posts'
+  post_next: 'Next post ›'
+  post_prev: '‹ Previous post'
 
 # Post meta
 meta:
