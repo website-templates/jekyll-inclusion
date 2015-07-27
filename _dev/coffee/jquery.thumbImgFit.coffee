@@ -17,7 +17,7 @@
 		$thumbImg = $('.' + @options.thumbImg)
 		thumbAspect = $thumb.outerWidth() / $thumb.outerHeight()
 		thumbImgAspect = $this.outerWidth() / $this.outerHeight()
-		if thumbImgAspect > thumbAspect
+		if thumbImgAspect >= thumbAspect
 			$this.addClass @options.thumbImgHor
 		else if thumbImgAspect < thumbAspect
 			$this.addClass @options.thumbImgVer

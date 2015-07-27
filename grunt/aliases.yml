@@ -16,7 +16,7 @@ default:
         - 'sync:data'
         - 'sync:publ'
         - 'shell:jekyllBuild'
-        - 'watch:all'
+        - 'watch:default'
 
 # Process bower dependencies
 bower-dev:

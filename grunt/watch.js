@@ -1,6 +1,6 @@
 //Watch for changes
 module.exports = {
-	all: {
+	default: {
 		files: ['<%= dev.html %>/**/*.html',
 				'<%= dev.styles %>/**/*.sass',
 				'!<%= dev.styles %>/components/**/*.sass',
