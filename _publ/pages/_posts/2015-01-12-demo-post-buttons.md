@@ -11,8 +11,8 @@ tags:
 - buttons
 category:
 - technologies
-start_img: "img/post/lorem/meta/common-7.jpg"
-thumb_img: "img/post/lorem/meta/cm-7.jpg"
+start_img: "img/post/2015-01-12-demo-post-buttons/meta/common-7.jpg"
+thumb_img: "img/post/2015-01-12-demo-post-buttons/meta/cm-7.jpg"
 ---
 <h3 class="typo_serif typo_center">Buttons</h3>
 <figure class="code_center code_center-extra">

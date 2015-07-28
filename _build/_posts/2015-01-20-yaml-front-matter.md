@@ -10,8 +10,8 @@ tags:
 - YAML front matter
 category:
 - technologies
-thumb_img: "img/post/lorem/meta/cm-10.jpg"
-start_img: "img/post/lorem/meta/common-10.jpg"
+thumb_img: "img/post/2015-01-20-yaml-front-matter/meta/cm-10.jpg"
+start_img: "img/post/2015-01-20-yaml-front-matter/meta/common-10.jpg"
 start_attribution: "Photo from unsplash.com"
 ---
 Hi, this is an additional post, that I've wrote to explain some specifics of yaml front matter options that were used in current theme. Let's start from _config.yml file

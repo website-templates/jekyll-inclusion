@@ -901,7 +901,7 @@ Prism.languages.yaml={scalar:{pattern:/([\-:]\s*(![^\s]+)?[ \t]*[|>])[ \t]*(?:(\
       $thumbImg = $('.' + this.options.thumbImg);
       thumbAspect = $thumb.outerWidth() / $thumb.outerHeight();
       thumbImgAspect = $this.outerWidth() / $this.outerHeight();
-      if (thumbImgAspect > thumbAspect) {
+      if (thumbImgAspect >= thumbAspect) {
         $this.addClass(this.options.thumbImgHor);
       } else if (thumbImgAspect < thumbAspect) {
         $this.addClass(this.options.thumbImgVer);

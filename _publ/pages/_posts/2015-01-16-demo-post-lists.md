@@ -11,8 +11,8 @@ tags:
 - lists
 category:
 - technologies
-start_img: "img/post/lorem/meta/common-3.jpg"
-thumb_img: "img/post/lorem/meta/cm-3.jpg"
+start_img: "img/post/2015-01-16-demo-post-lists/meta/common-3.jpg"
+thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
 ---     
 <h3 class="typo_serif typo_center">Ordered and unordered lists</h3>
 

@@ -11,8 +11,8 @@ tags:
 - tables
 category:
 - technologies
-start_img: "img/post/lorem/meta/common-5.jpg"
-thumb_img: "img/post/lorem/meta/cm-5.jpg"
+start_img: "img/post/2015-01-14-demo-post-tables/meta/common-5.jpg"
+thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
 ---
 <h3 class="typo_serif typo_center">Tables</h3>
 

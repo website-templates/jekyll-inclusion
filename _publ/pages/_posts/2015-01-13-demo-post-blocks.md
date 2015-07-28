@@ -11,8 +11,8 @@ tags:
 - blocks
 category:
 - technologies
-start_img: "img/post/lorem/meta/common-6.jpg"
-thumb_img: "img/post/lorem/meta/cm-6.jpg"
+start_img: "img/post/2015-01-13-demo-post-blocks/meta/common-6.jpg"
+thumb_img: "img/post/2015-01-13-demo-post-blocks/meta/cm-6.jpg"
 ---
 <h3 class="typo_serif typo_center">Blocks</h3>
 <blockquote class="bq_align-center">
@@ -100,11 +100,11 @@ thumb_img: "img/post/lorem/meta/cm-6.jpg"
     <pre><code class="language-markup">
     &lt;div class=&quot;block_right&quot;&gt;
         &lt;figure class=&quot;image_left&quot;&gt;
-            &lt;img class=&quot;js-lazy js-view&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot; data-src=&quot;/img/post/lorem/6.jpg&quot; alt=&quot;A lot of sand.&quot; /&gt;
+            &lt;img class=&quot;js-lazy js-view&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot; data-src=&quot;/img/post/2015-01-13-demo-post-blocks/6.jpg&quot; alt=&quot;A lot of sand.&quot; /&gt;
             &lt;figcaption&gt;A lot of sand.&lt;/figcaption&gt;
         &lt;/figure&gt;                       
         &lt;figure class=&quot;image_left&quot;&gt;
-            &lt;img class=&quot;js-lazy js-view&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot; data-src=&quot;/img/post/lorem/7.jpg&quot; alt=&quot;Groningen&quot; /&gt;
+            &lt;img class=&quot;js-lazy js-view&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot; data-src=&quot;/img/post/2015-01-13-demo-post-blocks/7.jpg&quot; alt=&quot;Groningen&quot; /&gt;
             &lt;figcaption&gt;Groningen&lt;/figcaption&gt;
         &lt;/figure&gt;                           
     &lt;/div&gt;
@@ -113,11 +113,11 @@ thumb_img: "img/post/lorem/meta/cm-6.jpg"
 </figure>
 <div class="block_right" title="Right-floated thumbs within block">
     <figure class="image_left">
-        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/6.jpg" alt="A lot of sand." />
+        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/2015-01-13-demo-post-blocks/6.jpg" alt="A lot of sand." />
         <figcaption>A lot of sand.</figcaption>
     </figure>                       
     <figure class="image_left">
-        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/7.jpg" alt="Groningen" />
+        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/2015-01-13-demo-post-blocks/7.jpg" alt="Groningen" />
         <figcaption>Groningen</figcaption>
     </figure>                           
 </div>                      
@@ -260,7 +260,7 @@ thumb_img: "img/post/lorem/meta/cm-6.jpg"
     &lt;div class=&quot;block_left block_left-extra block_spoiler js-spoiler&quot;&gt;
         &lt;a href=&quot;#&quot; class=&quot;js-panel&quot;&gt;Hidden image&lt;/a&gt;
         &lt;figure class=&quot;image_center&quot;&gt;
-            &lt;img class=&quot;js-lazy js-view&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot; data-src=&quot;/img/post/lorem/3.jpg&quot; alt=&quot;Lindesnes Fyr&quot; /&gt;
+            &lt;img class=&quot;js-lazy js-view&quot; src=&quot;data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7&quot; data-src=&quot;/img/post/2015-01-13-demo-post-blocks/3.jpg&quot; alt=&quot;Lindesnes Fyr&quot; /&gt;
             &lt;figcaption&gt;Lindesnes Fyr&lt;/figcaption&gt;
         &lt;/figure&gt;                           
     &lt;/div&gt;
@@ -270,7 +270,7 @@ thumb_img: "img/post/lorem/meta/cm-6.jpg"
 <div class="block_left block_left-extra block_spoiler js-spoiler" title="Left-floated image under spoiler">
     <a href="#" class="js-panel">Hidden image</a>
     <figure class="image_center">
-        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/lorem/3.jpg" alt="Lindesnes Fyr" />
+        <img class="js-lazy js-view" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/img/post/2015-01-13-demo-post-blocks/3.jpg" alt="Lindesnes Fyr" />
         <figcaption>Lindesnes Fyr</figcaption>
     </figure>                           
 </div>
