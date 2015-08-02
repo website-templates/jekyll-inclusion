@@ -1,3 +1,7 @@
+* (July 28, 2015)
+	- post images separated, using updated structure
+* (July 27, 2015)
+	- image structure modified, jsthumb aspect fixed, grunt watch task fixed
 * (July 15, 2015)
 	- locales moved to _data/locales
 * (July 14, 2015)
