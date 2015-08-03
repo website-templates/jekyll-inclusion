@@ -14,55 +14,70 @@ type: taxonomy
     <meta name="description" content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="keywords" content="{% if page.tags %}{% for tag in page.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ site.keywords }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"><!--Opengraph-->
+    <link rel="canonical" href="{{ site.url | append: site.baseurl | append: page.url | replace:'index.html','' }}"><!--Opengraph-->
     <meta property="og:type" content="website">
     <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta property="og:image" content="{% if page.thumb_img %}{{ page.thumb_img | prepend: '/' | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.thumb_img | prepend: '/' | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"><!--TwitterCard-->
+    <meta property="og:image" content="{% if page.thumb_img %}{{ site.baseurl | append: '/' | append: page.thumb_img | replace: '//', '/' | prepend: site.url }}{% else %}{{ site.baseurl | append: '/' | append: site.thumb_img | replace: '//', '/' | prepend: site.url }}{% endif %}">
+    <meta property="og:url" content="{{ site.baseurl | append: page.url | replace:'index.html','' | replace: '//', '/' | prepend: site.url }}"><!--TwitterCard-->
     {% if site.twitter_username %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="twitter:image:src" content="{% if page.thumb_img %}{{ page.thumb_img | prepend: '/' | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.thumb_img | prepend: '/' | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+    <meta name="twitter:image:src" content="{% if page.thumb_img %}{{ site.baseurl | append: '/' | append: page.thumb_img | replace: '//', '/' | prepend: site.url }}{% else %}{{ site.baseurl | append: '/' | append: site.thumb_img | replace: '//', '/' | prepend: site.url }}{% endif %}">
     <meta name="twitter:creator" content="{{ site.twitter_username }}">
     <meta name="twitter:site" content="{{ site.twitter_username }}">
-    <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">{% endif %}
+    <meta name="twitter:url" content="{{ site.baseurl | append: page.url | replace:'index.html','' | replace: '//', '/' | prepend: site.url }}">{% endif %}
     <!-- Head external resources-->
-    <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
-    <link rel="shortcut icon" href="{{ '/img/ico/favicon.png' | prepend: site.baseurl }}" type="image/x-icon">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ '/img/ico/apple-touch-icon-144x144-precomposed.png' | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ '/img/ico/apple-touch-icon-114x114-precomposed.png' | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ '/img/ico/apple-touch-icon-72x72-precomposed.png' | prepend: site.baseurl }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ '/img/ico/apple-touch-icon-precomposed.png' | prepend: site.baseurl }}">
+    <link rel="shortcut icon" href="{{ site.baseurl | append: '/' | append: 'favicon.ico' | replace: '//', '/' }}">
+    <link rel="shortcut icon" href="{{ site.baseurl | append: '/' | append: 'img/ico/favicon.png' | replace: '//', '/' }}" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl | append: '/' | append: 'img/ico/apple-touch-icon-144x144-precomposed.png' | replace: '//', '/' }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl | append: '/' | append: 'img/ico/apple-touch-icon-114x114-precomposed.png' | replace: '//', '/' }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl | append: '/' | append: 'img/ico/apple-touch-icon-72x72-precomposed.png' | replace: '//', '/' }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl | append: '/' | append: 'img/ico/apple-touch-icon-precomposed.png' | replace: '//', '/' }}">
     <!-- OpenSans and OpenSans Condensed from Google cdn-->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800|Open+Sans+Condensed:300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <!-- Main stylesheet--><!-- build:css {{ '/css/screen.min.css' | prepend: site.baseurl }} -->
-    <link rel="stylesheet" href="{{ '/css/screen.css' | prepend: site.baseurl }}"><!-- /build -->
-    <!-- Browser update screen styles--><!--[if lt IE 8]><link rel="stylesheet" href="{{ '/css/ie-out.min.css' | prepend: site.baseurl }}"><![endif]-->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800|Open+Sans+Condensed:300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <!-- Main stylesheet--><!-- build:css {{ site.baseurl | append: '/' | append: 'css/screen.min.css' | replace: '//', '/' }} -->
+    <link rel="stylesheet" href="{{ site.baseurl | append: '/' | append: 'css/screen.css' | replace: '//', '/' }}"><!-- /build -->
+    <!-- Browser update screen styles--><!-- build:remove -->
+    <!--[if lt IE 9]><link rel="stylesheet" href="{{ site.baseurl | append: '/' | append: 'css/ie-out.css' | replace: '//', '/' }}"><![endif]-->
+    <!-- /build -->
+    <!--[if lt IE 9]><link rel="stylesheet" href="{{ site.baseurl | append: '/' | append: 'css/ie-out.min.css' | replace: '//', '/' }}"><![endif]-->
     <!-- CSS3 media queries and HTML5 tags support for old IE--><!--[if lt IE 9]><script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script><script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script><![endif]-->
     <!-- Or you can use these two scripts from local folder, dont forget for conditional comments for old IE
-    <script src="{{ '/js/ie/ie.min.js' | prepend: site.baseurl }}"></script> -->
+    <script src="{{ site.baseurl | append: '/' | append: 'js/ie/ie.min.js' | replace: '//', '/' }}"></script> -->
     <!-- Page refresh script for live coding--><!-- build:remove -->
-    <script src="{{ '/js/live.js' | prepend: site.baseurl }}"></script><!-- /build -->
+    <script src="{{ site.baseurl | append: '/' | append: 'js/live.js' | replace: '//', '/' }}"></script><!-- /build -->
   </head>
   <body>
     <!-- Main Header-->
     <header class="main-header">
       <nav class="js-nav nav">
         <ul class="nav__list">{% for item in site.data.nav %}
+          {% if item.internal %}
           {% if item.submenu != null %}
-          <li class="nav__item"><a href="{{ item.link | prepend: site.baseurl }}" class="nav__link nav__link_submenu">{{ item.name }}</a>
+          <li class="nav__item"><a href="{{ site.baseurl | append: item.internal | replace: '//', '/' }}" class="nav__link nav__link_submenu">{{ item.name }}</a>
             <ul class="nav__list nav__list_sub">{% for subitem in item.submenu %}
-              <li class="nav__item nav__item_sub"><a href="{{ subitem.link | prepend: site.baseurl }}" class="nav__link">{{ subitem.name }}</a>
+              <li class="nav__item nav__item_sub"><a href="{{ site.baseurl | append: subitem.internal | replace: '//', '/' }}" class="nav__link">{{ subitem.name }}</a>
               </li>{% endfor %}
             </ul>
           </li>{% else %}
-          <li class="nav__item"><a href="{{ item.link | prepend: site.baseurl }}" class="nav__link">{{ item.name }}</a>
+          <li class="nav__item"><a href="{{ site.baseurl | append: item.internal | replace: '//', '/' }}" class="nav__link">{{ item.name }}</a>
           </li>{% endif %}
+          {% elsif item.external %}
+          {% if item.submenu != null %}
+          <li class="nav__item"><a href="{{ item.external }}" class="nav__link nav__link_submenu">{{ item.name }}</a>
+            <ul class="nav__list nav__list_sub">{% for subitem in item.submenu %}
+              <li class="nav__item nav__item_sub"><a href="{{ subitem.external }}" class="nav__link">{{ subitem.name }}</a>
+              </li>{% endfor %}
+            </ul>
+          </li>{% else %}
+          <li class="nav__item"><a href="{{ item.external }}" class="nav__link">{{ item.name }}</a>
+          </li>{% endif %}
+          {% endif %}
           {% endfor %}{% for page in site.pages %}
           {% if page.menu %}
-          <li class="nav__item"><a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">{{ page.title }}</a>
+          <li class="nav__item"><a href="{{ site.baseurl | append: page.url | replace: '//', '/' }}" class="nav__link">{{ page.title }}</a>
           </li>{% endif %}
           {% endfor %}
         </ul>
@@ -75,7 +90,7 @@ type: taxonomy
             </div>
           </li>{% endif %}
           {% for pagelang in page.langs %}{% if sitelang[0] == pagelang[0] %}
-          <li class="languages__item"><a href="{{ pagelang[1] | prepend: sitelang[1] }}" class="languages__link">{{ sitelang[0] }}</a>
+          <li class="languages__item"><a href="{{ sitelang[1] | append: pagelang[1] }}" class="languages__link">{{ sitelang[0] }}</a>
           </li>{% endif %}
           {% endfor %}
           {% endfor %}
@@ -87,9 +102,9 @@ type: taxonomy
       <section class="page">
         <!-- Page home-->
         <header class="page-header">{% if page.start_blur %}
-          <div style="background-image: url('{{ site.baseurl }}/{% if page.start_img %}{{ page.start_img }}{% else %}{{ site.start_img }}{% endif %}')" class="page-header__bg page-header__bg_blurred">
+          <div style="background-image: url('{% if page.start_img %}{{ site.baseurl | append: '/' | append: page.start_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.start_img }}{% endif %}')" class="page-header__bg page-header__bg_blurred">
           </div>{% else %}
-          <div style="background-image: url('{{ site.baseurl }}/{% if page.start_img %}{{ page.start_img }}{% else %}{{ site.start_img }}{% endif %}')" class="page-header__bg">
+          <div style="background-image: url('{% if page.start_img %}{{ site.baseurl | append: '/' | append: page.start_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.start_img }}{% endif %}')" class="page-header__bg">
           </div>{% endif %}
           <div class="overlay">
             <div class="container">
@@ -106,8 +121,8 @@ type: taxonomy
         <div id="start" class="container container_page">
           <!-- Post preview list-->{% for post in paginator.posts %}
           <article class="post-preview">
-            <div class="js-thumb post-preview__thumbnail"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl }}/{{ post.thumb_img }}" alt="{{ post.title }}" class="js-lazy js-thumb-img post-preview__image" title=""/>
-            </div><a href="{{ post.url | prepend: site.baseurl }}" class="post-preview__link">
+            <div class="js-thumb post-preview__thumbnail"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="{{ site.baseurl | append: '/' | append: post.thumb_img | replace: '//', '/' }}" alt="{{ post.title }}" class="js-lazy js-thumb-img post-preview__image" title=""/>
+            </div><a href="{{ site.baseurl | append: post.url | replace: '//', '/' }}" class="post-preview__link">
               <h3 class="post-preview__title">{{ post.title }}
               </h3>{% if post.description %}
               <h4 class="post-preview__descr">{{ post.description }}
@@ -121,12 +136,12 @@ type: taxonomy
               </p>{% if post.tags %}
               <p class="post-meta__tags post-meta__tags_preview">
                 {{ site.data.locales.meta.tags }}:&nbsp;
-                {% for tag in post.tags %}<a href="{{ site.data.locales.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/" class="post-meta__tag post-meta__tag_preview">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+                {% for tag in post.tags %}<a href="{{ site.baseurl | append: site.data.locales.tags.url | append: tag | append: '/' | replace:' ','-' | replace: '//', '/' }}" class="post-meta__tag post-meta__tag_preview">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
                 {% endfor %}
               </p>{% endif %}{% if post.category %}
               <p class="post-meta__categories post-meta__categories_preview">
                 {{ site.data.locales.meta.category }}:&nbsp;
-                {% for cat in post.category %}<a href="{{ site.data.locales.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/" class="post-meta__category post-meta__category_preview">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
+                {% for cat in post.category %}<a href="{{ site.baseurl | append: site.data.locales.categories.url | append: cat | append: '/' | replace:' ','-' | replace: '//', '/' }}" class="post-meta__category post-meta__category_preview">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
                 {% endfor %}
               </p>{% endif %}
             </div>{% elsif page.type == 'post' %}
@@ -139,12 +154,12 @@ type: taxonomy
               </p>{% if page.tags %}
               <p class="post-meta__tags">
                 {{ site.data.locales.meta.tags }}:&nbsp;
-                {% for tag in page.tags %}<a href="{{ site.data.locales.tags.url | prepend: site.baseurl }}{{ tag | replace:' ','-' }}/" class="post-meta__tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+                {% for tag in page.tags %}<a href="{{ site.baseurl | append: site.data.locales.tags.url | append: tag | append: '/' | replace:' ','-' | replace: '//', '/' }}" class="post-meta__tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
                 {% endfor %}
               </p>{% endif %}{% if page.category %}
               <p class="post-meta__categories">
                 {{ site.data.locales.meta.category }}:&nbsp;
-                {% for cat in page.category %}<a href="{{ site.data.locales.categories.url | prepend: site.baseurl }}{{ cat | replace:' ','-' }}/" class="post-meta__category">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
+                {% for cat in page.category %}<a href="{{ site.baseurl | append: site.data.locales.categories.url | append: cat | append: '/' | replace:' ','-' | replace: '//', '/' }}" class="post-meta__category">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
                 {% endfor %}
               </p>{% endif %}
             </div>
@@ -156,10 +171,10 @@ type: taxonomy
           {% if paginator.total_pages > 1 %}
           <nav class="pager">
             <ul class="pager__list">{% if paginator.previous_page %}
-              <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_next}}</a>
+              <li class="pager__item pager__item_next"><a href="{{ site.baseurl | append: paginator.previous_page_path | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_next}}</a>
               </li>{% endif %}
               {% if paginator.next_page %}
-              <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_prev}}</a>
+              <li class="pager__item pager__item_previous"><a href="{{ site.baseurl | append: paginator.next_page_path | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_prev}}</a>
               </li>{% endif %}
             </ul>
           </nav>{% endif %}
@@ -170,16 +185,16 @@ type: taxonomy
             <ul class="pager__list">
               {% if paginator.previous_page %}
               {% if paginator.previous_page == 1 %}
-              <li class="pager__item pager__item_next"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_next}}</a>
+              <li class="pager__item pager__item_next"><a href="{{ site.baseurl | append: page.base | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_next}}</a>
               </li>{% else %}
-              <li class="pager__item pager__item_next"><a href="{{ paginator.previous_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_next}}</a>
+              <li class="pager__item pager__item_next"><a href="{{  site.baseurl | append: page.base | append: page.slug | append: paginator.previous_page | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_next}}</a>
               </li>{% endif %}
               {% endif %}
               {% if paginator.next_page %}
               {% if paginator.next_page == 1 %}
-              <li class="pager__item pager__item_previous"><a href="{{ page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_prev}}</a>
+              <li class="pager__item pager__item_previous"><a href="{{ site.baseurl | append: page.base | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_prev}}</a>
               </li>{% else %}
-              <li class="pager__item pager__item_previous"><a href="{{ paginator.next_page | prepend: page.slug | prepend: page.base | prepend: site.baseurl | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_prev}}</a>
+              <li class="pager__item pager__item_previous"><a href="{{ site.baseurl | append: page.base | append: page.slug | append: paginator.next_page | replace: '//', '/' }}" class="pager__link">{{site.data.locales.paginator.page_prev}}</a>
               </li>{% endif %}
               {% endif %}
             </ul>
@@ -188,10 +203,10 @@ type: taxonomy
           {% if page.type == 'post' %}
           <nav class="pager">
             <ul class="pager__list">{% if page.previous.url %}
-              <li class="pager__item pager__item_previous"><a href="{{page.previous.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.previous.title}}" class="pager__link">{{site.data.locales.paginator.post_prev}}</a>
+              <li class="pager__item pager__item_previous"><a href="{{ site.baseurl | append: page.previous.url | replace: '//', '/'}}" title="{{page.previous.title}}" class="pager__link">{{site.data.locales.paginator.post_prev}}</a>
               </li>{% endif %}
               {% if page.next.url %}
-              <li class="pager__item pager__item_next"><a href="{{page.next.url | prepend: site.baseurl | replace: '//', '/'}}" title="{{page.next.title}}" class="pager__link">{{site.data.locales.paginator.post_next}}</a>
+              <li class="pager__item pager__item_next"><a href="{{ site.baseurl | append: page.next.url | replace: '//', '/'}}" title="{{page.next.title}}" class="pager__link">{{site.data.locales.paginator.post_next}}</a>
               </li>{% endif %}
             </ul>
           </nav>{% endif %}
@@ -199,9 +214,9 @@ type: taxonomy
       </section>
       <!-- Page End-->
       <section class="end">{% if page.end_blur %}
-        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="end__bg end__bg_blurred">
+        <div style="background-image: url('{% if page.end_img %}{{ site.baseurl | append: '/' | append: page.end_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.end_img }}{% endif %}')" class="end__bg end__bg_blurred">
         </div>{% else %}
-        <div style="background-image: url('{{ site.baseurl }}/{% if page.end_img %}{{ page.end_img }}{% else %}{{ site.end_img }}{% endif %}')" class="end__bg">
+        <div style="background-image: url('{% if page.end_img %}{{ site.baseurl | append: '/' | append: page.end_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.end_img }}{% endif %}')" class="end__bg">
         </div>{% endif %}
         <div class="overlay">
           <div class="container">
@@ -248,7 +263,7 @@ type: taxonomy
     <!-- Main footer-->
     <footer class="main-footer">
       <div class="container">
-        <h5 class="main-footer__copyright">Designed and coded by&nbsp;<a href="http://orlovmax.com" class="main-footer__link">Maxim Orlov</a> under&nbsp;<a href="http://opensource.org/licenses/MIT" rel="nofollow" class="main-footer__link">MIT</a> license<br>&copy; {{ site.time | date: '%Y' }} {{ site.url | replace: 'http://', '' }}
+        <h5 class="main-footer__copyright">Designed and coded by&nbsp;<a href="http://orlovmax.com" class="main-footer__link">Maxim Orlov</a> under&nbsp;<a href="http://opensource.org/licenses/MIT" rel="nofollow" class="main-footer__link">MIT</a> license<br>&copy; {{ site.time | date: '%Y' }} {{ site.url | append: site.baseurl | replace: 'http://', '' }}
         </h5>
         <p class="main-footer__site-info">Based on&nbsp;<a href="http://jekyllrb.com" rel="nofollow" class="main-footer__link">Jekyll</a>, designed with&nbsp;<a href="http://orlovmax.com/lab/tools/inclusion" class="inclusion">Inclusion</a><br>Powered by&nbsp;<a href="http://gruntjs.com" rel="nofollow" class="main-footer__link">Grunt</a>, hosted on&nbsp;<a href="{{ site.home-repo }}" rel="nofollow" class="main-footer__link">Github</a>
         </p>
@@ -262,9 +277,9 @@ type: taxonomy
     {% elsif site.lang == 'ru' %}
     <!--[if lt IE 9]><div class="browser-msg"><h2 class="browser-msg__title">Хьюстон у нас проблема</h2><p class="browser-msg__info">Похоже, что вы используете ненадежную версию Интернет Эксплорера.<br>Использование устаревших браузеров делает вашу систему уязвимой.</p><h3 class="browser-msg__sub">Для более удобного и безопасного использования веба, пожалуйста обновите ваш браузер.</h3><ul class="browser-msg__list"><li class="browser-msg__item"><a href="http://www.google.com/chrome" title="Google Chrome"><span class="browser-item__img chrome"></span><h2 class="browser-item__title">Google Chrome</h2><p class="browser-item__descr">Built for the modern web and designed to be fast in every possible way.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.firefox.com/" title="Mozilla Firefox"><span class="browser-item__img firefox"></span><h2 class="browser-item__title">Mozilla Firefox</h2><p class="browser-item__descr">Committed to you, your privacy and an open Web.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.apple.com/safari/" title="Apple Safari"><span class="browser-item__img safari"></span><h2 class="browser-item__title">Safari</h2><p class="browser-item__descr">The smartest way to surf. Wait less and browse more.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.opera.com/" title="Opera"><span class="browser-item__img opera"></span><h2 class="browser-item__title">Opera</h2><p class="browser-item__descr">Made to discover. Get a better experience.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer"><span class="browser-item__img ie"></span><h2 class="browser-item__title">Internet Explorer</h2><p class="browser-item__descr">Fast and fluid. Stay safer as you browse.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li></ul><p class="browser-msg__info">Спасибо за понимание :)</p></div><![endif]-->
     {% endif %}
-    <!-- Body external resources--><!-- build:js {{ '/js/vendor/vendor.min.js' | prepend: site.baseurl }} -->
-    <script src="{{ '/js/vendor/vendor.js' | prepend: site.baseurl }}"></script><!-- /build -->
-    <!-- build:js {{ '/js/assembled.min.js' | prepend: site.baseurl }} -->
-    <script src="{{ '/js/assembled.js' | prepend: site.baseurl }}"></script><!-- /build -->
+    <!-- Body external resources--><!-- build:js {{ site.baseurl | append: '/' | append: '/js/vendor/vendor.min.js' | replace: '//', '/' }} -->
+    <script src="{{ site.baseurl | append: '/' | append: '/js/vendor/vendor.js' | replace: '//', '/' }}"></script><!-- /build -->
+    <!-- build:js {{ site.baseurl | append: '/' | append: '/js/assembled.min.js' | replace: '//', '/' }} -->
+    <script src="{{ site.baseurl | append: '/' | append: '/js/assembled.js' | replace: '//', '/' }}"></script><!-- /build -->
   </body>
 </html>{% endstrip %}

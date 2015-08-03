@@ -1,7 +1,7 @@
-<!-- build:js {{ '/js/vendor/vendor.min.js' | prepend: site.baseurl }} -->
-script(src="{{ '/js/vendor/vendor.js' | prepend: site.baseurl }}")
+<!-- build:js {{ site.baseurl | append: '/' | append: '/js/vendor/vendor.min.js' | replace: '//', '/' }} -->
+script(src="{{ site.baseurl | append: '/' | append: '/js/vendor/vendor.js' | replace: '//', '/' }}")
 <!-- /build -->
 
-<!-- build:js {{ '/js/assembled.min.js' | prepend: site.baseurl }} -->
-script(src="{{ '/js/assembled.js' | prepend: site.baseurl }}")
+<!-- build:js {{ site.baseurl | append: '/' | append: '/js/assembled.min.js' | replace: '//', '/' }} -->
+script(src="{{ site.baseurl | append: '/' | append: '/js/assembled.js' | replace: '//', '/' }}")
 <!-- /build -->

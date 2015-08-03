@@ -2,9 +2,9 @@
 mixin page-header()
 	+b('header').page-header&attributes(attributes)
 		| {% if page.start_blur %}
-		+e('div').bg_blurred(style="background-image: url('{{ site.baseurl }}/{% if page.start_img %}{{ page.start_img }}{% else %}{{ site.start_img }}{% endif %}')")&attributes(attributes)
+		+e('div').bg_blurred(style="background-image: url('{% if page.start_img %}{{ site.baseurl | append: '/' | append: page.start_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.start_img }}{% endif %}')")&attributes(attributes)
 		| {% else %}
-		+e('div').bg(style="background-image: url('{{ site.baseurl }}/{% if page.start_img %}{{ page.start_img }}{% else %}{{ site.start_img }}{% endif %}')")&attributes(attributes)
+		+e('div').bg(style="background-image: url('{% if page.start_img %}{{ site.baseurl | append: '/' | append: page.start_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.start_img }}{% endif %}')")&attributes(attributes)
 		| {% endif %}
 		.overlay
 			.container

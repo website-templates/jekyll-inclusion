@@ -4,17 +4,32 @@ mixin nav()
 		+e('ul').list
 			//- We can add page menu items from data *.yml
 			| {% for item in site.data.nav %}
+			| {% if item.internal %}
 			| {% if item.submenu != null %}
 			+e.item
-				+e.link_submenu(href='{{ item.link | prepend: site.baseurl }}') {{ item.name }}
+				+e.link_submenu(href="{{ site.baseurl | append: item.internal | replace: '//', '/' }}") {{ item.name }}
 				+e('ul').list_sub
 					| {% for subitem in item.submenu %}
 					+e.item_sub
-						+e.link(href='{{ subitem.link | prepend: site.baseurl }}') {{ subitem.name }}
+						+e.link(href="{{ site.baseurl | append: subitem.internal | replace: '//', '/' }}") {{ subitem.name }}
 					| {% endfor %}
 			| {% else %}
 			+e.item
-				+e.link(href='{{ item.link | prepend: site.baseurl }}') {{ item.name }}
+				+e.link(href="{{ site.baseurl | append: item.internal | replace: '//', '/' }}") {{ item.name }}
+			| {% endif %}
+			| {% elsif item.external %}
+			| {% if item.submenu != null %}
+			+e.item
+				+e.link_submenu(href="{{ item.external }}") {{ item.name }}
+				+e('ul').list_sub
+					| {% for subitem in item.submenu %}
+					+e.item_sub
+						+e.link(href="{{ subitem.external }}") {{ subitem.name }}
+					| {% endfor %}
+			| {% else %}
+			+e.item
+				+e.link(href="{{ item.external }}") {{ item.name }}
+			| {% endif %}
 			| {% endif %}
 			| {% endfor %}
 
@@ -22,6 +37,6 @@ mixin nav()
 			| {% for page in site.pages %}
 			| {% if page.menu %}
 			+e.item
-				+e.link(href='{{ page.url | prepend: site.baseurl }}') {{ page.title }}
+				+e.link(href="{{ site.baseurl | append: page.url | replace: '//', '/' }}") {{ page.title }}
 			| {% endif %}
 			| {% endfor %}

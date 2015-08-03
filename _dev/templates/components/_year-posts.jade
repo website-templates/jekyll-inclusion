@@ -14,6 +14,6 @@ mixin year-posts()
 			| {% endif %}
 			| {% endunless %}
 			+e('li').item
-				+e('a').link(href='{{ post.url | prepend: site.baseurl }}') {{ post.title }}
+				+e('a').link(href="{{ site.baseurl | append: post.url | replace: '//', '/' }}") {{ post.title }}
 				+e('time').date {{ post.date | localize: "%-d %B" }}
 			| {% endfor %}

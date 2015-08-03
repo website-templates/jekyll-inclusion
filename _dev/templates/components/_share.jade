@@ -2,13 +2,13 @@
 mixin share()
 	+b('ul').social
 		+e.item
-			+e.link.icon.icon_light.icon_twitter(href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}", title='{{ site.data.locales.share.twitter }}') {{ site.data.locales.share.twitter }}
+			+e.link.icon.icon_light.icon_twitter(href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url | append: site.baseurl | append: page.url | replace:'index.html','' }}", title='{{ site.data.locales.share.twitter }}') {{ site.data.locales.share.twitter }}
 
 		+e.item
-			+e.link.icon.icon_light.icon_fb(href="http://www.facebook.com/sharer.php?u={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}", title='{{ site.data.locales.share.facebook }}') {{ site.data.locales.share.facebook }}
+			+e.link.icon.icon_light.icon_fb(href="http://www.facebook.com/sharer.php?u={{ site.url | append: site.baseurl | append: page.url | replace:'index.html','' }}", title='{{ site.data.locales.share.facebook }}') {{ site.data.locales.share.facebook }}
 
 		+e.item
-			+e.link.icon.icon_light.icon_vk(href="http://vk.com/share.php?url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}", title='{{ site.data.locales.share.vkontakte }}') {{ site.data.locales.share.vkontakte }}
+			+e.link.icon.icon_light.icon_vk(href="http://vk.com/share.php?url={{ site.url | append: site.baseurl | append: page.url | replace:'index.html','' }}", title='{{ site.data.locales.share.vkontakte }}') {{ site.data.locales.share.vkontakte }}
 
 		+e.item
-			+e.link.icon.icon_light.icon_gplus(href="https://plus.google.com/share?url={{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}", title='{{ site.data.locales.share.gplus }}') {{ site.data.locales.share.gplus }}
+			+e.link.icon.icon_light.icon_gplus(href="https://plus.google.com/share?url={{ site.url | append: site.baseurl | append: page.url | replace:'index.html','' }}", title='{{ site.data.locales.share.gplus }}') {{ site.data.locales.share.gplus }}

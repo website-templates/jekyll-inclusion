@@ -13,7 +13,7 @@ mixin languages()
 		//- Show languages if they are available in pages or posts
 		| {% if sitelang[0] == pagelang[0] %}
 		+e.item
-			+e.link(href="{{ pagelang[1] | prepend: sitelang[1] }}") {{ sitelang[0] }}
+			+e.link(href="{{ sitelang[1] | append: pagelang[1] }}") {{ sitelang[0] }}
 		| {% endif %}
 		| {% endfor %}
 		| {% endfor %}

@@ -1,11 +1,11 @@
 - name: "Home"
-  link: "/"
+  internal: "/"
 
 - name: "Archive"
-  link: "/archive"
+  internal: "/archive"
 
 - name: "About author"
-  link: "http://orlovmax.com"
+  external: "http://orlovmax.com"
 
 - name: "Project on github"
-  link: "https://github.com/website-templates/jekyll-inclusion"
+  external: "https://github.com/website-templates/jekyll-inclusion"
