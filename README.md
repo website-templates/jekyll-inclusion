@@ -33,6 +33,16 @@ Check out [quick demo](http://website-templates.github.io/jekyll-inclusion/) of 
 There are two branches: master branch and gh-pages.
 Project's development based on [frontend-scaffold](https://github.com/orlovmax/front-end-scaffold) and located in master branch:
 ```
+Gruntfile.js                     - tasks
+package.json                     - npm packages
+bower.json                       - bower packages
+README.md                        - readme
+CHANGELOG.md                     - changelog
+Gemfile                          - required gems
+.editorconfig                    - codestyle things
+_config.yml                      - site configurations
+Rakefile                         - deploy scripts
+post.sh                          - script for new posts creating
 `/_dev/` folder - contains source code.
 	`coffee/`                    - coffeescripts
 	`css/`                       - compiled css
@@ -74,7 +84,6 @@ Project's development based on [frontend-scaffold](https://github.com/orlovmax/f
 	`pages`                      - site posts and pages
 		`_drafts`                - drafts (will be copied to `_build/_drafts` folder)
 		`_posts`                 - posts (will be copied to `_build/_posts`folder)
-		jpost.sh                 - script for new posts creating
 ```
 gh-pages branch contains pure html/css/js site compiled by jekyll. This is for common user repository. For organization repository deploy branch should be `master` This brunch located in deploy folder:
 
@@ -110,8 +119,7 @@ This project have .editorconfig file at the root that used by your code editor w
 This theme use special data from _data/nav.yml to generate navigation. It's useful when you need to create nested menu. Also each page have menu option and if it will turn to true - this page will appear in menu.
 
 ### Post creating
-There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b917c2) that allows us to create new posts. I've put it in a `_publ` folder, so just execute it, like `bash post.sh your-post-name` or `post.sh your-post-name` and it will create new post at `_publ/pages/_posts` with predefined draft layout from `_draft` directory and also it will create folder in `_publ/img/posts/` with name `your-post-name` for your post images. It's pretty simple and useful.
-Also you can find this function in `jpost` file [here](https://github.com/website-templates/jekyll-inclusion/blob/master/_publ/post.sh)
+There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b917c2) that allows us to create new posts. I've put it in the root of the website, so just execute it, like `bash post.sh your-post-name` or `post.sh your-post-name` and it will create new *.md file at `_publ/pages/_posts` with predefined draft layout from `_draft` directory and also it will create folder in `_publ/img/posts/` with name `your-post-name` for your post images. It's pretty simple and useful.
 
 ## Changelog
 Youc can find full changelog [HERE](https://github.com/website-templates/jekyll-inclusion/blob/master/CHANGELOG.md)

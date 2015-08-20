@@ -1,3 +1,5 @@
+* (August 20, 2015)
+	- posting script modified
 * (July 28, 2015)
 	- post images separated, using updated structure
 * (July 27, 2015)
