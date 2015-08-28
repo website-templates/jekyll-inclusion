@@ -16,6 +16,5 @@ end_attribution: ""
 end_blur: true
 langs:
   "en": "/"
-permalink: 
 comments: true
 ---
