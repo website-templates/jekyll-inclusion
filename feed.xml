@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Inclusion jekyll theme</title>
-    <description>Responsive blog theme for jekyll website generator</description>
-    <link>http://website-templates.github.io/jekyll-inclusion/</link>
-    <atom:link href="http://website-templates.github.io/jekyll-inclusion/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 28 Jul 2015 23:51:40 +0300</pubDate>
-    <lastBuildDate>Tue, 28 Jul 2015 23:51:40 +0300</lastBuildDate>
-    <generator>Jekyll v3.0.0.pre.beta2</generator>
-    
-      <item>
-        <title>Demo post &amp;mdash; YAML front matter</title>
-        <description>&lt;p&gt;Hi, this is an additional post, that I’ve wrote to explain some specifics of yaml front matter options that were used in current theme. Let’s start from _config.yml file&lt;/p&gt;
+	<title>Inclusion jekyll theme</title>
+	<description>Responsive blog theme for jekyll website generator</description>
+	<link>http://website-templates.github.io/jekyll-inclusion/</link>
+	<atom:link href="http://website-templates.github.io/jekyll-inclusion/feed.xml" rel="self" type="application/rss+xml" />
+	<pubDate>Fri, 28 Aug 2015 21:53:24 +0300</pubDate>
+	<lastBuildDate>Fri, 28 Aug 2015 21:53:24 +0300</lastBuildDate>
+	<generator>Jekyll v3.0.0.pre.beta2</generator>
+	
+	  <item>
+		<title>Demo post &amp;mdash; YAML front matter</title>
+		<description>&lt;p&gt;Hi, this is an additional post, that I’ve wrote to explain some specifics of yaml front matter options that were used in current theme. Let’s start from _config.yml file&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 20 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/20/yaml-front-matter/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/20/yaml-front-matter/</guid>
-        
-        <category>Lorem ipsum</category>
-        
-        <category>test</category>
-        
-        <category>demo</category>
-        
-        <category>YAML front matter</category>
-        
-        
-        <category>technologies</category>
-        
-      </item>
-    
-      <item>
-        <title>Demo post &amp;mdash; typography</title>
-        <description>&lt;h2 class=&quot;typo_center&quot;&gt;Page elements&lt;/h2&gt;
+		<pubDate>Tue, 20 Jan 2015 00:00:00 +0200</pubDate>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/20/yaml-front-matter/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/20/yaml-front-matter/</guid>
+		
+		<category>Lorem ipsum</category>
+		
+		<category>test</category>
+		
+		<category>demo</category>
+		
+		<category>YAML front matter</category>
+		
+		
+		<category>technologies</category>
+		
+	  </item>
+	
+	  <item>
+		<title>Demo post &amp;mdash; typography</title>
+		<description>&lt;h2 class=&quot;typo_center&quot;&gt;Page elements&lt;/h2&gt;
 &lt;div class=&quot;chapter&quot;&gt;
     &lt;p&gt;This blog is based on &lt;span class=&quot;inclusion&quot;&gt;Inclusion&lt;/span&gt; framework, so it&#39;s tools allow us to decorate our content. Just add predefined classname to our markup element - and that&#39;s all! Here is orifinal description:&lt;/p&gt;
     &lt;blockquote class=&quot;bq_align-center&quot;&gt;
@@ -55,181 +55,181 @@
 &lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Headings and text&lt;/h3&gt;
 
 </description>
-        <pubDate>Mon, 19 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</guid>
-        
-        <category>Lorem ipsum</category>
-        
-        <category>test</category>
-        
-        <category>demo</category>
-        
-        <category>page elements</category>
-        
-        <category>typography</category>
-        
-        
-        <category>technologies</category>
-        
-      </item>
-    
-      <item>
-        <title>Demo post &amp;mdash; images</title>
-        <description>&lt;!-- Images demo start--&gt;
+		<pubDate>Mon, 19 Jan 2015 00:00:00 +0200</pubDate>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</guid>
+		
+		<category>Lorem ipsum</category>
+		
+		<category>test</category>
+		
+		<category>demo</category>
+		
+		<category>page elements</category>
+		
+		<category>typography</category>
+		
+		
+		<category>technologies</category>
+		
+	  </item>
+	
+	  <item>
+		<title>Demo post &amp;mdash; images</title>
+		<description>&lt;!-- Images demo start--&gt;
 &lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Images&lt;/h3&gt;
 &lt;blockquote class=&quot;bq_align-center&quot;&gt;
     &lt;p&gt;Well, here you can see centerd, floated or extra-positioned images. Also you can check fullscreen prview of images by clicking on them. For this purpose I&#39;ve used &lt;a rel=&quot;nofollow&quot; href=&quot;https://github.com/tholman/intense-images&quot;&gt;Intense Images plugin&lt;/a&gt; It&#39;s really awesome thing!&lt;/p&gt;
 &lt;/blockquote&gt;
 
 </description>
-        <pubDate>Sun, 18 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</guid>
-        
-        <category>Lorem ipsum</category>
-        
-        <category>test</category>
-        
-        <category>demo</category>
-        
-        <category>page elements</category>
-        
-        <category>images</category>
-        
-        
-        <category>technologies</category>
-        
-      </item>
-    
-      <item>
-        <title>Demo post &amp;mdash; blockquotes</title>
-        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Blockquotes&lt;/h3&gt;
+		<pubDate>Sun, 18 Jan 2015 00:00:00 +0200</pubDate>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</guid>
+		
+		<category>Lorem ipsum</category>
+		
+		<category>test</category>
+		
+		<category>demo</category>
+		
+		<category>page elements</category>
+		
+		<category>images</category>
+		
+		
+		<category>technologies</category>
+		
+	  </item>
+	
+	  <item>
+		<title>Demo post &amp;mdash; blockquotes</title>
+		<description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Blockquotes&lt;/h3&gt;
 
 </description>
-        <pubDate>Sat, 17 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</guid>
-        
-        <category>Lorem ipsum</category>
-        
-        <category>test</category>
-        
-        <category>demo</category>
-        
-        <category>page elements</category>
-        
-        <category>blockquotes</category>
-        
-        
-        <category>technologies</category>
-        
-      </item>
-    
-      <item>
-        <title>Demo post &amp;mdash; lists</title>
-        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Ordered and unordered lists&lt;/h3&gt;
+		<pubDate>Sat, 17 Jan 2015 00:00:00 +0200</pubDate>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</guid>
+		
+		<category>Lorem ipsum</category>
+		
+		<category>test</category>
+		
+		<category>demo</category>
+		
+		<category>page elements</category>
+		
+		<category>blockquotes</category>
+		
+		
+		<category>technologies</category>
+		
+	  </item>
+	
+	  <item>
+		<title>Demo post &amp;mdash; lists</title>
+		<description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Ordered and unordered lists&lt;/h3&gt;
 
 </description>
-        <pubDate>Fri, 16 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</guid>
-        
-        <category>Lorem ipsum</category>
-        
-        <category>test</category>
-        
-        <category>demo</category>
-        
-        <category>page elements</category>
-        
-        <category>lists</category>
-        
-        
-        <category>technologies</category>
-        
-      </item>
-    
-      <item>
-        <title>Demo post &amp;mdash; code blocks</title>
-        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Code blocks&lt;/h3&gt;
+		<pubDate>Fri, 16 Jan 2015 00:00:00 +0200</pubDate>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</guid>
+		
+		<category>Lorem ipsum</category>
+		
+		<category>test</category>
+		
+		<category>demo</category>
+		
+		<category>page elements</category>
+		
+		<category>lists</category>
+		
+		
+		<category>technologies</category>
+		
+	  </item>
+	
+	  <item>
+		<title>Demo post &amp;mdash; code blocks</title>
+		<description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Code blocks&lt;/h3&gt;
 &lt;p&gt;Let&#39;s check code blocks, each of them represent their own markup with predefined classnames.&lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 15 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</guid>
-        
-        <category>Lorem ipsum</category>
-        
-        <category>test</category>
-        
-        <category>demo</category>
-        
-        <category>page elements</category>
-        
-        <category>code blocks</category>
-        
-        
-        <category>technologies</category>
-        
-      </item>
-    
-      <item>
-        <title>Demo post &amp;mdash; tables</title>
-        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Tables&lt;/h3&gt;
+		<pubDate>Thu, 15 Jan 2015 00:00:00 +0200</pubDate>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</guid>
+		
+		<category>Lorem ipsum</category>
+		
+		<category>test</category>
+		
+		<category>demo</category>
+		
+		<category>page elements</category>
+		
+		<category>code blocks</category>
+		
+		
+		<category>technologies</category>
+		
+	  </item>
+	
+	  <item>
+		<title>Demo post &amp;mdash; tables</title>
+		<description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Tables&lt;/h3&gt;
 
 </description>
-        <pubDate>Wed, 14 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</guid>
-        
-        <category>Lorem ipsum</category>
-        
-        <category>test</category>
-        
-        <category>demo</category>
-        
-        <category>page elements</category>
-        
-        <category>tables</category>
-        
-        
-        <category>technologies</category>
-        
-      </item>
-    
-      <item>
-        <title>Demo post &amp;mdash; blocks</title>
-        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Blocks&lt;/h3&gt;
+		<pubDate>Wed, 14 Jan 2015 00:00:00 +0200</pubDate>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</guid>
+		
+		<category>Lorem ipsum</category>
+		
+		<category>test</category>
+		
+		<category>demo</category>
+		
+		<category>page elements</category>
+		
+		<category>tables</category>
+		
+		
+		<category>technologies</category>
+		
+	  </item>
+	
+	  <item>
+		<title>Demo post &amp;mdash; blocks</title>
+		<description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Blocks&lt;/h3&gt;
 &lt;blockquote class=&quot;bq_align-center&quot;&gt;
     &lt;p&gt;This inclusion was created as container for other page elements like widgets, complex blocks, media stuff, iframes or floated titles and also some nested things as container with titled lists or image galleries. Also this element have a spoiler option, that hide content under spoiler with title and icon. &lt;br /&gt;
     This sounds good and it&#39;s really useful for some cases so let&#39;s see how we can do this.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 </description>
-        <pubDate>Tue, 13 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</guid>
-        
-        <category>Lorem ipsum</category>
-        
-        <category>test</category>
-        
-        <category>demo</category>
-        
-        <category>page elements</category>
-        
-        <category>blocks</category>
-        
-        
-        <category>technologies</category>
-        
-      </item>
-    
-      <item>
-        <title>Demo post &amp;mdash; buttons</title>
-        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Buttons&lt;/h3&gt;
+		<pubDate>Tue, 13 Jan 2015 00:00:00 +0200</pubDate>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</guid>
+		
+		<category>Lorem ipsum</category>
+		
+		<category>test</category>
+		
+		<category>demo</category>
+		
+		<category>page elements</category>
+		
+		<category>blocks</category>
+		
+		
+		<category>technologies</category>
+		
+	  </item>
+	
+	  <item>
+		<title>Demo post &amp;mdash; buttons</title>
+		<description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Buttons&lt;/h3&gt;
 &lt;figure class=&quot;code_center code_center-extra&quot;&gt;
     &lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;
     &amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;button button_center button_small&amp;quot;&amp;gt;Small button&amp;lt;/button&amp;gt;
@@ -251,28 +251,28 @@
 &lt;p&gt;&lt;button type=&quot;button&quot; class=&quot;button button_center button_regular button_disabled&quot; title=&quot;Regular disabled button&quot;&gt;Disabled button&lt;/button&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 12 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</guid>
-        
-        <category>Lorem ipsum</category>
-        
-        <category>test</category>
-        
-        <category>demo</category>
-        
-        <category>page elements</category>
-        
-        <category>buttons</category>
-        
-        
-        <category>technologies</category>
-        
-      </item>
-    
-      <item>
-        <title>Demo post &amp;mdash; grid</title>
-        <description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Grid&lt;/h3&gt;
+		<pubDate>Mon, 12 Jan 2015 00:00:00 +0200</pubDate>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</guid>
+		
+		<category>Lorem ipsum</category>
+		
+		<category>test</category>
+		
+		<category>demo</category>
+		
+		<category>page elements</category>
+		
+		<category>buttons</category>
+		
+		
+		<category>technologies</category>
+		
+	  </item>
+	
+	  <item>
+		<title>Demo post &amp;mdash; grid</title>
+		<description>&lt;h3 class=&quot;typo_serif typo_center&quot;&gt;Grid&lt;/h3&gt;
 &lt;h4 class=&quot;typo_condensed typo_center&quot;&gt;Fluid responsive grid example&lt;/h4&gt;
 &lt;div class=&quot;block_center block_center-extra block_spoiler js-spoiler&quot;&gt;
 	&lt;a href=&quot;#&quot; class=&quot;js-panel&quot;&gt;Fluid responsive grid markup&lt;/a&gt;
@@ -437,24 +437,24 @@
 &lt;/div&gt;
 
 </description>
-        <pubDate>Sun, 11 Jan 2015 00:00:00 +0200</pubDate>
-        <link>http://website-templates.github.io/jekyll-inclusion/2015/01/11/demo-post-grid/</link>
-        <guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/11/demo-post-grid/</guid>
-        
-        <category>Lorem ipsum</category>
-        
-        <category>test</category>
-        
-        <category>demo</category>
-        
-        <category>page elements</category>
-        
-        <category>grid</category>
-        
-        
-        <category>technologies</category>
-        
-      </item>
-    
+		<pubDate>Sun, 11 Jan 2015 00:00:00 +0200</pubDate>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/11/demo-post-grid/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/11/demo-post-grid/</guid>
+		
+		<category>Lorem ipsum</category>
+		
+		<category>test</category>
+		
+		<category>demo</category>
+		
+		<category>page elements</category>
+		
+		<category>grid</category>
+		
+		
+		<category>technologies</category>
+		
+	  </item>
+	
   </channel>
 </rss>
