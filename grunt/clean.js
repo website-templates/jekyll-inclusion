@@ -4,5 +4,7 @@ module.exports = {
 			'!<%= build.js %>/**/*.min.js',
 			'<%= build.css %>/**/*.css',
 			'!<%= build.css %>/**/*.min.css'],
+	build: ['<%= build.js %>/**/*.min.js',
+			'<%= build.css %>/**/*.min.css'],
 	bower: 'bower_components'
 }

@@ -41,6 +41,7 @@ regen:
         - 'sync:ruby'
         - 'sync:data'
         - 'sync:publ'
+        - 'clean:build'
         - 'shell:jekyllBuild'
 
 # Task for theme style fixes (only styles or scripting).
