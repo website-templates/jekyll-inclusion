@@ -68,7 +68,7 @@
 @import helpers/_prism
 
 // $Settings
-@import helpers/_settings
+@import helpers/_variables
 
 
 /////////////////////////////////
@@ -81,13 +81,41 @@
 // $Reset
 @import components/general/_reset
 
+// $Common
+@import components/general/_common
+
+/////////////////////////////////
+/// $Content
+/////////////////////////////////
+
+// $Mixins
+@import components/general/inclusion/_inclusion-mixins
+
+// $Typography
+@import components/general/inclusion/_inclusion-typo
+
+// $Button
+@import components/general/inclusion/_inclusion-buttons
+
+// $Common block
+@import components/general/inclusion/_inclusion-block
+
+// $Blockquote
+@import components/general/inclusion/_inclusion-blockquote
+
+// $List
+@import components/general/inclusion/_inclusion-list
+
+// $Figure
+@import components/general/inclusion/_inclusion-figure
+
+// $Table
+@import components/general/inclusion/_inclusion-table
+
 
 /////////////////////////////////
 /// $Layout styles
 /////////////////////////////////
-
-// $Common
-@import components/_common
 
 // $Main header
 @import components/_main-header
@@ -127,34 +155,6 @@
 
 // $Main footer
 @import components/_main-footer
-
-/////////////////////////////////
-/// $Content
-/////////////////////////////////
-
-// $Mixins
-@import components/inclusion/_inclusion-mixins
-
-// $Typography
-@import components/inclusion/_inclusion-typo
-
-// $Button
-@import components/inclusion/_inclusion-buttons
-
-// $Common block
-@import components/inclusion/_inclusion-block
-
-// $Blockquote
-@import components/inclusion/_inclusion-blockquote
-
-// $List
-@import components/inclusion/_inclusion-list
-
-// $Figure
-@import components/inclusion/_inclusion-figure
-
-// $Table
-@import components/inclusion/_inclusion-table
 
 /////////////////////////////////
 /// $Media queries
