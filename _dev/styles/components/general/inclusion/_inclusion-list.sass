@@ -1,31 +1,41 @@
-// Common list
-ul, ol
+.list
   list-style-position: inside
   font-size: 20px
   line-height: 1.4
   font-weight: 400
   text-align: left
-  color: $list-text
-  font-family: $font-serif
-  & ul, & ol
-    margin-left: 20px
+  color: $c-list_text
+  font-family: $f-serif
   @media screen and (max-width: 960px)
     font-size: 18px
+
+
+  & ul, & ol
+    margin-left: 20px
+
+
   & li
     margin-bottom: 10px
     @media screen and (max-width: 960px)
       margin-bottom: 5px
 
-.list
+
   &_center
     +common-elem(center)
+
     &-extra
       +common-elem-extra(center)
+
+
   &_left
     +common-elem(left)
+
     &-extra
       +common-elem-extra(left)
+
+
   &_right
     +common-elem(right)
+
     &-extra
       +common-elem-extra(right)

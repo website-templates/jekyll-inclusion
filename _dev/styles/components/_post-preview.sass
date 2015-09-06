@@ -3,6 +3,7 @@
 	clear: both
 	+clearfix
 
+
 	&__thumbnail
 		position: relative
 		display: block
@@ -17,6 +18,8 @@
 			height: auto
 			margin: 0 auto 10px
 			overflow: visible
+
+
 	&__image
 		position: absolute
 		display: block
@@ -31,28 +34,36 @@
 			max-width: 100%
 			height: auto
 			transform: translate(0,0)
+
 		&.is-vertical
 			width: 100%
 			max-width: 100%
 			@media screen and (max-width: 800px)
 				width: auto
+
 		&.is-horizontal
 			height: 100%
 			max-height: 100%
 			@media screen and (max-width: 800px)
 				height: auto
+
+
 	&__link
 		text-decoration: none
+
+
 	&__title
-		font-family: $font-sans
-		color: $section-text
+		font-family: $f-sans
+		color: $c-post-preview_title
 		font-weight: 600
 		margin-left: 250px
 		@media screen and (max-width: 800px)
 			margin: auto
+
+
 	&__descr
-		font-family: $font-condensed
-		color: $section-muted
+		font-family: $f-condensed
+		color: $c-post-preview_descr
 		margin-left: 250px
 		@media screen and (max-width: 800px)
 			margin: auto

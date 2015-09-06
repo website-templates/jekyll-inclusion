@@ -4,35 +4,8 @@
 	clear: both
 	margin-top: 50px
 	padding: 0 10px
-	border-left: 3px solid $figure-border
+	border-left: 3px solid $c-post-meta_border
 
-	&__autorship,
-	&__tags,
-	&__categories
-		display: block
-		margin-bottom: 0
-		font-family: $font-sans
-		color: $section-text
-		font-weight: 400
-		&_preview
-			display: block
-			margin-bottom: 0
-			font-family: $font-sans
-			color: $section-text
-			font-weight: 400
-
-	&__author,
-	&__date,
-	&__tag,
-	&__category,
-	&__translator
-		// font-family: $font-serif;
-		color: $section-muted
-		font-weight: 300
-		&_preview
-			// font-family: $font-serif;
-			color: $section-muted
-			font-weight: 300
 
 	&_preview
 		clear: none
@@ -42,3 +15,23 @@
 		border: none
 		@media screen and (max-width: 800px)
 			margin: auto
+
+
+	&__autorship,
+	&__tags,
+	&__categories
+		display: block
+		margin-bottom: 0
+		font-family: $f-sans
+		color: $c-post-meta_text
+		font-weight: 400
+
+
+	&__author,
+	&__date,
+	&__tag,
+	&__category,
+	&__translator
+		// font-family: $f-serif;
+		color: $c-post-meta_text_muted
+		font-weight: 300

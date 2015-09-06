@@ -2,8 +2,7 @@
 module.exports = {
 	default: {
 		files: ['<%= dev.html %>/**/*.html',
-				'<%= dev.styles %>/**/*.sass',
-				'!<%= dev.styles %>/components/**/*.sass',
+				'<%= dev.styles %>/*.sass',
 				'<%= dev.coffee %>/**/*.coffee',
 				'<%= dev.css %>/*.css',
 				'<%= dev.js %>/**/*.js',
@@ -20,8 +19,7 @@ module.exports = {
 		}
 	},
 	theme: {
-		files: ['<%= dev.styles %>/**/*.sass',
-				'!<%= dev.styles %>/components/**/*.sass',
+		files: ['<%= dev.styles %>/*.sass',
 				'<%= dev.coffee %>/**/*.coffee',
 				'<%= dev.css %>/*.css',
 				'<%= dev.js %>/**/*.js',

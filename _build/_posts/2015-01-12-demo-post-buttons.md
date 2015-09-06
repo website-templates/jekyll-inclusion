@@ -14,8 +14,8 @@ category:
 start_img: "img/post/2015-01-12-demo-post-buttons/meta/common-7.jpg"
 thumb_img: "img/post/2015-01-12-demo-post-buttons/meta/cm-7.jpg"
 ---
-<h3 class="typo_serif typo_center">Buttons</h3>
-<figure class="code_center code_center-extra">
+<h3 class="typo typo_serif typo_center">Buttons</h3>
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup">
     &lt;button type=&quot;button&quot; class=&quot;button button_center button_small&quot;&gt;Small button&lt;/button&gt;
     &lt;button type=&quot;button&quot; class=&quot;button button_center button_regular&quot;&gt;Regular button&lt;/button&gt;

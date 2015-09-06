@@ -1,4 +1,4 @@
-table
+.table
 	max-width: 100%
 	margin: 10px auto 20px
 	border-collapse: collapse
@@ -6,40 +6,53 @@ table
 	font-size: 16px
 	line-height: 1.2
 	text-align: left
-	color: $table-text
-	font-family: $font-serif
+	color: $c-table_text
+	font-family: $f-serif
+
+
 	&
 		th, .group
 			font-weight: bold
 			text-align: center
-			color: $table-head-text
-			border-bottom: 2px solid $table-head-border
+			color: $c-table_text_head
+			border-bottom: 2px solid $c-table_border_head
+
 		th, td
 			padding: 15px 10px
 			vertical-align: middle
 			@media screen and (max-width: 480px)
 				padding: 5px 2px
+
 		td:not(:last-of-type)
-			border-right: 1px solid $table-border
+			border-right: 1px solid $c-table_border
+
 		tr
-			border-bottom: 1px solid $table-border
+			border-bottom: 1px solid $c-table_border
+
 		caption
 			caption-side: bottom
-			font-family: $font-condensed
+			font-family: $f-condensed
 			margin: 10px 0 5px
 			padding: 0 10px
 			font-size: 25px
 
-.table
+
 	&_center
 		+common-elem(center)
+
 		&-extra
 			+common-elem-extra(center)
+
+
 	&_left
 		+common-elem(left)
+
 		&-extra
 			+common-elem-extra(left)
+
+
 	&_right
 		+common-elem(right)
+
 		&-extra
 			+common-elem-extra(right)

@@ -1,27 +1,32 @@
+// Archive post list
 .year-posts
 	display: block
 	width: 100%
 	margin-bottom: 50px
 
+
 	&__title
-		font-family: $font-condensed
-		color: $section-text
+		font-family: $f-condensed
+		color: $c-year-post_title
 
 
 	&__list
 		list-style: none
 		width: 100%
 
+
 	&__item
 		position: relative
 		display: block
 		width: 100%
 		margin: 0 0 0 10px
-		border-bottom: 1px dotted $chapter-border
+		border-bottom: 1px dotted $c-year-post_border
 		transition: all .2s
 		+clearfix
+
 		&:hover
-			border-bottom: 1px solid $chapter-border
+			border-bottom: 1px solid $c-year-post_border
+
 
 	&__link
 		display: block
@@ -29,16 +34,18 @@
 		height: 100%
 		padding: 15px 0 5px
 		text-decoration: none
-		font-family: $font-sans
-		color: $section-text
+		font-family: $f-sans
+		color: $c-year-post_link
+
 		&:hover
-			color: $section-text
+			color: $c-year-post_link_hover
+
 
 	&__date
 		position: absolute
 		top: 15px
 		right: 0
-		font-family: $font-sans
-		color: $section-muted
+		font-family: $f-sans
+		color: $c-year-post_date
 		@media(max-width:600px)
 			display: none

@@ -2,19 +2,22 @@
 .nav
 	display: block
 	width: 100%
-	background: $nav-bg
+	background: $c-nav_bg
 	text-align: center
+
+
 	&__list
 		text-align: center
 		line-height: 1
 		list-style-type: none
+
 		&_sub
 			position: absolute
 			display: none
 			padding: 10px 0 0
 			left: 0
 			z-index: 101
-			background: $nav-bg
+			background: $c-nav_bg
 			text-align: left
 			overflow: hidden
 			list-style-type: none
@@ -22,17 +25,19 @@
 				position: relative
 				text-align: center
 
+
 	&__item
 		display: inline-block
 		position: relative
 		padding: 10px 10px 15px
 		margin-bottom: 0
-		color: $nav-text
-		&:hover .nav__list_sub
-			display: block
+		color: $c-nav_link
 		@media screen and (max-width: 800px)
 			display: block
 			padding: 5px 10px 10px
+
+		&:hover .nav__list_sub
+			display: block
 
 		&_sub
 			display: block
@@ -41,18 +46,21 @@
 				display: inline-block
 				padding: 0 10px 10px
 
+
 	&__link
-		font-family: $font-condensed
+		font-family: $f-condensed
 		font-size: 30px
-		color: $nav-text
+		color: $c-nav_link
 		text-decoration: none
 		transition: all .3s
+
 		&:hover
-			color: $nav-text-hover
+			color: $c-nav_link_hover
+
 		&.is-active
 			border: none
 			cursor: default
-			color: $nav-text-hover
+			color: $c-nav_link_hover
 
 		&_submenu
 			&:after
@@ -68,7 +76,7 @@
 				-moz-osx-font-smoothing: grayscale
 				font-size: 20px
 				vertical-align: middle
-				color: $nav-text
+				color: $c-nav_link
 				transition: all .3s
 			&:hover:after
-				color: $nav-text-hover
+				color: $c-nav_link_hover

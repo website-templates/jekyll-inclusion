@@ -16,7 +16,7 @@ start_attribution: "Photo from unsplash.com"
 ---
 Hi, this is an additional post, that I've wrote to explain some specifics of yaml front matter options that were used in current theme. Let's start from _config.yml file
 
-<figure class="code_center">
+<figure class="code code_center">
 	<pre><code class="language-yaml">
 	# Site settings
 	# General settings
@@ -46,8 +46,8 @@ Hi, this is an additional post, that I've wrote to explain some specifics of yam
 	#   "ua": "http://uablog.orlovmax.com"
 	# lang_current: "ua"
 	# Default src
-	start_img: "img/bg/index-header.jpg" #Image for the first screen of the page or post
-	end_img: "img/bg/index-end.jpg" #Image for the last screen of the page or post
+	start_img: "img/bg/start.jpg" #Image for the first screen of the page or post
+	end_img: "img/bg/end.jpg" #Image for the last screen of the page or post
 	thumb_img: "img/pic.jpg"  #Image for the post preview
 	# disqus-code: # Disqus comments code
 	# Build settings
@@ -66,58 +66,13 @@ Hi, this is an additional post, that I've wrote to explain some specifics of yam
 	]
 	source: _build # Jekyll source folder
 	destination: _deploy # Generated website folder
-	# Category pages settings
-	categories:
-	  url: /category/
-	  slug: ''
-	  title_prefix: 'Category: '
-	  descr_prefix: 'Blog posts in category «'
-	  descr_postfix: '», page '
-	  layout: category.html
-	# Tag pages settings
-	tags:
-	  url: /tag/
-	  slug: ''
-	  title_prefix: 'Tag: '
-	  descr_prefix: 'Posts tagged «'
-	  descr_postfix: '», page '
-	  layout: tag.html
-	# Layout common texts
-	scroll-next: 'Let`s go!'
-	menu-text: 'Menu'
-	pager:
-	  page-next: 'Newer posts ›'
-	  page-prev: '‹ Older posts'
-	  post-next: 'Next post ›'
-	  post-prev: '‹ Previous post'
-	meta:
-	  author: 'Author'
-	  translator: 'translator'
-	  source: 'Source'
-	  date: 'published'
-	  tags: 'Tags'
-	  category: 'Category'
-	end:
-	  title: 'Let`s get in touch!'
-	  descr: 'If you have any questions, please do not hesitate to contact me'
-	social:
-	  rss: 'News feed'
-	  twitter: 'Follow me on twitter'
-	  facebook: 'My Facebook'
-	  vkontakte: 'I`m Vkontakte'
-	  gplus: 'My Google+'
-	  mail: 'Shoot me an email'
-	  skype: 'Add me to Skype contacts'
-	  git: 'My projects on github'
-	  bitbucket: 'Some of my projects on Bitbucket'
-	  linkedin: 'My Linkedin profile'
 	</code></pre>
 	<figcaption>_config.yml settings</figcaption>
 </figure>
 
 Ok, I think that's clear, we've alredy checked general settings. And now let's talk about YAML fromt matter block for posts or pages. Here is a code from _draft.md - template for the new posts.
 
-<figure class="code_center">
+<figure class="code code_center">
 	<pre><code class="language-yaml">
 	---
 	layout: post # Layout of the page
@@ -138,7 +93,6 @@ Ok, I think that's clear, we've alredy checked general settings. And now let's t
 	end_blur: true # Add blur for the last screen of post or page
 	langs: # URL's for different languages
 	  "en": "/"
-	permalink: # Custom page permalink
 	comments: true # Enable or disable disqus comments
 	---		
 	</code></pre>
@@ -147,7 +101,7 @@ Ok, I think that's clear, we've alredy checked general settings. And now let's t
 
 And I think that's all. Of course there are a few extra options, like this:
 
-<figure class="code_center">
+<figure class="code code_center">
 	<pre><code class="language-yaml">
 	---		
 	color: light # set color scheme for the first and last screens (might be light or dark)

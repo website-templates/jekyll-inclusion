@@ -14,11 +14,11 @@ category:
 start_img: "img/post/2015-01-11-demo-post-grid/meta/common-8.jpg"
 thumb_img: "img/post/2015-01-11-demo-post-grid/meta/cm-8.jpg"
 ---
-<h3 class="typo_serif typo_center">Grid</h3>
-<h4 class="typo_condensed typo_center">Fluid responsive grid example</h4>
-<div class="block_center block_center-extra block_spoiler js-spoiler">
+<h3 class="typo typo_serif typo_center">Grid</h3>
+<h4 class="typo typo_condensed typo_center">Fluid responsive grid example</h4>
+<div class="block block_center block_center-extra block_spoiler js-spoiler">
 	<a href="#" class="js-panel">Fluid responsive grid markup</a>
-	<figure class="code_center">
+	<figure class="code code_center">
 		<pre><code class="language-markup">
 	&lt;div class=&quot;demo_gs gs_container&quot;&gt;
 		&lt;div class=&quot;gs_row&quot;&gt;                            
@@ -107,10 +107,10 @@ thumb_img: "img/post/2015-01-11-demo-post-grid/meta/cm-8.jpg"
 		<div class="demo_col gs_col-12">12</div>
 	</div>                          
 </div>
-<h4 class="typo_condensed typo_center">Fluid grid with pushed and pulled columns</h4>
-<div class="block_center block_center-extra block_spoiler js-spoiler">
+<h4 class="typo typo_condensed typo_center">Fluid grid with pushed and pulled columns</h4>
+<div class="block block_center block_center-extra block_spoiler js-spoiler">
 	<a href="#" class="js-panel">Fluid grid markup</a>
-	<figure class="code_center">
+	<figure class="code code_center">
 		<pre><code class="language-markup">
 	&lt;div class=&quot;demo_gs gs_container&quot;&gt;
 		&lt;div class=&quot;gs_row&quot;&gt;                            

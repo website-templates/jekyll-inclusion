@@ -14,13 +14,13 @@ category:
 start_img: "img/post/2015-01-14-demo-post-tables/meta/common-5.jpg"
 thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
 ---
-<h3 class="typo_serif typo_center">Tables</h3>
+<h3 class="typo typo_serif typo_center">Tables</h3>
 
 <!-- left-floated table -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup">
-    &lt;table class=&quot;table_left&quot;&gt;
+    &lt;table class=&quot;table table_left&quot;&gt;
         &lt;caption&gt;Left-floated table&lt;/caption&gt;
         &lt;tr&gt;
             &lt;th&gt;Entry Header 1&lt;/th&gt;
@@ -38,7 +38,7 @@ thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
     </code></pre>
     <figcaption>Left-floated table</figcaption>
 </figure>
-<table class="table_left" title="Left-floated table">
+<table class="table table_left" title="Left-floated table">
     <caption>Left-floated table</caption>
     <tr>
         <th>Entry Header 1</th>
@@ -69,9 +69,9 @@ thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
 
 <!-- right-floated table -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup">
-    &lt;table class=&quot;table_right&quot;&gt;
+    &lt;table class=&quot;table table_right&quot;&gt;
         &lt;caption&gt;Right-floated table&lt;/caption&gt;
         &lt;tr&gt;
             &lt;th&gt;Entry Header 1&lt;/th&gt;
@@ -89,7 +89,7 @@ thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
     </code></pre>
     <figcaption>Right-floated table</figcaption>
 </figure>    
-<table class="table_right" title="Right-floated table">
+<table class="table table_right" title="Right-floated table">
     <caption>Right-floated table</caption>
     <tr>
         <th>Entry Header 1</th>
@@ -120,9 +120,9 @@ thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
 
 <!-- centered full-width table -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup">
-    &lt;table class=&quot;table_center&quot;&gt;
+    &lt;table class=&quot;table table_center&quot;&gt;
         &lt;caption&gt;Centered full-width table&lt;/caption&gt;
         &lt;tr&gt;
             &lt;th&gt;Entry Header 1&lt;/th&gt;
@@ -140,7 +140,7 @@ thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
     </code></pre>
     <figcaption>Centered full-width table</figcaption>
 </figure>
-<table class="table_center" title="Centered full-width table">
+<table class="table table_center" title="Centered full-width table">
     <caption>Centered full-width table</caption>
     <tr>
         <th>Entry Header 1</th>
@@ -189,9 +189,9 @@ thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
 
 <!-- left-floated (with extra margin) table -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup">
-    &lt;table class=&quot;table_left table_left-extra&quot;&gt;
+    &lt;table class=&quot;table table_left table_left-extra&quot;&gt;
         &lt;caption&gt;Left floated table with extra margin&lt;/caption&gt;
         &lt;tr&gt;
             &lt;th&gt;Entry Header 1&lt;/th&gt;
@@ -209,7 +209,7 @@ thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
     </code></pre>
     <figcaption>Left floated table with extra margin</figcaption>
 </figure>
-<table class="table_left table_left-extra" title="Left floated table with extra margin">
+<table class="table table_left table_left-extra" title="Left floated table with extra margin">
     <caption>Left floated table with extra margin</caption>
     <tr>
         <th>Entry Header 1</th>
@@ -240,9 +240,9 @@ thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
 
 <!-- right-floated (with extra margin) table -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup">
-    &lt;table class=&quot;table_right table_right-extra&quot;&gt;
+    &lt;table class=&quot;table table_right table_right-extra&quot;&gt;
         &lt;caption&gt;Right floated table with extra margin&lt;/caption&gt;
         &lt;tr&gt;
             &lt;th&gt;Entry Header 1&lt;/th&gt;
@@ -260,7 +260,7 @@ thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
     </code></pre>
     <figcaption>Right floated table with extra margin</figcaption>
 </figure>
-<table class="table_right table_right-extra" title="Right floated table with extra margin">
+<table class="table table_right table_right-extra" title="Right floated table with extra margin">
     <caption>Right floated table with extra margin</caption>
     <tr>
         <th>Entry Header 1</th>
@@ -292,9 +292,9 @@ thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
 
 <!-- centered full-width table with extra margin -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup">
-    &lt;table class=&quot;table_center table_center-extra&quot;&gt;
+    &lt;table class=&quot;table table_center table_center-extra&quot;&gt;
         &lt;caption&gt;Centered full-width table with extra margin&lt;/caption&gt;
         &lt;tr&gt;
             &lt;th&gt;Entry Header 1&lt;/th&gt;
@@ -312,7 +312,7 @@ thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
     </code></pre>
     <figcaption>Centered full-width table with extra margin</figcaption>
 </figure>       
-<table class="table_center table_center-extra" title="Centered full-width table with extra margin">
+<table class="table table_center table_center-extra" title="Centered full-width table with extra margin">
     <caption>Centered full-width table with extra margin</caption>
     <tr>
         <th>Entry Header 1</th>

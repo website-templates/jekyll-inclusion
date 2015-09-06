@@ -1,23 +1,35 @@
 .block
+	+clearfix()
+
 	&_center
 		+common-elem(center)
+
 		&-extra
 			+common-elem-extra(center)
+
+
 	&_left
 		+common-elem(left)
+
 		&-extra
 			+common-elem-extra(left)
+
+
 	&_right
 		+common-elem(right)
+
 		&-extra
 			+common-elem-extra(right)
+
+
 	&_spoiler
 		position: relative
 		padding: 0 20px 10px
 		overflow: hidden
 		text-align: left
-		background-color: $spoiler-bg
-		border: 1px solid $spoiler-border
+		background-color: $c-spoiler_bg
+		border: 1px solid $c-spoiler_border
+
 		&:after
 			content: ""
 			display: block
@@ -26,10 +38,12 @@
 			height: 50px
 			top: 0
 			left: 0
-			background-color: $spoiler-head-bg
+			background-color: $c-spoiler_head_bg
+
 		&:hover
 			&:after
-				background-color: $spoiler-head-bg-hover
+				background-color: $c-spoiler_head_bg_hover
+
 		&:before
 			content: ""
 			display: block
@@ -39,6 +53,7 @@
 			top: 0
 			left: 0
 			margin-bottom: 60px
+
 		& > a
 			position: absolute
 			display: block
@@ -47,12 +62,13 @@
 			top: 10px
 			left: 20px
 			z-index: 1
-			font-family: $font-condensed
+			font-family: $f-condensed
 			text-decoration: none
 			font-size: 25px
 			line-height: 1
 			white-space: nowrap
-			color: $spoiler-head-text
+			color: $c-spoiler_head_text
+
 			&:before
 				content: "\e803"
 				display: inline-block
@@ -64,9 +80,12 @@
 				text-transform: none
 				-webkit-font-smoothing: antialiased
 				-moz-osx-font-smoothing: grayscale
-				color: $spoiler-head-text
+				color: $c-spoiler_head_text
+
 		&.is-closed
 			height: 50px
+
 			& > a
+
 				&:before
 					content: "\e802"

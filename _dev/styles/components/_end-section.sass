@@ -4,7 +4,6 @@
 	min-height: 50%
 	text-align: center
 	overflow: hidden
-	box-shadow: inset 0 3px 3px -2px $section-shadow, inset 0 -3px 3px -2px $section-shadow
 
 	&__bg
 		position: absolute
@@ -23,16 +22,16 @@
 			filter: unquote("progid:DXImageTransform.Microsoft.Blur(PixelRadius='5')")
 
 	&__title
-		color: $jumbo-text
-		font-family: $font-sans
+		color: $c-jumbo_text
+		font-family: $f-sans
 		font-weight: 800
-		text-shadow: 1px 1px 1px $header-shadow
+		text-shadow: 1px 1px 1px $c-jumbo_text-shadow
 
 	&__descr
 		margin-bottom: 75px
-		color: $jumbo-text
-		font-family: $font-condensed
-		text-shadow: 1px 1px 1px $header-shadow
+		color: $c-jumbo_text
+		font-family: $f-condensed
+		text-shadow: 1px 1px 1px $c-jumbo_text-shadow
 		@media screen and (max-width: 800px)
 			margin-bottom: 50px
 

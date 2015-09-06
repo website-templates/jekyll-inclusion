@@ -1,61 +1,85 @@
-blockquote
-	font-family: $font-serif
+.bq
+	font-family: $f-serif
 	display: block
 	clear: both
 	padding: 10px 0 5px
 	margin-bottom: 20px
+
+
 	& p
 		font-style: italic
-		color: $bq-text
+		color: $c-bq_text
+
+
 	& cite
 		display: block
 		margin-top: 10px
 		font-size: 20px
-		color: $bq-cite
+		color: $c-bq_cite
 		@media screen and (max-width: 960px)
 			font-size: 18px
+
 		& a
-			color: $bq-cite
+			color: $c-bq_cite
+
 			&:hover
 				text-decoration: none
-				color: $bq-cite
+				color: $c-bq_cite
+
 		&:before
 			content: "\2014"
-			color: $bq-cite
+			color: $c-bq_cite
 
-.bq
+
 	&_pos-center
 		+common-elem(center)
+
 		&-extra
 			+common-elem-extra(center)
+
+
 	&_pos-left
 		+common-elem(left)
+
 		&-extra
 			+common-elem-extra(left)
+
+
 	&_pos-right
 		+common-elem(right)
+
 		&-extra
 			+common-elem-extra(right)
+
+
 	&_align-center
 		text-align: justify
+
 		& p:first-child:before
 			content: "\201C"
 			padding-right: 10px
 			font-size: 60px
 			line-height: 0
 			vertical-align: middle
-			color: $bq-text
+			color: $c-bq_text
+
 		& cite
 			text-align: right
+
+
 	&_align-left
 		text-align: left
 		padding-left: 15px
-		border-left: 3px solid $bq-border
+		border-left: 3px solid $c-bq_border
+
 		& cite
 			text-align: right
+
+
 	&_align-right
 		text-align: right
 		padding-right: 15px
-		border-right: 3px solid $bq-border
+		border-right: 3px solid $c-bq_border
+
 		& cite
 			text-align: left

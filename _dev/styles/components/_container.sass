@@ -1,0 +1,25 @@
+.container
+	position: relative
+	max-width: 1200px
+	margin: 0 auto
+	padding: 10px 120px
+	overflow: hidden
+	+clearfix
+	@media screen and (max-width: 960px)
+		padding: 10px 60px
+	@media screen and (max-width: 640px)
+		padding: 10px 20px
+		-ms-overflow-y: hidden
+		overflow-y: hidden
+
+
+	&_post,
+	&_page
+		padding-top: 60px
+		padding-bottom: 50px
+		@media screen and (max-width: 960px)
+			padding-top: 40px
+			padding-bottom: 30px
+		@media screen and (max-width: 640px)
+			padding-top: 30px
+			padding-bottom: 20px

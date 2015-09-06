@@ -1,10 +1,12 @@
 // Common element mixin
 =common-elem($position)
+
 	@if $position == "center"
 		clear: both
 		width: 90%
 		max-width: 90%
 		margin: 10px auto 20px
+
 	@else if $position == "left"
 		width: 47%
 		max-width: 47%
@@ -16,6 +18,7 @@
 			width: 90%
 			max-width: 90%
 			margin: 10px auto 20px
+
 	@else if $position == "right"
 		width: 47%
 		max-width: 47%
@@ -28,7 +31,9 @@
 			max-width: 90%
 			margin: 10px auto 20px
 
+
 =common-elem-extra($position)
+
 	@if $position == "center"
 		width: 100%
 		width: calc(100% + 240px)
@@ -45,6 +50,7 @@
 			width: 100%
 			max-width: 100%
 			margin-left: auto
+
 	@else if $position == "left"
 		margin-left: -120px
 		@media screen and (max-width: 960px)
@@ -53,6 +59,7 @@
 			width: 100%
 			max-width: 100%
 			margin-left: auto
+
 	@else if $position == "right"
 		margin-right: -120px
 		@media screen and (max-width: 960px)

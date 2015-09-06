@@ -16,41 +16,50 @@
 //
 // Contents......................Here we are!
 //
-// Helpers.......................useful things, mixins, elements
+// Helpers
 //   Mixins......................External scss mixins
 //   Grid system.................Import fluid gs
 //   Prism.......................Prism syntax highlighting styles
-//   Settings....................Settings and variables
+//   Variables...................Settings and variables
 //
-// General.......................General components and settings
+// General
 //   Fonts.......................Offline and online fonts
 //   Reset.......................Reset defaults
+//   Common......................Common styles
+//   Inclusion
+//     Mixins......................Internal framework mixins
+//     Typography..................Headings and text
+//     Buttons.....................Iconic and common buttons
+//     Common block................Common block element
+//     Blockquote..................Blockquote element
+//     List........................List element
+//     Figure......................Images and code elements
+//     Table.......................Table element
 //
-// Layout........................Basic page styles
-//   Common......................Site containers and common layout blocks
-//   Main header.................Site header
-//   Navigation..................main navigation
-//   Header group................Header group for langmenu and navicon
-//   Languages...................Languages menu
-//   Page and post header........Page and post header screen
-//   Year posts..................Post list from archive page
-//   Post preview................Post preview for post list
-//   Post meta...................Post meta information
-//   Paginator...................Page and post pagination
-//   Comments....................Comments block
-//   End section.................Post and page end section with social icons
-//   Social buttons..............Social buttons
-//   Main footer.................Site footer
-//
-// Inclusion.....................Content styling things
-//   Mixins......................Internal framework mixins
-//   Typography..................Headings and text
-//   Buttons.....................Iconic and common buttons
-//   Common block................Common block element
-//   Blockquote..................Blockquote element
-//   List........................List element
-//   Figure......................Images and code elements
-//   Table.......................Table element
+// Components
+//   Wrappers
+//     Body........................Body styles
+//     Main........................Main wrapper
+//     Common-section..............Page section
+//     Container...................Page container
+//     Chapter.....................Page chapter
+//     Overlay.....................Background overlay
+//     Divider.....................Post divider
+//   Blocks
+//     Main header.................Site header
+//     Logo........................Site logo
+//     Header group................Header group for langmenu and navicon
+//     Navigation..................Main navigation
+//     Search bar..................Site search
+//     Jumbo.......................Page and post header & end screen
+//     Slider......................Main page slider
+//     Year posts..................Post list from archive page
+//     Post preview................Post preview for post list
+//     Post meta...................Post meta information
+//     Paginator...................Page and post pagination
+//     Comments....................Comments block
+//     Social buttons..............Social buttons
+//     Main footer.................Site footer
 //
 // Media queries.................Media queries section
 
@@ -67,7 +76,7 @@
 // $Prism
 @import helpers/_prism
 
-// $Settings
+// $Variables
 @import helpers/_variables
 
 
@@ -84,10 +93,10 @@
 // $Common
 @import components/general/_common
 
-/////////////////////////////////
-/// $Content
-/////////////////////////////////
+// $Text selection
+@import components/general/_selection
 
+///////////////////////////////// Inclusion framework
 // $Mixins
 @import components/general/inclusion/_inclusion-mixins
 
@@ -114,9 +123,32 @@
 
 
 /////////////////////////////////
-/// $Layout styles
+/// $Components
 /////////////////////////////////
 
+///////////////////////////////// Wrappers
+// $Body
+@import components/_body
+
+// $Main
+@import components/_main
+
+// $Common-section
+@import components/_common-section
+
+// $Container
+@import components/_container
+
+// $Chapter
+@import components/_chapter
+
+// $Overlay
+@import components/_overlay
+
+// $Divider
+@import components/_divider
+
+///////////////////////////////// Blocks
 // $Main header
 @import components/_main-header
 

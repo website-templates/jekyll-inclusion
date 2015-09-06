@@ -4,6 +4,7 @@ h1, h2, h3, h4, h5, h6
 	font-weight: 400
 	line-height: 1.2
 
+
 h1
 	font-size: 72px
 	line-height: 1.1
@@ -14,12 +15,14 @@ h1
 		font-size: 48px
 		line-height: 1.0
 
+
 h2
 	font-size: 48px
 	@media screen and (max-width: 960px)
 		font-size: 40px
 	@media screen and (max-width: 600px)
 		font-size: 32px
+
 
 h3
 	font-size: 32px
@@ -28,12 +31,14 @@ h3
 	@media screen and (max-width: 600px)
 		font-size: 24px
 
+
 h4
 	font-size: 24px
 	@media screen and (max-width: 960px)
 		font-size: 22px
 	@media screen and (max-width: 600px)
 		font-size: 20px
+
 
 h5
 	font-size: 20px
@@ -42,10 +47,12 @@ h5
 	@media screen and (max-width: 600px)
 		font-size: 16px
 
+
 h6
 	font-size: 16px
 	@media screen and (max-width: 600px)
 		font-size: 14px
+
 
 p
 	margin-bottom: 15px
@@ -57,34 +64,57 @@ p
 	@media screen and (max-width: 600px)
 		font-size: 16px
 
+
 a
 	text-decoration: underline
-	color: $link-color
+	color: $c-link
+
 	&:hover
-		color: $link-hover-color
+		color: $c-link_hover
 		text-decoration: none
+
 	&:focus
 		outline: 0
 
+
 .typo
+
+
 	&_center
 		text-align: center
+
+
 	&_left
 		text-align: left
+
+
 	&_right
 		text-align: right
+
+
 	&_justify
 		text-align: justify
+
+
 	&_sans
-		font-family: $font-sans
+		font-family: $f-sans
+
+
 	&_serif
-		font-family: $font-serif
+		font-family: $f-serif
+
+
 	&_condensed
-		font-family: $font-condensed
+		font-family: $f-condensed
+
+
 	&_muted
-		color: $typo-muted
+		color: $c-typo_muted
+
+
 	&_shadow
-		text-shadow: 1px 1px 1px $typo-shadow
+		text-shadow: 1px 1px 1px $c-typo_shadow
+
 
 .inclusion
 	color: $accent-color

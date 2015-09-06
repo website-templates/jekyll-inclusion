@@ -14,13 +14,13 @@ category:
 start_img: "img/post/2015-01-16-demo-post-lists/meta/common-3.jpg"
 thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
 ---     
-<h3 class="typo_serif typo_center">Ordered and unordered lists</h3>
+<h3 class="typo typo_serif typo_center">Ordered and unordered lists</h3>
 
 <!-- left-floated ordered list -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup">    
-    &lt;ol class=&quot;list_left&quot;&gt;
+    &lt;ol class=&quot;list list_left&quot;&gt;
         &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing 
         elit. Aenean commodo ligula eget dolor. &lt;/li&gt;
         &lt;li&gt;Cum sociis natoque penatibus et magnis dis 
@@ -29,7 +29,7 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
     </code></pre>
     <figcaption>Left-floated ordered list</figcaption>
 </figure>
-<ol class="list_left" title="Left-floated ordered list">
+<ol class="list list_left" title="Left-floated ordered list">
     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing 
     elit. Aenean commodo ligula eget dolor. </li>
     <li>Cum sociis natoque penatibus et magnis dis 
@@ -42,9 +42,9 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
 
 <!-- left-floated unordered list -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup"> 
-    &lt;ul class=&quot;list_left&quot;&gt;
+    &lt;ul class=&quot;list list_left&quot;&gt;
         &lt;li&gt;Lorem ipsum dolor sit amet consectetuer.&lt;/li&gt;
         &lt;li&gt;Proin eu egestas metus, quis semper mauris.&lt;/li&gt;
         &lt;li&gt;Cras arcu ligula, hendrerit ac tempus ac.&lt;/li&gt;
@@ -52,7 +52,7 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
     </code></pre>
     <figcaption>Left-floated unordered list</figcaption>
 </figure>
-<ul class="list_left" title="Left-floated unordered list">
+<ul class="list list_left" title="Left-floated unordered list">
     <li>Lorem ipsum dolor sit amet consectetuer.</li>
     <li>Proin eu egestas metus, quis semper mauris.</li>
     <li>Cras arcu ligula, hendrerit ac tempus ac.</li>
@@ -61,9 +61,9 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
 
 <!-- right-floated ordered list -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup"> 
-    &lt;ol class=&quot;list_right&quot;&gt;
+    &lt;ol class=&quot;list list_right&quot;&gt;
         &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing 
         elit. Aenean commodo ligula eget dolor. &lt;/li&gt;
         &lt;li&gt;Cum sociis natoque penatibus et magnis dis 
@@ -72,7 +72,7 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
     </code></pre>
     <figcaption>Right-floated ordered list</figcaption>
 </figure>
-<ol class="list_right" title="Right-floated ordered list">
+<ol class="list list_right" title="Right-floated ordered list">
     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing 
     elit. Aenean commodo ligula eget dolor. </li>
     <li>Cum sociis natoque penatibus et magnis dis 
@@ -84,9 +84,9 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
 
 <!-- right-floated unordered list -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup"> 
-    &lt;ul class=&quot;list_right&quot;&gt;
+    &lt;ul class=&quot;list list_right&quot;&gt;
         &lt;li&gt;Lorem ipsum dolor sit amet consectetuer.&lt;/li&gt;
         &lt;li&gt;Aenean commodo ligula eget dolor.&lt;/li&gt;
         &lt;li&gt;Aenean massa cum sociis natoque penatibus.&lt;/li&gt;
@@ -94,7 +94,7 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
     </code></pre>
     <figcaption>Right-floated unordered list</figcaption>
 </figure>
-<ul class="list_right" title="Right-floated unordered list">
+<ul class="list list_right" title="Right-floated unordered list">
     <li>Lorem ipsum dolor sit amet consectetuer.</li>
     <li>Aenean commodo ligula eget dolor.</li>
     <li>Aenean massa cum sociis natoque penatibus.</li>
@@ -106,9 +106,9 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
 
 <!-- left-floated (with extra margin) ordered list -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup"> 
-    &lt;ol class=&quot;list_left list_left-extra&quot;&gt;
+    &lt;ol class=&quot;list list_left list_left-extra&quot;&gt;
         &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing 
         elit.&lt;/li&gt;
         &lt;li&gt;Cum sociis natoque penatibus et magnis.&lt;/li&gt;
@@ -117,7 +117,7 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
     </code></pre>
     <figcaption>Left-floated ordered list with extra margin</figcaption>
 </figure>
-<ol class="list_left list_left-extra" title="Left-floated ordered list with extra margin">
+<ol class="list list_left list_left-extra" title="Left-floated ordered list with extra margin">
     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing 
     elit.</li>
     <li>Cum sociis natoque penatibus et magnis.</li>
@@ -127,9 +127,9 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
 
 <!-- left-floated (with extra margin) unordered list -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup"> 
-    &lt;ul class=&quot;list_left list_left-extra&quot;&gt;
+    &lt;ul class=&quot;list list_left list_left-extra&quot;&gt;
         &lt;li&gt;Lorem ipsum dolor sit amet consectetuer.&lt;/li&gt;
         &lt;li&gt;Aenean commodo ligula eget dolor.&lt;/li&gt;
         &lt;li&gt;Aenean massa cum sociis natoque penatibus.&lt;/li&gt;
@@ -137,7 +137,7 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
     </code></pre>
     <figcaption>Left-floated unordered list with extra margin</figcaption>
 </figure>
-<ul class="list_left list_left-extra" title="Left-floated unordered list with extra margin">
+<ul class="list list_left list_left-extra" title="Left-floated unordered list with extra margin">
     <li>Lorem ipsum dolor sit amet consectetuer.</li>
     <li>Aenean commodo ligula eget dolor.</li>
     <li>Aenean massa cum sociis natoque penatibus.</li>
@@ -148,9 +148,9 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
 
 <!-- right-floated (with extra margin) ordered list -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup"> 
-    &lt;ol class=&quot;list_right list_right-extra&quot;&gt;
+    &lt;ol class=&quot;list list_right list_right-extra&quot;&gt;
         &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing 
         elit.&lt;/li&gt;
         &lt;li&gt;Cum sociis natoque penatibus et magnis.&lt;/li&gt;
@@ -159,7 +159,7 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
     </code></pre>
     <figcaption>Right-floated ordered list with extra margin</figcaption>
 </figure>
-<ol class="list_right list_right-extra" title="Right-floated ordered list with extra margin">
+<ol class="list list_right list_right-extra" title="Right-floated ordered list with extra margin">
     <li>Lorem ipsum dolor sit amet, consectetuer adipiscing 
     elit.</li>
     <li>Cum sociis natoque penatibus et magnis.</li>
@@ -169,9 +169,9 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
 
 <!-- right-floated (with extra margin) unordered list -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup"> 
-    &lt;ul class=&quot;list_right list_right-extra&quot;&gt;
+    &lt;ul class=&quot;list list_right list_right-extra&quot;&gt;
         &lt;li&gt;Lorem ipsum dolor sit amet consectetuer.&lt;/li&gt;
         &lt;li&gt;Aenean commodo ligula eget dolor.&lt;/li&gt;
         &lt;li&gt;Aenean massa cum sociis natoque penatibus.&lt;/li&gt;
@@ -179,7 +179,7 @@ thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
     </code></pre>
     <figcaption>Right-floated unordered list with extra margin</figcaption>
 </figure>
-<ul class="list_right list_right-extra" title="Right-floated unordered list with extra margin">
+<ul class="list list_right list_right-extra" title="Right-floated unordered list with extra margin">
     <li>Lorem ipsum dolor sit amet consectetuer.</li>
     <li>Aenean commodo ligula eget dolor.</li>
     <li>Aenean massa cum sociis natoque penatibus.</li>

@@ -1,25 +1,35 @@
-figure
-	color: $figure-caption
+.image, .code, .video
+	color: $c-figure_caption
+
+
 	& figcaption
-		font-family: $font-condensed
+		font-family: $f-condensed
 		margin: 10px 0 5px
 		padding: 0 10px
 		font-size: 25px
-		color: $figure-caption
+		color: $c-figure_caption
 		@media screen and (max-width: 960px)
 			font-size: 20px
+
+
 	// Code content
 	& code,pre
-		color: $code-color
+		color: $c-code_text
+
+
 	& pre
-		background-color: $code-bg
-		border-color: $code-border
+		background-color: $c-code_bg
+		border-color: $c-code_border
+
+
 	// Image content
 	& img
 		display: block
 		// width: 100%;
 		max-width: 100%
 		margin: auto
+
+
 	// Video content
 	& > div
 		position: relative
@@ -27,6 +37,7 @@ figure
 		height: 0
 		padding-top: 20px
 		padding-bottom: 60%
+
 		& iframe
 			position: absolute
 			top: 0
@@ -34,30 +45,40 @@ figure
 			width: 100%
 			height: 100%
 
-.image, .code, .video
+
 	&_center
 		+common-elem(center)
+
 		& figcaption
 			text-align: center
+
 		&-extra
 			+common-elem-extra(center)
+
+
 	&_left
 		+common-elem(left)
+
 		& figcaption
 			text-align: left
-			border-left: 3px solid $figure-border
+			border-left: 3px solid $c-figure_border
 			@media screen and (max-width: 800px)
 				text-align: center
 				border: none
+
 		&-extra
 			+common-elem-extra(left)
+
+
 	&_right
 		+common-elem(right)
+
 		& figcaption
 			text-align: right
-			border-right: 3px solid $figure-border
+			border-right: 3px solid $c-figure_border
 			@media screen and (max-width: 800px)
 				text-align: center
 				border: none
+
 		&-extra
 			+common-elem-extra(right)

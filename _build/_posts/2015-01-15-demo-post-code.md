@@ -14,14 +14,14 @@ category:
 start_img: "img/post/2015-01-15-demo-post-code/meta/common-4.jpg"
 thumb_img: "img/post/2015-01-15-demo-post-code/meta/cm-4.jpg"
 ---
-<h3 class="typo_serif typo_center">Code blocks</h3>
+<h3 class="typo typo_serif typo_center">Code blocks</h3>
 <p>Let's check code blocks, each of them represent their own markup with predefined classnames.</p>
 
 <!-- left-floated code block -->
 
-<figure class="code_left">
+<figure class="code code_left">
     <pre><code class="language-markup"> 
-    &lt;figure class=&quot;code_left&quot;&gt;
+    &lt;figure class=&quot;code code_left&quot;&gt;
         &lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt; 
     &nbsp;               
         &lt;/code&gt;&lt;/pre&gt;
@@ -35,9 +35,9 @@ thumb_img: "img/post/2015-01-15-demo-post-code/meta/cm-4.jpg"
 
 <!-- right-floated code block -->
 
-<figure class="code_right">
+<figure class="code code_right">
     <pre><code class="language-markup"> 
-    &lt;figure class=&quot;code_right&quot;&gt;
+    &lt;figure class=&quot;code code_right&quot;&gt;
         &lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt; 
     &nbsp;               
         &lt;/code&gt;&lt;/pre&gt;
@@ -51,9 +51,9 @@ thumb_img: "img/post/2015-01-15-demo-post-code/meta/cm-4.jpg"
 
 <!-- centered code block -->
 
-<figure class="code_center">
+<figure class="code code_center">
     <pre><code class="language-markup"> 
-    &lt;figure class=&quot;code_center&quot;&gt;
+    &lt;figure class=&quot;code code_center&quot;&gt;
         &lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt; 
     &nbsp;               
         &lt;/code&gt;&lt;/pre&gt;
@@ -66,9 +66,9 @@ thumb_img: "img/post/2015-01-15-demo-post-code/meta/cm-4.jpg"
 
 <!-- left-floated (with extra margin) code block -->
 
-<figure class="code_left code_left-extra">
+<figure class="code code_left code_left-extra">
     <pre><code class="language-markup"> 
-    &lt;figure class=&quot;code_left code_left-extra&quot;&gt;
+    &lt;figure class=&quot;code code_left code_left-extra&quot;&gt;
         &lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt; 
     &nbsp;               
         &lt;/code&gt;&lt;/pre&gt;
@@ -81,9 +81,9 @@ thumb_img: "img/post/2015-01-15-demo-post-code/meta/cm-4.jpg"
 
 <!-- right-floated (with extra margin) code block -->
 
-<figure class="code_right code_right-extra">
+<figure class="code code_right code_right-extra">
     <pre><code class="language-markup"> 
-    &lt;figure class=&quot;code_right code_right-extra&quot;&gt;
+    &lt;figure class=&quot;code code_right code_right-extra&quot;&gt;
         &lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt; 
     &nbsp;               
         &lt;/code&gt;&lt;/pre&gt;
@@ -97,9 +97,9 @@ thumb_img: "img/post/2015-01-15-demo-post-code/meta/cm-4.jpg"
 
 <!-- centered extra margin code block -->
 
-<figure class="code_center code_center-extra">
+<figure class="code code_center code_center-extra">
     <pre><code class="language-markup"> 
-    &lt;figure class=&quot;code_center code_center-extra&quot;&gt;
+    &lt;figure class=&quot;code code_center code_center-extra&quot;&gt;
         &lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt; 
     &nbsp;               
         &lt;/code&gt;&lt;/pre&gt;
