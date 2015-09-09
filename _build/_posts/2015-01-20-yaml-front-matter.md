@@ -112,4 +112,4 @@ And I think that's all. Of course there are a few extra options, like this:
 	<figcaption>Additional options</figcaption>
 </figure>
 
-But you shouldn't worry about it, it's just internal things. After a while of usage of this theme I've almost forgot about them ;) Thanks for watching
+But you shouldn't worry about it, it's just internal things. After a while of usage of this theme I've almost forgot about them ;) Thanks for watching.

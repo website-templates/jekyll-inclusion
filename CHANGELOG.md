@@ -1,3 +1,7 @@
+* (September 06, 2015)
+	- block structure updated
+* (August 30, 2015)
+	- ie8 issue fixed
 * (August 20, 2015)
 	- posting script modified
 * (July 28, 2015)
