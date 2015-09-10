@@ -2,20 +2,14 @@
     <script src="/jekyll-inclusion/js/ie/ie.min.js"></script> --></head><body><!-- Main Header--><header class="main-header"><nav class="js-nav nav"><ul class="nav__list"><li class="nav__item"><a href="/jekyll-inclusion/" class="nav__link">Home</a></li><li class="nav__item"><a href="/jekyll-inclusion/archive" class="nav__link">Archive</a></li><li class="nav__item"><a href="http://orlovmax.com" class="nav__link">About author</a></li><li class="nav__item"><a href="https://github.com/website-templates/jekyll-inclusion" class="nav__link">Project on github</a></li></ul></nav><div class="hgroup"><a href="#" class="hgroup__navicon js-navtoggle">Menu</a></div></header><!-- Main content--><main role="main" class="main"><article class="post"><!-- Post home--><header class="page-header page-header_post"><div style="background-image:url(/jekyll-inclusion/img/post/2015-09-09-i18n/meta/start.jpg)" class="page-header__bg page-header__bg_post"></div><div class="overlay"><div class="container"><h1 style="color:#efefef" class="page-header__title page-header__title_post">Demo post &mdash; i18n plugin and data files</h1><h2 style="color:#efefef" class="page-header__descr page-header__descr_post">Blog internationalization using i18n plugin and special data files for common texts</h2><a href="#start" title="Let`s go!" class="icon icon_down icon_light js-anchor page-header__icon page-header__icon_post">Let`s go!</a></div></div></header><!-- Post content from *.md--><div id="start" class="container container_post"><p>Hi, in this short post I want to say a few words about internationalization (i18n) feature. All dates in this blog were humanized using Jekyll built-in function. And for their i18n I’ve used <a href="https://github.com/gacha/gacha.id.lv/blob/master/_plugins/i18n_filter.rb">i18n filter plugin</a></p><p>And for other common used texts on the website I’ve used special *.yml data file:</p><figure class="code code_center"><pre><code class="language-yaml">
 	# Category pages settings
 	categories:
-	  url: /category/
-	  slug: ''
 	  title_prefix: 'Category: '
 	  descr_prefix: 'Blog posts in category «'
 	  descr_postfix: '», page '
-	  layout: category.html
 	# Tag pages settings
 	tags:
-	  url: /tag/
-	  slug: ''
 	  title_prefix: 'Tag: '
 	  descr_prefix: 'Posts tagged «'
 	  descr_postfix: '», page '
-	  layout: tag.html
 	# Layout common texts
 	scroll-next: 'Let`s go!'
 	# Menu
