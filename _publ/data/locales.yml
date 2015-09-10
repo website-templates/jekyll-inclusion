@@ -1,20 +1,14 @@
 # Category pages settings
 categories:
-  url: /category/
-  slug: ''
   title_prefix: 'Category: '
   descr_prefix: 'Blog posts in category «'
   descr_postfix: '», page '
-  layout: category.html
 
 # Tag pages settings
 tags:
-  url: /tag/
-  slug: ''
   title_prefix: 'Tag: '
   descr_prefix: 'Posts tagged «'
   descr_postfix: '», page '
-  layout: tag.html
 
 # Layout common texts
 scroll-next: 'Let`s go!'

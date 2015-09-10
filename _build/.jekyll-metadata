@@ -36,7 +36,7 @@ D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-01-20-yaml-front-matter.md:
-  mtime: 2015-09-10 00:22:20.000000000 +03:00
+  mtime: 2015-09-10 23:08:34.000000000 +03:00
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/feed.xml:
@@ -49,10 +49,10 @@ D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_
   mtime: 2015-08-16 01:41:11.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/css/ie-out_light.min.css:
-  mtime: 2015-09-06 23:33:03.000000000 +03:00
+  mtime: 2015-09-10 23:33:00.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/css/screen.min.css:
-  mtime: 2015-09-06 23:33:03.000000000 +03:00
+  mtime: 2015-09-10 23:33:01.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/favicon.ico:
   mtime: 2015-07-06 22:36:46.000000000 +03:00
@@ -244,37 +244,37 @@ D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_
 : mtime: 2015-07-04 22:58:41.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/assembled.min.js:
-  mtime: 2015-09-06 23:32:56.000000000 +03:00
+  mtime: 2015-09-10 23:32:54.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/ie/ie.min.js:
-  mtime: 2015-09-06 23:32:57.000000000 +03:00
+  mtime: 2015-09-10 23:32:55.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/vendor/vendor.min.js:
-  mtime: 2015-09-06 23:33:03.000000000 +03:00
+  mtime: 2015-09-10 23:33:00.000000000 +03:00
   deps: []
 /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html:
-  mtime: 2015-09-06 23:32:37.000000000 +03:00
+  mtime: 2015-09-10 23:29:43.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/css/ie-out_light.css:
-  mtime: 2015-09-06 23:32:37.000000000 +03:00
+  mtime: 2015-09-10 23:29:43.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/css/screen.css:
-  mtime: 2015-09-06 23:32:37.000000000 +03:00
+  mtime: 2015-09-10 23:29:43.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/assembled.js:
-  mtime: 2015-09-06 23:32:37.000000000 +03:00
+  mtime: 2015-09-10 23:29:43.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/ie/ie.js:
-  mtime: 2015-09-06 22:31:12.000000000 +03:00
+  mtime: 2015-09-10 23:08:33.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/live.js:
-  mtime: 2015-09-06 22:31:12.000000000 +03:00
+  mtime: 2015-09-10 23:08:33.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/js/vendor/vendor.js:
-  mtime: 2015-09-06 22:31:11.000000000 +03:00
+  mtime: 2015-09-10 23:08:33.000000000 +03:00
   deps: []
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_posts/2015-09-09-i18n.md:
-  mtime: 2015-09-10 00:28:53.000000000 +03:00
+  mtime: 2015-09-10 23:08:34.000000000 +03:00
   deps:
   - /OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/_layouts/post.html
 D:/OpenServer/domains/orlovmax.com/git/free-website-templates/jekyll-inclusion/_build/img/post/2015-09-09-i18n/meta/end.jpg:

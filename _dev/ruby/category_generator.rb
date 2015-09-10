@@ -17,9 +17,9 @@ module Jekyll
       category_name = category.gsub(/\s+/, '-')
       (1..num_pages).each do |page|
         pager = CategoryPager.new(site, page, category_posts, category_name, num_pages)
-        dir = File.join(site.data['locales']['categories']['url'], category_name, page > 1 ? site.data['locales']['categories']['slug'] + "#{page}" : '')
-	      base_path = site.data['locales']['categories']['url'] + "#{category_name}" + "/"
-	      slug_path = site.data['locales']['categories']['slug']
+        dir = File.join(site.config['categories']['url'], category_name, page > 1 ? site.config['categories']['slug'] + "#{page}" : '')
+	      base_path = site.config['categories']['url'] + "#{category_name}" + "/"
+	      slug_path = site.config['categories']['slug']
         page = CategoryPage.new(site, site.source, dir, category, base_path, slug_path, page)
         page.pager = pager
         site.pages << page
@@ -35,7 +35,7 @@ module Jekyll
       @name = 'index.html'
 
       self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), site.data['locales']['categories']['layout'])
+      self.read_yaml(File.join(base, '_layouts'), site.config['categories']['layout'])
       self.data['category'] = category
 
       category_title_prefix = site.data['locales']['categories']['title_prefix']

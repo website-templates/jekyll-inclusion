@@ -17,9 +17,9 @@ module Jekyll
       tag_name = tag.gsub(/\s+/, '-')
       (1..num_pages).each do |page|
         pager = TagPager.new(site, page, tag_posts, tag_name, num_pages)
-        dir = File.join(site.data['locales']['tags']['url'], tag_name, page > 1 ? site.data['locales']['tags']['slug'] + "#{page}" : '')
-	      base_path = site.data['locales']['tags']['url'] + "#{tag_name}" + "/"
-	      slug_path = site.data['locales']['tags']['slug']
+        dir = File.join(site.config['tags']['url'], tag_name, page > 1 ? site.config['tags']['slug'] + "#{page}" : '')
+	      base_path = site.config['tags']['url'] + "#{tag_name}" + "/"
+	      slug_path = site.config['tags']['slug']
         page = TagPage.new(site, site.source, dir, tag, base_path, slug_path, page)
         page.pager = pager
         site.pages << page
@@ -35,7 +35,7 @@ module Jekyll
       @name = 'index.html'
 
       self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), site.data['locales']['tags']['layout'])
+      self.read_yaml(File.join(base, '_layouts'), site.config['tags']['layout'])
       self.data['tag'] = tag
 
       tag_title_prefix = site.data['locales']['tags']['title_prefix']

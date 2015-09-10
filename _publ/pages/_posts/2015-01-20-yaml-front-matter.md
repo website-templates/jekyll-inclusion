@@ -66,6 +66,17 @@ Hi, this is an additional post, that I've wrote to explain some specifics of yam
 	]
 	source: _build # Jekyll source folder
 	destination: _deploy # Generated website folder
+	<pre><code class="language-yaml">
+	# Category pages settings
+	categories:
+	  url: /category/
+	  slug: ''
+	  layout: category.html
+	# Tag pages settings
+	tags:
+	  url: /tag/
+	  slug: ''
+	  layout: tag.html
 	</code></pre>
 	<figcaption>_config.yml settings</figcaption>
 </figure>

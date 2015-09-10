@@ -52,3 +52,15 @@ exclude: [
 
 source: _build
 destination: _deploy
+
+# Category pages settings
+categories:
+  url: /category/
+  slug: ''
+  layout: category.html
+
+# Tag pages settings
+tags:
+  url: /tag/
+  slug: ''
+  layout: tag.html
