@@ -13,6 +13,7 @@ category:
 - technologies
 start_img: "img/post/2015-01-12-demo-post-buttons/meta/common-7.jpg"
 thumb_img: "img/post/2015-01-12-demo-post-buttons/meta/cm-7.jpg"
+comments: true
 ---
 <h3 class="typo typo_serif typo_center">Buttons</h3>
 <figure class="code code_center code_center-extra">

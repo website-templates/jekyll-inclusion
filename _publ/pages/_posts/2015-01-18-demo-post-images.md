@@ -13,6 +13,7 @@ category:
 - technologies
 start_img: "img/post/2015-01-18-demo-post-images/meta/common-1.jpg"
 thumb_img: "img/post/2015-01-18-demo-post-images/meta/cm-1.jpg"
+comments: true
 --- 
 
 <!-- Images demo start-->

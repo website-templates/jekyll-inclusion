@@ -13,6 +13,7 @@ category:
 - technologies
 start_img: "img/post/2015-01-14-demo-post-tables/meta/common-5.jpg"
 thumb_img: "img/post/2015-01-14-demo-post-tables/meta/cm-5.jpg"
+comments: true
 ---
 <h3 class="typo typo_serif typo_center">Tables</h3>
 

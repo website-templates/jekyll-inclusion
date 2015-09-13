@@ -13,6 +13,7 @@ category:
 - technologies
 start_img: "img/post/2015-01-17-demo-post-blockquotes/meta/common-2.jpg"
 thumb_img: "img/post/2015-01-17-demo-post-blockquotes/meta/cm-2.jpg"
+comments: true
 ---
 <h3 class="typo typo_serif typo_center">Blockquotes</h3>
 

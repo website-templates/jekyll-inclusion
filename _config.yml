@@ -33,7 +33,7 @@ start_img: "img/bg/start.jpg"
 end_img: "img/bg/end.jpg"
 thumb_img: "img/pic.jpg"
 
-# disqus-code:
+disqus-code: "jekyll-inclusion"
 
 # Build settings
 markdown: kramdown

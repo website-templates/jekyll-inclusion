@@ -13,6 +13,7 @@ category:
 - technologies
 start_img: "img/post/2015-01-16-demo-post-lists/meta/common-3.jpg"
 thumb_img: "img/post/2015-01-16-demo-post-lists/meta/cm-3.jpg"
+comments: true
 ---     
 <h3 class="typo typo_serif typo_center">Ordered and unordered lists</h3>
 

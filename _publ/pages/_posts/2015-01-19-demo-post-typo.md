@@ -13,6 +13,7 @@ category:
 - technologies
 start_img: "img/post/2015-01-19-demo-post-typo/meta/common-0.jpg"
 thumb_img: "img/post/2015-01-19-demo-post-typo/meta/cm-0.jpg"
+comments: true
 ---
 
 <h2 class="typo typo_center">Page elements</h2>

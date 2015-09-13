@@ -13,6 +13,7 @@ category:
 - technologies
 start_img: "img/post/2015-01-15-demo-post-code/meta/common-4.jpg"
 thumb_img: "img/post/2015-01-15-demo-post-code/meta/cm-4.jpg"
+comments: true
 ---
 <h3 class="typo typo_serif typo_center">Code blocks</h3>
 <p>Let's check code blocks, each of them represent their own markup with predefined classnames.</p>
@@ -46,8 +47,8 @@ thumb_img: "img/post/2015-01-15-demo-post-code/meta/cm-4.jpg"
     </code></pre>
     <figcaption>Right-floated code block</figcaption>
 </figure>
-   <p>Praesent ante est, sollicitudin eu velit at, eleifend interdum ipsum. Duis et blandit metus. Fusce sed pellentesque turpis, eu faucibus mi. Nullam tempor nibh sit amet semper posuere. Cras in dignissim mi. Suspendisse id massa ac nisl posuere congue et in velit.</p>
-   <p>Donec vitae semper ante, et placerat est. Vivamus adipiscing pulvinar purus. Suspendisse imperdiet nibh ac purus placerat sodales. Praesent vel molestie libero. Quisque gravida et leo ut placerat. Fusce vel magna commodo, sodales risus at, eleifend nibh. Nulla tristique metus eu ante elementum, sit amet tempor purus molestie. In luctus feugiat lacus sed lobortis. Fusce vel magna commodo, sodales risus at, eleifend nibh. Nulla tristique metus eu ante elementum, sit amet tempor purus molestie. In luctus feugiat lacus sed lobortis.</p>
+<p>Praesent ante est, sollicitudin eu velit at, eleifend interdum ipsum. Duis et blandit metus. Fusce sed pellentesque turpis, eu faucibus mi. Nullam tempor nibh sit amet semper posuere. Cras in dignissim mi. Suspendisse id massa ac nisl posuere congue et in velit.</p>
+<p>Donec vitae semper ante, et placerat est. Vivamus adipiscing pulvinar purus. Suspendisse imperdiet nibh ac purus placerat sodales. Praesent vel molestie libero. Quisque gravida et leo ut placerat. Fusce vel magna commodo, sodales risus at, eleifend nibh. Nulla tristique metus eu ante elementum, sit amet tempor purus molestie. In luctus feugiat lacus sed lobortis. Fusce vel magna commodo, sodales risus at, eleifend nibh. Nulla tristique metus eu ante elementum, sit amet tempor purus molestie. In luctus feugiat lacus sed lobortis.</p>
 
 <!-- centered code block -->
 

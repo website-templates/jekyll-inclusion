@@ -13,6 +13,7 @@ category:
 - technologies
 start_img: "img/post/2015-01-11-demo-post-grid/meta/common-8.jpg"
 thumb_img: "img/post/2015-01-11-demo-post-grid/meta/cm-8.jpg"
+comments: true
 ---
 <h3 class="typo typo_serif typo_center">Grid</h3>
 <h4 class="typo typo_condensed typo_center">Fluid responsive grid example</h4>

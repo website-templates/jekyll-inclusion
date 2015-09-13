@@ -13,6 +13,7 @@ category:
 thumb_img: "img/post/2015-01-20-yaml-front-matter/meta/cm-10.jpg"
 start_img: "img/post/2015-01-20-yaml-front-matter/meta/common-10.jpg"
 start_attribution: "Photo from unsplash.com"
+comments: true
 ---
 Hi, this is an additional post, that I've wrote to explain some specifics of yaml front matter options that were used in current theme. Let's start from _config.yml file
 
@@ -66,7 +67,6 @@ Hi, this is an additional post, that I've wrote to explain some specifics of yam
 	]
 	source: _build # Jekyll source folder
 	destination: _deploy # Generated website folder
-	<pre><code class="language-yaml">
 	# Category pages settings
 	categories:
 	  url: /category/
