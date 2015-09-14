@@ -1,0 +1,84 @@
+// Search form styles
+// Just a draft
+.search
+	display: block
+	margin: 0 10px
+	text-align: center
+	vertical-align: middle
+	white-space: nowrap
+
+
+	&__hidden
+		display: none
+
+
+	&__label
+		display: none
+
+
+	&__field
+		display: inline-block
+		width: 70%
+		height: 30px
+		padding-left: 10px
+		font-family: $f-sans
+		font-size: 15px
+		border: 1px solid $c-search_field_bd
+		background-color: $c-search_field_bg
+		vertical-align: middle
+		width: calc(100% - 100px)
+		transition: all .2s
+		@media screen and (max-width: 480px)
+			width: 80%
+			width: calc(100% - 50px)
+
+		&:focus,
+		&:hover
+			background-color: $c-search_field_bg_focus
+			border-color: $c-search_field_bd_focus
+
+
+	&__submit
+		position: relative
+		display: inline-block
+		width: 80px
+		height: 30px
+		font: $f-sans
+		font-size: 15px
+		line-height: 1
+		text-align: center
+		color: $c-search_btn_text
+		border: 1px solid $c-search_btn_bd
+		background-color: $c-search_btn_bg
+		vertical-align: middle
+		overflow: hidden
+		transition: all .2s
+		@media screen and (max-width: 480px)
+			width: 30px
+			font-size: 0
+
+		&:before
+			content: "\e81a"
+			position: absolute
+			top: 0
+			z-index: 100
+			display: none
+			font-family: "inclusion"
+			font-style: normal
+			font-weight: normal
+			font-variant: normal
+			text-transform: none
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			color: $c-search_btn_text
+			font-size: 20px
+			line-height: 28px
+			cursor: pointer
+			transition: all .3s
+			@media screen and (max-width: 480px)
+				display: block
+
+		&:hover
+			background-color: $c-search_btn_bg_hover
+			border-color: $c-search_btn_bd_hover
+			color: $c-search_btn_text_hover
