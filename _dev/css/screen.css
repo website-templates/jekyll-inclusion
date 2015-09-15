@@ -2347,44 +2347,44 @@ body {
   font-weight: 300;
 }
 
-.pager__list {
+.paginator__list {
   list-style-type: none;
 }
-.pager__list:before, .pager__list:after {
+.paginator__list:before, .paginator__list:after {
   display: block;
   content: "";
   clear: both;
   height: 0;
 }
-.pager__item {
+.paginator__item {
   display: block;
   max-width: 49%;
   height: 50px;
   margin: 10px 0;
 }
 @media screen and (max-width: 800px) {
-  .pager__item {
+  .paginator__item {
     width: 100%;
     max-width: 100%;
   }
 }
-.pager__item_previous {
+.paginator__item_previous {
   float: left;
 }
 @media screen and (max-width: 800px) {
-  .pager__item_previous {
+  .paginator__item_previous {
     float: none;
   }
 }
-.pager__item_next {
+.paginator__item_next {
   float: right;
 }
 @media screen and (max-width: 800px) {
-  .pager__item_next {
+  .paginator__item_next {
     float: none;
   }
 }
-.pager__link {
+.paginator__link {
   display: block;
   width: 100%;
   height: 100%;
@@ -2401,16 +2401,16 @@ body {
   transition: all 0.2s;
 }
 @media screen and (max-width: 960px) {
-  .pager__link {
+  .paginator__link {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 600px) {
-  .pager__link {
+  .paginator__link {
     font-size: 16px;
   }
 }
-.pager__link:hover {
+.paginator__link:hover {
   border-color: #a3a3a3;
   color: #777777;
 }

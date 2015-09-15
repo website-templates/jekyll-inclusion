@@ -2,7 +2,7 @@
 mixin paginator()
 	| {% if page.type == 'page' %}
 	| {% if paginator.total_pages > 1 %}
-	+b('nav').pager
+	+b('nav').paginator
 		+e('ul').list
 			| {% if paginator.previous_page %}
 			+e('li').item_next
@@ -18,7 +18,7 @@ mixin paginator()
 
 	| {% if page.type == 'taxonomy' %}
 	| {% if paginator.total_pages > 1 %}
-	+b('nav').pager
+	+b('nav').paginator
 		+e('ul').list
 			| {% if paginator.previous_page %}
 			| {% if paginator.previous_page == 1 %}
@@ -43,7 +43,7 @@ mixin paginator()
 	| {% endif %}
 
 	| {% if page.type == 'post' %}
-	+b('nav').pager
+	+b('nav').paginator
 		+e('ul').list
 			| {% if page.previous.url %}
 			+e('li').item_previous
