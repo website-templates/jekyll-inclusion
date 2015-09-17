@@ -983,7 +983,7 @@ a:focus {
   outline: 0;
 }
 .inclusion:before {
-  content: "";
+  content: "";
   display: inline-block;
   font-family: "inclusion";
   font-style: normal;
@@ -1106,43 +1106,43 @@ a:focus {
   color: #2b2b2b;
 }
 .icon_up:after {
-  content: "";
+  content: "";
 }
 .icon_down:after {
-  content: "";
+  content: "";
 }
 .icon_twitter:after {
-  content: "";
+  content: "";
 }
 .icon_vk:after {
-  content: "";
+  content: "";
 }
 .icon_gplus:after {
-  content: "";
+  content: "";
 }
 .icon_skype:after {
-  content: "";
+  content: "";
 }
 .icon_bitbucket:after {
-  content: "";
+  content: "";
 }
 .icon_linkedin:after {
-  content: "";
+  content: "";
 }
 .icon_mail:after {
-  content: "";
+  content: "";
 }
 .icon_git:after {
-  content: "";
+  content: "";
 }
 .icon_pencil:after {
-  content: "";
-}
-.icon_fb:after {
   content: "";
 }
+.icon_fb:after {
+  content: "";
+}
 .icon_rss:after {
-  content: "";
+  content: "";
 }
 
 .block:before, .block:after {
@@ -1287,7 +1287,7 @@ a:focus {
   color: #2b2b2b;
 }
 .block_spoiler > a:before {
-  content: "";
+  content: "";
   display: inline-block;
   margin-right: 10%;
   font-family: "inclusion";
@@ -1303,7 +1303,7 @@ a:focus {
   height: 50px;
 }
 .block_spoiler.is-closed > a:before {
-  content: "";
+  content: "";
 }
 
 .bq {
@@ -2040,7 +2040,7 @@ body {
   color: #a3a3a3;
 }
 .nav__link_submenu:after {
-  content: "";
+  content: "";
   display: inline-block;
   padding-left: 5px;
   font-family: "inclusion";
@@ -2074,7 +2074,7 @@ body {
   font-size: 0;
 }
 .hgroup__navicon:before {
-  content: "";
+  content: "";
   display: inline-block;
   margin-right: 10px;
   font-family: "inclusion";
@@ -2090,7 +2090,7 @@ body {
   transition: all 0.3s;
 }
 .hgroup__navicon.is-open:before {
-  content: "";
+  content: "";
 }
 .hgroup__navicon:hover:before {
   color: #777777;
