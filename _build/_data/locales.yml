@@ -13,6 +13,12 @@ tags:
 # Layout common texts
 scroll-next: 'Let`s go!'
 
+# Search
+search:
+  label: 'Search'
+  placeholder: 'Looking for something?'
+  submit: 'Search'
+
 # Menu
 menu-text: 'Menu'
 

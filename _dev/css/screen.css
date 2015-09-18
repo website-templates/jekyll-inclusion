@@ -2059,6 +2059,96 @@ body {
   color: #a3a3a3;
 }
 
+.search {
+  display: block;
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #efefef;
+}
+.search__hidden {
+  display: none;
+}
+.search__label {
+  display: none;
+}
+.search__field {
+  display: inline-block;
+  width: 70%;
+  height: 30px;
+  padding-left: 10px;
+  font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
+  font-size: 15px;
+  border: 1px solid #2b2b2b;
+  background-color: transparent;
+  vertical-align: middle;
+  width: calc(100% - 100px);
+  transition: all 0.2s;
+}
+@media screen and (max-width: 480px) {
+  .search__field {
+    width: 80%;
+    width: calc(100% - 50px);
+  }
+}
+.search__field:focus, .search__field:hover {
+  background-color: #fff;
+  border-color: #777777;
+}
+.search__submit {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  font: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  color: #2b2b2b;
+  border: 1px solid #2b2b2b;
+  background-color: transparent;
+  vertical-align: middle;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 480px) {
+  .search__submit {
+    width: 30px;
+    font-size: 0;
+  }
+}
+.search__submit:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  display: none;
+  font-family: "inclusion";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2b2b2b;
+  font-size: 20px;
+  line-height: 28px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 480px) {
+  .search__submit:before {
+    display: block;
+  }
+}
+.search__submit:hover {
+  background-color: #fff;
+  border-color: #777777;
+  color: #777777;
+}
+
 .hgroup {
   position: relative;
   width: 100%;
@@ -2069,7 +2159,7 @@ body {
 .hgroup__navicon {
   display: none;
   float: right;
-  margin: 5px 20px 0;
+  margin: 5px 10px 0 0;
   border: none;
   font-size: 0;
 }
@@ -2093,6 +2183,32 @@ body {
   content: "";
 }
 .hgroup__navicon:hover:before {
+  color: #777777;
+}
+.hgroup__searchicon {
+  display: none;
+  float: right;
+  margin: 5px 10px 0 0;
+  border: none;
+  font-size: 0;
+}
+.hgroup__searchicon:before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  font-family: "inclusion";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #efefef;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.hgroup__searchicon:hover:before {
   color: #777777;
 }
 

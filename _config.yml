@@ -35,6 +35,9 @@ thumb_img: "img/pic.jpg"
 
 disqus-code: "jekyll-inclusion"
 
+#Custom search engine ID
+custom-search-engine_id: '007847994425388688875:2onbkc4tu2y'
+
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:day/:title/

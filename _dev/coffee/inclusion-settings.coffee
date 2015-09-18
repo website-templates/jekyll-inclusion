@@ -11,6 +11,13 @@ $ ->
 	#
 	$(".js-nav").navKit state: "closed" #apply plugin to navbar with .js-nav classname
 
+	# jQuery searchForm plugin init and settings
+	#	*
+	#	* searchIcon: "js-searchtoggle"	icon class name for toggling search form
+	#	* state: "closed"			default state of search form
+	#
+	$(".js-search").searchForm state: "closed" #apply plugin to search form with .js-search classname
+
 	# jQuery anchorScroll plugin init and settings, fallback for pages with no navbar but with anchor links
 	#	*  Disabled by default!
 	#	*

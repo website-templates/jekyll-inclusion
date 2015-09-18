@@ -12,7 +12,8 @@ module.exports = {
 				'<%= dev.fonts %>/**/*.{eot,svg,ttf,woff}',
 				'<%= dev.helpers %>/**/*.*',
 				'<%= dev.helpers %>/**/.htaccess',
-				'<%= dev.helpers %>/**/CNAME'],
+				'<%= dev.helpers %>/**/CNAME',
+				'<%= publ.data %>/**/**'],
 		tasks: ['default'],
 		options: {
 		  spawn: false

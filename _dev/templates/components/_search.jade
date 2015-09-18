@@ -1,9 +1,8 @@
 //- Site search
-mixin search(args)
-	- options = args || {}
-	+b('form').search(target='_blank' id='cse-search-box' action='http://google.com/cse')&attributes(options.block || {})
-		+e('input').hidden(type='hidden' name='cx' value='{{ site.custom-search-engine_id }}')&attributes(options.__hidden || {})
-		+e('input').hidden(type='hidden' name='ie' value='UTF-8')&attributes(options.__hidden || {})
-		+e('label').label(for='q')&attributes(options.__label || {}) {{ site.data.locales.search.label }}
-		+e('input').field(value='' name='q' id='q' type='text' placeholder='{{ site.data.locales.search.placeholder }}')&attributes(options.__field || {})
-		+e('button').submit(type='submit' name='sa')&attributes(options.__submit || {}) {{ site.data.locales.search.submit }}
+mixin search()
+	+b('form').search.js-search(target='_blank' id='cse-search-box' action='http://google.com/cse')
+		+e('input').hidden(type='hidden' name='cx' value='{{ site.custom-search-engine_id }}')
+		+e('input').hidden(type='hidden' name='ie' value='UTF-8')
+		+e('label').label(for='q') {{ site.data.locales.search.label }}
+		+e('input').field(value='' name='q' id='q' type='text' placeholder='{{ site.data.locales.search.placeholder }}')
+		+e('button').submit(type='submit' name='sa') {{ site.data.locales.search.submit }}

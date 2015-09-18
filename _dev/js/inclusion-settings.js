@@ -3,6 +3,9 @@
     $(".js-nav").navKit({
       state: "closed"
     });
+    $(".js-search").searchForm({
+      state: "closed"
+    });
     $(function() {
       var lazyImage;
       lazyImage = $(".js-lazy");

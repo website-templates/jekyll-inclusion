@@ -1,6 +1,7 @@
 //- Header group for languages bar and navicon
 mixin hgroup()
 	+b.hgroup
+		+e.searchicon.js-searchtoggle(href='#') {{ site.data.locales.search.label }}
 		+e.navicon.js-navtoggle(href='#') {{ site.data.locales.menu-text }}
 
 		block

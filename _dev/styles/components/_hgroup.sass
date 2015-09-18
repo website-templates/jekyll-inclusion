@@ -9,7 +9,7 @@
 	&__navicon
 		display: none
 		float: right
-		margin: 5px 20px 0
+		margin: 5px 10px 0 0
 		border: none
 		font-size: 0
 		&:before
@@ -31,3 +31,27 @@
 			content: "\e818"
 		&:hover:before
 			color: $c-hgroup_navicon_hover
+
+	&__searchicon
+		display: none
+		float: right
+		margin: 5px 10px 0 0
+		border: none
+		font-size: 0
+		&:before
+			content: "\e81a"
+			display: inline-block
+			margin-right: 10px
+			font-family: "inclusion"
+			font-style: normal
+			font-weight: normal
+			font-variant: normal
+			text-transform: none
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			color: $c-hgroup_searchicon
+			font-size: 30px
+			cursor: pointer
+			transition: all .3s
+		&:hover:before
+			color: $c-hgroup_searchicon_hover

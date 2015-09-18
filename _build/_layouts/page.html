@@ -80,7 +80,16 @@ type: page
           {% endfor %}
         </ul>
       </nav>
-      <div class="hgroup"><a href="#" class="hgroup__navicon js-navtoggle">{{ site.data.locales.menu-text }}</a>{% if site.lang_current %}
+      <form target="_blank" id="cse-search-box" action="http://google.com/cse" class="js-search search">
+        <input type="hidden" name="cx" value="{{ site.custom-search-engine_id }}" class="search__hidden"/>
+        <input type="hidden" name="ie" value="UTF-8" class="search__hidden"/>
+        <label for="q" class="search__label">{{ site.data.locales.search.label }}
+        </label>
+        <input value="" name="q" id="q" type="text" placeholder="{{ site.data.locales.search.placeholder }}" class="search__field"/>
+        <button type="submit" name="sa" class="search__submit">{{ site.data.locales.search.submit }}
+        </button>
+      </form>
+      <div class="hgroup"><a href="#" class="hgroup__searchicon js-searchtoggle">{{ site.data.locales.search.label }}</a><a href="#" class="hgroup__navicon js-navtoggle">{{ site.data.locales.menu-text }}</a>{% if site.lang_current %}
         <ul class="languages">{% for sitelang in site.langs %}
           {% if site.lang_current == sitelang[0] and page.langs %}
           <li class="languages__item">
