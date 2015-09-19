@@ -7,7 +7,7 @@ mixin nav()
 			| {% if item.internal %}
 			| {% if item.submenu != null %}
 			+e.item
-				+e.link_submenu(href="{{ site.baseurl | append: item.internal | replace: '//', '/' }}") {{ item.name }}
+				+e.submenu-title {{ item.name }}
 				+e('ul').list_sub
 					| {% for subitem in item.submenu %}
 					+e.item_sub
@@ -20,7 +20,7 @@ mixin nav()
 			| {% elsif item.external %}
 			| {% if item.submenu != null %}
 			+e.item
-				+e.link_submenu(href="{{ item.external }}") {{ item.name }}
+				+e.submenu-title {{ item.name }}
 				+e('ul').list_sub
 					| {% for subitem in item.submenu %}
 					+e.item_sub

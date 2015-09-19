@@ -54,7 +54,9 @@ type: page
         <ul class="nav__list">{% for item in site.data.nav %}
           {% if item.internal %}
           {% if item.submenu != null %}
-          <li class="nav__item"><a href="{{ site.baseurl | append: item.internal | replace: '//', '/' }}" class="nav__link nav__link_submenu">{{ item.name }}</a>
+          <li class="nav__item">
+            <div class="nav__submenu-title">{{ item.name }}
+            </div>
             <ul class="nav__list nav__list_sub">{% for subitem in item.submenu %}
               <li class="nav__item nav__item_sub"><a href="{{ site.baseurl | append: subitem.internal | replace: '//', '/' }}" class="nav__link">{{ subitem.name }}</a>
               </li>{% endfor %}
@@ -64,7 +66,9 @@ type: page
           </li>{% endif %}
           {% elsif item.external %}
           {% if item.submenu != null %}
-          <li class="nav__item"><a href="{{ item.external }}" class="nav__link nav__link_submenu">{{ item.name }}</a>
+          <li class="nav__item">
+            <div class="nav__submenu-title">{{ item.name }}
+            </div>
             <ul class="nav__list nav__list_sub">{% for subitem in item.submenu %}
               <li class="nav__item nav__item_sub"><a href="{{ subitem.external }}" class="nav__link">{{ subitem.name }}</a>
               </li>{% endfor %}
