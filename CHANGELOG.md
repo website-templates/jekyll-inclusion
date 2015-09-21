@@ -1,3 +1,9 @@
+* (September 20, 2015)
+	- Search feature added, dropdown menu issue fixed
+* (September 17, 2015)
+	- Font variables for each block added
+* (September 11, 2015)
+	- Data files and _config updated
 * (September 06, 2015)
 	- block structure updated
 * (August 30, 2015)

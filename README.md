@@ -56,14 +56,13 @@ post.sh                          - script for new posts creating
 	`styles/`                    - sass stylesheets
 		`helpers`                  - grid and third-party stuff, mixins
 		`components`               - stylsheets components (blocks)
-			`inclusion`              - post content styles (Inclusion)
 			`general`                - general styles like reset.sass
+				`inclusion`          - post content styles (Inclusion)
 	`templates/`                 - jade templates
 		`components`               - page blocks
 		`helpers`                  - mixins
 		`pages`                    - site separate pages
 			`_layouts`               - page layouts (will be copied to _build folder)
-			`_posts`                 - page posts (will be copied to _build folder)
 
 `/_build/` folder - build version, generated sources ready for jekyll build
 	`_data/`                     - data for jekyll generation (nav etc)
