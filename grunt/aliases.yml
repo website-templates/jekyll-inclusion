@@ -66,6 +66,7 @@ build:
         - 'shell:jekyllBuild'
         - 'processhtml'
         - 'htmlmin'
+        - 'cacheBust'
 
 # Publishing task - copy posts, pages and their images to src folder
 # for further regeneration
