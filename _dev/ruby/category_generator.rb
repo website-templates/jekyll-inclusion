@@ -12,7 +12,7 @@ module Jekyll
     end
 
     def paginate(site, category)
-      category_posts = site.posts.find_all {|post| post.categories.include?(category)}.sort_by {|post| -post.date.to_f}
+      category_posts = site.posts.docs.find_all {|post| post.to_liquid['categories'].include?(category)}.sort_by {|post| -post.date.to_f}
       num_pages = CategoryPager.calculate_pages(category_posts, site.config['paginate'].to_i)
       category_name = category.gsub(/\s+/, '-')
       (1..num_pages).each do |page|

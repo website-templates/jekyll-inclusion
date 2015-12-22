@@ -12,7 +12,7 @@ module Jekyll
     end
 
     def paginate(site, tag)
-      tag_posts = site.posts.find_all {|post| post.tags.include?(tag)}.sort_by {|post| -post.date.to_f}
+      tag_posts = site.posts.docs.find_all {|post| post.to_liquid['tags'].include?(tag)}.sort_by {|post| -post.date.to_f}
       num_pages = TagPager.calculate_pages(tag_posts, site.config['paginate'].to_i)
       tag_name = tag.gsub(/\s+/, '-')
       (1..num_pages).each do |page|
