@@ -52,6 +52,7 @@ exclude: [
 'README.md',
 'Rakefile'
 ]
+incremental: true
 
 source: _build
 destination: _deploy
