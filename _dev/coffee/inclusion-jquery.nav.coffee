@@ -1,5 +1,5 @@
-# 
-# * navigation script: sticky nav, anchor smooth scrolling, selecting current nav item 
+#
+# * navigation script: sticky nav, anchor smooth scrolling, selecting current nav item
 #
 (($, window, document, undefined_) ->
 	NavKit = (element, options) ->
@@ -23,35 +23,39 @@
 		navHeight = $this.show().height()
 		aArray = []
 		i = undefined
-		
-		# Looking for condition from settings, if it closed - add appropriate classes 
-		# to icon, menu and container  
+
+		# Looking for condition from settings, if it closed - add appropriate classes
+		# to icon, menu and container
 		if not cond or cond is "closed"
 			$this.slideToggle()
 			$navIcon.show()
 		else
 			$navIcon.show().addClass @options.iconOpen
-		
+
 		#toggle nav onclick
 		$navIcon.on "click", $.proxy((e) ->
 			e.preventDefault()
 			$navIcon.toggleClass @options.iconOpen
 			$this.slideToggle()
 		, this)
-		
-		# Smooth anchor scroll, targeted to our nav anchors 
+
+		# Smooth anchor scroll, targeted to our nav anchors
 		# Actually this thing was modified on csstricks
 		$navAnchor.click ->
 			if location.pathname.replace(/^\//, "") is @pathname.replace(/^\//, "") and location.hostname is @hostname
-				target = $(@hash)
-				target = (if target.length then target else $("[name=" + @hash.slice(1) + "]"))
-				if target.length
-					$("html,body").animate
-						scrollTop: target.offset().top - navHeight
-					, 1000
-					false
+				anchor = $(@hash)
+				target = (if anchor.length then anchor else $("[name=" + @hash.slice(1) + "]"))
+				targetOffset = target.offset().top
+				windowScroll = $(window).scrollTop()
 
-		
+				if Math.abs(targetOffset - windowScroll) > 20
+					if target.length
+						$("html,body").animate
+							scrollTop: targetOffset
+						, 1000
+						false
+
+
 		#Highlight nav list item when current section visible
 		#Originally this way is belong to http://www.callmenick.com
 		i = 0
@@ -76,13 +80,13 @@
 				else
 					$navLink.filter("[href='" + theID + "']").removeClass @options.activeLink
 				i += 1
-			
+
 			#highlight last nav list item on last section
 			if windowPos + windowHeight is docHeight
 				unless $this.find("li").filter(":last-child").find($navLink).hasClass(@options.activeLink)
 					$navLink.filter("." + @options.activeLink).removeClass @options.activeLink
 					$this.find("li").filter(":last-child").find($navLink).addClass @options.activeLink
-			
+
 			#highlight first nav item when first section has some top offset
 			if windowPos < $firstSection.offset().top
 				unless $this.find("li").filter(":first-child").find($navLink).hasClass(@options.activeLink)

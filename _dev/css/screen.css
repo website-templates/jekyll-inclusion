@@ -965,7 +965,7 @@ a:focus {
   font-family: "Open Sans Condensed", sans-serif;
 }
 .typo_muted {
-  color: #777777;
+  color: #787878;
 }
 .typo_shadow {
   text-shadow: 1px 1px 1px #000;
@@ -1003,7 +1003,7 @@ a:focus {
   -webkit-border-radius: 0;
   border-radius: 0;
   border: 1px solid;
-  border-color: #777777;
+  border-color: #787878;
   font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
   line-height: 1;
   text-decoration: none;
@@ -1013,7 +1013,7 @@ a:focus {
 }
 .button:hover {
   border-color: #a3a3a3;
-  color: #777777;
+  color: #787878;
 }
 .button_small {
   min-width: 150px;
@@ -1037,13 +1037,13 @@ a:focus {
   font-size: 26px;
 }
 .button_disabled {
-  border-color: #777777;
-  color: #777777;
+  border-color: #787878;
+  color: #787878;
   cursor: not-allowed;
   opacity: 0.5;
 }
 .button_disabled:hover {
-  color: #777777;
+  color: #787878;
 }
 .button_center {
   margin: 5px auto;
@@ -1246,7 +1246,7 @@ a:focus {
   overflow: hidden;
   text-align: left;
   background-color: #fcfcfc;
-  border: 1px solid #777777;
+  border: 1px solid #787878;
 }
 .block_spoiler:after {
   content: "";
@@ -1259,7 +1259,7 @@ a:focus {
   background-color: #e2e2e2;
 }
 .block_spoiler:hover:after {
-  background-color: #d5d5d5;
+  background-color: #d6d6d6;
 }
 .block_spoiler:before {
   content: "";
@@ -1315,7 +1315,7 @@ a:focus {
 }
 .bq p {
   font-style: italic;
-  color: #777777;
+  color: #787878;
 }
 .bq cite {
   display: block;
@@ -1437,7 +1437,7 @@ a:focus {
   font-size: 60px;
   line-height: 0;
   vertical-align: middle;
-  color: #777777;
+  color: #787878;
 }
 .bq_align-center cite {
   text-align: right;
@@ -1445,7 +1445,7 @@ a:focus {
 .bq_align-left {
   text-align: left;
   padding-left: 15px;
-  border-left: 3px solid #777777;
+  border-left: 3px solid #787878;
 }
 .bq_align-left cite {
   text-align: right;
@@ -1453,7 +1453,7 @@ a:focus {
 .bq_align-right {
   text-align: right;
   padding-right: 15px;
-  border-right: 3px solid #777777;
+  border-right: 3px solid #787878;
 }
 .bq_align-right cite {
   text-align: left;
@@ -1465,7 +1465,7 @@ a:focus {
   line-height: 1.4;
   font-weight: 400;
   text-align: left;
-  color: #777777;
+  color: #787878;
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 @media screen and (max-width: 960px) {
@@ -1575,14 +1575,14 @@ a:focus {
 }
 
 .image, .code, .video {
-  color: #777777;
+  color: #787878;
 }
 .image figcaption, .code figcaption, .video figcaption {
   font-family: "Open Sans Condensed", sans-serif;
   margin: 10px 0 5px;
   padding: 0 10px;
   font-size: 25px;
-  color: #777777;
+  color: #787878;
 }
 @media screen and (max-width: 960px) {
   .image figcaption, .code figcaption, .video figcaption {
@@ -1594,7 +1594,7 @@ a:focus {
 }
 .image pre, .code pre, .video pre {
   background-color: #fcfcfc;
-  border-color: #d5d5d5;
+  border-color: #d6d6d6;
 }
 .image img, .code img, .video img {
   display: block;
@@ -1664,7 +1664,7 @@ a:focus {
 }
 .image_left figcaption, .code_left figcaption, .video_left figcaption {
   text-align: left;
-  border-left: 3px solid #777777;
+  border-left: 3px solid #787878;
 }
 @media screen and (max-width: 800px) {
   .image_left figcaption, .code_left figcaption, .video_left figcaption {
@@ -1704,7 +1704,7 @@ a:focus {
 }
 .image_right figcaption, .code_right figcaption, .video_right figcaption {
   text-align: right;
-  border-right: 3px solid #777777;
+  border-right: 3px solid #787878;
 }
 @media screen and (max-width: 800px) {
   .image_right figcaption, .code_right figcaption, .video_right figcaption {
@@ -1736,7 +1736,7 @@ a:focus {
   font-size: 16px;
   line-height: 1.2;
   text-align: left;
-  color: #777777;
+  color: #787878;
   font-family: Georgia, Times, "Times New Roman", serif;
 }
 .table th, .table .group {
@@ -1755,10 +1755,10 @@ a:focus {
   }
 }
 .table td:not(:last-of-type) {
-  border-right: 1px solid #777777;
+  border-right: 1px solid #787878;
 }
 .table tr {
-  border-bottom: 1px solid #777777;
+  border-bottom: 1px solid #787878;
 }
 .table caption {
   caption-side: bottom;
@@ -2098,7 +2098,7 @@ body {
 }
 .search__field:focus, .search__field:hover {
   background-color: #fff;
-  border-color: #777777;
+  border-color: #787878;
 }
 .search__submit {
   position: relative;
@@ -2148,8 +2148,8 @@ body {
 }
 .search__submit:hover {
   background-color: #fff;
-  border-color: #777777;
-  color: #777777;
+  border-color: #787878;
+  color: #787878;
 }
 
 .hgroup {
@@ -2186,7 +2186,7 @@ body {
   content: "";
 }
 .hgroup__navicon:hover:before {
-  color: #777777;
+  color: #787878;
 }
 .hgroup__searchicon {
   display: none;
@@ -2212,7 +2212,7 @@ body {
   transition: all 0.3s;
 }
 .hgroup__searchicon:hover:before {
-  color: #777777;
+  color: #787878;
 }
 
 .languages {
@@ -2236,13 +2236,13 @@ body {
   transition: all 0.3s;
 }
 .languages__link:hover {
-  color: #777777;
-  border-color: #777777;
+  color: #787878;
+  border-color: #787878;
 }
 .languages__link.is-selected {
   border: none;
   cursor: default;
-  color: #777777;
+  color: #787878;
 }
 
 .page-header {
@@ -2283,6 +2283,7 @@ body {
   bottom: 10px;
   right: 20px;
   z-index: 100;
+  font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
   font-style: italic;
   font-size: 14px;
 }
@@ -2340,7 +2341,7 @@ body {
   top: 15px;
   right: 0;
   font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
-  color: #777777;
+  color: #787878;
 }
 @media(max-width:600px) {
   .year-posts__date {
@@ -2426,7 +2427,7 @@ body {
 }
 .post-preview__descr {
   font-family: "Open Sans Condensed", sans-serif;
-  color: #777777;
+  color: #787878;
   margin-left: 250px;
 }
 @media screen and (max-width: 800px) {
@@ -2440,7 +2441,7 @@ body {
   clear: both;
   margin-top: 50px;
   padding: 0 10px;
-  border-left: 3px solid #777777;
+  border-left: 3px solid #787878;
 }
 .post-meta_preview {
   clear: none;
@@ -2462,7 +2463,7 @@ body {
   font-weight: 400;
 }
 .post-meta__author, .post-meta__date, .post-meta__tag, .post-meta__category, .post-meta__translator {
-  color: #777777;
+  color: #787878;
   font-weight: 300;
 }
 
@@ -2509,7 +2510,7 @@ body {
   height: 100%;
   padding: 0 15px;
   border: 1px solid;
-  border-color: #777777;
+  border-color: #787878;
   font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
   font-size: 20px;
   line-height: 50px;
@@ -2531,7 +2532,7 @@ body {
 }
 .paginator__link:hover {
   border-color: #a3a3a3;
-  color: #777777;
+  color: #787878;
 }
 
 .comments {
@@ -2587,6 +2588,7 @@ body {
   bottom: 10px;
   right: 20px;
   z-index: 100;
+  font-family: "Open Sans", Tahoma, Verdana, Arial, sans-serif;
   font-style: italic;
   font-size: 14px;
 }
