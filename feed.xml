@@ -3,11 +3,11 @@
   <channel>
 	<title>Inclusion jekyll theme</title>
 	<description>Responsive blog theme for jekyll website generator</description>
-	<link>http://website-templates.github.io/</link>
-	<atom:link href="http://website-templates.github.io/feed.xml" rel="self" type="application/rss+xml" />
-	<pubDate>Sat, 19 Sep 2015 01:26:42 +0300</pubDate>
-	<lastBuildDate>Sat, 19 Sep 2015 01:26:42 +0300</lastBuildDate>
-	<generator>Jekyll v3.0.0.pre.beta2</generator>
+	<link>http://website-templates.github.io/jekyll-inclusion/</link>
+	<atom:link href="http://website-templates.github.io/jekyll-inclusion/feed.xml" rel="self" type="application/rss+xml" />
+	<pubDate>Wed, 30 Dec 2015 02:24:58 +0200</pubDate>
+	<lastBuildDate>Wed, 30 Dec 2015 02:24:58 +0200</lastBuildDate>
+	<generator>Jekyll v3.0.1</generator>
 	
 	  <item>
 		<title>Demo post &amp;mdash; i18n plugin and data files</title>
@@ -15,8 +15,8 @@
 
 </description>
 		<pubDate>Wed, 09 Sep 2015 00:00:00 +0300</pubDate>
-		<link>http://website-templates.github.io/2015/09/09/i18n/</link>
-		<guid isPermaLink="true">http://website-templates.github.io/2015/09/09/i18n/</guid>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/09/09/i18n/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/09/09/i18n/</guid>
 		
 		<category>Lorem ipsum</category>
 		
@@ -35,8 +35,8 @@
 
 </description>
 		<pubDate>Tue, 20 Jan 2015 00:00:00 +0200</pubDate>
-		<link>http://website-templates.github.io/2015/01/20/yaml-front-matter/</link>
-		<guid isPermaLink="true">http://website-templates.github.io/2015/01/20/yaml-front-matter/</guid>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/20/yaml-front-matter/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/20/yaml-front-matter/</guid>
 		
 		<category>Lorem ipsum</category>
 		
@@ -76,8 +76,8 @@
 
 </description>
 		<pubDate>Mon, 19 Jan 2015 00:00:00 +0200</pubDate>
-		<link>http://website-templates.github.io/2015/01/19/demo-post-typo/</link>
-		<guid isPermaLink="true">http://website-templates.github.io/2015/01/19/demo-post-typo/</guid>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/19/demo-post-typo/</guid>
 		
 		<category>Lorem ipsum</category>
 		
@@ -104,8 +104,8 @@
 
 </description>
 		<pubDate>Sun, 18 Jan 2015 00:00:00 +0200</pubDate>
-		<link>http://website-templates.github.io/2015/01/18/demo-post-images/</link>
-		<guid isPermaLink="true">http://website-templates.github.io/2015/01/18/demo-post-images/</guid>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/18/demo-post-images/</guid>
 		
 		<category>Lorem ipsum</category>
 		
@@ -128,8 +128,8 @@
 
 </description>
 		<pubDate>Sat, 17 Jan 2015 00:00:00 +0200</pubDate>
-		<link>http://website-templates.github.io/2015/01/17/demo-post-blockquotes/</link>
-		<guid isPermaLink="true">http://website-templates.github.io/2015/01/17/demo-post-blockquotes/</guid>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/17/demo-post-blockquotes/</guid>
 		
 		<category>Lorem ipsum</category>
 		
@@ -152,8 +152,8 @@
 
 </description>
 		<pubDate>Fri, 16 Jan 2015 00:00:00 +0200</pubDate>
-		<link>http://website-templates.github.io/2015/01/16/demo-post-lists/</link>
-		<guid isPermaLink="true">http://website-templates.github.io/2015/01/16/demo-post-lists/</guid>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/16/demo-post-lists/</guid>
 		
 		<category>Lorem ipsum</category>
 		
@@ -177,8 +177,8 @@
 
 </description>
 		<pubDate>Thu, 15 Jan 2015 00:00:00 +0200</pubDate>
-		<link>http://website-templates.github.io/2015/01/15/demo-post-code/</link>
-		<guid isPermaLink="true">http://website-templates.github.io/2015/01/15/demo-post-code/</guid>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/15/demo-post-code/</guid>
 		
 		<category>Lorem ipsum</category>
 		
@@ -201,8 +201,8 @@
 
 </description>
 		<pubDate>Wed, 14 Jan 2015 00:00:00 +0200</pubDate>
-		<link>http://website-templates.github.io/2015/01/14/demo-post-tables/</link>
-		<guid isPermaLink="true">http://website-templates.github.io/2015/01/14/demo-post-tables/</guid>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/14/demo-post-tables/</guid>
 		
 		<category>Lorem ipsum</category>
 		
@@ -229,8 +229,8 @@
 
 </description>
 		<pubDate>Tue, 13 Jan 2015 00:00:00 +0200</pubDate>
-		<link>http://website-templates.github.io/2015/01/13/demo-post-blocks/</link>
-		<guid isPermaLink="true">http://website-templates.github.io/2015/01/13/demo-post-blocks/</guid>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/13/demo-post-blocks/</guid>
 		
 		<category>Lorem ipsum</category>
 		
@@ -269,11 +269,10 @@
 &lt;p&gt;&lt;button type=&quot;button&quot; class=&quot;button button_right button_regular&quot; title=&quot;Right-floated regular active button&quot;&gt;Right-floated button&lt;/button&gt;&lt;/p&gt;
 &lt;p&gt;Phasellus euismod neque at odio congue bibendum. Nam neque lectus, hendrerit nec ligula nec, feugiat tincidunt dolor. Maecenas id sem orci. Ut non velit est. Nullam et lectus in arcu rhoncus rutrum vitae vitae augue. Donec sodales risus auctor velit vulputate, vel elementum velit viverra. Nulla mattis scelerisque tellus eget malesuada. Donec tempus vulputate felis, id dictum odio euismod sit amet. &lt;/p&gt;
 &lt;p&gt;&lt;button type=&quot;button&quot; class=&quot;button button_center button_regular button_disabled&quot; title=&quot;Regular disabled button&quot;&gt;Disabled button&lt;/button&gt;&lt;/p&gt;
-
 </description>
 		<pubDate>Mon, 12 Jan 2015 00:00:00 +0200</pubDate>
-		<link>http://website-templates.github.io/2015/01/12/demo-post-buttons/</link>
-		<guid isPermaLink="true">http://website-templates.github.io/2015/01/12/demo-post-buttons/</guid>
+		<link>http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</link>
+		<guid isPermaLink="true">http://website-templates.github.io/jekyll-inclusion/2015/01/12/demo-post-buttons/</guid>
 		
 		<category>Lorem ipsum</category>
 		
