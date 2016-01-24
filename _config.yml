@@ -12,6 +12,8 @@ keywords: "jekyll theme, jekyll template, responsive jekyll theme"
 baseurl: "/jekyll-inclusion" # the subpath of your site, e.g. /blog/
 url: "http://website-templates.github.io" # the base hostname & protocol for your site
 home-repo: "https://github.com/website-templates/jekyll-inclusion"
+
+# Social services
 twitter_username: orlovmax_im
 github_username:  orlovmax
 # fb_username:
@@ -42,7 +44,7 @@ custom-search-engine_id: "007847994425388688875:2onbkc4tu2y"
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 paginate: 3
-paginate_path: "page-:num/"
+paginate_path: "page/:num/"
 exclude: [
 'node_modules',
 'bower_components',
@@ -59,12 +61,18 @@ destination: _deploy
 
 # Category pages settings
 categories:
+  # category pages url
   url: /category/
+  # category pages slug, ex. page-1 or page2. Number by default
   slug: ''
   layout: category.html
 
 # Tag pages settings
 tags:
+  # tag pages url
   url: /tag/
+  # tag pages slug, ex. page-1 or page2. Number by default
   slug: ''
+  # tag name word delimiter, '_' by defult
+  delimiter: '_'
   layout: tag.html

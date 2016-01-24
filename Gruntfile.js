@@ -6,34 +6,49 @@ module.exports = function(grunt) {
 				main: '_dev',
 				coffee: '<%= dev.main %>/coffee',
 				js: '<%= dev.main %>/js',
-				templates: '<%= dev.main %>/templates',
-				styles: '<%= dev.main %>/styles',
-				css: '<%= dev.main %>/css',
-				html: '<%= dev.main %>/html',
-				img: '<%= dev.main %>/img',
+				jade: '<%= dev.main %>/jade/pages',
+				sass: '<%= dev.main %>/sass',
+				images: '<%= dev.main %>/images',
 				fonts: '<%= dev.main %>/fonts',
 				helpers: '<%= dev.main %>/helpers',
-				ruby: '<%= dev.main %>/ruby',
-				devtools: '<%= dev.main %>/devtools'
+				ruby: '<%= dev.main %>/ruby'
 			},
+			// Publiscation paths
 			publ: {
-				main: '_publ',
-				img: '<%= publ.main %>/img',
-				data: '<%= publ.main %>/data',
-				pages: '<%= publ.main %>/pages'
+				main: '_publ'
 			},
+			// Build paths
 			build: {
 				main: '_build',
-				css: '<%= build.main %>/css',
-				fonts: '<%= build.main %>/fonts',
-				img: '<%= build.main %>/img',
+				html: '<%= build.main %>',
+				css: '<%= build.main %>/static/css',
+				fonts: '<%= build.main %>/static/fonts',
+				images: '<%= build.main %>/static/images',
+				js: '<%= build.main %>/static/js',
 				plugins: '<%= build.main %>/_plugins',
-				data: '<%= build.main %>/_data',
-				js: '<%= build.main %>/js'
+				data: '<%= build.main %>/_data'
 			},
+			// Generated site paths
 			deploy: {
-				main: '_deploy'
-			}
+				main: '_deploy',
+				html: '<%= deploy.main %>',
+				css: '<%= deploy.main %>/static/css',
+				images: '<%= deploy.main %>/static/images',
+				js: '<%= deploy.main %>/static/js'
+			},
+			// By default >1%, last 2 versions, Firefox ESR, Opera 12.1;
+			browserlist: [
+				'> 1%',
+				'last 20 versions',
+				'Opera 12.1',
+				'Explorer > 7',
+				'Safari >= 5'
+			]
+		},
+		loadGruntTasks: {
+			pattern: ['grunt-*', 'main-*'],
+			config: require('./package.json'),
+			scope: 'devDependencies'
 		}
 	});
 };
