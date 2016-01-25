@@ -1,4 +1,4 @@
-//Combine media queries in result *.css files
+// Combine matching media queries into one media query definition
 module.exports = {
 	options: {
 		log: false
@@ -6,9 +6,9 @@ module.exports = {
 	main: {
 		files:[{
 			expand: true,
-			cwd: '<%= build.css %>/',
-			src: ['**/*.css', '!*.min.css'],
-			dest: '<%= build.css %>/'
+			cwd: '<%= deploy.css %>',
+			src: ['*.css', '!*.min.css'],
+			dest: '<%= deploy.css %>'
 		}]
 	}
 }

@@ -1,0 +1,13 @@
+//- Page and post paginator
+mixin paginator_post()
+	+b('nav').paginator
+		+e('ul').list
+			| {% if page.previous.url %}
+			+e('li').item_previous
+				+e.link(href="{{ site.baseurl | append: page.previous.url | replace: '//', '/'}}", title='{{page.previous.title}}') {{site.data.locales.paginator.post_prev}}
+			| {% endif %}
+
+			| {% if page.next.url %}
+			+e('li').item_next
+				+e.link(href="{{ site.baseurl | append: page.next.url | replace: '//', '/'}}", title='{{page.next.title}}') {{site.data.locales.paginator.post_next}}
+			| {% endif %}

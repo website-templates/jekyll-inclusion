@@ -1,0 +1,22 @@
+extends ../../layouts/base
+
+block front-matter
+	:verbatim
+		---
+		color: light
+		---
+
+//- I don't think that default layout is so necessary for jekyll generating
+//- So we can apply it with JADE template engine and minimize count of build steps
+block main-content
+	section.page
+		// Page start
+		+hero_start_page()
+
+		// Page content from *.md
+		#start.container.container_page
+			| {{ content }}
+
+	// Page End
+	+hero_end_social()
+		+social()

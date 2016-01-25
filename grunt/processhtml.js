@@ -3,9 +3,9 @@ module.exports = {
 	dist: {
 		files: [{
 			expand: true,
-			cwd: '<%= deploy.main %>',
+			cwd: '<%= deploy.html %>',
 			src: '**/*.html',
-			dest: '<%= deploy.main %>',
+			dest: '<%= deploy.html %>',
 			ext: '.html'
 		}],
 	}

@@ -1,0 +1,20 @@
+//- Page end section
+mixin hero_end_share()
+	+b('section').hero_small
+		| {% if page.end_blur %}
+		+e('div').bg_blurred(style="background-image: url('{% if page.end_img %}{{ site.baseurl | append: '/' | append: page.end_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.end_img }}{% endif %}')")
+		| {% else %}
+		+e('div').bg(style="background-image: url('{% if page.end_img %}{{ site.baseurl | append: '/' | append: page.end_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.end_img }}{% endif %}')")
+		| {% endif %}
+		.overlay
+			.container
+				+e('h2').title(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+					| {{ site.data.locales.end.title_share }}
+				+e('h3').descr(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+					| {{ site.data.locales.end.descr_share }}
+
+				block
+		| {% if page.end_attribution %}
+		+e('p').attribution(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+			| {{ page.end_attribution }}
+		| {% endif %}

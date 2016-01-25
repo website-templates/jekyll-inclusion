@@ -1,19 +1,34 @@
-// Bust static assets from the cache using content hashing
+// Cache bust static assets using content hashing
 module.exports = {
 	options: {
 		encoding: 'utf8',
 		algorithm: 'md5',
 		length: 16,
-		ignorePatterns: ['ico'],
-		deleteOriginals: true,
-		rename: true
+		ignorePatterns: ['favicon.ico'],
+		// deleteOriginals: true,
+		rename: true,
+		filters: [{
+			// 'img':
+			// function() {
+			// 	return this.attribs['data-src'];
+			// }
+		}]
 	},
-	assets: {
+	markup: {
 		files: [{
 			expand: true,
-        	cwd: '<%= build.main %>',
-        	baseDir: '<%= build.main %>',
-			src: ['**/*.html']
+        	cwd: '<%= build.html %>',
+        	baseDir: '<%= build.html %>',
+			src: ['*.html']
 		}]
+	},
+	styles: {
+		files: [{
+			expand: true,
+			cwd: '<%= build.css %>',
+			baseDir: '<%= build.css %>',
+			src: ['*.css']
+		}]
+
 	}
 }

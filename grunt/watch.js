@@ -1,41 +1,55 @@
 //Watch for changes
 module.exports = {
-	default: {
-		files: ['<%= dev.html %>/**/*.html',
-				'<%= dev.styles %>/*.sass',
-				'<%= dev.coffee %>/**/*.coffee',
-				'<%= dev.css %>/*.css',
-				'<%= dev.js %>/**/*.js',
-				'<%= dev.img %>/**/*.{png,jpg,gif}',
-				'<%= dev.templates %>/pages/**/*.jade',
-				'<%= dev.ruby %>/**/*.rb',
-				'<%= dev.fonts %>/**/*.{eot,svg,ttf,woff}',
-				'<%= dev.helpers %>/**/*.*',
-				'<%= dev.helpers %>/**/.htaccess',
-				'<%= dev.helpers %>/**/CNAME',
-				'<%= publ.data %>/**/**'],
-		tasks: ['default'],
+	dev: {
+		files: [
+			'<%= dev.sass %>/*.{sass,scss}',
+			'<%= dev.coffee %>/**/*.coffee',
+			'<%= dev.js %>/**/*.js',
+			'<%= dev.jade %>/*.jade',
+			'<%= dev.images %>/**/*.*',
+			'<%= dev.fonts %>/**/*.{eot,svg,ttf,otf,woff,woff2}',
+			'<%= dev.helpers %>/**/*.*',
+			'<%= dev.helpers %>/.htaccess',
+			'<%= dev.helpers %>/CNAME',
+			'<%= dev.ruby %>/**/*.rb'
+		],
+		tasks: [
+			'newer:coffee:main',
+			'newer:concat:main',
+			'newer:concat:ie',
+			'newer:concat:vendor',
+			'newer:sass',
+			'newer:jade',
+			'sync:imagesDev',
+			'sync:fontsDev',
+			'sync:helpersDev',
+			'sync:rubyDev',
+			'sync:mainPubl',
+			'shell:jekyllBuild'
+		],
 		options: {
-		  spawn: false
+			spawn: false,
 		}
 	},
 	theme: {
-		files: ['<%= dev.styles %>/*.sass',
-				'<%= dev.coffee %>/**/*.coffee',
-				'<%= dev.css %>/*.css',
-				'<%= dev.js %>/**/*.js',
-				'<%= dev.img %>/**/*.{png,jpg,gif}'],
-		tasks: ['theme'],
+		files: [
+			'<%= dev.sass %>/*.{sass,scss}',
+			'<%= dev.coffee %>/**/*.coffee',
+			'<%= dev.js %>/**/*.js',
+			'<%= dev.images %>/**/*.*',
+			'<%= dev.fonts %>/**/*.{eot,svg,ttf,otf,woff,woff2}'
+		],
+		tasks: [
+			'newer:coffee:main',
+			'newer:concat:main',
+			'newer:concat:ie',
+			'newer:concat:vendor',
+			'newer:sass',
+			'sync:cssTheme',
+			'sync:jsTheme'
+		],
 		options: {
-		  spawn: false
-		}
-	},
-	publish: {
-		files: ['<%= publ.img %>/**/*.{png,jpg,gif}',
-				'<%= publ.pages %>/**/*.*'],
-		tasks: ['publish'],
-		options: {
-		  spawn: false
+			spawn: false,
 		}
 	}
 }

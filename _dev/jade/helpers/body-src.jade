@@ -1,0 +1,8 @@
+mixin body-src()
+	<!-- build:js {{ site.baseurl | append: '/' | append: 'static/js/vendor.min.js' | replace: '//', '/' }} -->
+	script(src="{{ site.baseurl | append: '/' | append: 'static/js/vendor.js' | replace: '//', '/' }}")
+	<!-- /build -->
+
+	<!-- build:js {{ site.baseurl | append: '/' | append: 'static/js/main.min.js' | replace: '//', '/' }} -->
+	script(src="{{ site.baseurl | append: '/' | append: 'static/js/main.js' | replace: '//', '/' }}")
+	<!-- /build -->

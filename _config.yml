@@ -31,8 +31,8 @@ bitbucket_username: orlovmax
 # lang_current: "ua"
 
 # Default src
-start_img: "img/bg/start.jpg"
-end_img: "img/bg/end.jpg"
+start_img: "static/images/bg/start.jpg"
+end_img: "static/images/bg/end.jpg"
 thumb_img: "img/pic.jpg"
 
 disqus-code: "jekyll-inclusion"
@@ -45,15 +45,7 @@ markdown: kramdown
 permalink: /:year/:month/:day/:title/
 paginate: 3
 paginate_path: "page/:num/"
-exclude: [
-'node_modules',
-'bower_components',
-'Gruntfile.js',
-'package.json',
-'bower.json',
-'README.md',
-'Rakefile'
-]
+exclude: []
 incremental: true
 
 source: _build

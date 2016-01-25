@@ -1,0 +1,33 @@
+extends ../layouts/base
+
+block front-matter
+	:verbatim
+		---
+		color: light
+		start_img: "static/images/page/index/meta/start.jpg"
+		end_img: "static/images/page/index/meta/end.jpg"
+		regenerate: true
+		---
+
+//- I don't think that default layout is so necessary for jekyll generating
+//- So we can apply it with JADE template engine and minimize count of build steps
+block main-content
+	section.page
+		// Page start
+		+hero_start_page()
+
+		// Page content
+		#start.container.container_page
+			// Post preview list
+			| {% for post in paginator.posts %}
+			+post-preview()
+				+post-meta_preview()
+			+divider()
+			| {% endfor %}
+
+			// Pagination
+			+paginator_page()
+
+	// Page End
+	+hero_end_social()
+		+social()

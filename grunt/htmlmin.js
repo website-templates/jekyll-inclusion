@@ -7,9 +7,9 @@ module.exports = {
 			minifyCSS: true
 		},
 		files: [ {
-			cwd: '<%= deploy.main %>',
+			cwd: '<%= deploy.html %>',
 			src: '**/*.html',
-			dest: '<%= deploy.main %>',
+			dest: '<%= deploy.html %>',
 			expand: true,
 			ext: '.html'
 		} ]

@@ -1,4 +1,4 @@
-//Compile *.sass files
+// Compile Sass to CSS
 module.exports = {
 	main: {
 		options: {
@@ -7,9 +7,9 @@ module.exports = {
 		},
 		files: [{
 			expand: true,
-			cwd: '<%= dev.styles %>',
-			src: '**/*.{sass,scss}',
-			dest: '<%= dev.css %>',
+			cwd: '<%= dev.sass %>',
+			src: [ '*.{sass,scss}' ],
+			dest: '<%= build.css %>',
 			ext: '.css'
 		}]
 	}

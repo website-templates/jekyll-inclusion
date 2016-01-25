@@ -1,0 +1,25 @@
+//- Page and post paginator
+mixin paginator_taxonomy()
+	| {% if paginator.total_pages > 1 %}
+	+b('nav').paginator
+		+e('ul').list
+			| {% if paginator.previous_page %}
+			| {% if paginator.previous_page == 1 %}
+			+e('li').item_next
+				+e.link(href="{{ site.baseurl | append: page.base | replace: '//', '/' }}") {{site.data.locales.paginator.page_next}}
+			| {% else %}
+			+e('li').item_next
+				+e.link(href="{{  site.baseurl | append: page.base | append: page.slug | append: paginator.previous_page | replace: '//', '/' }}") {{site.data.locales.paginator.page_next}}
+			| {% endif %}
+			| {% endif %}
+
+			| {% if paginator.next_page %}
+			| {% if paginator.next_page == 1 %}
+			+e('li').item_previous
+				+e.link(href="{{ site.baseurl | append: page.base | replace: '//', '/' }}") {{site.data.locales.paginator.page_prev}}
+			| {% else %}
+			+e('li').item_previous
+				+e.link(href="{{ site.baseurl | append: page.base | append: page.slug | append: paginator.next_page | replace: '//', '/' }}") {{site.data.locales.paginator.page_prev}}
+			| {% endif %}
+			| {% endif %}
+	| {% endif %}

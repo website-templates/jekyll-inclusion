@@ -1,0 +1,27 @@
+mixin head-meta()
+	meta(charset="utf-8")
+	meta(http-equiv="X-UA-Compatible", content="IE=edge")
+	meta(name="viewport", content="width=device-width, initial-scale=1")
+
+	title {% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}
+	meta(name="description", content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}")
+	meta(name="keywords", content="{% if page.tags %}{% for tag in page.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ site.keywords }}{% endif %}")
+	link(rel="canonical", href="{{ site.url | append: site.baseurl | append: page.url | replace:'index.html','' }}")
+
+	// Opengraph
+	meta(property="og:type", content="website")
+	meta(property="og:title", content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}")
+	meta(property="og:description", content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}")
+	meta(property="og:image", content="{% if page.thumb_img %}{{ site.baseurl | append: '/' | append: page.thumb_img | replace: '//', '/' | prepend: site.url }}{% else %}{{ site.baseurl | append: '/' | append: site.thumb_img | replace: '//', '/' | prepend: site.url }}{% endif %}")
+	meta(property="og:url", content="{{ site.baseurl | append: page.url | replace:'index.html','' | replace: '//', '/' | prepend: site.url }}")
+
+	// TwitterCard
+	| {% if site.twitter_username %}
+	meta(name="twitter:card", content="summary")
+	meta(name="twitter:title", content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}")
+	meta(name="twitter:description", content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}")
+	meta(name="twitter:image:src", content="{% if page.thumb_img %}{{ site.baseurl | append: '/' | append: page.thumb_img | replace: '//', '/' | prepend: site.url }}{% else %}{{ site.baseurl | append: '/' | append: site.thumb_img | replace: '//', '/' | prepend: site.url }}{% endif %}")
+	meta(name="twitter:creator", content="{{ site.twitter_username }}")
+	meta(name="twitter:site", content="{{ site.twitter_username }}")
+	meta(name="twitter:url", content="{{ site.baseurl | append: page.url | replace:'index.html','' | replace: '//', '/' | prepend: site.url }}")
+	| {% endif %}

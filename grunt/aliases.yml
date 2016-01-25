@@ -1,91 +1,111 @@
-# Default task watch and process changes from dev and blogging folders
-default:
+start:
+    description: 'Move bower dependencies to main dev folders'
     tasks:
-        - 'newer:coffee'
-        - 'newer:concat'
-        - 'newer:sass'
-        - 'jade'
-        - 'newer:imagemin'
-        - 'sync:fonts'
-        - 'sync:js'
-        - 'sync:livejs'
-        - 'sync:css'
-        - 'sync:html'
-        - 'sync:helpers'
-        - 'sync:ruby'
-        - 'sync:data'
-        - 'sync:publ'
-        - 'shell:jekyllBuild'
-        - 'watch:default'
+        - 'shell:bower'
+        - 'bower:ie'
+        - 'bower:vendor'
 
-# Process bower dependencies
-bower-dev:
-    tasks:
-        - 'bower_concat'
-        # - 'clean:bower'
 
-# Rebuild project from scratch using dev and blogging folders
-regen:
+dev:
+    description: 'Dev task with static server'
     tasks:
-        - 'coffee'
-        - 'concat'
+        - 'coffee:main'
+        - 'concat:main'
+        - 'concat:ie'
+        - 'concat:vendor'
         - 'sass'
         - 'jade'
-        - 'newer:imagemin'
-        - 'sync:fonts'
-        - 'sync:js'
-        - 'sync:livejs'
-        - 'sync:css'
-        - 'sync:html'
-        - 'sync:helpers'
-        - 'sync:ruby'
-        - 'sync:data'
-        - 'sync:publ'
-        - 'clean:build'
+        - 'sync:imagesDev'
+        - 'sync:fontsDev'
+        - 'sync:helpersDev'
+        - 'sync:rubyDev'
+        - 'sync:mainPubl'
         - 'shell:jekyllBuild'
+        - 'browserSync:dev'
+        - 'watch:dev'
 
-# Task for theme style fixes (only styles or scripting).
-# Run this task after regen task to update src paths for styles and scripts
-theme:
-    tasks:
-        - 'newer:sass'
-        - 'newer:coffee'
-        - 'newer:concat'
-        - 'sync:jekyllStyles'
-        - 'sync:jekyllScripts'
-        - 'watch:theme'
 
-# Generate jekyll website and prepares it for deploy
 build:
+    description: 'Build task'
     tasks:
+        - 'shell:jekyllBuild'
+        # - 'imagemin'
         - 'cmq'
         - 'autoprefixer'
+        - 'csscomb'
         - 'uglify'
         - 'csso'
-        - 'clean:debug'
-        - 'shell:jekyllBuild'
         - 'processhtml'
         - 'htmlmin'
-        # - 'cacheBust'
+        - 'clean:dev'
+        - 'browserSync:test'
 
-# Publishing task - copy posts, pages and their images to src folder
-# for further regeneration
-publish:
+
+rebuild:
+    description: 'Regenerate and build project by running all tasks'
     tasks:
-        - 'newer:imagemin'
-        - 'sync:publ'
-        - 'sync:data'
+        - 'coffee:main'
+        - 'concat:main'
+        - 'concat:ie'
+        - 'concat:vendor'
+        - 'sass'
+        - 'jade'
+        - 'sync:imagesDev'
+        - 'sync:fontsDev'
+        - 'sync:helpersDev'
+        - 'sync:rubyDev'
+        - 'sync:mainPubl'
         - 'shell:jekyllBuild'
+        # - 'imagemin'
+        - 'cmq'
+        - 'autoprefixer'
+        - 'csscomb'
+        - 'uglify'
+        - 'csso'
         - 'processhtml'
         - 'htmlmin'
-        # - 'watch:publish'
+        - 'clean:dev'
+        - 'browserSync:test'
 
-# Deploy dev and build versions
+
 deploy:
+    description: 'Deploy project by running Rakefile: git or ftp push'
     tasks:
-        - 'shell:rakeDeploy'
+        - 'shell:deploy'
 
-# Deploy only generated site
-jekyll-deploy:
+
+server:
+    description: 'Run server without watching for changes'
     tasks:
-        - 'shell:rakeJekyllDeploy'
+        - 'browserSync:test'
+
+
+theme:
+    description: 'Theme styles and scripts fixing'
+    tasks:
+        - 'coffee:main'
+        - 'concat:main'
+        - 'concat:ie'
+        - 'concat:vendor'
+        - 'sass'
+        - 'sync:cssTheme'
+        - 'sync:jsTheme'
+        - 'browserSync:theme'
+        - 'watch:theme'
+
+
+template:
+    description: 'Theme templates fixing'
+    tasks:
+        - 'jade'
+        - 'shell:jekyllBuild'
+
+
+publish:
+    description: 'Copy posts, pages and images to uild folder for Jekyll build'
+    tasks:
+        - 'sync:mainPubl'
+        - 'shell:jekyllBuild'
+        - 'processhtml'
+        - 'htmlmin'
+        - 'clean:dev'

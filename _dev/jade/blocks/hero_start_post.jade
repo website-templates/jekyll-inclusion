@@ -1,0 +1,21 @@
+//- Post header
+mixin hero_start_post()
+	+b('header').hero_big._left
+		| {% if page.start_blur %}
+		+e('div').bg_blurred(style="background-image: url('{% if page.start_img %}{{ site.baseurl | append: '/' | append: page.start_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.start_img }}{% endif %}')")
+		| {% else %}
+		+e('div').bg(style="background-image: url('{% if page.start_img %}{{ site.baseurl | append: '/' | append: page.start_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.start_img }}{% endif %}')")
+		| {% endif %}
+		.overlay
+			.container
+				+e('h1').title(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+					| {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+				+e('h2').descr(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+					| {% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
+				+e.icon.js-anchor.icon.icon_down.icon_light(href='#start', title='{{ site.data.locales.scroll-next }}') {{ site.data.locales.scroll-next }}
+
+				block
+		| {% if page.start_attribution %}
+		+e('p').attribution(style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}")
+			| {{ page.start_attribution }}
+		| {% endif %}

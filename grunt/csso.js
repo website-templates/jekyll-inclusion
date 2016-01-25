@@ -1,4 +1,4 @@
-//Minify and organize *.css files
+// Minify CSS files with CSSO
 module.exports = {
 	options: {
 		keepSpecialComments: '*',
@@ -7,9 +7,9 @@ module.exports = {
 	main: {
 		files:[{
 			expand: true,
-			cwd: '<%= build.css %>/',
+			cwd: '<%= deploy.css %>',
 			src: ['*.css', '!*.min.css'],
-			dest: '<%= build.css %>/',
+			dest: '<%= deploy.css %>',
 			ext: '.min.css'
 		}]
 	}

@@ -4,12 +4,11 @@ module.exports = {
 	jekyllBuild: {
 		command: 'jekyll build'
 	},
-	// Deploy only jekyll website
-	rakeJekyllDeploy: {
-		command: 'rake jekyllDeploy'
-	},
-	// Deploy dev version and jekyll website
-	rakeDeploy: {
+	// Deploy ekyll website
+	deploy: {
 		command: 'rake deploy'
+	},
+	bower: {
+		command: 'bower install'
 	}
 }

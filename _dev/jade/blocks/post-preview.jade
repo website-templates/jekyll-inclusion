@@ -1,0 +1,14 @@
+//- Post preview item
+mixin post-preview()
+	+b('article').post-preview
+		+e.thumbnail.js-thumb
+			+e.image.js-lazy.js-thumb-img(src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", data-src="{{ site.baseurl | append: '/' | append: post.thumb_img | replace: '//', '/' }}", alt="{{ post.title }}")
+		+e.link(href="{{ site.baseurl | append: post.url | replace: '//', '/' }}")
+			+e('h3').title
+				| {{ post.title }}
+			| {% if post.description %}
+			+e('h4').descr
+				| {{ post.description }}
+			| {% endif %}
+
+		block

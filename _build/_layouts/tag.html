@@ -1,8 +1,9 @@
 ---
-start_img: "img/page/tag/meta/start.jpg"
-end_img: "img/page/tag/meta/end.jpg"
+start_img: 'static/images/pages/tag/meta/start.jpg'
+start_blur: true
+end_img: 'static/images/pages/tag/meta/end.jpg'
 color: light
-type: taxonomy
+regenerate: true
 ---
 {% strip %}<!DOCTYPE html>
 <html lang="{{ site.lang }}">
@@ -10,17 +11,18 @@ type: taxonomy
     <!-- Meta information-->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="keywords" content="{% if page.tags %}{% for tag in page.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}{{ site.keywords }}{% endif %}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="{{ site.url | append: site.baseurl | append: page.url | replace:'index.html','' }}"><!--Opengraph-->
+    <link rel="canonical" href="{{ site.url | append: site.baseurl | append: page.url | replace:'index.html','' }}">
+    <!-- Opengraph-->
     <meta property="og:type" content="website">
     <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
     <meta property="og:description" content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:image" content="{% if page.thumb_img %}{{ site.baseurl | append: '/' | append: page.thumb_img | replace: '//', '/' | prepend: site.url }}{% else %}{{ site.baseurl | append: '/' | append: site.thumb_img | replace: '//', '/' | prepend: site.url }}{% endif %}">
-    <meta property="og:url" content="{{ site.baseurl | append: page.url | replace:'index.html','' | replace: '//', '/' | prepend: site.url }}"><!--TwitterCard-->
-    {% if site.twitter_username %}
+    <meta property="og:url" content="{{ site.baseurl | append: page.url | replace:'index.html','' | replace: '//', '/' | prepend: site.url }}">
+    <!-- TwitterCard-->{% if site.twitter_username %}
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
     <meta name="twitter:description" content="{% if page.subtitle %}{{ page.subtitle }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
@@ -30,24 +32,19 @@ type: taxonomy
     <meta name="twitter:url" content="{{ site.baseurl | append: page.url | replace:'index.html','' | replace: '//', '/' | prepend: site.url }}">{% endif %}
     <!-- Head external resources-->
     <link rel="shortcut icon" href="{{ site.baseurl | append: '/' | append: 'favicon.ico' | replace: '//', '/' }}">
-    <link rel="shortcut icon" href="{{ site.baseurl | append: '/' | append: 'img/ico/favicon.png' | replace: '//', '/' }}" type="image/x-icon">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl | append: '/' | append: 'img/ico/apple-touch-icon-144x144-precomposed.png' | replace: '//', '/' }}">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl | append: '/' | append: 'img/ico/apple-touch-icon-114x114-precomposed.png' | replace: '//', '/' }}">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl | append: '/' | append: 'img/ico/apple-touch-icon-72x72-precomposed.png' | replace: '//', '/' }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl | append: '/' | append: 'img/ico/apple-touch-icon-precomposed.png' | replace: '//', '/' }}">
+    <link rel="shortcut icon" href="{{ site.baseurl | append: '/' | append: 'static/images/icons/favicon.png' | replace: '//', '/' }}" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl | append: '/' | append: 'static/images/icons/apple-touch-icon-144x144-precomposed.png' | replace: '//', '/' }}">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl | append: '/' | append: 'static/images/icons/apple-touch-icon-114x114-precomposed.png' | replace: '//', '/' }}">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl | append: '/' | append: 'static/images/icons/apple-touch-icon-72x72-precomposed.png' | replace: '//', '/' }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl | append: '/' | append: 'static/images/icons/apple-touch-icon-precomposed.png' | replace: '//', '/' }}">
     <!-- OpenSans and OpenSans Condensed from Google cdn-->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800|Open+Sans+Condensed:300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
-    <!-- Main stylesheet--><!-- build:css {{ site.baseurl | append: '/' | append: 'css/screen.min.css' | replace: '//', '/' }} -->
-    <link rel="stylesheet" href="{{ site.baseurl | append: '/' | append: 'css/screen.css' | replace: '//', '/' }}"><!-- /build -->
-    <!-- Browser update screen styles--><!-- build:remove -->
-    <!--[if lt IE 8]><link rel="stylesheet" href="{{ site.baseurl | append: '/' | append: 'css/ie-out_light.css' | replace: '//', '/' }}"><![endif]-->
-    <!-- /build -->
-    <!--[if lt IE 8]><link rel="stylesheet" href="{{ site.baseurl | append: '/' | append: 'css/ie-out_light.min.css' | replace: '//', '/' }}"><![endif]-->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800%7COpen+Sans+Condensed:300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <!-- Main stylesheet--><!-- build:css {{ site.baseurl | append: '/' | append: 'static/css/screen.min.css' | replace: '//', '/' }} -->
+    <link rel="stylesheet" href="{{ site.baseurl | append: '/' | append: 'static/css/screen.css' | replace: '//', '/' }}"><!-- /build -->
     <!-- CSS3 media queries and HTML5 tags support for old IE--><!--[if lt IE 9]><script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script><script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script><![endif]-->
-    <!-- Or you can use these two scripts from local folder, dont forget for conditional comments for old IE
-    <script src="{{ site.baseurl | append: '/' | append: 'js/ie/ie.min.js' | replace: '//', '/' }}"></script> -->
-    <!-- Page refresh script for live coding--><!-- build:remove -->
-    <script src="{{ site.baseurl | append: '/' | append: 'js/live.js' | replace: '//', '/' }}"></script><!-- /build -->
+    <!-- Or you can use these two scripts from local folder, dont forget for conditional comments for old IE {{ site.baseurl | append: '/' | append: 'static/js/ie/ie.min.js' | replace: '//', '/' }} -->
+    <!-- Helper dev js-->
+    <!-- THIS IS DEV HELPER. USE BUILD TASK TO REMOVE IT FOR PRODUCTION.-->
   </head>
   <body>
     <!-- Main Header-->
@@ -111,26 +108,26 @@ type: taxonomy
       </div>
     </header>
     <!-- Main content-->
-    <main role="main" class="main">
+    <main class="main">
       <section class="page">
-        <!-- Page home-->
-        <header class="page-header">{% if page.start_blur %}
-          <div style="background-image: url('{% if page.start_img %}{{ site.baseurl | append: '/' | append: page.start_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.start_img }}{% endif %}')" class="page-header__bg page-header__bg_blurred">
+        <!-- Page start-->
+        <header class="hero hero_big">{% if page.start_blur %}
+          <div style="background-image: url('{% if page.start_img %}{{ site.baseurl | append: '/' | append: page.start_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.start_img }}{% endif %}')" class="hero__bg hero__bg_blurred">
           </div>{% else %}
-          <div style="background-image: url('{% if page.start_img %}{{ site.baseurl | append: '/' | append: page.start_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.start_img }}{% endif %}')" class="page-header__bg">
+          <div style="background-image: url('{% if page.start_img %}{{ site.baseurl | append: '/' | append: page.start_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.start_img }}{% endif %}')" class="hero__bg">
           </div>{% endif %}
           <div class="overlay">
             <div class="container">
-              <h1 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+              <h1 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="hero__title">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
               </h1>
-              <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__descr">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
-              </h2><a href="#start" title="{{ site.data.locales.scroll-next }}" class="icon icon_down icon_light js-anchor page-header__icon">{{ site.data.locales.scroll-next }}</a>
+              <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="hero__descr">{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}
+              </h2><a href="#start" title="{{ site.data.locales.scroll-next }}" class="hero__icon icon icon_down icon_light js-anchor">{{ site.data.locales.scroll-next }}</a>
             </div>
           </div>{% if page.start_attribution %}
-          <p style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="page-header__attribution">{{ page.start_attribution }}
+          <p style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="hero__attribution">{{ page.start_attribution }}
           </p>{% endif %}
         </header>
-        <!-- Page content from *.md-->
+        <!-- Page content-->
         <div id="start" class="container container_page">
           <!-- Post preview list-->{% for post in paginator.posts %}
           <article class="post-preview">
@@ -139,7 +136,7 @@ type: taxonomy
               <h3 class="post-preview__title">{{ post.title }}
               </h3>{% if post.description %}
               <h4 class="post-preview__descr">{{ post.description }}
-              </h4>{% endif %}</a>{% if page.type == 'page' or page.type == 'taxonomy' %}
+              </h4>{% endif %}</a>
             <div class="post-meta post-meta_preview">
               <p class="post-meta__autorship post-meta__autorship_preview">{% if post.translator %}
                 {{ site.data.locales.meta.author }}:&nbsp;<span class="post-meta__author post-meta__author_preview">{{ post.author }}</span>, {{ site.data.locales.meta.translator }}:&nbsp;<span class="post-meta__translator post-meta__translator_preview">{{ post.translator }}</span><br>{{ site.data.locales.meta.source }}:&nbsp;<a href="{{ post.source-link }}" class="post-meta__source post-meta__source_preview">{{ post.source }}</a>{% else %}
@@ -157,43 +154,10 @@ type: taxonomy
                 {% for cat in post.category %}<a href="{{ site.baseurl | append: site.categories.url | append: cat | append: '/' | replace:' ','-' | replace: '//', '/' }}" class="post-meta__category post-meta__category_preview">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
                 {% endfor %}
               </p>{% endif %}
-            </div>{% elsif page.type == 'post' %}
-            <div class="post-meta">
-              <p class="post-meta__autorship">{% if page.translator %}
-                {{ site.data.locales.meta.author }}:&nbsp;<span class="post-meta__author">{{ page.author }}</span>, {{ site.data.locales.meta.translator }}:&nbsp;<span class="post-meta__translator">{{ page.translator }}</span><br>{{ site.data.locales.meta.source }}:&nbsp;<a href="{{ page.source-link }}" class="post-meta__source">{{ page.source }}</a>{% else %}
-                {{ site.data.locales.meta.author }}:&nbsp;<span class="post-meta__author">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</span>{% endif %}, {{ site.data.locales.meta.date }}:&nbsp;
-                <time datetime="{{ page.date | date: '%Y-%m-%d' }}" class="post-meta__date">{{ page.date | localize: "%-d %B %Y" }}
-                </time>
-              </p>{% if page.tags %}
-              <p class="post-meta__tags">
-                {{ site.data.locales.meta.tags }}:&nbsp;
-                {% for tag in page.tags %}<a href="{{ site.baseurl | append: site.tags.url | append: tag | append: '/' | replace:' ','-' | replace: '//', '/' }}" class="post-meta__tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
-                {% endfor %}
-              </p>{% endif %}{% if page.category %}
-              <p class="post-meta__categories">
-                {{ site.data.locales.meta.category }}:&nbsp;
-                {% for cat in page.category %}<a href="{{ site.baseurl | append: site.categories.url | append: cat | append: '/' | replace:' ','-' | replace: '//', '/' }}" class="post-meta__category">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
-                {% endfor %}
-              </p>{% endif %}
             </div>
-            <hr class="divider">{% endif %}
           </article>
           <hr class="divider">{% endfor %}
-          <!-- Pagination-->
-          {% if page.type == 'page' %}
-          {% if paginator.total_pages > 1 %}
-          <nav class="paginator">
-            <ul class="paginator__list">{% if paginator.previous_page %}
-              <li class="paginator__item paginator__item_next"><a href="{{ site.baseurl | append: paginator.previous_page_path | replace: '//', '/' }}" class="paginator__link">{{site.data.locales.paginator.page_next}}</a>
-              </li>{% endif %}
-              {% if paginator.next_page %}
-              <li class="paginator__item paginator__item_previous"><a href="{{ site.baseurl | append: paginator.next_page_path | replace: '//', '/' }}" class="paginator__link">{{site.data.locales.paginator.page_prev}}</a>
-              </li>{% endif %}
-            </ul>
-          </nav>{% endif %}
-          {% endif %}
-          {% if page.type == 'taxonomy' %}
-          {% if paginator.total_pages > 1 %}
+          <!-- Pagination-->{% if paginator.total_pages > 1 %}
           <nav class="paginator">
             <ul class="paginator__list">
               {% if paginator.previous_page %}
@@ -212,30 +176,19 @@ type: taxonomy
               {% endif %}
             </ul>
           </nav>{% endif %}
-          {% endif %}
-          {% if page.type == 'post' %}
-          <nav class="paginator">
-            <ul class="paginator__list">{% if page.previous.url %}
-              <li class="paginator__item paginator__item_previous"><a href="{{ site.baseurl | append: page.previous.url | replace: '//', '/'}}" title="{{page.previous.title}}" class="paginator__link">{{site.data.locales.paginator.post_prev}}</a>
-              </li>{% endif %}
-              {% if page.next.url %}
-              <li class="paginator__item paginator__item_next"><a href="{{ site.baseurl | append: page.next.url | replace: '//', '/'}}" title="{{page.next.title}}" class="paginator__link">{{site.data.locales.paginator.post_next}}</a>
-              </li>{% endif %}
-            </ul>
-          </nav>{% endif %}
         </div>
       </section>
       <!-- Page End-->
-      <section class="end">{% if page.end_blur %}
-        <div style="background-image: url('{% if page.end_img %}{{ site.baseurl | append: '/' | append: page.end_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.end_img }}{% endif %}')" class="end__bg end__bg_blurred">
+      <section class="hero hero_small">{% if page.end_blur %}
+        <div style="background-image: url('{% if page.end_img %}{{ site.baseurl | append: '/' | append: page.end_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.end_img }}{% endif %}')" class="hero__bg hero__bg_blurred">
         </div>{% else %}
-        <div style="background-image: url('{% if page.end_img %}{{ site.baseurl | append: '/' | append: page.end_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.end_img }}{% endif %}')" class="end__bg">
+        <div style="background-image: url('{% if page.end_img %}{{ site.baseurl | append: '/' | append: page.end_img | replace: '//', '/' }}{% else %}{{ site.baseurl | append: '/' | append: site.end_img }}{% endif %}')" class="hero__bg">
         </div>{% endif %}
         <div class="overlay">
           <div class="container">
-            <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__title">{{ site.data.locales.end.title_social }}
+            <h2 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="hero__title">{{ site.data.locales.end.title_social }}
             </h2>
-            <h3 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__descr">{{ site.data.locales.end.descr_social }}
+            <h3 style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="hero__descr">{{ site.data.locales.end.descr_social }}
             </h3>
             <ul class="social">
               <li class="social__item"><a href="{{ '/feed.xml' | prepend: site.baseurl }}" title="{{ site.data.locales.social.rss }}" class="icon icon_light icon_rss social__link">{{ site.data.locales.social.rss }}</a>
@@ -269,7 +222,7 @@ type: taxonomy
             </ul>
           </div>
         </div>{% if page.end_attribution %}
-        <p style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="end__attribution">{{ page.end_attribution }}
+        <p style="{% if page.color == 'dark' %}color: #2b2b2b{% elsif page.color == 'light' %}color: #efefef{% else %}{{ page.color }}{% endif %}" class="hero__attribution">{{ page.end_attribution }}
         </p>{% endif %}
       </section>
     </main>
@@ -282,17 +235,11 @@ type: taxonomy
         </p>
       </div>
     </footer>
-    <!-- Browser update screen-->
-    {% if site.lang == 'en' %}
-    <!--[if lt IE 8]><div class="browser-msg"><h2 class="browser-msg__title">Houston we've had a problem</h2><p class="browser-msg__info">It looks like you’re using an insecure version of Internet Explorer.<br>Using an outdated browser makes your computer unsafe.</p><h3 class="browser-msg__sub">For the best experience on the web, please update your browser.</h3><ul class="browser-msg__list"><li class="browser-msg__item"><a href="http://www.google.com/chrome" title="Google Chrome"><span class="browser-item__img chrome"></span><h2 class="browser-item__title">Google Chrome</h2><p class="browser-item__descr">Built for the modern web and designed to be fast in every possible way.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.firefox.com/" title="Mozilla Firefox"><span class="browser-item__img firefox"></span><h2 class="browser-item__title">Mozilla Firefox</h2><p class="browser-item__descr">Committed to you, your privacy and an open Web.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.apple.com/safari/" title="Apple Safari"><span class="browser-item__img safari"></span><h2 class="browser-item__title">Safari</h2><p class="browser-item__descr">The smartest way to surf. Wait less and browse more.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://www.opera.com/" title="Opera"><span class="browser-item__img opera"></span><h2 class="browser-item__title">Opera</h2><p class="browser-item__descr">Made to discover. Get a better experience.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer"><span class="browser-item__img ie"></span><h2 class="browser-item__title">Internet Explorer</h2><p class="browser-item__descr">Fast and fluid. Stay safer as you browse.</p><p class="browser-item__note">Visit official website for more info</p></a></li></ul><p class="browser-msg__info">Thank you :)</p></div><![endif]-->
-    {% elsif site.lang == 'uk' %}
-    <!--[if lt IE 8]><div class="browser-msg"><h2 class="browser-msg__title">Х'юстон у нас проблема</h2><p class="browser-msg__info">Схоже на те, що ви використовуєте ненадійну версію Інтернет Експлорера.<br>Використання застарілих браузерів робить вашу систему вразливою.</p><h3 class="browser-msg__sub">Для більш зручного і безпечного користування вебом, будь-ласка оновіть ваш браузер.</h3><ul class="browser-msg__list"><li class="browser-msg__item"><a href="http://www.google.com/chrome" title="Google Chrome"><span class="browser-item__img chrome"></span><h2 class="browser-item__title">Google Chrome</h2><p class="browser-item__descr">Built for the modern web and designed to be fast in every possible way.</p><p class="browser-item__note">Відвідати офіційний сайт щоб дізнатись більше</p></a></li><li class="browser-msg__item"><a href="http://www.firefox.com/" title="Mozilla Firefox"><span class="browser-item__img firefox"></span><h2 class="browser-item__title">Mozilla Firefox</h2><p class="browser-item__descr">Committed to you, your privacy and an open Web.</p><p class="browser-item__note">Відвідати офіційний сайт щоб дізнатись більше</p></a></li><li class="browser-msg__item"><a href="http://www.apple.com/safari/" title="Apple Safari"><span class="browser-item__img safari"></span><h2 class="browser-item__title">Safari</h2><p class="browser-item__descr">The smartest way to surf. Wait less and browse more.</p><p class="browser-item__note">Відвідати офіційний сайт щоб дізнатись більше</p></a></li><li class="browser-msg__item"><a href="http://www.opera.com/" title="Opera"><span class="browser-item__img opera"></span><h2 class="browser-item__title">Opera</h2><p class="browser-item__descr">Made to discover. Get a better experience.</p><p class="browser-item__note">Відвідати офіційний сайт щоб дізнатись більше</p></a></li><li class="browser-msg__item"><a href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer"><span class="browser-item__img ie"></span><h2 class="browser-item__title">Internet Explorer</h2><p class="browser-item__descr">Fast and fluid. Stay safer as you browse.</p><p class="browser-item__note">Відвідати офіційний сайт щоб дізнатись більше</p></a></li></ul><p class="browser-msg__info">Дякую за розуміння :)</p></div><![endif]-->
-    {% elsif site.lang == 'ru' %}
-    <!--[if lt IE 8]><div class="browser-msg"><h2 class="browser-msg__title">Хьюстон у нас проблема</h2><p class="browser-msg__info">Похоже, что вы используете ненадежную версию Интернет Эксплорера.<br>Использование устаревших браузеров делает вашу систему уязвимой.</p><h3 class="browser-msg__sub">Для более удобного и безопасного использования веба, пожалуйста обновите ваш браузер.</h3><ul class="browser-msg__list"><li class="browser-msg__item"><a href="http://www.google.com/chrome" title="Google Chrome"><span class="browser-item__img chrome"></span><h2 class="browser-item__title">Google Chrome</h2><p class="browser-item__descr">Built for the modern web and designed to be fast in every possible way.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.firefox.com/" title="Mozilla Firefox"><span class="browser-item__img firefox"></span><h2 class="browser-item__title">Mozilla Firefox</h2><p class="browser-item__descr">Committed to you, your privacy and an open Web.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.apple.com/safari/" title="Apple Safari"><span class="browser-item__img safari"></span><h2 class="browser-item__title">Safari</h2><p class="browser-item__descr">The smartest way to surf. Wait less and browse more.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://www.opera.com/" title="Opera"><span class="browser-item__img opera"></span><h2 class="browser-item__title">Opera</h2><p class="browser-item__descr">Made to discover. Get a better experience.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li><li class="browser-msg__item"><a href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer"><span class="browser-item__img ie"></span><h2 class="browser-item__title">Internet Explorer</h2><p class="browser-item__descr">Fast and fluid. Stay safer as you browse.</p><p class="browser-item__note">Посетить официальный сайт чтоб узнать больше</p></a></li></ul><p class="browser-msg__info">Спасибо за понимание :)</p></div><![endif]-->
-    {% endif %}
-    <!-- Body external resources--><!-- build:js {{ site.baseurl | append: '/' | append: '/js/vendor/vendor.min.js' | replace: '//', '/' }} -->
-    <script src="{{ site.baseurl | append: '/' | append: '/js/vendor/vendor.js' | replace: '//', '/' }}"></script><!-- /build -->
-    <!-- build:js {{ site.baseurl | append: '/' | append: '/js/assembled.min.js' | replace: '//', '/' }} -->
-    <script src="{{ site.baseurl | append: '/' | append: '/js/assembled.js' | replace: '//', '/' }}"></script><!-- /build -->
+    <!-- Browser update screen--><!--[if lt IE 8 ]>
+    <style>html,body{position:relative!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;overflow:hidden!important}.browser-msg{position:fixed;width:100%;height:100%;top:0;left:0;right:0;bottom:0;z-index:99999;background-color:#ecf0f1;overflow-x:hidden;overflow-y:auto;font-family:Tahoma,Verdana,Arial,sans-serif;text-align:center}.browser-msg__title{margin:20px 0 30px 20px;font-family:Tahoma,Verdana,Arial,sans-serif;font-size:60px;font-weight:lighter;color:#4a4a4f;text-align:center}.browser-msg__info{margin:10px 20px;font-family:Georgia,Times,"Times New Roman",serif;font-size:24px;line-height:1.2;color:#7b7b84;text-align:center}.browser-msg__sub{margin:10px 20px;font-family:Tahoma,Verdana,Arial,sans-serif;font-size:30px;font-weight:lighter;color:#4a4a4f;text-align:center}.browser-msg__list{display:block;margin:40px auto 20px;text-align:center}.browser-msg__item{display:inline-block;*display:inline;zoom:1;width:180px;height:340px;padding:10px;margin:0 30px 30px 0;border:1px solid #7b7b84;vertical-align:top;cursor:pointer}.browser-msg__item:hover{background-color:#fbfcfc}.browser-item__link{display:block;position:relative;width:100%;height:100%;border:none;color:#3498db;text-decoration:none;white-space:normal}.browser-item__link:hover{text-decoration:none}.browser-item__img{display:inline-block;*display:inline;zoom:1;width:125px;height:130px;background-image:url("/images/browsers.png");cursor:pointer;text-align:center}.browser-item__img.chrome{background-position:0 0}.browser-item__img.firefox{background-position:-125px 0}.browser-item__img.safari{background-position:-250px 0}.browser-item__img.opera{background-position:-375px 0}.browser-item__img.ie{background-position:-500px 0}.browser-item__title{margin:5px 0 10px;font-family:Tahoma,Verdana,Arial,sans-serif;font-size:20px;text-align:center;color:#3498db}.browser-item__descr{font-family:Tahoma,Verdana,Arial,sans-serif;font-size:15px;line-height:1.2;color:#7b7b84;font-style:italic;text-align:left}.browser-item__note{position:absolute;width:100%;left:50%;margin-left:-50%;bottom:0;font-family:Tahoma,Verdana,Arial,sans-serif;font-size:16px;line-height:1.2;color:#3498db;cursor:pointer;text-align:center}</style><div class="browser-msg"><h2 class="browser-msg__title">Houston we've had a problem</h2><p class="browser-msg__info">It looks like you’re using an insecure version of Internet Explorer.<br>Using an outdated browser makes your computer unsafe.</p><h3 class="browser-msg__sub">For the best experience on the web, please update your browser.</h3><ul class="browser-msg__list"><li class="browser-msg__item"><a class="browser-item__link" href="http://www.google.com/chrome" title="Google Chrome"><span class="browser-item__img chrome"></span><h2 class="browser-item__title">Google Chrome</h2><p class="browser-item__descr">Built for the modern web and designed to be fast in every possible way.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a class="browser-item__link" href="http://www.firefox.com/" title="Mozilla Firefox"><span class="browser-item__img firefox"></span><h2 class="browser-item__title">Mozilla Firefox</h2><p class="browser-item__descr">Committed to you, your privacy and an open Web.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a class="browser-item__link" href="http://www.apple.com/safari/" title="Apple Safari"><span class="browser-item__img safari"></span><h2 class="browser-item__title">Safari</h2><p class="browser-item__descr">The smartest way to surf. Wait less and browse more.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a class="browser-item__link" href="http://www.opera.com/" title="Opera"><span class="browser-item__img opera"></span><h2 class="browser-item__title">Opera</h2><p class="browser-item__descr">Made to discover. Get a better experience.</p><p class="browser-item__note">Visit official website for more info</p></a></li><li class="browser-msg__item"><a class="browser-item__link" href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer"><span class="browser-item__img ie"></span><h2 class="browser-item__title">Internet Explorer</h2><p class="browser-item__descr">Fast and fluid. Stay safer as you browse.</p><p class="browser-item__note">Visit official website for more info</p></a></li></ul><p class="browser-msg__info">Thank you :)</p></div><![endif]-->
+    <!-- Body external resources--><!-- build:js {{ site.baseurl | append: '/' | append: 'static/js/vendor.min.js' | replace: '//', '/' }} -->
+    <script src="{{ site.baseurl | append: '/' | append: 'static/js/vendor.js' | replace: '//', '/' }}"></script><!-- /build -->
+    <!-- build:js {{ site.baseurl | append: '/' | append: 'static/js/main.min.js' | replace: '//', '/' }} -->
+    <script src="{{ site.baseurl | append: '/' | append: 'static/js/main.js' | replace: '//', '/' }}"></script><!-- /build -->
   </body>
 </html>{% endstrip %}

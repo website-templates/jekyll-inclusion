@@ -1,0 +1,44 @@
+//- Meta information: authorship, publication date, tags, category
+mixin post-meta()
+	+b.post-meta
+		+e('p').autorship
+
+			//- Check if post is translation and if so - use extended autorsip info
+			| {% if page.translator %}
+			| {{ site.data.locales.meta.author }}:&nbsp;
+			+e.author {{ page.author }}
+			| , {{ site.data.locales.meta.translator }}:&nbsp;
+			+e.translator {{ page.translator }}
+			br
+			| {{ site.data.locales.meta.source }}:&nbsp;
+			+e.source(href="{{ page.source-link }}") {{ page.source }}
+
+			//- Else use short autorsip info
+			| {% else %}
+			| {{ site.data.locales.meta.author }}:&nbsp;
+			+e.author {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}
+			| {% endif %}
+
+			//- Publication date
+			| , {{ site.data.locales.meta.date }}:&nbsp;
+			+e('time').date(datetime="{{ page.date | date: '%Y-%m-%d' }}") {{ page.date | localize: "%-d %B %Y" }}
+
+		//- Checking for post tags and show them
+		| {% if page.tags %}
+		+e('p').tags
+			| {{ site.data.locales.meta.tags }}:&nbsp;
+			| {% for tag in page.tags %}
+			+e.tag(href="{{ site.baseurl | append: site.tags.url | append: tag | append: '/' | replace:' ','-' | replace: '//', '/' }}") {{ tag }}
+			| {% unless forloop.last %}, {% endunless %}
+			| {% endfor %}
+		| {% endif %}
+
+		//- Checking for post category and show it
+		| {% if page.category %}
+		+e('p').categories
+			| {{ site.data.locales.meta.category }}:&nbsp;
+			| {% for cat in page.category %}
+			+e.category(href="{{ site.baseurl | append: site.categories.url | append: cat | append: '/' | replace:' ','-' | replace: '//', '/' }}") {{ cat }}
+			| {% unless forloop.last %}, {% endunless %}
+			| {% endfor %}
+		| {% endif %}

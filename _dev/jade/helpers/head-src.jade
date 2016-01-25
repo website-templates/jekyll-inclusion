@@ -1,0 +1,32 @@
+mixin head-src()
+	//- ICONS
+	link(rel="shortcut icon", href="{{ site.baseurl | append: '/' | append: 'favicon.ico' | replace: '//', '/' }}")
+	link(rel="shortcut icon", href="{{ site.baseurl | append: '/' | append: 'static/images/icons/favicon.png' | replace: '//', '/' }}", type="image/x-icon")
+	link(rel="apple-touch-icon-precomposed", sizes="144x144", href="{{ site.baseurl | append: '/' | append: 'static/images/icons/apple-touch-icon-144x144-precomposed.png' | replace: '//', '/' }}")
+	link(rel="apple-touch-icon-precomposed", sizes="114x114", href="{{ site.baseurl | append: '/' | append: 'static/images/icons/apple-touch-icon-114x114-precomposed.png' | replace: '//', '/' }}")
+	link(rel="apple-touch-icon-precomposed", sizes="72x72", href="{{ site.baseurl | append: '/' | append: 'static/images/icons/apple-touch-icon-72x72-precomposed.png' | replace: '//', '/' }}")
+	link(rel="apple-touch-icon-precomposed", href="{{ site.baseurl | append: '/' | append: 'static/images/icons/apple-touch-icon-precomposed.png' | replace: '//', '/' }}")
+
+
+	//- FONTS
+	// OpenSans and OpenSans Condensed from Google cdn
+	link(href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800%7COpen+Sans+Condensed:300&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+
+
+	//- STYLESHEETS
+	// Main stylesheet
+	<!-- build:css {{ site.baseurl | append: '/' | append: 'static/css/screen.min.css' | replace: '//', '/' }} -->
+	link(rel="stylesheet", href="{{ site.baseurl | append: '/' | append: 'static/css/screen.css' | replace: '//', '/' }}")
+	<!-- /build -->
+
+	// CSS3 media queries and HTML5 tags support for old IE
+	<!--[if lt IE 9]><script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script><script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script><![endif]-->
+	<!-- Or you can use these two scripts from local folder, dont forget for conditional comments for old IE {{ site.baseurl | append: '/' | append: 'static/js/ie/ie.min.js' | replace: '//', '/' }} -->
+
+	// Helper dev js
+	// THIS IS DEV HELPER. USE BUILD TASK TO REMOVE IT FOR PRODUCTION.
+	//- Page refresh script for live coding, useful if you want to achieve live coding on LAMP/WAMP server
+	//- Disabled in favor of BrowserSync.
+	//- <!-- build:remove -->
+	//- script(src='devtools/live.js')
+	//- <!-- /build -->

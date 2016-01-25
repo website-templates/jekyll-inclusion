@@ -1,16 +1,16 @@
-//Autoprefixer
+// Parse CSS and add vendor-prefixed CSS properties using the Can I Use database
 module.exports = {
 	options: {
-		browsers: ['last 2 versions', 'ie 8', 'ie 9']
 		//By default >1%, last 2 versions, Firefox ESR, Opera 12.1;
+		browsers: '<%= browserlist %>',
+		cascade: true
 	},
 	main: {
 		files:[{
 			expand: true,
-			flatten: true,
-			cwd: '<%= build.css %>/',
-			src: ['**/*.css', '!*.min.css'],
-			dest: '<%= build.css %>/'
+			cwd: '<%= deploy.css %>',
+			src: ['*.css', '!*.min.css'],
+			dest: '<%= deploy.css %>'
 		}]
 	}
 }

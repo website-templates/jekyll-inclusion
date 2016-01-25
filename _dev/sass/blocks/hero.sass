@@ -1,0 +1,80 @@
+.hero
+	position: relative
+	width: 100%
+	overflow: hidden
+	text-align: center
+
+
+	&_big
+		height: 100%
+		min-height: 100%
+
+
+	&_small
+		height: 50%
+		min-height: 50%
+
+
+	&_left
+		text-align: left
+
+
+	&__bg
+		position: absolute
+		min-width: 100%
+		min-height: 100%
+		z-index: 0
+		// NOTE: Background images are set within the HTML (YAML Front Matter) using inline CSS!
+		background-size: cover
+		background-position: center 0
+		background-repeat: no-repeat
+		background-attachment: fixed
+
+		&_blurred
+			filter: url(../static/images/blur.svg#blur)
+			-webkit-filter: blur(5px)
+			filter: blur(5px)
+			filter: unquote("progid:DXImageTransform.Microsoft.Blur(PixelRadius='5')")
+
+
+	&__title
+		margin-bottom: 20px
+		color: $c-hero_text
+		font-family: $f-hero_title
+		font-weight: 800
+		text-shadow: 1px 1px 1px $c-hero_text-shadow
+		transition: all .5s
+
+
+	&__descr
+		margin-bottom: 75px
+		color: $c-hero_text
+		font-family: $f-hero_descr
+		text-shadow: 1px 1px 1px $c-hero_text-shadow
+		transition: all .5s
+		@media screen and (max-width: 800px)
+			margin-bottom: 50px
+
+
+	&__link
+		display: block
+		text-decoration: none
+		&:hover .hero__title
+			color: $c-hero_link_hover
+
+
+	&__attribution
+		position: absolute
+		bottom: 10px
+		right: 20px
+		z-index: 10
+		font-family: $f-hero_attribution
+		font-style: italic
+		font-size: 14px
+		color: $c-hero_text
+		@media screen and (max-width: 480px)
+			display: none
+
+
+	&__icon
+		margin: 0 auto 30px

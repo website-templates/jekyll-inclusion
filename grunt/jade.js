@@ -1,14 +1,14 @@
-//Compile *.jade files
+// Compile Jade templates
 module.exports = {
 	main: {
 		options: {
-				client: false,
-				pretty: true
+			client: false,
+			pretty: true
 		},
 		files: [ {
-			cwd: '<%= dev.templates %>/pages',
-			src: '**/*.jade',
-			dest: '<%= dev.html %>/',
+			cwd: '<%= dev.jade %>',
+			src: ['**/*.jade'],
+			dest: '<%= build.html %>',
 			expand: true,
 			ext: '.html'
 		} ]

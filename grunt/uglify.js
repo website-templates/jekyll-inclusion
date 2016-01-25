@@ -1,14 +1,14 @@
-//Uglify assembled *.js file
+// Minify files with UglifyJS
 module.exports = {
 	options: {
 		mangle: false
 	},
-	build: {
+	main: {
 		files:[{
 			expand: true,
-			cwd: '<%= build.js %>/',
-			src: ['**/*.js', '!**/*.min.js', '!live.js'],
-			dest: '<%= build.js %>/',
+			cwd: '<%= deploy.js %>',
+			src: ['*.js', '!*.min.js'],
+			dest: '<%= deploy.js %>',
 			ext: '.min.js'
 		}]
 	}

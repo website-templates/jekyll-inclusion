@@ -1,0 +1,15 @@
+//- Page and post paginator
+mixin paginator_page()
+	| {% if paginator.total_pages > 1 %}
+	+b('nav').paginator
+		+e('ul').list
+			| {% if paginator.previous_page %}
+			+e('li').item_next
+				+e.link(href="{{ site.baseurl | append: paginator.previous_page_path | replace: '//', '/' }}") {{site.data.locales.paginator.page_next}}
+			| {% endif %}
+
+			| {% if paginator.next_page %}
+			+e('li').item_previous
+				+e.link(href="{{ site.baseurl | append: paginator.next_page_path | replace: '//', '/' }}") {{site.data.locales.paginator.page_prev}}
+			| {% endif %}
+	| {% endif %}
