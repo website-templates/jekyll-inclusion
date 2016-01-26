@@ -57,6 +57,8 @@ categories:
   url: /category/
   # category pages slug, ex. page-1 or page2. Number by default
   slug: ''
+  # category name word delimiter, '_' by defult
+  delimiter: '_'
   layout: category.html
 
 # Tag pages settings
