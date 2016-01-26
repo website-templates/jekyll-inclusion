@@ -135,12 +135,12 @@ color: light
             </p>{% if page.tags %}
             <p class="post-meta__tags">
               {{ site.data.locales.meta.tags }}:&nbsp;
-              {% for tag in page.tags %}<a href="{{ site.baseurl | append: site.tags.url | append: tag | append: '/' | replace:' ','-' | replace: '//', '/' }}" class="post-meta__tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+              {% for tag in page.tags %}<a href="{{ site.baseurl | append: site.tags.url | append: tag | append: '/' | replace:' ', site.tags.delimiter | replace: '//', '/' }}" class="post-meta__tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
               {% endfor %}
             </p>{% endif %}{% if page.category %}
             <p class="post-meta__categories">
               {{ site.data.locales.meta.category }}:&nbsp;
-              {% for cat in page.category %}<a href="{{ site.baseurl | append: site.categories.url | append: cat | append: '/' | replace:' ','-' | replace: '//', '/' }}" class="post-meta__category">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
+              {% for cat in page.category %}<a href="{{ site.baseurl | append: site.categories.url | append: cat | append: '/' | replace:' ', site.categories.delimiter | replace: '//', '/' }}" class="post-meta__category">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}
               {% endfor %}
             </p>{% endif %}
           </div>
