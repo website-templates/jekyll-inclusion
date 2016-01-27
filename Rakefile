@@ -2,7 +2,7 @@ require "rubygems"
 
 desc "Deploy to Github Pages"
 task :deploy do
-	cd "_deploy" do
+	cd "deploy" do
 		puts "## Deploying build version"
 		system "git add --all"
 

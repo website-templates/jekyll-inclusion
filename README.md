@@ -16,7 +16,7 @@ Check out [quick demo](http://website-templates.github.io/jekyll-inclusion/) of 
 	- [Editorconfig](#editorconfig)
 	- [Grunt tasks](#grunt-tasks)
 	- [Data driven nav](#data-driven-nav)
-	- [Post creating](#post-creating)
+	- [Post creation](#post-creation)
 * [Changelog](#changelog)
 * [Credits](#credits)
 * [License](#license)
@@ -30,94 +30,219 @@ Check out [quick demo](http://website-templates.github.io/jekyll-inclusion/) of 
 - [Python](http://www.python.org/) with [pip](http://www.pip-installer.org/)
 
 ## Structure
-There are two branches: master branch and gh-pages.
-Project's development based on [frontend-scaffold](https://github.com/orlovmax/front-end-scaffold) and located in master branch:
+There are two branches: master branch and gh-pages. Master is a main develop branch.
+Project based on [Synteagle general project template](https://github.com/synteagle/synt-general-template)
 ```
-Gruntfile.js                     - tasks
-package.json                     - npm packages
-bower.json                       - bower packages
-README.md                        - readme
-CHANGELOG.md                     - changelog
-Gemfile                          - required gems
-.editorconfig                    - codestyle things
-_config.yml                      - site configurations
-Rakefile                         - deploy scripts
-post.sh                          - script for new posts creating
-`/_dev/` folder - contains source code.
-	`coffee/`                    - coffeescripts
-	`css/`                       - compiled css
-	`devtools/`                  - livereload js
-	`fonts/`                     - offline and icon fonts
-	`helpers/`                   - files that will be copied to _build folder
-	`html/`                      - compiled html (pages and layouts)
-	`img/`                       - images
-	`js/`                        - compiled coffee js, vendor js, custom js
-	`ruby/`                      - jekyll plugins
-	`styles/`                    - sass stylesheets
-		`helpers`                  - grid and third-party stuff, mixins
-		`components`               - stylsheets components (blocks)
-			`general`                - general styles like reset.sass
-				`inclusion`          - post content styles (Inclusion)
-	`templates/`                 - jade templates
-		`components`               - page blocks
-		`helpers`                  - mixins
-		`pages`                    - site separate pages
-			`_layouts`               - page layouts (will be copied to _build folder)
+./
+├── .editorconfig
+├── Gruntfile.js
+├── package.json
+├── bower.json
+├── README.md
+├── CHANGELOG.md
+├── Rakefile
+├── Gemfile
+├── _config.yml
+├── post.sh
+├──grunt/                                      * grunt tasks
+|   ├── task.js
+│   └── aliases.yml 
+|
+├── dev/                                       * site source
+|   ├── coffee/                                * coffee scripts
+|	│   └── main/                              * main scripts
+|	│
+│   ├── images/                                * image sources
+|	│
+│   ├── jade/                                  * templates
+|	|	├── blocks/                            * blocks library
+|	│   |   └── block.jade
+|	│   ├── helpers/                           * helper mixins
+|	│   ├── vendor/                            * third-party code
+|	│   ├── layouts/                           * page layouts
+|	│   └── pages/                             * main pages templates
+|	│
+│   ├── js/                                    * compiled and source js
+|	|   ├── main/                              * main site scripts
+|	│   ├── ie/                                * ie compat scripts
+|	│   └── vendor/                            * vendor scripts
+|	│
+|	├── sass/                                  * sass preprocessor styles
+|	|	├── blocks/                            * blocks library
+|	│   |   └── block.sass
+|	│   ├── helpers/                           * mixins and vars
+|	│   ├── vendor/                            * third-party code
+|	│   └── screen.sass
+|	│
+│   ├── ruby/                                  * jekyll plugins
+|	│
+│   ├── helpers/                               * helper files
+|	│
+│   ├── fonts/                                 * font sources
+|	│
+│   └── devtools/                              * some dev tools
+│
+├── build/                                     * built source
+|	├── index.html
+|	├── _data/                                 * jekyll data (i18n, locales)
+|	|
+|	├── _drafts/                               * drafts
+|	|
+|	├── _layouts/                              * layouts for jekyll generation
+|	|
+|	├── _plugins/                              * jekyll plugins
+|	|
+|	├── _posts/                                * posts (*.md)
+|	|
+|	└── static/                                * static assets
+|		├── css/                               * minified styles
+|		|
+|		├── images/                            * minified images
+|		│
+|		├── js/                                * minified assembled js
+|		|
+|		└── fonts/                             * @font-face-ready webfonts
+│
+└── publ/                                      * generated website
+	├── _data/                                 * jekyll data (i18n, locales)
+	|
+	├── _drafts/                               * drafts
+	|
+	├── _posts/                                * posts (*.md)
+	|
+	└── static/                                * static assets
+		└── images/                            * post and pages images
 
-`/_build/` folder - build version, generated sources ready for jekyll build
-	`_data/`                     - data for jekyll generation (nav etc)
-		`i18n/`                  - i18n localization *.yml files
-	`_drafts`                    - drafts (will be copied to `_build/_drafts` folder)
-	`_layouts/`                  - layouts for jekyll generation
-	`_plugins/`                  - jekyll plugins
-	`_posts/`                    - posts (*.md)
-	`css/`                       - site styles
-	`fonts/`                     - site fonts
-	`img/`                       - images
-	`js/`                        - scripts
-
-`/_publ/` folder - site content: posts, pages and pictures
-	`data/`                      - data for jekyll generation (nav etc)
-		`i18n/`                  - i18n localization *.yml files
-	`img/`                       - post and pages images
-	`pages`                      - site posts and pages
-		`_drafts`                - drafts (will be copied to `_build/_drafts` folder)
-		`_posts`                 - posts (will be copied to `_build/_posts`folder)
 ```
-gh-pages branch contains pure html/css/js site compiled by jekyll. This is for common user repository. For organization repository deploy branch should be `master` This brunch located in deploy folder:
 
-`/_deploy/` folder - generated site, ready for deploy
+Take a look at [this article](http://www.aymerick.com/2014/07/22/jekyll-github-pages-bower-bootstrap.html) about creating dev and deploy branches for your blog. 
 
-You shoul  read [this article](http://www.aymerick.com/2014/07/22/jekyll-github-pages-bower-bootstrap.html) about creating dev and deploy branches for your blog. 
-
-NOTE: this example use in _config.yml use baseurl option, so after domain there is path: /jekyll-inclusion. If you want to run this example on the local machine you should to comment or remove this line in _config.yml file.
+NOTE: this example use in _config.yml use baseurl option, so after domain there is path: /jekyll-inclusion. If you want to run this example on the local machine you should comment or remove this line in _config.yml file.
 
 ## Development and blogging
-- 
-Install dependencies:
-* npm install
-* bower install
 
 ### Editorconfig
-This project have .editorconfig file at the root that used by your code editor with editorconfig plugin. It describes codestyle like indent style, trailing whitespaces etc. See more details [here](http://editorconfig.org/) 
+This project contains .editorconfig file. It describes codestyle like indentation, trailing whitespaces etc. See more details [here](http://editorconfig.org/) 
 
 ### Grunt tasks
-* Helper tasks:
-		- `grunt bower-dev` - copies bower dependencies in right folders
-* Site dev tasks:
-		- `grunt regen` - compiles source files, generates site with jekyll, but only once. Doesn't watch for changes. Useful for the first time project initialization to avoid broken path errors or for forced project regeneration.
-		- `grunt` - default task for development, compiles source files, generates site with jekyll, watches for changes. Note that this task watches and processes only changed files, thanks to `newer` option
-		- `grunt build` - minifies assets and generates site with jekyll, also processes and mififies generated markup
-		- `grunt theme` - task for theme styling and scripting without site rebuild. It inclues sass compile, js concat tasks and copy task that will copy generated css and js right to the _deploy folder and you'll be able to see changes without jekyll build. Please note that after this task I suggest you to run `grunt regen` task and then - `grunt build` for final build and further deploy.
-* Jekyll tasks:
-		- `grunt publish` - task for blogging, generates site with jekyll, processes and minifies generated markup
-		- `grunt jekyll-deploy` - task for deploy, runs `rakeJekyllDeploy` through `grunt-shell` plugin: commits deploy files and push them to the remote repo.
-		- `grunt deploy` - task for deploy, runs `rakeDeploy` through `grunt-shell` plugin: commits source files, commits deploy files and push all this stuff to the remote repo.
+Here comes groups of grunt tasks with some explanations
+
+#### Start 
+`grunt start` - Install bower dependencies and place them to dev folders
+```
+- 'shell:bower'                          Install bower components
+- 'bower:ie'                             Copy ie components to js folder
+- 'bower:vendor'                         Copy vendor  components to js folder
+```
+
+#### Dev
+`gulp dev` - Dev task with static server
+```
+- 'coffee:main'                          Compile main coffescripts
+- 'concat:main'                          Concatenate main javascripts
+- 'concat:ie'                            Concatenate ie javascripts
+- 'concat:vendor'                        Concatenate vendor javascripts
+- 'sass'                                 Compile Sass stylesheets
+- 'jade'                                 Compile Jade templates
+- 'sync:imagesDev'                       Sync images
+- 'sync:fontsDev'                        Sync fonts
+- 'sync:helpersDev'                      Sync helpers and other assets
+- 'sync:rubyDev'                         Sync jekyll plugins
+- 'sync:mainPubl'                        Sync posts and pages from publ folder
+- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
+- 'browserSync:dev'                      Run dev server with watch option
+- 'watch:dev'                            Watch for changes and run dev task
+```
+
+#### Build 
+`grunt build` - Build task
+```
+- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
+- 'imagemin'                             Minify images
+- 'cmq'                                  Combine media queries in css files
+- 'autoprefixer'                         Add vendor prefixes in css
+- 'csscomb'                              Applie styleguide to stylesheets
+- 'uglify'                               Minify javascript files
+- 'csso'                                 Minify stylesheets
+- 'processhtml'                          Replace assets paths in html
+- 'htmlmin'                              Minify html
+- 'clean:dev'                            Remove dev things
+- 'browserSync:test'                     Run test server without watch
+```
+
+#### Rebuild 
+`grunt rebuild` - Regenerate and build project by running all tasks
+```
+- 'coffee:main'                          Compile main coffescripts
+- 'concat:main'                          Concatenate main javascripts
+- 'concat:ie'                            Concatenate ie javascripts
+- 'concat:vendor'                        Concatenate vendor javascripts
+- 'sass'                                 Compile Sass stylesheets
+- 'jade'                                 Compile Jade templates
+- 'sync:imagesDev'                       Sync images
+- 'sync:fontsDev'                        Sync fonts
+- 'sync:helpersDev'                      Sync helpers and other assets
+- 'sync:rubyDev'                         Sync jekyll plugins
+- 'sync:mainPubl'                        Sync posts and pages from publ folder
+- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
+- 'imagemin'                             Minify images
+- 'cmq'                                  Combine media queries in css files
+- 'autoprefixer'                         Add vendor prefixes in css
+- 'csscomb'                              Applie styleguide to stylesheets
+- 'uglify'                               Minify javascript files
+- 'csso'                                 Minify stylesheets
+- 'processhtml'                          Replace assets paths in html
+- 'htmlmin'                              Minify html
+- 'clean:dev'                            Remove dev things
+```
+
+#### Theme
+`grunt theme` - Theme styles and scripts fixing
+```
+- 'coffee:main'                          Compile main coffescripts
+- 'concat:main'                          Concatenate main javascripts
+- 'concat:ie'                            Concatenate ie javascripts
+- 'concat:vendor'                        Concatenate vendor javascripts
+- 'sass'                                 Compile Sass stylesheets
+- 'sync:cssTheme'                        Sync css with Jekyll generated assets
+- 'sync:jsTheme'                         Sync js with Jekyll generated assets
+- 'browserSync:theme'                    Run dev server with watch option
+- 'watch:theme'                          Watch for changes and run theme task
+```
+
+#### Template
+`grunt template` - Theme templates fixing
+```
+- 'jade'                                 Compile Jade templates
+- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
+```
+
+#### Publish
+`grunt publish` - Copy posts, pages and images and generates website
+```
+- 'sync:mainPubl'                        Copy posts, pages and images
+- 'shell:jekyllBuild'                    Generate site using Jekyll.rb
+- 'processhtml'                          Replace assets paths in html
+- 'htmlmin'                              Minify html
+- 'clean:dev'                            Remove dev things
+```
+
+#### Deploy 
+`grunt deploy` - Deploy project by running Rakefile: git or ftp push
+```
+- 'shell:deploy'                         Deploy generated site to gh-pahes
+```
+
+#### Server 
+`grunt server` - Run server without watching for changes
+```
+- 'browserSync:test'                     Run test server without watch
+```
 
 ### Data driven nav
 This theme use special data from _data/nav.yml to generate navigation. It's useful when you need to create nested menu. Also each page have menu option and if it will turn to true - this page will appear in menu.
 
-### Post creating
+### Post creation
 There is a [simple bash script](https://gist.github.com/orlovmax/f1b73a5fd01fc4b917c2) that allows us to create new posts. I've put it in the root of the website, so just execute it, like `bash post.sh your-post-name` or `post.sh your-post-name` and it will create new *.md file at `_publ/pages/_posts` with predefined draft layout from `_draft` directory and also it will create folder in `_publ/img/posts/` with name `your-post-name` for your post images. It's pretty simple and useful.
 
 ## Changelog

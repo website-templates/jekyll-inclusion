@@ -1,3 +1,7 @@
+* (January 27, 2016)
+	- Main folders renamed, structure adjusted accoring to general template
+* (January 25, 2016)
+	- MAJOR UPDATE: structure modified, grunt tasks updated, all assets moved to 'static' folder, liquid templates updated using jade blocks, 'type' conditions removed
 * (September 20, 2015)
 	- Search feature added, dropdown menu issue fixed
 * (September 17, 2015)

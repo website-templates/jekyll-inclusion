@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 		data: {
 			// Dev paths
 			dev: {
-				main: '_dev',
+				main: 'dev',
 				coffee: '<%= dev.main %>/coffee',
 				js: '<%= dev.main %>/js',
 				jade: '<%= dev.main %>/jade/pages',
@@ -15,11 +15,11 @@ module.exports = function(grunt) {
 			},
 			// Publiscation paths
 			publ: {
-				main: '_publ'
+				main: 'publ'
 			},
 			// Build paths
 			build: {
-				main: '_build',
+				main: 'build',
 				html: '<%= build.main %>',
 				css: '<%= build.main %>/static/css',
 				fonts: '<%= build.main %>/static/fonts',
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 			},
 			// Generated site paths
 			deploy: {
-				main: '_deploy',
+				main: 'deploy',
 				html: '<%= deploy.main %>',
 				css: '<%= deploy.main %>/static/css',
 				images: '<%= deploy.main %>/static/images',

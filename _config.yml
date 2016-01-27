@@ -48,8 +48,8 @@ paginate_path: "page/:num/"
 exclude: []
 incremental: true
 
-source: _build
-destination: _deploy
+source: build
+destination: deploy
 
 # Category pages settings
 categories:

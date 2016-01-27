@@ -65,7 +65,6 @@ rebuild:
         - 'processhtml'
         - 'htmlmin'
         - 'clean:dev'
-        - 'browserSync:test'
 
 
 deploy:
