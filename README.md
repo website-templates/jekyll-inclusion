@@ -31,7 +31,7 @@ Check out [quick demo](http://website-templates.github.io/jekyll-inclusion/) of 
 
 ## Structure
 There are two branches: master branch and gh-pages. Master is a main develop branch.
-Project based on [Synteagle general project template](https://github.com/synteagle/synt-general-template)
+Project based on [Synteagle general project template](https://github.com/synteagle/se-general-template)
 ```
 ./
 ├── .editorconfig
